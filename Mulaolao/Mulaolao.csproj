@@ -1,0 +1,1637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBA791C9-2CC6-471C-B15C-BE9D7AAD7896}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mulaolao</RootNamespace>
+    <AssemblyName>Mulaolao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FastReport, Version=2013.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2013.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2013.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Install, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Install.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.VSDesign, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.VSDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Web, Version=2013.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="MulaolaoBll, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MulaolaoBll\bin\Debug\MulaolaoBll.dll</HintPath>
+    </Reference>
+    <Reference Include="MulaolaoLibrary">
+      <HintPath>..\MulaolaoLibrary\bin\Debug\MulaolaoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\FormQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FormQuotation.Designer.cs">
+      <DependentUpon>FormQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FormUserInfo.Designer.cs">
+      <DependentUpon>FormUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ReadyOfNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\ReadyOfNum.Designer.cs">
+      <DependentUpon>ReadyOfNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bom\R_FrmgongxuBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bom\R_FrmgongxuBom.Designer.cs">
+      <DependentUpon>R_FrmgongxuBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chart\ChartControl2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart\ChartControl2.Designer.cs">
+      <DependentUpon>ChartControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboboxEditQuery.cs" />
+    <Compile Include="Contract\FormInvenAdSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FormInvenAdSheet.Designer.cs">
+      <DependentUpon>FormInvenAdSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormSanitationBroad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormSanitationBroad.Designer.cs">
+      <DependentUpon>FormSanitationBroad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormSanitationCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormSanitationCheck.Designer.cs">
+      <DependentUpon>FormSanitationCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormSanitionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormSanitionReport.Designer.cs">
+      <DependentUpon>FormSanitionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\FormGonXuGonXi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\FormGonXuGonXi.Designer.cs">
+      <DependentUpon>FormGonXuGonXi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\FormInvenAdQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\FormInvenAdQuery.Designer.cs">
+      <DependentUpon>FormInvenAdQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\FormJiaoMiDu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\FormJiaoMiDu.Designer.cs">
+      <DependentUpon>FormJiaoMiDu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadOrWriteImageOfPicutre.cs" />
+    <Compile Include="Class\AppUpdate.cs" />
+    <Compile Include="Class\CheckOutCalcu.cs" />
+    <Compile Include="Class\DateDayRegise.cs" />
+    <Compile Include="Class\DateTimePickerCustom.cs" />
+    <Compile Include="Class\EcanRMB.cs" />
+    <Compile Include="Class\Encrypt.cs" />
+    <Compile Include="Class\FormChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\FormChild.Designer.cs">
+      <DependentUpon>FormChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\HeadmanWagesCalculation.cs" />
+    <Compile Include="Class\isStorage.cs" />
+    <Compile Include="Class\LogHelper.cs" />
+    <Compile Include="Class\SpecialPowers.cs" />
+    <Compile Include="Class\Version.cs" />
+    <Compile Include="Class\ViewExport.cs" />
+    <Compile Include="Class\XmlFiles.cs" />
+    <Compile Include="Contract\DefineFileds\youqicontract.cs" />
+    <Compile Include="Contract\FormContCheckTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FormContCheckTable.Designer.cs">
+      <DependentUpon>FormContCheckTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FormWarehouseReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FormWarehouseReceipt.Designer.cs">
+      <DependentUpon>FormWarehouseReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\GunqiChengLanJiaGong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\GunqiChengLanJiaGong.Designer.cs">
+      <DependentUpon>GunqiChengLanJiaGong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmCheMuJianContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmCheMuJianContract.Designer.cs">
+      <DependentUpon>R_FrmCheMuJianContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Merges.cs" />
+    <Compile Include="Class\oddNumbers.cs" />
+    <Compile Include="Class\Operation.cs" />
+    <Compile Include="Class\Roles.cs" />
+    <Compile Include="Contract\R_FrmContractToDoAJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmContractToDoAJob.Designer.cs">
+      <DependentUpon>R_FrmContractToDoAJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmDuanLiaoContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmDuanLiaoContract.Designer.cs">
+      <DependentUpon>R_FrmDuanLiaoContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmGunQiContrract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmGunQiContrract.Designer.cs">
+      <DependentUpon>R_FrmGunQiContrract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmInventoryProcurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmInventoryProcurement.Designer.cs">
+      <DependentUpon>R_FrmInventoryProcurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmJiaoMiDuJunHenTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmJiaoMiDuJunHenTable.Designer.cs">
+      <DependentUpon>R_FrmJiaoMiDuJunHenTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmSiReYiYinContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmSiReYiYinContract.Designer.cs">
+      <DependentUpon>R_FrmSiReYiYinContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmWaiXian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmWaiXian.Designer.cs">
+      <DependentUpon>R_FrmWaiXian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmYouQiPlanContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmYouQiPlanContract.Designer.cs">
+      <DependentUpon>R_FrmYouQiPlanContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\yesOrNoPlan\ProductionWorkshop.cs" />
+    <Compile Include="Contract\yesOrNoPlan\yesOrNoPlanActual.cs" />
+    <Compile Include="QuoForms\r195.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r195.Designer.cs">
+      <DependentUpon>r195.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormCustomerInspectionTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormCustomerInspectionTable.Designer.cs">
+      <DependentUpon>FormCustomerInspectionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormFeedTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormFeedTest.Designer.cs">
+      <DependentUpon>FormFeedTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormProductSpecification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormProductSpecification.Designer.cs">
+      <DependentUpon>FormProductSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormQualityFinalInspsction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormQualityFinalInspsction.Designer.cs">
+      <DependentUpon>FormQualityFinalInspsction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormQualityReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormQualityReport.Designer.cs">
+      <DependentUpon>FormQualityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormSafetyManegerAndControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormSafetyManegerAndControl.Designer.cs">
+      <DependentUpon>FormSafetyManegerAndControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditFor.Designer.cs">
+      <DependentUpon>FormStandardAuditFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditOne.Designer.cs">
+      <DependentUpon>FormStandardAuditOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditTre.Designer.cs">
+      <DependentUpon>FormStandardAuditTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditTwo.Designer.cs">
+      <DependentUpon>FormStandardAuditTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormStandardTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormStandardTest.Designer.cs">
+      <DependentUpon>FormStandardTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormTestReportForAQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormTestReportForAQ.Designer.cs">
+      <DependentUpon>FormTestReportForAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormTestResultRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormTestResultRecord.Designer.cs">
+      <DependentUpon>FormTestResultRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormTestResultRecordOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormTestResultRecordOne.Designer.cs">
+      <DependentUpon>FormTestResultRecordOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\R_FrmProductQuality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\R_FrmProductQuality.Designer.cs">
+      <DependentUpon>R_FrmProductQuality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\R_FrmQualityTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\R_FrmQualityTesting.Designer.cs">
+      <DependentUpon>R_FrmQualityTesting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditFiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\FormStandardAuditFiv.Designer.cs">
+      <DependentUpon>FormStandardAuditFiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\ColumnSets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\ColumnSets.Designer.cs">
+      <DependentUpon>ColumnSets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Frm_qhzdaoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Frm_qhzdaoSelect.Designer.cs">
+      <DependentUpon>Frm_qhzdaoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\PassWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\PassWords.Designer.cs">
+      <DependentUpon>PassWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\planeQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\planeQuery.Designer.cs">
+      <DependentUpon>planeQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R519batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R519batch.Designer.cs">
+      <DependentUpon>R519batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Reviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Reviews.Designer.cs">
+      <DependentUpon>Reviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm001.Designer.cs">
+      <DependentUpon>R_Frm001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm285.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm285.Designer.cs">
+      <DependentUpon>R_Frm285.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm266.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm266.Designer.cs">
+      <DependentUpon>R_Frm266.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm369.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm369.Designer.cs">
+      <DependentUpon>R_Frm369.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm412.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm412.Designer.cs">
+      <DependentUpon>R_Frm412.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm464Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm464Select.Designer.cs">
+      <DependentUpon>R_Frm464Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm495.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm495.Designer.cs">
+      <DependentUpon>R_Frm495.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm525.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm525.Designer.cs">
+      <DependentUpon>R_Frm525.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmOpenContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmOpenContract.Designer.cs">
+      <DependentUpon>R_FrmOpenContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmreviewPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmreviewPeople.Designer.cs">
+      <DependentUpon>R_FrmreviewPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmSystemDrity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmSystemDrity.Designer.cs">
+      <DependentUpon>R_FrmSystemDrity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_SelectAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_SelectAll.Designer.cs">
+      <DependentUpon>R_SelectAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bom\R_FrmMaterialBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bom\R_FrmMaterialBom.Designer.cs">
+      <DependentUpon>R_FrmMaterialBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bom\R_FrmPartBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bom\R_FrmPartBom.Designer.cs">
+      <DependentUpon>R_FrmPartBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bom\R_FrmProductBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bom\R_FrmProductBom.Designer.cs">
+      <DependentUpon>R_FrmProductBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmTPADGA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmTPADGA.Designer.cs">
+      <DependentUpon>R_FrmTPADGA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Stock.cs" />
+    <Compile Include="Class\Datatimepickeroverride.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\DateDay.cs" />
+    <Compile Include="Class\Ergodic.cs" />
+    <Compile Include="Class\PictureBoxOpen.cs" />
+    <Compile Include="Class\HeaderUnitView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\HeaderUnitView.Designer.cs">
+      <DependentUpon>HeaderUnitView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Powers.cs" />
+    <Compile Include="Class\Print.cs" />
+    <Compile Include="Class\ReviewES.cs" />
+    <Compile Include="Other\R_Frm338.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm338.Designer.cs">
+      <DependentUpon>R_Frm338.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frm347.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frm347.Designer.cs">
+      <DependentUpon>R_Frm347.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_Frmchanpinzhibiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_Frmchanpinzhibiao.Designer.cs">
+      <DependentUpon>R_Frmchanpinzhibiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmmucaiContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmmucaiContract.Designer.cs">
+      <DependentUpon>R_FrmmucaiContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmPQJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmPQJ.Designer.cs">
+      <DependentUpon>R_FrmPQJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\R_FrmSailes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\R_FrmSailes.Designer.cs">
+      <DependentUpon>R_FrmSailes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmWuJinContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmWuJinContract.Designer.cs">
+      <DependentUpon>R_FrmWuJinContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_Frmwaixiancontract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_Frmwaixiancontract.Designer.cs">
+      <DependentUpon>R_Frmwaixiancontract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frmpenselect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frmpenselect.Designer.cs">
+      <DependentUpon>R_Frmpenselect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_Frmpenyouqichen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_Frmpenyouqichen.Designer.cs">
+      <DependentUpon>R_Frmpenyouqichen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_Frmsuliaobuqitacontract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_Frmsuliaobuqitacontract.Designer.cs">
+      <DependentUpon>R_Frmsuliaobuqitacontract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bom\R_FrmyouqiBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bom\R_FrmyouqiBom.Designer.cs">
+      <DependentUpon>R_FrmyouqiBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_Frmyouqiyonlian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_Frmyouqiyonlian.Designer.cs">
+      <DependentUpon>R_Frmyouqiyonlian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\weiwaiSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\weiwaiSelect.Designer.cs">
+      <DependentUpon>weiwaiSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Youqicaigou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Youqicaigou.Designer.cs">
+      <DependentUpon>Youqicaigou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\huaxuepinSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\huaxuepinSelect.Designer.cs">
+      <DependentUpon>huaxuepinSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\Picichaxun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\Picichaxun.Designer.cs">
+      <DependentUpon>Picichaxun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\R_Frmhegegongfanshenhe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\R_Frmhegegongfanshenhe.Designer.cs">
+      <DependentUpon>R_Frmhegegongfanshenhe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\R_Frmhegexianchang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\R_Frmhegexianchang.Designer.cs">
+      <DependentUpon>R_Frmhegexianchang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\R_Frmhuaxuepinruku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\R_Frmhuaxuepinruku.Designer.cs">
+      <DependentUpon>R_Frmhuaxuepinruku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Guanyu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Guanyu.Designer.cs">
+      <DependentUpon>Guanyu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Power.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Power.Designer.cs">
+      <DependentUpon>Power.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Remind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Remind.Designer.cs">
+      <DependentUpon>Remind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Review.Designer.cs">
+      <DependentUpon>Review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmImageAmplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmImageAmplication.Designer.cs">
+      <DependentUpon>R_FrmImageAmplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\R_FrmContractreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\R_FrmContractreview.Designer.cs">
+      <DependentUpon>R_FrmContractreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmContractreviewa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmContractreviewa.Designer.cs">
+      <DependentUpon>R_FrmContractreviewa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmContractreviewb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmContractreviewb.Designer.cs">
+      <DependentUpon>R_FrmContractreviewb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\R_FrmCustomerrecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\R_FrmCustomerrecord.Designer.cs">
+      <DependentUpon>R_FrmCustomerrecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_FrmJiaomiducontract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_FrmJiaomiducontract.Designer.cs">
+      <DependentUpon>R_FrmJiaomiducontract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\R_FrmProductarchives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\R_FrmProductarchives.Designer.cs">
+      <DependentUpon>R_FrmProductarchives.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environmental\R_FrmSampleorproductfirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environmental\R_FrmSampleorproductfirst.Designer.cs">
+      <DependentUpon>R_FrmSampleorproductfirst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\R_Frmyouqimocontract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\R_Frmyouqimocontract.Designer.cs">
+      <DependentUpon>R_Frmyouqimocontract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmR_519select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmR_519select.Designer.cs">
+      <DependentUpon>R_FrmR_519select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmTPADFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmTPADFA.Designer.cs">
+      <DependentUpon>R_FrmTPADFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Other\gongxugongzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\gongxugongzi.Designer.cs">
+      <DependentUpon>gongxugongzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Raw material cost\R_FrmBatchNumManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raw material cost\R_FrmBatchNumManagement.Designer.cs">
+      <DependentUpon>R_FrmBatchNumManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raw material cost\R_Frmchanpingaishan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raw material cost\R_Frmchanpingaishan.Designer.cs">
+      <DependentUpon>R_Frmchanpingaishan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raw material cost\R_FrmDailyUseOfChemicals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raw material cost\R_FrmDailyUseOfChemicals.Designer.cs">
+      <DependentUpon>R_FrmDailyUseOfChemicals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raw material cost\R_Frmgongxugongzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raw material cost\R_Frmgongxugongzi.Designer.cs">
+      <DependentUpon>R_Frmgongxugongzi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raw material cost\R_FrmGunQiChenBen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raw material cost\R_FrmGunQiChenBen.Designer.cs">
+      <DependentUpon>R_FrmGunQiChenBen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raw material cost\R_Frmhuaxuepicichenben.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raw material cost\R_Frmhuaxuepicichenben.Designer.cs">
+      <DependentUpon>R_Frmhuaxuepicichenben.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_Frmlinjian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_Frmlinjian.Designer.cs">
+      <DependentUpon>R_Frmlinjian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\R_FrmPQP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\R_FrmPQP.Designer.cs">
+      <DependentUpon>R_FrmPQP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule control\R_Frmyanpinchangqiancehua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule control\R_Frmyanpinchangqiancehua.Designer.cs">
+      <DependentUpon>R_Frmyanpinchangqiancehua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\yanpinSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\yanpinSelect.Designer.cs">
+      <DependentUpon>yanpinSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary\MaterialProcurementSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary\MaterialProcurementSummary.Designer.cs">
+      <DependentUpon>MaterialProcurementSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary\R_FrmCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary\R_FrmCheckOut.Designer.cs">
+      <DependentUpon>R_FrmCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary\R_FrmChengBenYuHeSuanAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary\R_FrmChengBenYuHeSuanAll.Designer.cs">
+      <DependentUpon>R_FrmChengBenYuHeSuanAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary\R_FrmContractUncollectUnpaid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary\R_FrmContractUncollectUnpaid.Designer.cs">
+      <DependentUpon>R_FrmContractUncollectUnpaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary\R_FrmCostIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary\R_FrmCostIndex.Designer.cs">
+      <DependentUpon>R_FrmCostIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary\R_FrmDailyCollectionRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary\R_FrmDailyCollectionRecord.Designer.cs">
+      <DependentUpon>R_FrmDailyCollectionRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary\R_FrmProductCostSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary\R_FrmProductCostSummary.Designer.cs">
+      <DependentUpon>R_FrmProductCostSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary\SailsPaymentTaxRefundAndElectricityBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary\SailsPaymentTaxRefundAndElectricityBill.Designer.cs">
+      <DependentUpon>SailsPaymentTaxRefundAndElectricityBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCon\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCon\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCon\UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCon\UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\ChanPinGongZiKaoQinReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\ChanPinGongZiKaoQinReport.Designer.cs">
+      <DependentUpon>ChanPinGongZiKaoQinReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\DetailedDeductionChildTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\DetailedDeductionChildTable.Designer.cs">
+      <DependentUpon>DetailedDeductionChildTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormAnnualPayrollSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormAnnualPayrollSummary.Designer.cs">
+      <DependentUpon>FormAnnualPayrollSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormMaterial.Designer.cs">
+      <DependentUpon>FormMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormPaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormPaint.Designer.cs">
+      <DependentUpon>FormPaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormPeragg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormPeragg.Designer.cs">
+      <DependentUpon>FormPeragg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormPerformanceAppraisal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormPerformanceAppraisal.Designer.cs">
+      <DependentUpon>FormPerformanceAppraisal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormProcessingDelay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormProcessingDelay.Designer.cs">
+      <DependentUpon>FormProcessingDelay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormPurchaseDelaySummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormPurchaseDelaySummary.Designer.cs">
+      <DependentUpon>FormPurchaseDelaySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormUserChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormUserChange.Designer.cs">
+      <DependentUpon>FormUserChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FormWages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FormWages.Designer.cs">
+      <DependentUpon>FormWages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\FrmGongZiCe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\FrmGongZiCe.Designer.cs">
+      <DependentUpon>FrmGongZiCe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\Frmzuzhanggongzikaohehd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\Frmzuzhanggongzikaohehd.Designer.cs">
+      <DependentUpon>Frmzuzhanggongzikaohehd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_Frmchanpingongzikaoqin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_Frmchanpingongzikaoqin.Designer.cs">
+      <DependentUpon>R_Frmchanpingongzikaoqin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmChanPinGongZiKaoQinHuiZong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmChanPinGongZiKaoQinHuiZong.Designer.cs">
+      <DependentUpon>R_FrmChanPinGongZiKaoQinHuiZong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_Frmchejianzhurenkaohe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_Frmchejianzhurenkaohe.Designer.cs">
+      <DependentUpon>R_Frmchejianzhurenkaohe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmDetailedDeduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmDetailedDeduction.Designer.cs">
+      <DependentUpon>R_FrmDetailedDeduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmManagePayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmManagePayroll.Designer.cs">
+      <DependentUpon>R_FrmManagePayroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmMaterialPurchaseCompariase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmMaterialPurchaseCompariase.Designer.cs">
+      <DependentUpon>R_FrmMaterialPurchaseCompariase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmOtherExpenseStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmOtherExpenseStatement.Designer.cs">
+      <DependentUpon>R_FrmOtherExpenseStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmPayMent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmPayMent.Designer.cs">
+      <DependentUpon>R_FrmPayMent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_Frmshenchanjindujihua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_Frmshenchanjindujihua.Designer.cs">
+      <DependentUpon>R_Frmshenchanjindujihua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmshenchanjindujihuaReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmshenchanjindujihuaReport.Designer.cs">
+      <DependentUpon>R_FrmshenchanjindujihuaReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmTargetActualWarn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmTargetActualWarn.Designer.cs">
+      <DependentUpon>R_FrmTargetActualWarn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmTeamLeaderRoutineCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmTeamLeaderRoutineCheck.Designer.cs">
+      <DependentUpon>R_FrmTeamLeaderRoutineCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmWagesContrastTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmWagesContrastTable.Designer.cs">
+      <DependentUpon>R_FrmWagesContrastTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmWagesCostComparison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmWagesCostComparison.Designer.cs">
+      <DependentUpon>R_FrmWagesCostComparison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmWorkWages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmWorkWages.Designer.cs">
+      <DependentUpon>R_FrmWorkWages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_Frmxiaozuzhangyeji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_Frmxiaozuzhangyeji.Designer.cs">
+      <DependentUpon>R_Frmxiaozuzhangyeji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\xiaozuSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\xiaozuSelect.Designer.cs">
+      <DependentUpon>xiaozuSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_FrmZuZhangBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_FrmZuZhangBom.Designer.cs">
+      <DependentUpon>R_FrmZuZhangBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wages\R_Frmzuzhanggongzikaohe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wages\R_Frmzuzhanggongzikaohe.Designer.cs">
+      <DependentUpon>R_Frmzuzhanggongzikaohe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtrPaint.cs" />
+    <EmbeddedResource Include="Base\FormQuotation.resx">
+      <DependentUpon>FormQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormUserInfo.resx">
+      <DependentUpon>FormUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\ReadyOfNum.resx">
+      <DependentUpon>ReadyOfNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bom\R_FrmgongxuBom.resx">
+      <DependentUpon>R_FrmgongxuBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart\ChartControl2.resx">
+      <DependentUpon>ChartControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class\FormChild.resx">
+      <DependentUpon>FormChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FormContCheckTable.resx">
+      <DependentUpon>FormContCheckTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FormInvenAdSheet.resx">
+      <DependentUpon>FormInvenAdSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FormWarehouseReceipt.resx">
+      <DependentUpon>FormWarehouseReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\GunqiChengLanJiaGong.resx">
+      <DependentUpon>GunqiChengLanJiaGong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmCheMuJianContract.resx">
+      <DependentUpon>R_FrmCheMuJianContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmContractToDoAJob.resx">
+      <DependentUpon>R_FrmContractToDoAJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmDuanLiaoContract.resx">
+      <DependentUpon>R_FrmDuanLiaoContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmGunQiContrract.resx">
+      <DependentUpon>R_FrmGunQiContrract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmInventoryProcurement.resx">
+      <DependentUpon>R_FrmInventoryProcurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmJiaoMiDuJunHenTable.resx">
+      <DependentUpon>R_FrmJiaoMiDuJunHenTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmSiReYiYinContract.resx">
+      <DependentUpon>R_FrmSiReYiYinContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmWaiXian.resx">
+      <DependentUpon>R_FrmWaiXian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmYouQiPlanContract.resx">
+      <DependentUpon>R_FrmYouQiPlanContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormSanitationBroad.resx">
+      <DependentUpon>FormSanitationBroad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormSanitationCheck.resx">
+      <DependentUpon>FormSanitationCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormSanitionReport.resx">
+      <DependentUpon>FormSanitionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\FormGonXuGonXi.resx">
+      <DependentUpon>FormGonXuGonXi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\FormInvenAdQuery.resx">
+      <DependentUpon>FormInvenAdQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\FormJiaoMiDu.resx">
+      <DependentUpon>FormJiaoMiDu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r195.resx">
+      <DependentUpon>r195.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormCustomerInspectionTable.resx">
+      <DependentUpon>FormCustomerInspectionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormFeedTest.resx">
+      <DependentUpon>FormFeedTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormProductSpecification.resx">
+      <DependentUpon>FormProductSpecification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormQualityFinalInspsction.resx">
+      <DependentUpon>FormQualityFinalInspsction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormQualityReport.resx">
+      <DependentUpon>FormQualityReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormSafetyManegerAndControl.resx">
+      <DependentUpon>FormSafetyManegerAndControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormStandardAuditFor.resx">
+      <DependentUpon>FormStandardAuditFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormStandardAuditOne.resx">
+      <DependentUpon>FormStandardAuditOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormStandardAuditTre.resx">
+      <DependentUpon>FormStandardAuditTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormStandardAuditTwo.resx">
+      <DependentUpon>FormStandardAuditTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormStandardTest.resx">
+      <DependentUpon>FormStandardTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormTestReportForAQ.resx">
+      <DependentUpon>FormTestReportForAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormTestResultRecord.resx">
+      <DependentUpon>FormTestResultRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormTestResultRecordOne.resx">
+      <DependentUpon>FormTestResultRecordOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\R_FrmProductQuality.resx">
+      <DependentUpon>R_FrmProductQuality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\R_FrmQualityTesting.resx">
+      <DependentUpon>R_FrmQualityTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\FormStandardAuditFiv.resx">
+      <DependentUpon>FormStandardAuditFiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\ColumnSets.resx">
+      <DependentUpon>ColumnSets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Frm_qhzdaoSelect.resx">
+      <DependentUpon>Frm_qhzdaoSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\PassWords.resx">
+      <DependentUpon>PassWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\planeQuery.resx">
+      <DependentUpon>planeQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R519batch.resx">
+      <DependentUpon>R519batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Reviews.resx">
+      <DependentUpon>Reviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm001.resx">
+      <DependentUpon>R_Frm001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm285.resx">
+      <DependentUpon>R_Frm285.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm266.resx">
+      <DependentUpon>R_Frm266.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm369.resx">
+      <DependentUpon>R_Frm369.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm412.resx">
+      <DependentUpon>R_Frm412.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm464Select.resx">
+      <DependentUpon>R_Frm464Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm495.resx">
+      <DependentUpon>R_Frm495.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm525.resx">
+      <DependentUpon>R_Frm525.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmOpenContract.resx">
+      <DependentUpon>R_FrmOpenContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmreviewPeople.resx">
+      <DependentUpon>R_FrmreviewPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmSystemDrity.resx">
+      <DependentUpon>R_FrmSystemDrity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_SelectAll.resx">
+      <DependentUpon>R_SelectAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bom\R_FrmMaterialBom.resx">
+      <DependentUpon>R_FrmMaterialBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bom\R_FrmPartBom.resx">
+      <DependentUpon>R_FrmPartBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bom\R_FrmProductBom.resx">
+      <DependentUpon>R_FrmProductBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmTPADGA.resx">
+      <DependentUpon>R_FrmTPADGA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm338.resx">
+      <DependentUpon>R_Frm338.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frm347.resx">
+      <DependentUpon>R_Frm347.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_Frmchanpinzhibiao.resx">
+      <DependentUpon>R_Frmchanpinzhibiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmmucaiContract.resx">
+      <DependentUpon>R_FrmmucaiContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmPQJ.resx">
+      <DependentUpon>R_FrmPQJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\R_FrmSailes.resx">
+      <DependentUpon>R_FrmSailes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmWuJinContract.resx">
+      <DependentUpon>R_FrmWuJinContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_Frmwaixiancontract.resx">
+      <DependentUpon>R_Frmwaixiancontract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frmpenselect.resx">
+      <DependentUpon>R_Frmpenselect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_Frmpenyouqichen.resx">
+      <DependentUpon>R_Frmpenyouqichen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_Frmsuliaobuqitacontract.resx">
+      <DependentUpon>R_Frmsuliaobuqitacontract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bom\R_FrmyouqiBom.resx">
+      <DependentUpon>R_FrmyouqiBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_Frmyouqiyonlian.resx">
+      <DependentUpon>R_Frmyouqiyonlian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\weiwaiSelect.resx">
+      <DependentUpon>weiwaiSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Youqicaigou.resx">
+      <DependentUpon>Youqicaigou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\huaxuepinSelect.resx">
+      <DependentUpon>huaxuepinSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\Picichaxun.resx">
+      <DependentUpon>Picichaxun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\R_Frmhegegongfanshenhe.resx">
+      <DependentUpon>R_Frmhegegongfanshenhe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\R_Frmhegexianchang.resx">
+      <DependentUpon>R_Frmhegexianchang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\R_Frmhuaxuepinruku.resx">
+      <DependentUpon>R_Frmhuaxuepinruku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Guanyu.resx">
+      <DependentUpon>Guanyu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Power.resx">
+      <DependentUpon>Power.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Remind.resx">
+      <DependentUpon>Remind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Review.resx">
+      <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmImageAmplication.resx">
+      <DependentUpon>R_FrmImageAmplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\R_FrmContractreview.resx">
+      <DependentUpon>R_FrmContractreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmContractreviewa.resx">
+      <DependentUpon>R_FrmContractreviewa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmContractreviewb.resx">
+      <DependentUpon>R_FrmContractreviewb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\R_FrmCustomerrecord.resx">
+      <DependentUpon>R_FrmCustomerrecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_FrmJiaomiducontract.resx">
+      <DependentUpon>R_FrmJiaomiducontract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\R_FrmProductarchives.resx">
+      <DependentUpon>R_FrmProductarchives.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environmental\R_FrmSampleorproductfirst.resx">
+      <DependentUpon>R_FrmSampleorproductfirst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\R_Frmyouqimocontract.resx">
+      <DependentUpon>R_Frmyouqimocontract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmR_519select.resx">
+      <DependentUpon>R_FrmR_519select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmTPADFA.resx">
+      <DependentUpon>R_FrmTPADFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\gongxugongzi.resx">
+      <DependentUpon>gongxugongzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raw material cost\R_FrmBatchNumManagement.resx">
+      <DependentUpon>R_FrmBatchNumManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raw material cost\R_Frmchanpingaishan.resx">
+      <DependentUpon>R_Frmchanpingaishan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raw material cost\R_FrmDailyUseOfChemicals.resx">
+      <DependentUpon>R_FrmDailyUseOfChemicals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raw material cost\R_Frmgongxugongzi.resx">
+      <DependentUpon>R_Frmgongxugongzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raw material cost\R_FrmGunQiChenBen.resx">
+      <DependentUpon>R_FrmGunQiChenBen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raw material cost\R_Frmhuaxuepicichenben.resx">
+      <DependentUpon>R_Frmhuaxuepicichenben.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_Frmlinjian.resx">
+      <DependentUpon>R_Frmlinjian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\R_FrmPQP.resx">
+      <DependentUpon>R_FrmPQP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule control\R_Frmyanpinchangqiancehua.resx">
+      <DependentUpon>R_Frmyanpinchangqiancehua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\yanpinSelect.resx">
+      <DependentUpon>yanpinSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary\MaterialProcurementSummary.resx">
+      <DependentUpon>MaterialProcurementSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary\R_FrmCheckOut.resx">
+      <DependentUpon>R_FrmCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary\R_FrmChengBenYuHeSuanAll.resx">
+      <DependentUpon>R_FrmChengBenYuHeSuanAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary\R_FrmContractUncollectUnpaid.resx">
+      <DependentUpon>R_FrmContractUncollectUnpaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary\R_FrmCostIndex.resx">
+      <DependentUpon>R_FrmCostIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary\R_FrmDailyCollectionRecord.resx">
+      <DependentUpon>R_FrmDailyCollectionRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary\R_FrmProductCostSummary.resx">
+      <DependentUpon>R_FrmProductCostSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary\SailsPaymentTaxRefundAndElectricityBill.resx">
+      <DependentUpon>SailsPaymentTaxRefundAndElectricityBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCon\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCon\UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\ChanPinGongZiKaoQinReport.resx">
+      <DependentUpon>ChanPinGongZiKaoQinReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\DetailedDeductionChildTable.resx">
+      <DependentUpon>DetailedDeductionChildTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormAnnualPayrollSummary.resx">
+      <DependentUpon>FormAnnualPayrollSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormMaterial.resx">
+      <DependentUpon>FormMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormPaint.resx">
+      <DependentUpon>FormPaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormPeragg.resx">
+      <DependentUpon>FormPeragg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormPerformanceAppraisal.resx">
+      <DependentUpon>FormPerformanceAppraisal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormProcessingDelay.resx">
+      <DependentUpon>FormProcessingDelay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormPurchaseDelaySummary.resx">
+      <DependentUpon>FormPurchaseDelaySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormUserChange.resx">
+      <DependentUpon>FormUserChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FormWages.resx">
+      <DependentUpon>FormWages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\FrmGongZiCe.resx">
+      <DependentUpon>FrmGongZiCe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\Frmzuzhanggongzikaohehd.resx">
+      <DependentUpon>Frmzuzhanggongzikaohehd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_Frmchanpingongzikaoqin.resx">
+      <DependentUpon>R_Frmchanpingongzikaoqin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmChanPinGongZiKaoQinHuiZong.resx">
+      <DependentUpon>R_FrmChanPinGongZiKaoQinHuiZong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_Frmchejianzhurenkaohe.resx">
+      <DependentUpon>R_Frmchejianzhurenkaohe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmDetailedDeduction.resx">
+      <DependentUpon>R_FrmDetailedDeduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmManagePayroll.resx">
+      <DependentUpon>R_FrmManagePayroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmMaterialPurchaseCompariase.resx">
+      <DependentUpon>R_FrmMaterialPurchaseCompariase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmOtherExpenseStatement.resx">
+      <DependentUpon>R_FrmOtherExpenseStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmPayMent.resx">
+      <DependentUpon>R_FrmPayMent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_Frmshenchanjindujihua.resx">
+      <DependentUpon>R_Frmshenchanjindujihua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmshenchanjindujihuaReport.resx">
+      <DependentUpon>R_FrmshenchanjindujihuaReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmTargetActualWarn.resx">
+      <DependentUpon>R_FrmTargetActualWarn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmTeamLeaderRoutineCheck.resx">
+      <DependentUpon>R_FrmTeamLeaderRoutineCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmWagesContrastTable.resx">
+      <DependentUpon>R_FrmWagesContrastTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmWagesCostComparison.resx">
+      <DependentUpon>R_FrmWagesCostComparison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmWorkWages.resx">
+      <DependentUpon>R_FrmWorkWages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_Frmxiaozuzhangyeji.resx">
+      <DependentUpon>R_Frmxiaozuzhangyeji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\xiaozuSelect.resx">
+      <DependentUpon>xiaozuSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_FrmZuZhangBom.resx">
+      <DependentUpon>R_FrmZuZhangBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wages\R_Frmzuzhanggongzikaohe.resx">
+      <DependentUpon>R_Frmzuzhanggongzikaohe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="bin\Debug\image\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2.ico" />
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SelectAll\SelectAll.csproj">
+      <Project>{C7C52DB3-A8FB-4E13-9E0F-AA5DFE430617}</Project>
+      <Name>SelectAll</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="07/19/2016 20:32:14" ReportInfo.Modified="01/18/2018 15:04:33" ReportInfo.CreatorVersion="2013.2.5.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+
+    private void Data1_AfterData(object sender, EventArgs e)
+    {
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuA1xLHWipKEL+OnlhDbnsrcq+AnhGmGaZmV4p2xWAONNg==">
+      <TableDataSource Name="Table" Alias="R_PQEZ" DataType="System.Int32" Enabled="true" SelectCommand="SELECT SUBSTRING(EZ004,0,5) EZ004,SUBSTRING(EZ004,5,2) EZ04,EZ002,SUM(EZ007+EZ008-EZ009-EZ010) EZ FROM R_PQEZ GROUP BY EZ004,EZ002">
+        <Column Name="EZ004" DataType="System.String"/>
+        <Column Name="EZ04" DataType="System.String"/>
+        <Column Name="EZ" Enabled="false" DataType="System.Decimal"/>
+        <Column Name="EZ002" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="R_PQEZS" DataType="System.Int32" Enabled="true" SelectCommand="SELECT EZ011,EZ005,EZ006,CONVERT(BIGINT,EZ007) EZ007,CONVERT(BIGINT,EZ008) EZ008,CASE WHEN EZ005=0 THEN 0 WHEN EZ005!=0 THEN CONVERT(DECIMAL(11,1),EZ007/EZ005) END EZJJ,&#13;&#10;CASE WHEN EZ006=0 THEN 0 WHEN EZ006!=0 THEN CONVERT(DECIMAL(11,1),EZ008/EZ006) END EZJS,CONVERT(BIGINT,EZ009) EZ009,CONVERT(BIGINT,EZ010) EZ010,EZ003,&#13;&#10;CONVERT(BIGINT,EZ007)+CONVERT(BIGINT,EZ008)+CONVERT(BIGINT,EZ009)+CONVERT(BIGINT,EZ010) EZ FROM R_PQEZ&#13;&#10;">
+        <Column Name="EZ011" DataType="System.String"/>
+        <Column Name="EZ005" DataType="System.Decimal"/>
+        <Column Name="EZ006" DataType="System.Decimal"/>
+        <Column Name="EZ007" DataType="System.Decimal"/>
+        <Column Name="EZ008" DataType="System.Decimal"/>
+        <Column Name="EZJJ" DataType="System.Decimal"/>
+        <Column Name="EZJS" DataType="System.Decimal"/>
+        <Column Name="EZ009" DataType="System.Decimal"/>
+        <Column Name="EZ010" DataType="System.Decimal"/>
+        <Column Name="EZ003" DataType="System.String"/>
+        <Column Name="EZ" DataType="System.Int64"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+    <Parameter Name="Sum" DataType="System.String"/>
+    <Parameter Name="SumTrim" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9" LeftMargin="5" RightMargin="5" FirstPageSource="15" OtherPagesSource="15">
+    <ReportTitleBand Name="ReportTitle1" Width="756" Height="37.8" CanBreak="true">
+      <TextObject Name="Text1" Left="103.95" Width="66.15" Height="37.8" Text="[R_PQEZ.EZ004]" HorzAlign="Center" VertAlign="Center" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text2" Left="170.1" Width="28.35" Height="37.8" Text="年" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text3" Left="198.45" Width="37.8" Height="37.8" Text="[R_PQEZ.EZ04]" HorzAlign="Center" VertAlign="Center" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text4" Left="236.25" Width="28.35" Height="37.8" Text="月" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text5" Left="264.6" Width="94.5" Height="37.8" Text="[R_PQEZ.EZ002]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text6" Left="359.1" Width="151.2" Height="37.8" Text="生产部工资册" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text7" Left="652.05" Top="18.9" Width="94.5" Height="18.9" Text="R_323" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="756" Height="47.25" CanBreak="true">
+      <TextObject Name="Text8" Left="37.8" Width="56.7" Height="47.25" Border.Lines="All" Text="姓名" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text9" Left="94.5" Width="56.7" Height="47.25" Border.Lines="All" Text="计件工时" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text10" Left="151.2" Width="56.7" Height="47.25" Border.Lines="All" Text="计时工时" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text11" Left="207.9" Width="56.7" Height="47.25" Border.Lines="All" Text="计件工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text12" Left="264.6" Width="56.7" Height="47.25" Border.Lines="All" Text="计时工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text13" Left="321.3" Width="66.15" Height="47.25" Border.Lines="All" Text="计件日均工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text14" Left="387.45" Width="66.15" Height="47.25" Border.Lines="All" Text="计时日均工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text15" Left="453.6" Width="66.15" Height="47.25" Border.Lines="All" Text="承担责任款" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text16" Left="519.75" Width="56.7" Height="47.25" Border.Lines="All" Text="扣借支款" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text17" Left="576.45" Width="66.15" Height="47.25" Border.Lines="All" Text="本次实发工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text18" Left="642.6" Width="56.7" Height="47.25" Border.Lines="All" Text="分管组长" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text19" Left="699.3" Width="56.7" Height="47.25" Border.Lines="All" Text="领款签字" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text55" Width="37.8" Height="47.25" Border.Lines="All" Text="序号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="93.05" Width="756" Height="28.35" AfterDataEvent="Data1_AfterData" CanBreak="true" DataSource="Table1">
+      <TextObject Name="Text20" Left="37.8" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ003]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text21" Left="94.5" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ005]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text22" Left="151.2" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ006]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text23" Left="207.9" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ007]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text24" Left="264.6" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ008]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text25" Left="321.3" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZJJ]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text26" Left="387.45" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZJS]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text27" Left="453.6" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ009]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text28" Left="519.75" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ010]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text29" Left="576.45" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text30" Left="642.6" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQEZS.EZ011]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text31" Left="699.3" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text56" Width="37.8" Height="28.35" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <ChildBand Name="Child1" Top="125.4" Width="756" Height="28.35" CanBreak="true" CompleteToNRows="1">
+        <TextObject Name="Text43" Left="37.8" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text44" Left="94.5" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text45" Left="151.2" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text46" Left="207.9" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text47" Left="264.6" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text48" Left="321.3" Width="66.15" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text49" Left="387.45" Width="66.15" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text50" Left="453.6" Width="66.15" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text51" Left="519.75" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text52" Left="576.45" Width="66.15" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text53" Left="642.6" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text54" Left="699.3" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text57" Width="37.8" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      </ChildBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="157.75" Width="756" Height="170.1" CanBreak="true">
+      <TextObject Name="Text32" Top="28.35" Width="132.3" Height="28.35" Border.Lines="All" Text="合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text34" Left="132.3" Top="28.35" Width="623.7" Height="28.35" Border.Lines="All" Text="[Sum]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text35" Top="56.7" Width="132.3" Height="28.35" Border.Lines="All" Text="大写合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text36" Left="132.3" Top="56.7" Width="623.7" Height="28.35" Border.Lines="All" Text="[SumTrim]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text37" Top="85.05" Width="756" Height="56.7" Border.Lines="All" Text="注:此表中的各人考勤合计工资额应=对应同期各产品≤工序工资汇总表≥各人考勤合计工资额应=对应同期各产品≤个人工序工资考勤表≥各人合计工资额=同期各产品≤工资考勤表≥各人合计工资额。财务会计必须在发工资和做账前逐一进行认真复合和核对。堆各有关人员每批产品工资账务过程的准确性和及时性考核各50元，造成损失的承担相应责任。" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text33" Top="141.75" Width="66.15" Height="28.35" Text="批准人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text38" Left="66.15" Top="141.75" Width="94.5" Height="28.35" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text39" Left="160.65" Top="141.75" Width="85.05" Height="28.35" Text="车间主任" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text40" Left="245.7" Top="141.75" Width="94.5" Height="28.35" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text41" Left="340.2" Top="141.75" Width="85.05" Height="28.35" Text="统计员" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text42" Left="425.25" Top="141.75" Width="94.5" Height="28.35" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text58" Left="37.8" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text59" Left="94.5" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text60" Left="151.2" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text61" Left="207.9" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text62" Left="264.6" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text63" Left="321.3" Width="66.15" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text64" Left="387.45" Width="66.15" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text65" Left="453.6" Width="66.15" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text66" Left="519.75" Width="56.7" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text67" Left="576.45" Width="66.15" Height="28.35" Border.Lines="All" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text68" Left="642.6" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text69" Left="699.3" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text70" Width="37.8" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

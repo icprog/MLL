@@ -1,0 +1,1021 @@
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.pdb
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormBase.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.Properties.Resources.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.UIControl.UserControl1.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.csproj.GenerateResource.Cache
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.pdb
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoLibrary.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.Build.Utilities.v3.5.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ADODB.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoLibrary.pdb
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.Build.Utilities.v3.5.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\zh-CHS\Microsoft.Build.Utilities.v3.5.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.dll.config
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.dll
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoBll.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoBll.pdb
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailesQueryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaomiducontractQueryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheckOutQueryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.MucaiContractQueryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheMuJiancontractQueryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WuJinContractQueryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SuLiaoBucontractQueryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXiancontractAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouQicontractAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinZhiBaoAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SiReYiYincontractAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DailyCollectionRecordAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductCostSummaryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChengBenYuSuanAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ShenChanJinDuJiHuaAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinGongZiKaoQinAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongXuGongZiAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ShenChanJinDuJiHuaCopyPartAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeHdAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheJianZhuRenKaoHeAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongZiCeAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PenYouQiChenAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.NumberEditContract.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.RemindAuto.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinGongZiKaiQinBatchEdit.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductAgentFeeAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductBeforeAndAfterRoadWagesAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductContractProcessAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductFinishedProductOutsourcingAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductLron.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPackageMaterialAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPaintAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductGunPaintAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPlywoodAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductVehicleWoodPiecesAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductWoodAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductLronAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DuanLiaoAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DuanLiaoNumSelect.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaoHeBanJunHengNumAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaoMiDuJunHengAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChengLanAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChengLanNumAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractPartAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailsPayAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouQiSelectAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailsPaymentTaxRefundAndElectricityBillAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll._519BatchGunQi.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXianAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXianNumAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractUncollectUnpaidAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TargetActualWarnAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WorkWagesAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WagesCostComparisonAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractChoiceAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProgressBar.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionNumQuery.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ManagePayrollAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionSupplier.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentCheckOutAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentDetailed.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentWages.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentOneAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentTwoAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentTreAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentFivAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentForAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TeamLeaderRoutineCheckAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouqiBomAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CostIndexAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeOne.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContracToDoAJobAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractToDoAJobNumAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchPayMentTimeAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingALL.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingQueryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingNumQuery.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductQualityAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BeingLoaded.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OtherExpenseStatementNumAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OtherExpenseStatementAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OutbandChoice.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchEdit.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchEditNumChoice.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.yanpinchangqiancehuaAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\text.SpessOfProgress.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ReadyOfNumAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChangPingGongZiKaoQingAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongXuGongZiNumAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChangPingGaiShanNumAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ResidualPaintAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductCostSummaryBatch.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenLibraryAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheckOutBatchEdit.resources
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenLibraryEditAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormSupplier.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\SelectAll.dll.config
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\SelectAll.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\SelectAll.pdb
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Charts.v16.2.Core.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Data.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraBars.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.UI.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraLayout.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\MulaolaoBll.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\MulaolaoLibrary.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.UI.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraNavBar.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\Microsoft.Build.Utilities.v3.5.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ADODB.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraRichEdit.v16.2.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Office.v16.2.Core.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Data.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraBars.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.UI.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraLayout.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\MulaolaoBll.pdb
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\MulaolaoLibrary.pdb
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.UI.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraNavBar.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\Microsoft.Build.Utilities.v3.5.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraRichEdit.v16.2.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\DevExpress.Office.v16.2.Core.xml
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraBars.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraBars.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraBars.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraCharts.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraCharts.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraCharts.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraCharts.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraGrid.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraLayout.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraPrinting.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraPrinting.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraPrinting.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraPrinting.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Utils.v16.2.UI.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Utils.v16.2.UI.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Utils.v16.2.UI.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Utils.v16.2.UI.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraNavBar.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraNavBar.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraNavBar.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraNavBar.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.RichEdit.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.RichEdit.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.RichEdit.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.RichEdit.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\zh-CHS\Microsoft.Build.Utilities.v3.5.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraRichEdit.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraRichEdit.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraRichEdit.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraRichEdit.v16.2.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Office.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll._519BatchGunQi.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchEdit.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchEditNumChoice.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchPayMentTimeAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.BeingLoaded.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ChangPingGaiShanNumAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ChangPingGongZiKaoQingAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinGongZiKaiQinBatchEdit.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinGongZiKaoQinAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinZhiBaoAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.CheckOutBatchEdit.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.CheckOutQueryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.CheJianZhuRenKaoHeAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.CheMuJiancontractQueryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ChengBenYuSuanAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ContracToDoAJobAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractToDoAJobNumAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractUncollectUnpaidAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.CostIndexAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.DailyCollectionRecordAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionNumQuery.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionSupplier.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.DuanLiaoAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.DuanLiaoNumSelect.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.FormBase.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.FormSupplier.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GongXuGongZiAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GongXuGongZiNumAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GongZiCeAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenLibraryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenLibraryEditAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChengLanAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChengLanNumAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractChoiceAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractPartAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaoHeBanJunHengNumAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaomiducontractQueryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaoMiDuJunHengAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ManagePayrollAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.MucaiContractQueryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.NumberEditContract.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.OtherExpenseStatementAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.OtherExpenseStatementNumAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.OutbandChoice.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentCheckOutAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentDetailed.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentFivAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentForAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentOneAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentTreAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentTwoAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentWages.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.PenYouQiChenAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductAgentFeeAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductBeforeAndAfterRoadWagesAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductContractProcessAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductCostSummaryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductCostSummaryBatch.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductFinishedProductOutsourcingAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductGunPaintAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductLron.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductLronAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPackageMaterialAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPaintAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPlywoodAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductQualityAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductVehicleWoodPiecesAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductWoodAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ProgressBar.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.Properties.Resources.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingALL.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingNumQuery.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingQueryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ReadyOfNumAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.RemindAuto.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ResidualPaintAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.SailesQueryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.SailsPayAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.SailsPaymentTaxRefundAndElectricityBillAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ShenChanJinDuJiHuaAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ShenChanJinDuJiHuaCopyPartAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.SiReYiYincontractAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\text.SpessOfProgress.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.SuLiaoBucontractQueryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.TargetActualWarnAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.TeamLeaderRoutineCheckAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.UIControl.UserControl1.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.WagesCostComparisonAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXianAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXiancontractAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXianNumAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.WorkWagesAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.WuJinContractQueryAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.yanpinchangqiancehuaAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.YouqiBomAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.YouQicontractAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.YouQiSelectAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeHdAll.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeOne.resources
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.dll.licenses
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.dll
+C:\Users\Administrator\Desktop\Mulaolao\SelectAll\obj\Debug\SelectAll.pdb
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Charts.v16.2.Core.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Data.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraBars.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.UI.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraLayout.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.UI.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraNavBar.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraRichEdit.v16.2.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Office.v16.2.Core.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Data.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraBars.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.UI.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraLayout.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.UI.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraNavBar.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraRichEdit.v16.2.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Office.v16.2.Core.xml
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraBars.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraBars.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraBars.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraCharts.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraGrid.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraLayout.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Utils.v16.2.UI.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Office.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptAdd.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptEdit.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormGongXuBatch.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PeraggAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptLibr.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditOneAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditTwoAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditTreAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditFivAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditForAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FeedTestPartAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FeedTestAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestResultRecordAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestResultRecordOneAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CustomerrecordAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestReportForAQAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SafetyManegerAndControlAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductSpecificationAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityFinalInspsctionAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityReportAll.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractreviewQuery.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.csprojResolveAssemblyReference.cache
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.dll.config
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.pdb
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Charts.v16.2.Core.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Data.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraBars.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.UI.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraLayout.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoBll.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoLibrary.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.UI.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraNavBar.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.Build.Utilities.v3.5.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ADODB.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraRichEdit.v16.2.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Office.v16.2.Core.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Data.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraBars.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.UI.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraLayout.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoBll.pdb
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoLibrary.pdb
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.UI.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraNavBar.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.Build.Utilities.v3.5.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraRichEdit.v16.2.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Office.v16.2.Core.xml
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraBars.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraBars.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraBars.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraCharts.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraCharts.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraCharts.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraCharts.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraGrid.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraLayout.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraPrinting.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraPrinting.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraPrinting.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraPrinting.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Utils.v16.2.UI.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Utils.v16.2.UI.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Utils.v16.2.UI.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Utils.v16.2.UI.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraNavBar.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraNavBar.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraNavBar.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraNavBar.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.RichEdit.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.RichEdit.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.RichEdit.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.RichEdit.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\zh-CHS\Microsoft.Build.Utilities.v3.5.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraRichEdit.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraRichEdit.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraRichEdit.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraRichEdit.v16.2.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Office.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.csprojResolveAssemblyReference.cache
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll._519BatchGunQi.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchEdit.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchEditNumChoice.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchPayMentTimeAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BeingLoaded.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChangPingGaiShanNumAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChangPingGongZiKaoQingAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinGongZiKaiQinBatchEdit.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinGongZiKaoQinAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinZhiBaoAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheckOutBatchEdit.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheckOutQueryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheJianZhuRenKaoHeAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheMuJiancontractQueryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChengBenYuSuanAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContracToDoAJobAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractreviewQuery.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractToDoAJobNumAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractUncollectUnpaidAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CostIndexAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CustomerrecordAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DailyCollectionRecordAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionNumQuery.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionSupplier.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DuanLiaoAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DuanLiaoNumSelect.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FeedTestAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FeedTestPartAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormBase.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormGongXuBatch.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormSupplier.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongXuGongZiAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongXuGongZiNumAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongZiCeAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenLibraryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenLibraryEditAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChengLanAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChengLanNumAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractChoiceAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractPartAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaoHeBanJunHengNumAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaomiducontractQueryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaoMiDuJunHengAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ManagePayrollAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.MucaiContractQueryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.NumberEditContract.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OtherExpenseStatementAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OtherExpenseStatementNumAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OutbandChoice.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentCheckOutAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentDetailed.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentFivAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentForAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentOneAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentTreAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentTwoAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentWages.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PenYouQiChenAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PeraggAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductAgentFeeAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductBeforeAndAfterRoadWagesAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductContractProcessAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductCostSummaryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductCostSummaryBatch.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductFinishedProductOutsourcingAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductGunPaintAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductLron.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductLronAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPackageMaterialAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPaintAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPlywoodAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductQualityAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductSpecificationAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductVehicleWoodPiecesAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductWoodAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProgressBar.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.Properties.Resources.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityFinalInspsctionAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityReportAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingALL.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingNumQuery.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingQueryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ReadyOfNumAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.RemindAuto.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ResidualPaintAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SafetyManegerAndControlAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailesQueryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailsPayAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailsPaymentTaxRefundAndElectricityBillAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ShenChanJinDuJiHuaAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ShenChanJinDuJiHuaCopyPartAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SiReYiYincontractAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\text.SpessOfProgress.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditFivAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditForAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditOneAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditTreAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditTwoAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SuLiaoBucontractQueryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TargetActualWarnAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TeamLeaderRoutineCheckAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestReportForAQAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestResultRecordAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestResultRecordOneAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.UIControl.UserControl1.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WagesCostComparisonAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXianAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXiancontractAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXianNumAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptAdd.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptEdit.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptLibr.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WorkWagesAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WuJinContractQueryAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.yanpinchangqiancehuaAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouqiBomAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouQicontractAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouQiSelectAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeHdAll.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeOne.resources
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.csproj.GenerateResource.Cache
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.dll
+F:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.pdb
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormQuotationQuery.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormBatchAdd.resources
+D:\Project data\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormShenchenJinDu.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.dll.config
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\SelectAll.pdb
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Charts.v16.2.Core.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Data.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Printing.v16.2.Core.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraBars.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.UI.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraEditors.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraLayout.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoBll.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoLibrary.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.UI.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraNavBar.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.Build.Utilities.v3.5.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ADODB.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraRichEdit.v16.2.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Office.v16.2.Core.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Data.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Printing.v16.2.Core.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraBars.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.UI.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraEditors.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraLayout.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoBll.pdb
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\MulaolaoLibrary.pdb
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Utils.v16.2.UI.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraVerticalGrid.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraNavBar.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\Microsoft.Build.Utilities.v3.5.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.XtraRichEdit.v16.2.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\DevExpress.Office.v16.2.Core.xml
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Data.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraBars.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraCharts.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraCharts.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraCharts.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraCharts.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraCharts.v16.2.Wizard.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraEditors.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraLayout.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraPrinting.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Utils.v16.2.UI.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Utils.v16.2.UI.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Utils.v16.2.UI.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Utils.v16.2.UI.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraVerticalGrid.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraNavBar.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.RichEdit.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\zh-CHS\Microsoft.Build.Utilities.v3.5.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.XtraRichEdit.v16.2.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\de\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\es\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ja\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\bin\Debug\ru\DevExpress.Office.v16.2.Core.resources.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.csprojResolveAssemblyReference.cache
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll._519BatchGunQi.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchEdit.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchEditNumChoice.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BatchPayMentTimeAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.BeingLoaded.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChangPingGaiShanNumAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChangPingGongZiKaoQingAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinGongZiKaiQinBatchEdit.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinGongZiKaoQinAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChanPinZhiBaoAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheckOutBatchEdit.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheckOutQueryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheJianZhuRenKaoHeAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CheMuJiancontractQueryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ChengBenYuSuanAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContracToDoAJobAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractreviewQuery.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractToDoAJobNumAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ContractUncollectUnpaidAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CostIndexAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.CustomerrecordAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DailyCollectionRecordAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionNumQuery.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DetailedDeductionSupplier.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DuanLiaoAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.DuanLiaoNumSelect.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FeedTestAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FeedTestPartAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormBase.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormBatchAdd.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormGongXuBatch.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormQuotationQuery.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormShenchenJinDu.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormSupplier.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongXuGongZiAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongXuGongZiNumAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GongZiCeAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenLibraryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChenBenLibraryEditAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChengLanAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiChengLanNumAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractChoiceAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.GunQiContractPartAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaoHeBanJunHengNumAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaomiducontractQueryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.JiaoMiDuJunHengAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ManagePayrollAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.MucaiContractQueryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.NumberEditContract.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OtherExpenseStatementAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OtherExpenseStatementNumAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.OutbandChoice.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentCheckOutAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentDetailed.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentFivAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentForAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentOneAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentTreAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentTwoAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PayMentWages.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PenYouQiChenAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.PeraggAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductAgentFeeAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductBeforeAndAfterRoadWagesAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductContractProcessAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductCostSummaryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductCostSummaryBatch.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductFinishedProductOutsourcingAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductGunPaintAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductLron.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductLronAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPackageMaterialAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPaintAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductPlywoodAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductQualityAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductSpecificationAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductVehicleWoodPiecesAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProductWoodAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ProgressBar.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.Properties.Resources.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityFinalInspsctionAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityReportAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingALL.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingNumQuery.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.QualityTestingQueryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ReadyOfNumAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.RemindAuto.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ResidualPaintAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SafetyManegerAndControlAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailesQueryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailsPayAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SailsPaymentTaxRefundAndElectricityBillAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ShenChanJinDuJiHuaAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ShenChanJinDuJiHuaCopyPartAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SiReYiYincontractAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\text.SpessOfProgress.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditFivAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditForAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditOneAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditTreAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.StandardAuditTwoAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.SuLiaoBucontractQueryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TargetActualWarnAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TeamLeaderRoutineCheckAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestReportForAQAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestResultRecordAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.TestResultRecordOneAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.UIControl.UserControl1.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WagesCostComparisonAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXianAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXiancontractAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WaiXianNumAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptAdd.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptEdit.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WarehouseReceiptLibr.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WorkWagesAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.WuJinContractQueryAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.yanpinchangqiancehuaAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouqiBomAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouQicontractAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.YouQiSelectAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeHdAll.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.ZuZhangGongZiKaoHeOne.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.csproj.GenerateResource.Cache
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.dll
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.pdb
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FromSanitationCheckQuery.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FrmchanpingaishanQuery.resources
+D:\ProjectData\MLL\Mulaolao\SelectAll\obj\Debug\SelectAll.FormInvenAdSheetQueryAll.resources

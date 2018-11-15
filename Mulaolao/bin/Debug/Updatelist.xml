@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoUpdater>
+  <Description>Application autoUpdate</Description>
+  <Updater>
+    <Url>http://192.168.0.222/</Url>
+    <LastUpdateTime>2013-06-18</LastUpdateTime>
+  </Updater>
+  <Application applicationId="Mulaolao">
+    <EntryPoint>Mulaolao.exe</EntryPoint>
+    <Location>.</Location>
+    <VersionName>1.0.0.3000</VersionName>
+    <VersionId>3000</VersionId>
+  </Application>
+</AutoUpdater>

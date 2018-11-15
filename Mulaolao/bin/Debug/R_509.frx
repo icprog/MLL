@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="03/10/2016 16:28:53" ReportInfo.Modified="10/21/2016 16:54:54" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuDLLnsnyrk5c5DoRXNTSia97Wa1gQvNXEixc8ZuDM1obQ==">
+      <TableDataSource Name="Table" Alias="R_PQP" DataType="System.Int32" Enabled="true" SelectCommand="SELECT GS46,GS47,GS48,GS01,GS49 GS049,GS50,GS03,GS02,GS49,GS04,GS05,GS04-D.U7 U0,D.U7,GS04-GS05 U1,GS05*GS49*GS10 U2,GS49*(GS04-D.U7) U3,GS49*GS10 U4,&#13;&#10;GS07,GS08,GS09,GS10,GS11,GS10*GS11 U5,GS51,GS13,GS49*(GS04-D.U7)*GS13 U6,GS14,GS15,GS16,GS17,GS18,GS19,&#13;&#10;(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,&#13;&#10;(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011&#13;&#10;FROM R_PQP A, &#13;&#10;(SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02 ) D &#13;&#10;WHERE A.GS02 = D.U0 AND GS02!='' AND GS02 IS NOT NULL &#13;&#10;ORDER BY GS02">
+        <Column Name="GS02" DataType="System.String"/>
+        <Column Name="GS49" DataType="System.Int64"/>
+        <Column Name="GS04" DataType="System.Decimal"/>
+        <Column Name="GS05" DataType="System.Decimal"/>
+        <Column Name="U0" DataType="System.Decimal"/>
+        <Column Name="U7" DataType="System.Decimal"/>
+        <Column Name="U1" DataType="System.Decimal"/>
+        <Column Name="U2" DataType="System.Decimal"/>
+        <Column Name="U3" DataType="System.Decimal"/>
+        <Column Name="U4" DataType="System.Int64"/>
+        <Column Name="GS07" DataType="System.String"/>
+        <Column Name="GS08" DataType="System.String"/>
+        <Column Name="GS09" DataType="System.String"/>
+        <Column Name="GS10" DataType="System.Int32"/>
+        <Column Name="GS11" DataType="System.Decimal"/>
+        <Column Name="U5" DataType="System.Decimal"/>
+        <Column Name="GS51" DataType="System.Decimal"/>
+        <Column Name="GS13" DataType="System.Int32"/>
+        <Column Name="U6" DataType="System.Decimal"/>
+        <Column Name="GS14" DataType="System.String"/>
+        <Column Name="GS15" DataType="System.String"/>
+        <Column Name="GS16" DataType="System.String"/>
+        <Column Name="GS17" DataType="System.String"/>
+        <Column Name="GS18" DataType="System.String"/>
+        <Column Name="GS19" DataType="System.String"/>
+        <Column Name="DGA003" DataType="System.String"/>
+        <Column Name="DGA011" DataType="System.String"/>
+        <Column Name="GS46" DataType="System.String"/>
+        <Column Name="GS47" DataType="System.String"/>
+        <Column Name="GS48" DataType="System.String"/>
+        <Column Name="GS01" DataType="System.String"/>
+        <Column Name="GS049" DataType="System.Int64"/>
+        <Column Name="GS50" DataType="System.String"/>
+        <Column Name="GS03" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="R_PQPS" DataType="System.Int32" Enabled="true" SelectCommand="SELECT GS35,GS36,GS37,GS36-GS37 U10,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45 FROM R_PQP WHERE GS35 IS NOT NULL AND GS35!=''">
+        <Column Name="GS35" DataType="System.String"/>
+        <Column Name="GS36" DataType="System.Decimal"/>
+        <Column Name="GS37" DataType="System.Decimal"/>
+        <Column Name="GS38" DataType="System.String"/>
+        <Column Name="GS39" DataType="System.Int32"/>
+        <Column Name="GS40" DataType="System.String"/>
+        <Column Name="GS41" DataType="System.String"/>
+        <Column Name="GS42" DataType="System.String"/>
+        <Column Name="GS43" DataType="System.String"/>
+        <Column Name="GS44" DataType="System.String"/>
+        <Column Name="GS45" DataType="System.String"/>
+        <Column Name="U10" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Table2" Alias="R_PQPSE" DataType="System.Int32" Enabled="true" SelectCommand="SELECT GS52,GS49,GS61,GS53,GS54,GS53-D.U11 U9,D.U11,GS53-GS54 U12,GS54*GS49*GS59 U13,GS49*(GS53-D.U11) U14,GS49*GS59 U15,&#13;&#10;GS56,GS57,GS58,GS59,GS60,GS59*GS60 U16,GS69,GS69*GS49*(GS53-D.U11) U17,GS62,GS63,GS64,GS65,GS66,GS67,&#13;&#10;(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,&#13;&#10;(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,GS61&#13;&#10;FROM R_PQP A, &#13;&#10;(SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D &#13;&#10;WHERE A.GS52 = D.U0 &#13;&#10; AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52">
+        <Column Name="GS52" DataType="System.String"/>
+        <Column Name="GS49" DataType="System.Int64"/>
+        <Column Name="GS61" DataType="System.Decimal"/>
+        <Column Name="GS53" DataType="System.Decimal"/>
+        <Column Name="GS54" DataType="System.Decimal"/>
+        <Column Name="U9" DataType="System.Decimal"/>
+        <Column Name="U11" DataType="System.Decimal"/>
+        <Column Name="U12" DataType="System.Decimal"/>
+        <Column Name="U13" DataType="System.Decimal"/>
+        <Column Name="U14" DataType="System.Decimal"/>
+        <Column Name="U15" DataType="System.Int64"/>
+        <Column Name="GS56" DataType="System.String"/>
+        <Column Name="GS57" DataType="System.String"/>
+        <Column Name="GS58" DataType="System.String"/>
+        <Column Name="GS59" DataType="System.Int32"/>
+        <Column Name="GS60" DataType="System.Decimal"/>
+        <Column Name="U16" DataType="System.Decimal"/>
+        <Column Name="GS69" DataType="System.Int32"/>
+        <Column Name="U17" DataType="System.Decimal"/>
+        <Column Name="GS62" DataType="System.String"/>
+        <Column Name="GS63" DataType="System.String"/>
+        <Column Name="GS64" DataType="System.String"/>
+        <Column Name="GS65" DataType="System.String"/>
+        <Column Name="GS66" DataType="System.String"/>
+        <Column Name="GS67" DataType="System.String"/>
+        <Column Name="DGA003" DataType="System.String"/>
+        <Column Name="DGA011" DataType="System.String"/>
+        <Column Name="GS611" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Table3" Alias="R_PQPSES" DataType="System.Int32" Enabled="true" SelectCommand=" SELECT GS22,GS23,GS24,GS25,GS26,GS27,GS28,GS29,GS30,GS31 FROM R_PQP">
+        <Column Name="GS22" DataType="System.String"/>
+        <Column Name="GS23" DataType="System.String"/>
+        <Column Name="GS24" DataType="System.String"/>
+        <Column Name="GS25" DataType="System.String"/>
+        <Column Name="GS26" DataType="System.String"/>
+        <Column Name="GS27" DataType="System.String"/>
+        <Column Name="GS28" DataType="System.String"/>
+        <Column Name="GS29" DataType="System.String"/>
+        <Column Name="GS30" DataType="System.String"/>
+        <Column Name="GS31" DataType="System.Int32"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="9" FirstPageSource="15" OtherPagesSource="15">
+    <ReportTitleBand Name="ReportTitle1" Width="1047.06" Height="113.4" CanBreak="true">
+      <TextObject Name="Text1" Width="1048.95" Height="28.35" Text="产品每套成本下降控制表" HorzAlign="Center" VertAlign="Center" Font="宋体, 14.25pt, style=Bold"/>
+      <TextObject Name="Text92" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text100" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text101" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text102" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text103" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text104" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text127" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text128" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text129" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text130" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text174" Left="-9450" Top="-9450" Width="37.8" Height="37.8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text75" Left="954.45" Top="28.35" Width="94.5" Height="18.9" Text="R_509" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text77" Left="812.7" Top="28.35" Width="47.25" Height="18.9" Visible="false" Text="[R_PQP.GS03]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text4" Top="66.15" Width="37.8" Height="47.25" Border.Lines="All" Text="序号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text18" Left="37.8" Top="66.15" Width="113.4" Height="47.25" Border.Lines="All" Text="材料/工段/辅料" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text19" Left="793.8" Top="66.15" Width="85.05" Height="47.25" Border.Lines="All" Text="产品数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text20" Left="614.25" Top="66.15" Width="94.5" Height="47.25" Border.Lines="All" Text="原单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text23" Left="708.75" Top="66.15" Width="85.05" Height="47.25" Border.Lines="All" Text="采购合计单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text27" Left="954.45" Top="66.15" Width="94.5" Height="47.25" Border.Lines="All" Text="零件总数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text28" Left="151.2" Top="66.15" Width="170.1" Height="47.25" Border.Lines="All" Text="零件名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text29" Left="321.3" Top="66.15" Width="141.75" Height="47.25" Border.Lines="All" Text="规格" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text30" Left="463.05" Top="66.15" Width="66.15" Height="47.25" Border.Lines="All" Text="单位" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text31" Left="878.85" Top="66.15" Width="75.6" Height="47.25" Border.Lines="All" Text="每套零件数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text2" Top="47.25" Width="66.15" Height="18.9" Border.Lines="All" Text="产品名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text3" Left="66.15" Top="47.25" Width="132.3" Height="18.9" Border.Lines="All" Text="[R_PQP.GS46]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text6" Left="387.45" Top="47.25" Width="37.8" Height="18.9" Border.Lines="All" Text="货号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text7" Left="198.45" Top="47.25" Width="75.6" Height="18.9" Border.Lines="All" Text="合同号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text8" Left="274.05" Top="47.25" Width="113.4" Height="18.9" Border.Lines="All" Text="[R_PQP.GS47]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text9" Left="425.25" Top="47.25" Width="113.4" Height="18.9" Border.Lines="All" Text="[R_PQP.GS48]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text10" Left="538.65" Top="47.25" Width="75.6" Height="18.9" Border.Lines="All" Text="流水号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text11" Left="614.25" Top="47.25" Width="85.05" Height="18.9" Border.Lines="All" Text="[R_PQP.GS01]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text12" Left="699.3" Top="47.25" Width="37.8" Height="18.9" Border.Lines="All" Text="数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text13" Left="737.1" Top="47.25" Width="75.6" Height="18.9" Border.Lines="All" Text="[R_PQP.GS049]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text14" Left="812.7" Top="47.25" Width="47.25" Height="18.9" Border.Lines="All" Text="生产部" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text15" Left="859.95" Top="47.25" Width="75.6" Height="18.9" Border.Lines="All" Text="[R_PQP.GS50]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <CheckBoxObject Name="CheckBox1" Left="935.55" Top="47.25" Width="18.9" Height="18.9" Border.Lines="All" Expression="IIf([R_PQP.GS03]==&quot;老单&quot;,true,false)"/>
+      <TextObject Name="Text16" Left="954.45" Top="47.25" Width="37.8" Height="18.9" Border.Lines="All" Text="老单" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <CheckBoxObject Name="CheckBox2" Left="992.25" Top="47.25" Width="18.9" Height="18.9" Border.Lines="All" Expression="IIf([R_PQP.GS03]==&quot;新单&quot;,true,false)"/>
+      <TextObject Name="Text17" Left="1011.15" Top="47.25" Width="37.8" Height="18.9" Border.Lines="All" Text="新单" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text76" Left="529.2" Top="66.15" Width="85.05" Height="47.25" Border.Lines="All" Text="材料总单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="117.4" Width="1047.06" Height="37.8" CanBreak="true" DataSource="Table">
+      <TextObject Name="Text5" Width="37.8" Height="37.8" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text45" Left="793.8" Width="85.05" Height="37.8" Border.Lines="All" Text="[R_PQP.GS49]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text49" Left="708.75" Width="85.05" Height="37.8" Border.Lines="All" Text="[R_PQP.U7]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text53" Left="954.45" Width="94.5" Height="37.8" Border.Lines="All" Text="[R_PQP.U4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text54" Left="321.3" Width="141.75" Height="37.8" Border.Lines="All" Text="[R_PQP.GS08]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text55" Left="151.2" Width="170.1" Height="37.8" Border.Lines="All" Text="[R_PQP.GS07]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text56" Left="463.05" Width="66.15" Height="37.8" Border.Lines="All" Text="[R_PQP.GS09]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text57" Left="878.85" Width="75.6" Height="37.8" Border.Lines="All" Text="[R_PQP.GS10]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text186" Left="37.8" Width="113.4" Height="37.8" Border.Lines="All" Text="[R_PQP.GS02]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text187" Left="614.25" Width="94.5" Height="37.8" Border.Lines="All" Text="[R_PQP.GS04]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text78" Left="529.2" Width="85.05" Height="37.8" Border.Lines="All" Text="[R_PQP.GS51]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <ChildBand Name="Child1" Top="159.2" Width="1047.06" Height="37.8" CanBreak="true" CompleteToNRows="1">
+        <TextObject Name="Text419" Width="37.8" Height="37.8" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text474" Left="793.8" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text477" Left="708.75" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text481" Left="954.45" Width="94.5" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text482" Left="321.3" Width="141.75" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text483" Left="151.2" Width="170.1" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text484" Left="463.05" Width="66.15" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text485" Left="878.85" Width="75.6" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text498" Left="37.8" Width="113.4" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text499" Left="614.25" Width="94.5" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text503" Left="529.2" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      </ChildBand>
+    </DataBand>
+    <DataBand Name="Data2" Top="201" Width="1047.06" Height="37.8" CanBreak="true" DataSource="Table1">
+      <TextObject Name="Text232" Width="37.8" Height="37.8" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text233" Left="793.8" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text236" Left="708.75" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text240" Left="954.45" Width="94.5" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text241" Left="321.3" Width="141.75" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text242" Left="151.2" Width="170.1" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text243" Left="463.05" Width="66.15" Height="37.8" Border.Lines="All" Text="[R_PQPS.GS38]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text244" Left="878.85" Width="75.6" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text257" Left="37.8" Width="113.4" Height="37.8" Border.Lines="All" Text="[R_PQPS.GS35]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text258" Left="614.25" Width="94.5" Height="37.8" Border.Lines="All" Text="[R_PQPS.GS36]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text504" Left="529.2" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <ChildBand Name="Child2" Top="242.8" Width="1047.06" Height="37.8" CanBreak="true" CompleteToNRows="1">
+        <TextObject Name="Text420" Left="793.8" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text423" Left="708.75" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text427" Left="954.45" Width="94.5" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text428" Left="321.3" Width="141.75" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text429" Left="151.2" Width="170.1" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text430" Left="463.05" Width="66.15" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text431" Left="878.85" Width="75.6" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text444" Left="37.8" Width="113.4" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text445" Left="614.25" Width="94.5" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text500" Width="37.8" Height="37.8" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text505" Left="529.2" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      </ChildBand>
+    </DataBand>
+    <DataBand Name="Data3" Top="284.6" Width="1047.06" Height="37.8" CanBreak="true" DataSource="Table2">
+      <TextObject Name="Text286" Width="37.8" Height="37.8" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text287" Left="793.8" Width="85.05" Height="37.8" Border.Lines="All" Text="[R_PQPSE.GS49]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text290" Left="708.75" Width="85.05" Height="37.8" Border.Lines="All" Text="[R_PQPSE.U11]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text294" Left="954.45" Width="94.5" Height="37.8" Border.Lines="All" Text="[R_PQPSE.U15]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text295" Left="321.3" Width="141.75" Height="37.8" Border.Lines="All" Text="[R_PQPSE.GS57]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text296" Left="151.2" Width="170.1" Height="37.8" Border.Lines="All" Text="[R_PQPSE.GS56]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text297" Left="463.05" Width="66.15" Height="37.8" Border.Lines="All" Text="[R_PQPSE.GS58]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text298" Left="878.85" Width="75.6" Height="37.8" Border.Lines="All" Text="[R_PQPSE.GS59]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text311" Left="37.8" Width="113.4" Height="37.8" Border.Lines="All" Text="[R_PQPSE.GS52]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text312" Left="614.25" Width="94.5" Height="37.8" Border.Lines="All" Text="[R_PQPSE.GS53]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text506" Left="529.2" Width="85.05" Height="37.8" Border.Lines="All" Text="[R_PQPSE.GS61]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <ChildBand Name="Child3" Top="326.4" Width="1047.06" Height="37.8" CanBreak="true" CompleteToNRows="1">
+        <TextObject Name="Text446" Width="37.8" Height="37.8" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text447" Left="793.8" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text450" Left="708.75" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text454" Left="954.45" Width="94.5" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text455" Left="321.3" Width="141.75" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text456" Left="151.2" Width="170.1" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text457" Left="463.05" Width="66.15" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text458" Left="878.85" Width="75.6" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text471" Left="37.8" Width="113.4" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text472" Left="614.25" Width="94.5" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text507" Left="529.2" Width="85.05" Height="37.8" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      </ChildBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="368.2" Width="1047.06" Height="75.6" CanBreak="true">
+      <TextObject Name="Text188" Top="28.35" Width="66.15" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS22]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text189" Left="66.15" Top="28.35" Width="75.6" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS23]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text190" Left="141.75" Top="28.35" Width="75.6" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS24]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text191" Left="217.35" Top="28.35" Width="75.6" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS25]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text192" Left="292.95" Top="28.35" Width="75.6" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS26]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text193" Left="406.35" Top="28.35" Width="66.15" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS27]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text194" Left="472.5" Top="28.35" Width="66.15" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS28]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text195" Left="538.65" Top="28.35" Width="113.4" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS29]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text196" Left="652.05" Top="28.35" Width="47.25" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS30]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text197" Left="737.1" Top="28.35" Width="37.8" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text199" Left="897.75" Top="28.35" Width="37.8" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text200" Left="368.55" Top="28.35" Width="37.8" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text201" Left="774.9" Top="28.35" Width="37.8" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text202" Left="859.95" Top="28.35" Width="37.8" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text204" Left="812.7" Top="28.35" Width="47.25" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text473" Left="992.25" Top="28.35" Width="56.7" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text44" Width="66.15" Height="28.35" Border.Lines="All" Text="计划定价人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text46" Left="66.15" Width="75.6" Height="28.35" Border.Lines="All" Text="定价期" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text175" Left="141.75" Width="75.6" Height="28.35" Border.Lines="All" Text="填表人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text176" Left="217.35" Width="75.6" Height="28.35" Border.Lines="All" Text="填表期" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text177" Left="292.95" Width="75.6" Height="28.35" Border.Lines="All" Text="审核人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text178" Left="368.55" Width="37.8" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text179" Left="406.35" Width="66.15" Height="28.35" Border.Lines="All" Text="审核期" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text70" Left="472.5" Width="66.15" Height="28.35" Border.Lines="All" Text="批准人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text71" Left="538.65" Width="113.4" Height="28.35" Border.Lines="All" Text="批准期" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text72" Left="652.05" Width="47.25" Height="28.35" Border.Lines="All" Text="监督人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text73" Left="699.3" Width="37.8" Height="28.35" Border.Lines="All" Text="降价次数" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text74" Left="737.1" Width="37.8" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text180" Left="774.9" Width="37.8" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text181" Left="812.7" Width="47.25" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text182" Left="859.95" Width="37.8" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text183" Left="897.75" Width="37.8" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text184" Left="935.55" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text185" Left="992.25" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text501" Left="935.55" Top="28.35" Width="56.7" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text502" Left="699.3" Top="28.35" Width="37.8" Height="47.25" Border.Lines="All" Text="[R_PQPSES.GS31]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

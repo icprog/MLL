@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/01/2016 17:00:37" ReportInfo.Modified="12/20/2016 11:10:27" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuA1xLHWipKEL+OnlhDbnsrcL/DaoiSEJ1Ixpb5loMWlrw==">
+      <TableDataSource Name="Table" Alias="R_PQBD" DataType="System.Int32" Enabled="true" SelectCommand="SELECT BD015,BD016,BD017,CONVERT(VARCHAR(20),BD018,102) BD018,BD019,BD020,BD021,BD022,BD023,BD024,BD025,BD026,BD027,BD028,BD029,BD030,BD031,BD032,BD033,BD034,BD035,BD036,BD037,BD038,BD039,BD042 FROM R_PQBD&#13;&#10;&#13;&#10;">
+        <Column Name="BD015" DataType="System.String"/>
+        <Column Name="BD016" DataType="System.String"/>
+        <Column Name="BD017" DataType="System.String"/>
+        <Column Name="BD018" DataType="System.String"/>
+        <Column Name="BD019" DataType="System.String"/>
+        <Column Name="BD020" DataType="System.String"/>
+        <Column Name="BD021" DataType="System.String"/>
+        <Column Name="BD022" DataType="System.String"/>
+        <Column Name="BD023" DataType="System.String"/>
+        <Column Name="BD024" DataType="System.String"/>
+        <Column Name="BD025" DataType="System.String"/>
+        <Column Name="BD026" DataType="System.String"/>
+        <Column Name="BD027" DataType="System.Int32"/>
+        <Column Name="BD028" DataType="System.Int32"/>
+        <Column Name="BD029" DataType="System.String"/>
+        <Column Name="BD030" DataType="System.String"/>
+        <Column Name="BD031" DataType="System.String"/>
+        <Column Name="BD032" DataType="System.String"/>
+        <Column Name="BD033" DataType="System.String"/>
+        <Column Name="BD034" DataType="System.String"/>
+        <Column Name="BD035" DataType="System.String"/>
+        <Column Name="BD036" DataType="System.String"/>
+        <Column Name="BD037" DataType="System.String"/>
+        <Column Name="BD038" DataType="System.String"/>
+        <Column Name="BD039" DataType="System.String"/>
+        <Column Name="BD042" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="R_PQBDS" DataType="System.Int32" Enabled="true" SelectCommand="SELECT BD002,BD003,BD004,BD006,BD007,BD008,BD009,CONVERT(VARCHAR(20),BD010,102) BD010,CONVERT(VARCHAR(20),BD011,102) BD011,&#13;&#10;CONVERT(VARCHAR(20),BD012,102) BD012,CONVERT(VARCHAR(20),BD013,102) BD013,BD014,BD005 FROM R_PQBD&#13;&#10;">
+        <Column Name="BD002" DataType="System.String"/>
+        <Column Name="BD003" DataType="System.String"/>
+        <Column Name="BD004" DataType="System.String"/>
+        <Column Name="BD006" DataType="System.String"/>
+        <Column Name="BD007" DataType="System.String"/>
+        <Column Name="BD008" DataType="System.String"/>
+        <Column Name="BD009" DataType="System.String"/>
+        <Column Name="BD010" DataType="System.String"/>
+        <Column Name="BD011" DataType="System.String"/>
+        <Column Name="BD012" DataType="System.String"/>
+        <Column Name="BD013" DataType="System.String"/>
+        <Column Name="BD014" DataType="System.Int32"/>
+        <Column Name="BD005" DataType="System.Int32"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+    <Parameter Name="大写合计" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="9">
+    <ReportTitleBand Name="ReportTitle1" Width="1047.06" Height="37.8">
+      <TextObject Name="Text1" Width="1048.95" Height="37.8" Text="产品白坯段产前质量策划控制要点操作规程及作业指导表(R_365)" HorzAlign="Center" VertAlign="Center" Font="宋体, 16pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="1047.06" Height="85.05">
+      <TextObject Name="Text4" Top="28.35" Width="66.15" Height="56.7" Border.Lines="All" Text="部件名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="94.5" Top="28.35" Width="56.7" Height="56.7" Border.Lines="All" Text="工序质量控制要点" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text6" Left="189" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="定干燥度测量" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Left="255.15" Top="28.35" Width="56.7" Height="56.7" Border.Lines="All" Text="定标准样或量/检具" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text8" Left="311.85" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="是否有效使用" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Left="349.65" Top="28.35" Width="66.15" Height="56.7" Border.Lines="All" Text="样板/量/检具是否收回保存" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text11" Left="567" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="定日巡次数" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text12" Left="604.8" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="实日巡次数" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text13" Left="642.6" Top="28.35" Width="47.25" Height="56.7" Border.Lines="All" Text="定全检或抽检" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text14" Left="689.85" Top="28.35" Width="56.7" Height="56.7" Border.Lines="All" Text="全/抽检数量或合格率" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text15" Left="784.35" Top="28.35" Width="56.7" Height="56.7" Border.Lines="All" Text="不同质量分类存放" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text16" Left="841.05" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="是否分类存放" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text17" Left="916.65" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="是否标识区域" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text71" Left="415.8" Top="28.35" Width="56.7" Height="56.7" Border.Lines="All" Text="定防碰/压/划伤措施" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text75" Left="472.5" Top="28.35" Width="56.7" Height="56.7" Border.Lines="All" Text="定报检或抽检工序" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text79" Left="529.2" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="鉴定人签名" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text83" Left="746.55" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="一次交全数" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text87" Left="151.2" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="工序投产日期" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text88" Left="226.8" Top="28.35" Width="28.35" Height="56.7" Border.Lines="All" Text="干燥度" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text95" Left="878.85" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="定标识区域" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text2" Width="75.6" Height="28.35" Border.Lines="All" Text="车间监管人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text99" Left="75.6" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQBDS.BD006]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text100" Left="141.75" Width="75.6" Height="28.35" Border.Lines="All" Text="策划负责人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text101" Left="217.35" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQBDS.BD007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text102" Left="283.5" Width="47.25" Height="28.35" Border.Lines="All" Text="审核人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text103" Left="330.75" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQBDS.BD008]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text104" Left="396.9" Width="47.25" Height="28.35" Border.Lines="All" Text="执行人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text105" Left="444.15" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQBDS.BD009]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text106" Left="510.3" Width="66.15" Height="28.35" Border.Lines="All" Text="产品名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text107" Left="576.45" Width="85.05" Height="28.35" Border.Lines="All" Text="[R_PQBDS.BD002]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text108" Left="661.5" Width="47.25" Height="28.35" Border.Lines="All" Text="流水号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text109" Left="708.75" Width="85.05" Height="28.35" Border.Lines="All" Text="[R_PQBDS.BD003]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text110" Left="793.8" Width="47.25" Height="28.35" Border.Lines="All" Text="货号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text111" Left="841.05" Width="85.05" Height="28.35" Border.Lines="All" Text="[R_PQBDS.BD004]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text112" Left="926.1" Width="47.25" Height="28.35" Border.Lines="All" Text="数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text113" Left="973.35" Width="75.6" Height="28.35" Border.Lines="All" Text="[R_PQBDS.BD005]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text120" Left="66.15" Top="28.35" Width="28.35" Height="56.7" Border.Lines="All" Text="尺寸和" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text122" Left="954.45" Top="28.35" Width="56.7" Height="56.7" Border.Lines="All" Text="定不合格品当天处理" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text123" Left="1011.15" Top="28.35" Width="37.8" Height="56.7" Border.Lines="All" Text="是否当天处理" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="130.85" Width="1047.06" Height="28.35" CanBreak="true" DataSource="Table">
+      <TextObject Name="Text18" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD015]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text19" Left="94.5" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD016]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text20" Left="151.2" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD018]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text21" Left="255.15" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD020]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text22" Left="311.85" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD021]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text23" Left="349.65" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD022]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text24" Left="567" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD027]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text25" Left="642.6" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD029]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text26" Left="689.85" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD033]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text27" Left="746.55" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD030]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text28" Left="784.35" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD031]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text29" Left="878.85" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD034]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text30" Left="954.45" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD036]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text72" Left="415.8" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD023]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text76" Left="472.5" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD024]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text80" Left="604.8" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD028]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text84" Left="841.05" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD032]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text89" Left="189" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD017]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="5" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text90" Left="226.8" Width="28.35" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD019]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="5" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text96" Left="1011.15" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD037]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text115" Left="916.65" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD035]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text121" Left="66.15" Width="28.35" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD025]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text124" Left="529.2" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQBD.BD026]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="163.2" Width="1047.06" Height="85.05">
+      <TextObject Name="Text59" Width="113.4" Height="28.35" Text="客户签合同日期:" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text60" Left="226.8" Width="113.4" Height="28.35" Text="接单(评审)日期" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text61" Left="340.2" Width="113.4" Height="28.35" Text="[R_PQBDS.BD011]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text63" Left="727.65" Width="85.05" Height="28.35" Text="应完成时间:" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text69" Left="453.6" Width="170.1" Height="28.35" Text="策划(此表)填写下达日期:" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text70" Left="623.7" Width="103.95" Height="28.35" Text="[R_PQBDS.BD012]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text116" Left="113.4" Width="113.4" Height="28.35" Text="[R_PQBDS.BD010]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text117" Left="812.7" Width="85.05" Height="28.35" Text="[R_PQBDS.BD013]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text118" Left="897.75" Width="66.15" Height="28.35" Text="延误天数" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text119" Left="963.9" Width="85.05" Height="28.35" Text="[R_PQBDS.BD014]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text3" Top="28.35" Width="1048.95" Height="56.7" Text="后道特殊工序：1.全检并一次性交完工序：上漆/滚漆/丝印/热转印/移印/烫印/粘接/组装/包装的前道工序(大批量除外)。  2.色差、漆剥落、色牢度、染色、靠方定位等送报检测鉴定工序：上漆/滚漆/丝印/热转印/移印/烫印/粘接/组装等。3.包装时报检(成品终检)。   4.不合格品当场(天)或完工前处理工序：  5.送牢固度、利、尖点等安全测试部件或工序；    6.全检的质量工序范围及内容：对前面已全检的后面工序的质量要求标准进行检验，检验时必须参照标准样用检具或量具进行。   7.对全检工序的员工每批产品上岗时必须对其进行检验能力鉴定(鉴定人华建秋或车间主管)。" Font="宋体, 9pt, style=Bold"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

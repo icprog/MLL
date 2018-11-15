@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A82CB8A4-9349-44C4-83DB-A420C4C2EBD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MulaolaoLibrary</RootNamespace>
+    <AssemblyName>MulaolaoLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnnualPayrollSummaryEntity.cs" />
+    <Compile Include="BatchNumManagementLibrary.cs" />
+    <Compile Include="ChanPinGaiShanEntity.cs" />
+    <Compile Include="ChanPinGongZiKaoQinLibrary.cs" />
+    <Compile Include="ChanPinZhiBiaoLibrary.cs" />
+    <Compile Include="CheckOutLibrary.cs" />
+    <Compile Include="CheJianZhuRenKaoHeCzLibrary.cs" />
+    <Compile Include="CheJianZhuRenKaoHeDzLibrary.cs" />
+    <Compile Include="CheMuJianContractLibrary.cs" />
+    <Compile Include="ChengBenYuHeSuanAllLibrary.cs" />
+    <Compile Include="ContractToDoAJobLibrary.cs" />
+    <Compile Include="ContractUncollectUnpaid.cs" />
+    <Compile Include="CostIndexLibrary.cs" />
+    <Compile Include="CostIndexOneLibrary.cs" />
+    <Compile Include="CustomerrecordEntity.cs" />
+    <Compile Include="CustomerrecordNAEntity.cs" />
+    <Compile Include="DailyCollectionRecordLibrary.cs" />
+    <Compile Include="DailyUseOfChemicalsLibrary.cs" />
+    <Compile Include="DetailedDeductionLibrary.cs" />
+    <Compile Include="DuanLiaoLibrary.cs" />
+    <Compile Include="GongXuGongZiLibrary.cs" />
+    <Compile Include="GongZiCeLibrary.cs" />
+    <Compile Include="GunQiChenBenLibrary.cs" />
+    <Compile Include="GunQiChengLanJiaGongLibrary.cs" />
+    <Compile Include="GunQiContractLibrary.cs" />
+    <Compile Include="HuaXuePiCiChenBenLibrary.cs" />
+    <Compile Include="InvenAdSheetINAEntity.cs" />
+    <Compile Include="InvenAdSheetINBEntity.cs" />
+    <Compile Include="JiaoMiDuContractLibrary.cs" />
+    <Compile Include="JiaoMiDuJunHengTableLibrary.cs" />
+    <Compile Include="ManagePayrollLibrary.cs" />
+    <Compile Include="MaterialPurchaseCompariaseLibrary.cs" />
+    <Compile Include="MuCaiContractLibrary.cs" />
+    <Compile Include="PayMentForLibrary.cs" />
+    <Compile Include="PayMentLibrary.cs" />
+    <Compile Include="PayMentOneLibrary.cs" />
+    <Compile Include="PayMentTreLibrary.cs" />
+    <Compile Include="PayMentTwoLibrary.cs" />
+    <Compile Include="PeraggEntity.cs" />
+    <Compile Include="PerformanceAppraisalEntity.cs" />
+    <Compile Include="PqjbEntity.cs" />
+    <Compile Include="PqmdEntity.cs" />
+    <Compile Include="ProductCostSummaryLibrary.cs" />
+    <Compile Include="ProductCostSummaryOfSumLibrary.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QualityReportDKEntity.cs" />
+    <Compile Include="QualityTestingLibrary.cs" />
+    <Compile Include="QuoEntity.cs" />
+    <Compile Include="QupEntity.cs" />
+    <Compile Include="ReadyOfNumLibrary.cs" />
+    <Compile Include="R_FrmProductQualityLibrary.cs" />
+    <Compile Include="SailesLibrary.cs" />
+    <Compile Include="SailsPaymentTaxRefundAndElectricityBillLibrary.cs" />
+    <Compile Include="SanitationCheckBodyEntity.cs" />
+    <Compile Include="SanitationCheckHeaderEntity.cs" />
+    <Compile Include="ShenChanJinDuJiHuaLibrary.cs" />
+    <Compile Include="SiReYiYinContractLibrary.cs" />
+    <Compile Include="SuLiaoBuQiContractLibrary.cs" />
+    <Compile Include="TargetActualWarnLibrary.cs" />
+    <Compile Include="TeamLeaderRoutineCheckLibrary.cs" />
+    <Compile Include="WagesContrastTableLibrary.cs" />
+    <Compile Include="WagesCostComparisonLibrary.cs" />
+    <Compile Include="WaiXianContractLibrary.cs" />
+    <Compile Include="WaiXianLibrary.cs" />
+    <Compile Include="WorkWagesLibrary.cs" />
+    <Compile Include="WuJinContractLibrary.cs" />
+    <Compile Include="YouQiBomHupLibrary.cs" />
+    <Compile Include="YouQiBomLibrary.cs" />
+    <Compile Include="YouQiLibrary.cs" />
+    <Compile Include="ZuZhangBomLibrary.cs" />
+    <Compile Include="ZuZhangGongZiKaoHeBzLibrary.cs" />
+    <Compile Include="ZuZhangGongZiKaoHeHdAzLibrary.cs" />
+    <Compile Include="ZuZhangGongZiKaoHeZaLibrary.cs" />
+    <Compile Include="ZuZhangGongZiKaoHeZbLibrary.cs" />
+    <Compile Include="OtherExpenseStatementLibrary.cs" />
+    <Compile Include="yanpinchangqiancehuaLibrary.cs" />
+    <Compile Include="MaterialProcurementSummaryBH.cs" />
+    <Compile Include="MaterialProcurementSummaryBI.cs" />
+    <Compile Include="MaterialProcurementSummaryBJ.cs" />
+    <Compile Include="MaterialProcurementSummaryBK.cs" />
+    <Compile Include="MaterialProcurementSummaryBL.cs" />
+    <Compile Include="MaterialProcurementSummaryBM.cs" />
+    <Compile Include="MaterialProcurementSummaryBN.cs" />
+    <Compile Include="MaterialProcurementSummaryBO.cs" />
+    <Compile Include="TeamLeaderRoutineCheckPqqzc.cs" />
+    <Compile Include="WarehouseReceiptWAREntity.cs" />
+    <Compile Include="WarehouseReceiptWASEntity.cs" />
+    <Compile Include="StandardAuditOneCBEntity.cs" />
+    <Compile Include="StandardAuditOneCCEntity.cs" />
+    <Compile Include="StandardAuditTwoCEEntity.cs" />
+    <Compile Include="StandardAuditTwoCDEntity.cs" />
+    <Compile Include="StandardAuditTreCFEntity.cs" />
+    <Compile Include="StandardAuditTreCGEntity.cs" />
+    <Compile Include="StandardAuditFivCJEntity.cs" />
+    <Compile Include="StandardAuditFivCKEntity.cs" />
+    <Compile Include="StandardAuditForCIEntity.cs" />
+    <Compile Include="StandardAuditForCHEntity.cs" />
+    <Compile Include="StandardTestCLEntity.cs" />
+    <Compile Include="StandardTestCMEntity.cs" />
+    <Compile Include="FeedTestCNEntity.cs" />
+    <Compile Include="FeedTestCOEntity.cs" />
+    <Compile Include="ZuZhangGongZiKaoHeOneEntity.cs" />
+    <Compile Include="ContractreviewEntity.cs" />
+    <Compile Include="FeedTestCPEntity.cs" />
+    <Compile Include="TestResultRecordCREntity.cs" />
+    <Compile Include="TestResultRecordCSEntity.cs" />
+    <Compile Include="TestResultRecordCTEntity.cs" />
+    <Compile Include="TestResultRecordOneCUEntity.cs" />
+    <Compile Include="TestResultRecordOneCVEntity.cs" />
+    <Compile Include="TestResultRecordOneCWEntity.cs" />
+    <Compile Include="TestReportForAQDAEntity.cs" />
+    <Compile Include="TestReportForAQDBEntity.cs" />
+    <Compile Include="SafetyManegerAndControlDCEntity.cs" />
+    <Compile Include="SafetyManegerAndControlDDEntity.cs" />
+    <Compile Include="SafetyManegerAndControlDEEntity.cs" />
+    <Compile Include="ProductSpecificationDFEntity.cs" />
+    <Compile Include="ProductSpecificationDGEntity.cs" />
+    <Compile Include="ProductSpecificationDHEntity.cs" />
+    <Compile Include="QualityFinalInspsctionDIEntity.cs" />
+    <Compile Include="QualityFinalInspsctionDJEntity.cs" />
+    <Compile Include="CustomerInspectionTableDMEntity.cs" />
+    <Compile Include="FrmpenyouqichenEntity.cs" />
+    <Compile Include="DetailedDeductionWYLibrary.cs" />
+    <Compile Include="ContCheckTableEntity.cs" />
+    <Compile Include="MaterialEntity.cs" />
+    <Compile Include="WagesEntity.cs" />
+    <Compile Include="PaintEntity.cs" />
+    <Compile Include="PowerEntity.cs" />
+    <Compile Include="UserInfoEntity.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

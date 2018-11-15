@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/19/2016 11:56:21" ReportInfo.Modified="01/22/2018 15:52:24" ReportInfo.CreatorVersion="2013.2.5.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+
+    private void ReportSummary1_AfterData(object sender, EventArgs e)
+    {
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuA1xLHWipKEL+OnlhDbnsrcKdpjEnG1n0jfNyduyS3Nkw==">
+      <TableDataSource Name="Table" Alias="R_PQR" DataType="System.Int32" Enabled="true" SelectCommand="SELECT DISTINCT DS22,DS01,DS24,DS25,DS27 FROM R_PQR">
+        <Column Name="DS22" DataType="System.String"/>
+        <Column Name="DS01" DataType="System.String"/>
+        <Column Name="DS24" DataType="System.String"/>
+        <Column Name="DS25" DataType="System.Int64"/>
+        <Column Name="DS27" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="R_PQDS" DataType="System.Int32" Enabled="true" SelectCommand="SELECT DS03,DS04,ISNULL(DS25,0)*ISNULL(DS29,0) DS1,ISNULL(DS29,0) DS29,&#13;&#10;CONVERT(DECIMAL(11,4),CASE WHEN DS06=0 THEN 0 ELSE DS05*1.0/DS06 END) DS2,&#13;&#10;CONVERT(DECIMAL(11,4),CASE WHEN DS05=0 THEN 0 ELSE ISNULL(DS29,0)*(DS05*1.0/DS06) END) DS3,DS09 FROM R_PQR">
+        <Column Name="DS03" DataType="System.String"/>
+        <Column Name="DS04" DataType="System.String"/>
+        <Column Name="DS1" DataType="System.Int64"/>
+        <Column Name="DS29" DataType="System.Int32"/>
+        <Column Name="DS2" DataType="System.Decimal"/>
+        <Column Name="DS3" DataType="System.Decimal"/>
+        <Column Name="DS09" DataType="System.String"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperHeight="295" RawPaperSize="9" LeftMargin="1" TopMargin="20" RightMargin="1" BottomMargin="1" FirstPageSource="15" OtherPagesSource="15">
+    <ReportTitleBand Name="ReportTitle1" Width="786.24" Height="122.85">
+      <TextObject Name="Text1" Width="784.35" Height="28.35" Text="产品定时、定量、定额工序工资明细表(R_436)" HorzAlign="Center" VertAlign="Center" Font="宋体, 16pt"/>
+      <TextObject Name="Text2" Top="28.35" Width="226.8" Height="28.35" Border.Lines="All" Text="产品名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text4" Left="226.8" Top="28.35" Width="132.3" Height="28.35" Border.Lines="All" Text="流水号" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text6" Left="359.1" Top="28.35" Width="160.65" Height="28.35" Border.Lines="All" Text="货号" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text8" Left="519.75" Top="28.35" Width="94.5" Height="28.35" Border.Lines="All" Text="产品数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text11" Left="614.25" Top="28.35" Width="170.1" Height="28.35" Border.Lines="All" Text="产品交期" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text3" Top="56.7" Width="226.8" Height="28.35" Border.Lines="All" Text="[R_PQR.DS22]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text5" Left="226.8" Top="56.7" Width="132.3" Height="28.35" Border.Lines="All" Text="[R_PQR.DS01]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text7" Left="359.1" Top="56.7" Width="160.65" Height="28.35" Border.Lines="All" Text="[R_PQR.DS24]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text9" Left="519.75" Top="56.7" Width="94.5" Height="28.35" Border.Lines="All" Text="[R_PQR.DS25]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text10" Left="614.25" Top="56.7" Width="170.1" Height="28.35" Border.Lines="All" Text="[R_PQR.DS27]" Format="Date" Format.Format="d" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text12" Top="85.05" Width="170.1" Height="37.8" Border.Lines="All" Text="零件名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text13" Left="170.1" Top="85.05" Width="113.4" Height="37.8" Border.Lines="All" Text="工序名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text14" Left="283.5" Top="85.05" Width="75.6" Height="37.8" Border.Lines="All" Text="零件数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text15" Left="359.1" Top="85.05" Width="66.15" Height="37.8" Border.Lines="All" Text="每套零件个数" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text16" Left="425.25" Top="85.05" Width="94.5" Height="37.8" Border.Lines="All" Text="计划单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text17" Left="519.75" Top="85.05" Width="94.5" Height="37.8" Border.Lines="All" Text="计划套单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text18" Left="614.25" Top="85.05" Width="170.1" Height="37.8" Border.Lines="All" Text="备注" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="126.85" Width="786.24" Height="28.35" DataSource="Table1">
+      <TextObject Name="Text19" Width="170.1" Height="28.35" Border.Lines="All" Text="[R_PQDS.DS03]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text20" Left="170.1" Width="113.4" Height="28.35" Border.Lines="All" Text="[R_PQDS.DS04]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text21" Left="283.5" Width="75.6" Height="28.35" Border.Lines="All" Text="[R_PQDS.DS1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text22" Left="359.1" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQDS.DS29]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text23" Left="425.25" Width="94.5" Height="28.35" Border.Lines="All" Text="[R_PQDS.DS2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text24" Left="519.75" Width="94.5" Height="28.35" Border.Lines="All" Text="[R_PQDS.DS3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text25" Left="614.25" Width="170.1" Height="28.35" Border.Lines="All" Text="[R_PQDS.DS09]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

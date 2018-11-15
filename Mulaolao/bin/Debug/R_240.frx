@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="12/29/2015 14:44:47" ReportInfo.Modified="12/21/2017 10:20:23" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuA1xLHWipKEL+OnlhDbnsrc54Q8AtDEucApGoE8exQO1A==">
+      <TableDataSource Name="Table9" Alias="R_PQAN" DataType="System.Int32" Enabled="true" SelectCommand="SELECT DISTINCT AN003,AN004,AN005,AN002,AN008,AN009,AN010,AN011 FROM R_PQAN&#13;&#10;">
+        <Column Name="AN003" DataType="System.String"/>
+        <Column Name="AN004" DataType="System.String"/>
+        <Column Name="AN005" DataType="System.String"/>
+        <Column Name="AN002" DataType="System.String"/>
+        <Column Name="AN008" DataType="System.String"/>
+        <Column Name="AN009" DataType="System.String"/>
+        <Column Name="AN010" DataType="System.String"/>
+        <Column Name="AN011" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table" Alias="R_PQAN1" DataType="System.Int32" Enabled="true" SelectCommand="SELECT AN012,AN013,AN014,CONVERT(DECIMAL(11,0),AN006*AN015) U0,CONVERT(FLOAT,AN015) AN015,CONVERT(FLOAT,AN016) AN016,CONVERT(FLOAT,AN017) AN017,&#13;&#10;CONVERT(FLOAT,AN018) AN018,&#13;&#10;CONVERT(FLOAT,CASE WHEN AN012='胶合板、密度板采购合同书(R_338)' OR AN012='木材采购合同书(R_341)' THEN AN017*AN006 ELSE AN006*AN015*AN018 END) U1,&#13;&#10;AN006,CONVERT(DECIMAL(11,2),CASE WHEN AN006=0 THEN 0 ELSE AN019/AN006 END) U2,&#13;&#10;CONVERT(FLOAT,AN019) AN019,CONVERT(DECIMAL(11,2),CASE WHEN AN006=0 THEN 0 ELSE AN020/AN006 END) U3,&#13;&#10;CONVERT(FLOAT,AN020) AN020,CONVERT(DECIMAL(11,2),CASE WHEN AN006=0 THEN 0 ELSE AN025/AN006 END) U4,&#13;&#10;CONVERT(FLOAT,AN025) AN025,CONVERT(DECIMAL(11,2),CASE WHEN AN006=0 THEN 0 ELSE AN022/AN006 END) U6,&#13;&#10;CONVERT(FLOAT,AN022) AN022,CONVERT(FLOAT,(CASE WHEN AN012='胶合板、密度板采购合同书(R_338)' OR AN012='木材采购合同书(R_341)' THEN AN017*AN006 ELSE AN006*AN015*AN018 END)-AN025) U5,&#13;&#10;CONVERT(DECIMAL(11,2),((CASE WHEN AN012='胶合板、密度板采购合同书(R_338)' OR AN012='木材采购合同书(R_341)' THEN AN017*AN006 ELSE AN006*AN015*AN018 END)-AN025)/AN006) U7,&#13;&#10;CONVERT(DECIMAL(11,0),(CASE WHEN AN012='胶合板、密度板采购合同书(R_338)' OR AN012='木材采购合同书(R_341)' THEN AN017*AN006 ELSE AN006*AN015*AN018 END)-AN025-AN022) U8,&#13;&#10;CONVERT(DECIMAL(11,2),CASE WHEN AN006=0 THEN 0 ELSE ((CASE WHEN AN012='胶合板、密度板采购合同书(R_338)' OR AN012='木材采购合同书(R_341)' THEN AN017*AN006 ELSE AN006*AN015*AN018 END)-AN025-AN022)/AN006 END) U9,AN023,AN024 FROM R_PQAN WHERE AN002='16030102'">
+        <Column Name="AN012" DataType="System.String"/>
+        <Column Name="AN013" DataType="System.String"/>
+        <Column Name="AN014" DataType="System.String"/>
+        <Column Name="U0" DataType="System.Decimal"/>
+        <Column Name="AN015" DataType="System.Double"/>
+        <Column Name="AN016" DataType="System.Double"/>
+        <Column Name="AN017" DataType="System.Double"/>
+        <Column Name="AN018" DataType="System.Double"/>
+        <Column Name="U1" DataType="System.Double"/>
+        <Column Name="AN006" DataType="System.Int64"/>
+        <Column Name="U2" DataType="System.Decimal"/>
+        <Column Name="AN019" DataType="System.Double"/>
+        <Column Name="U3" DataType="System.Decimal"/>
+        <Column Name="AN020" DataType="System.Double"/>
+        <Column Name="U4" DataType="System.Decimal"/>
+        <Column Name="AN025" DataType="System.Double"/>
+        <Column Name="U6" DataType="System.Decimal"/>
+        <Column Name="AN022" DataType="System.Double"/>
+        <Column Name="U5" DataType="System.Double"/>
+        <Column Name="U7" DataType="System.Decimal"/>
+        <Column Name="U8" DataType="System.Decimal"/>
+        <Column Name="U9" DataType="System.Decimal"/>
+        <Column Name="AN023" DataType="System.String"/>
+        <Column Name="AN024" DataType="System.String"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+    <Total Name="TotalAN019" Expression="[R_PQAN1.AN019]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalAN020" Expression="[R_PQAN1.AN020]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalAN022" Expression="[R_PQAN1.AN022]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalAN025" Expression="[R_PQAN1.AN025]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalU1" Expression="[R_PQAN1.U1]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalU5" Expression="[R_PQAN1.U5]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalU8" Expression="[R_PQAN1.U8]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalSUMU1" Expression="[R_PQAN1.U1]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalSUMAN019" Expression="[R_PQAN1.AN019]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalSUMAN020" Expression="[R_PQAN1.AN020]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalSUMAN025" Expression="[R_PQAN1.AN025]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalSUMAN022" Expression="[R_PQAN1.AN022]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalSUMU5" Expression="[R_PQAN1.U5]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+    <Total Name="TotalSUMU8" Expression="[R_PQAN1.U8]" Evaluator="Data1" PrintOn="ReportSummary1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="370" PaperHeight="210">
+    <ReportTitleBand Name="ReportTitle1" Width="1323" Height="141.75">
+      <TextObject Name="Text1" Width="1323" Height="37.8" Text="产品生产成本预、核算汇总表(R_240)" HorzAlign="Center" VertAlign="Center" Font="宋体, 18pt, style=Bold"/>
+      <TextObject Name="Text2" Top="37.8" Width="66.15" Height="18.9" Border.Lines="All" Text="产品名称" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text3" Left="66.15" Top="37.8" Width="160.65" Height="18.9" Border.Lines="All" Text="[R_PQAN.AN003]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text4" Left="226.8" Top="37.8" Width="56.7" Height="18.9" Border.Lines="All" Text="合同号" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text5" Left="283.5" Top="37.8" Width="122.85" Height="18.9" Border.Lines="All" Text="[R_PQAN.AN004]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text6" Left="406.35" Top="37.8" Width="37.8" Height="18.9" Border.Lines="All" Text="货号" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text7" Left="444.15" Top="37.8" Width="113.4" Height="18.9" Border.Lines="All" Text="[R_PQAN.AN005]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text8" Left="557.55" Top="37.8" Width="56.7" Height="18.9" Border.Lines="All" Text="流水号" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text9" Left="614.25" Top="37.8" Width="113.4" Height="18.9" Border.Lines="All" Text="[R_PQAN.AN002]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text10" Top="56.7" Width="66.15" Height="18.9" Border.Lines="All" Text="合同交期" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text11" Left="66.15" Top="56.7" Width="160.65" Height="18.9" Border.Lines="All" Text="[R_PQAN.AN008]" Format="Date" Format.Format="d" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text12" Left="226.8" Top="56.7" Width="66.15" Height="18.9" Border.Lines="All" Text="接单日期" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text13" Left="292.95" Top="56.7" Width="160.65" Height="18.9" Border.Lines="All" Text="[R_PQAN.AN009]" Format="Date" Format.Format="d" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text14" Left="453.6" Top="56.7" Width="66.15" Height="18.9" Border.Lines="All" Text="交货日期" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text15" Left="519.75" Top="56.7" Width="160.65" Height="18.9" Border.Lines="All" Text="[R_PQAN.AN010]" Format="Date" Format.Format="d" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text16" Left="680.4" Top="56.7" Width="66.15" Height="18.9" Border.Lines="All" Text="生产车间" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text17" Left="746.55" Top="56.7" Width="160.65" Height="18.9" Border.Lines="All" Text="[R_PQAN.AN011]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text18" Top="75.6" Width="113.4" Height="66.15" Border.Lines="All" Text="物品.工序名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text19" Left="113.4" Top="75.6" Width="94.5" Height="66.15" Border.Lines="All" Text="规格" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text20" Left="207.9" Top="75.6" Width="37.8" Height="66.15" Border.Lines="All" Text="产品数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text21" Left="245.7" Top="75.6" Width="37.8" Height="66.15" Border.Lines="All" Text="零件数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text22" Left="283.5" Top="75.6" Width="37.8" Height="66.15" Border.Lines="All" Text="每套零件数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text23" Left="321.3" Top="75.6" Width="198.45" Height="28.35" Border.Lines="All" Text="R_509报价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text24" Left="321.3" Top="103.95" Width="56.7" Height="37.8" Border.Lines="All" Text="每套零件数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text25" Left="378" Top="103.95" Width="47.25" Height="37.8" Border.Lines="All" Text="每套单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text26" Left="425.25" Top="103.95" Width="47.25" Height="37.8" Border.Lines="All" Text="零件单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text27" Left="472.5" Top="103.95" Width="47.25" Height="37.8" Border.Lines="All" Text="金额" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text28" Left="519.75" Top="75.6" Width="94.5" Height="28.35" Border.Lines="All" Text="外购合同成本" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text29" Left="519.75" Top="103.95" Width="47.25" Height="37.8" Border.Lines="All" Text="每套单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text30" Left="567" Top="103.95" Width="47.25" Height="37.8" Border.Lines="All" Text="本批金额" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text31" Left="614.25" Top="75.6" Width="94.5" Height="28.35" Border.Lines="All" Text="库存合同成本" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text32" Left="614.25" Top="103.95" Width="47.25" Height="37.8" Border.Lines="All" Text="每套单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text33" Left="661.5" Top="103.95" Width="47.25" Height="37.8" Border.Lines="All" Text="本批金额" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text34" Left="708.75" Top="75.6" Width="132.3" Height="28.35" Border.Lines="All" Text="外购+库存合同成本" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text35" Left="708.75" Top="103.95" Width="56.7" Height="37.8" Border.Lines="All" Text="每套单价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text36" Left="765.45" Top="103.95" Width="75.6" Height="37.8" Border.Lines="All" Text="本批金额" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text37" Left="841.05" Top="75.6" Width="113.4" Height="28.35" Border.Lines="All" Text="超补合同" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text38" Left="841.05" Top="103.95" Width="56.7" Height="37.8" Border.Lines="All" Text="套超价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text39" Left="897.75" Top="103.95" Width="56.7" Height="37.8" Border.Lines="All" Text="金额" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text40" Left="954.45" Top="75.6" Width="113.4" Height="28.35" Border.Lines="All" Text="节省" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text41" Left="954.45" Top="103.95" Width="56.7" Height="37.8" Border.Lines="All" Text="套超价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text42" Left="1011.15" Top="103.95" Width="56.7" Height="37.8" Border.Lines="All" Text="金额" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text43" Left="1067.85" Top="75.6" Width="47.25" Height="66.15" Border.Lines="All" Text="盈亏套价" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text44" Left="1115.1" Top="75.6" Width="47.25" Height="66.15" Border.Lines="All" Text="盈亏" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text45" Left="1162.35" Top="75.6" Width="56.7" Height="66.15" Border.Lines="All" Text="生产责任人" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text46" Left="1219.05" Top="75.6" Width="103.95" Height="66.15" Border.Lines="All" Text="备注" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+    </ReportTitleBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="145.75" Width="1323" Height="28.35" Condition="[R_PQAN1.AN012]">
+      <TextObject Name="Text70" Width="1323" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN012]" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <DataBand Name="Data1" Top="178.1" Width="1323" Height="28.35" CanBreak="true" DataSource="Table">
+        <TextObject Name="Text47" Width="113.4" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN013]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text48" Left="113.4" Width="94.5" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN014]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text49" Left="207.9" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN006]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text50" Left="245.7" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U0]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text51" Left="283.5" Width="37.8" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN015]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text52" Left="321.3" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN016]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text53" Left="378" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN017]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text54" Left="425.25" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN018]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text55" Left="472.5" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text56" Left="519.75" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text57" Left="567" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN019]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text58" Left="614.25" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text59" Left="661.5" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN020]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text60" Left="708.75" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text61" Left="765.45" Width="75.6" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN025]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text62" Left="841.05" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U6]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text63" Left="897.75" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN022]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text64" Left="954.45" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U7]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text65" Left="1011.15" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text66" Left="1067.85" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U9]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text67" Left="1115.1" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQAN1.U8]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text68" Left="1162.35" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN023]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text69" Left="1219.05" Width="103.95" Height="28.35" Border.Lines="All" Text="[R_PQAN1.AN024]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="210.45" Width="1323" Height="28.35">
+        <TextObject Name="Text76" Left="378" Width="47.25" Height="28.35" Border.Lines="All" Text="[[TotalU1]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text77" Left="425.25" Width="47.25" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text78" Left="472.5" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalU1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text79" Left="519.75" Width="47.25" Height="28.35" Border.Lines="All" Text="[[TotalAN019]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text80" Left="567" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalAN019]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text81" Left="614.25" Width="47.25" Height="28.35" Border.Lines="All" Text="[[TotalAN020]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text82" Left="661.5" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalAN020]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text83" Left="708.75" Width="56.7" Height="28.35" Border.Lines="All" Text="[[TotalAN025]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text84" Left="765.45" Width="75.6" Height="28.35" Border.Lines="All" Text="[TotalAN025]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text85" Left="841.05" Width="56.7" Height="28.35" Border.Lines="All" Text="[[TotalAN022]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text86" Left="897.75" Width="56.7" Height="28.35" Border.Lines="All" Text="[TotalAN022]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text87" Left="954.45" Width="56.7" Height="28.35" Border.Lines="All" Text="[[TotalU5]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text88" Left="1011.15" Width="56.7" Height="28.35" Border.Lines="All" Text="[TotalU5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text89" Left="1067.85" Width="47.25" Height="28.35" Border.Lines="All" Text="[[TotalU8]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text90" Left="1115.1" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalU8]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text91" Left="1162.35" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text92" Left="1219.05" Width="103.95" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+        <TextObject Name="Text93" Width="378" Height="28.35" Border.Lines="All" Text="分组小计" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="242.8" Width="1323" Height="28.35">
+      <TextObject Name="Text110" Width="378" Height="28.35" Border.Lines="All" Text="合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text94" Left="378" Width="47.25" Height="28.35" Border.Lines="All" Text="[[TotalSUMU1]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text95" Left="425.25" Width="47.25" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text96" Left="472.5" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalSUMU1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text97" Left="519.75" Width="47.25" Height="28.35" Border.Lines="All" Text="[[TotalSUMAN019]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text98" Left="567" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalSUMAN019]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text99" Left="614.25" Width="47.25" Height="28.35" Border.Lines="All" Text="[[TotalSUMAN020]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text100" Left="661.5" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalSUMAN020]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text101" Left="708.75" Width="56.7" Height="28.35" Border.Lines="All" Text="[[TotalSUMAN025]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text102" Left="765.45" Width="75.6" Height="28.35" Border.Lines="All" Text="[TotalSUMAN025]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text103" Left="841.05" Width="56.7" Height="28.35" Border.Lines="All" Text="[[TotalSUMAN022]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text104" Left="897.75" Width="56.7" Height="28.35" Border.Lines="All" Text="[TotalSUMAN022]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text105" Left="954.45" Width="56.7" Height="28.35" Border.Lines="All" Text="[[TotalSUMU5]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text106" Left="1011.15" Width="56.7" Height="28.35" Border.Lines="All" Text="[TotalSUMU5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text107" Left="1067.85" Width="47.25" Height="28.35" Border.Lines="All" Text="[[TotalSUMU8]/[R_PQAN1.AN006]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text108" Left="1115.1" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalSUMU8]" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text109" Left="1162.35" Width="56.7" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+      <TextObject Name="Text111" Left="1219.05" Width="103.95" Height="28.35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt"/>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

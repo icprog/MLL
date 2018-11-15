@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/12/2016 09:55:49" ReportInfo.Modified="05/23/2017 08:18:35" ReportInfo.CreatorVersion="2013.2.5.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+
+    private void PageHeader1_AfterData(object sender, EventArgs e)
+    {
+      if(Text11.Text.Trim()==&quot;F&quot; || string.IsNullOrEmpty(Text11.Text))
+        Text864.Visible=false;
+      else
+        Text864.Visible=true;
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuA1xLHWipKEL+OnlhDbnsrcyEVW0XgBTsUskY+E+WriGQ==">
+      <TableDataSource Name="Table1" Alias="R_PQBA" DataType="System.Int32" Enabled="true" SelectCommand="SELECT BA001,BA051,BA053,BA006,BA007,BA054,BA008,BA013,CONVERT(VARCHAR(16),BA014,102) BA014,CONVERT(DECIMAL(11,0),BA054*BA013) BA,BA052 FROM R_PQBA&#13;&#10;">
+        <Column Name="BA001" DataType="System.String"/>
+        <Column Name="BA051" DataType="System.String"/>
+        <Column Name="BA053" DataType="System.String"/>
+        <Column Name="BA006" DataType="System.String"/>
+        <Column Name="BA007" DataType="System.String"/>
+        <Column Name="BA054" DataType="System.Int64"/>
+        <Column Name="BA008" DataType="System.String"/>
+        <Column Name="BA013" DataType="System.Decimal"/>
+        <Column Name="BA014" DataType="System.String"/>
+        <Column Name="BA" DataType="System.Decimal"/>
+        <Column Name="BA052" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table2" Alias="R_PQBAS" DataType="System.Int32" Enabled="true" SelectCommand="SELECT DBA002,DBA028,BA044,BA045,BA046,BA047,BA048,BA015,BA016,BA017,BA018,BA019,BA020,BA021,BA022,BA023,BA024,BA025,BA026,BA027,BA028,BA029,BA030,BA031,BA032,CONVERT(NVARCHAR(16),BA033,102) BA033,BA034,CONVERT(NVARCHAR(16),BA035,102) BA035,BA036,CONVERT(NVARCHAR(16),BA037,102) BA037,BA038,CONVERT(NVARCHAR(16),BA039,102) BA039,BA040,CONVERT(NVARCHAR(16),BA041,102) BA041,BA042,CONVERT(NVARCHAR(16),BA043,102) BA043,BA005,BA004,BA057,BA003,ISNULL(BA056,0) BA056 FROM R_PQBA A LEFT JOIN TPADBA B ON A.BA002=B.DBA001&#13;&#10;">
+        <Column Name="DBA002" DataType="System.String"/>
+        <Column Name="DBA028" DataType="System.String"/>
+        <Column Name="BA044" DataType="System.String"/>
+        <Column Name="BA045" DataType="System.String"/>
+        <Column Name="BA046" DataType="System.String"/>
+        <Column Name="BA047" DataType="System.String"/>
+        <Column Name="BA048" DataType="System.String"/>
+        <Column Name="BA015" DataType="System.String"/>
+        <Column Name="BA016" DataType="System.String"/>
+        <Column Name="BA017" DataType="System.String"/>
+        <Column Name="BA018" DataType="System.String"/>
+        <Column Name="BA019" DataType="System.Int32"/>
+        <Column Name="BA020" DataType="System.String"/>
+        <Column Name="BA021" DataType="System.String"/>
+        <Column Name="BA022" DataType="System.String"/>
+        <Column Name="BA023" DataType="System.String"/>
+        <Column Name="BA024" DataType="System.String"/>
+        <Column Name="BA025" DataType="System.String"/>
+        <Column Name="BA026" DataType="System.String"/>
+        <Column Name="BA027" DataType="System.String"/>
+        <Column Name="BA028" DataType="System.String"/>
+        <Column Name="BA029" DataType="System.String"/>
+        <Column Name="BA030" DataType="System.String"/>
+        <Column Name="BA031" DataType="System.String"/>
+        <Column Name="BA032" DataType="System.String"/>
+        <Column Name="BA033" DataType="System.String"/>
+        <Column Name="BA034" DataType="System.String"/>
+        <Column Name="BA035" DataType="System.String"/>
+        <Column Name="BA036" DataType="System.String"/>
+        <Column Name="BA037" DataType="System.String"/>
+        <Column Name="BA038" DataType="System.String"/>
+        <Column Name="BA039" DataType="System.String"/>
+        <Column Name="BA040" DataType="System.String"/>
+        <Column Name="BA041" DataType="System.String"/>
+        <Column Name="BA042" DataType="System.String"/>
+        <Column Name="BA043" DataType="System.String"/>
+        <Column Name="BA005" DataType="System.String"/>
+        <Column Name="BA004" DataType="System.String"/>
+        <Column Name="BA057" DataType="System.String"/>
+        <Column Name="BA003" DataType="System.String"/>
+        <Column Name="BA056" DataType="System.String"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+    <Total Name="TotalOne" Expression="[R_PQBA.BA]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="295" PaperHeight="240" LeftMargin="1" TopMargin="25" RightMargin="1" BottomMargin="1" FirstPageSource="15" OtherPagesSource="15">
+    <PageHeaderBand Name="PageHeader1" Width="1107.54" Height="141.75" AfterDataEvent="PageHeader1_AfterData" CanBreak="true">
+      <TextObject Name="Text3" Top="28.35" Width="727.65" Height="22.68" Border.Lines="All" Text="甲方下单方（）：浙江木佬佬玩具工艺品有限公司         地址：云和县城南西路98号    法定代表人：廖灵飞" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text4" Top="51.03" Width="122.85" Height="22.68" Border.Lines="All" Text="乙方(承志人)" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text5" Left="122.85" Top="51.03" Width="132.3" Height="22.68" Border.Lines="All" Text="[R_PQBAS.BA044]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text6" Left="255.15" Top="51.03" Width="66.15" Height="22.68" Border.Lines="All" Text="地址" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text7" Left="321.3" Top="51.03" Width="255.15" Height="22.68" Border.Lines="All" Text="[R_PQBAS.BA045]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text8" Left="576.45" Top="51.03" Width="66.15" Height="22.68" Border.Lines="All" Text="法定人" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text9" Left="642.6" Top="51.03" Width="85.05" Height="22.68" Border.Lines="All" Text="[R_PQBAS.BA046]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text12" Top="73.71" Width="652.05" Height="24.57" Border.Lines="All" Text="生产(加工)产品(物品)名称、数量、价格、交货日期等见下表：付款期 货款到帐后5个工作日内：" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text13" Left="652.05" Top="73.71" Width="75.6" Height="24.57" Border.Lines="All" Text="交货地点" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text14" Left="727.65" Top="73.71" Width="179.55" Height="24.57" Border.Lines="All" Text="[R_PQBAS.BA005]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text15" Left="907.2" Top="73.71" Width="75.6" Height="24.57" Border.Lines="All" Text="合同批号" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text16" Left="982.8" Top="73.71" Width="122.85" Height="24.57" Border.Lines="All" Text="[R_PQBAS.BA004]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text17" Top="98.28" Width="94.5" Height="43.47" Border.Lines="All" Text="产品流水号" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text18" Left="94.5" Top="98.28" Width="170.1" Height="43.47" Border.Lines="All" Text="产品名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text19" Left="264.6" Top="98.28" Width="103.95" Height="43.47" Border.Lines="All" Text="货号" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text21" Left="481.95" Top="98.28" Width="122.85" Height="43.47" Border.Lines="All" Text="物品名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text22" Left="604.8" Top="98.28" Width="103.95" Height="43.47" Border.Lines="All" Text="物品规格" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text24" Left="708.75" Top="98.28" Width="75.6" Height="43.47" Border.Lines="All" Text="产品数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text25" Left="784.35" Top="98.28" Width="47.25" Height="43.47" Border.Lines="All" Text="单位" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text41" Left="831.6" Top="98.28" Width="75.6" Height="43.47" Border.Lines="All" Text="现外价含税" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text48" Left="982.8" Top="98.28" Width="122.85" Height="43.47" Border.Lines="All" Text="交货日期" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text2" Left="963.9" Top="9.45" Width="113.4" Height="18.9" Text="R_199" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt, style=Bold"/>
+      <TextObject Name="Text1" Width="954.45" Height="28.35" Text="委外加工合同" HorzAlign="Center" VertAlign="Center" Font="宋体, 15pt, style=Bold"/>
+      <TextObject Name="Text249" Left="727.65" Top="28.35" Width="56.7" Height="22.68" Border.Lines="All" Text="联系人" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text250" Left="784.35" Top="28.35" Width="113.4" Height="22.68" Border.Lines="All" Text="[R_PQBAS.DBA002]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text251" Left="897.75" Top="28.35" Width="85.05" Height="22.68" Border.Lines="All" Text="联系电话" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text252" Left="982.8" Top="28.35" Width="122.85" Height="22.68" Border.Lines="All" Text="[R_PQBAS.DBA028]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text253" Left="727.65" Top="51.03" Width="56.7" Height="22.68" Border.Lines="All" Text="联系人" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text254" Left="784.35" Top="51.03" Width="113.4" Height="22.68" Border.Lines="All" Text="[R_PQBAS.BA047]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text255" Left="897.75" Top="51.03" Width="85.05" Height="22.68" Border.Lines="All" Text="联系电话" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text256" Left="982.8" Top="51.03" Width="122.85" Height="22.68" Border.Lines="All" Text="[R_PQBAS.BA048]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text257" Left="907.2" Top="98.28" Width="75.6" Height="43.47" Border.Lines="All" Text="委外生产额" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text10" Top="9.45" Width="141.75" Height="18.9" Text="[R_PQBAS.BA003]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text261" Left="368.55" Top="98.28" Width="113.4" Height="43.47" Border.Lines="All" Text="合同号" HorzAlign="Center" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text864" Left="841.05" Top="75.6" Width="170.1" Height="66.15" Text="超补" HorzAlign="Center" Font="宋体, 48pt, style=Bold, Italic, Underline" TextFill.Color="Red"/>
+      <TextObject Name="Text11" Left="756" Top="9.45" Width="94.5" Height="18.9" Visible="false" Text="[R_PQBAS.BA056]" Font="宋体, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="145.75" Width="1107.54" Height="24.57" CanBreak="true" FirstRowStartsNewPage="true" DataSource="Table1">
+      <TextObject Name="Text214" Width="94.5" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA001]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text215" Left="94.5" Width="170.1" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA051]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text216" Left="264.6" Width="103.95" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA053]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text218" Left="481.95" Width="122.85" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA006]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text219" Left="604.8" Width="103.95" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text221" Left="708.75" Width="75.6" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA054]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text222" Left="784.35" Width="47.25" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA008]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text226" Left="831.6" Width="75.6" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA013]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text230" Left="982.8" Width="122.85" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA014]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text258" Left="907.2" Width="75.6" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text262" Left="368.55" Width="113.4" Height="24.57" Border.Lines="All" Text="[R_PQBA.BA052]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <ChildBand Name="Child1" Top="174.32" Width="1107.54" Height="24.57" CanBreak="true" CompleteToNRows="6">
+        <TextObject Name="Text27" Width="94.5" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text28" Left="94.5" Width="170.1" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text29" Left="264.6" Width="103.95" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text31" Left="481.95" Width="122.85" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text32" Left="604.8" Width="103.95" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text34" Left="708.75" Width="75.6" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text35" Left="784.35" Width="47.25" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text42" Left="831.6" Width="75.6" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text50" Left="982.8" Width="122.85" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text259" Left="907.2" Width="75.6" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text263" Left="368.55" Width="113.4" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      </ChildBand>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="202.89" Width="1107.54" Height="24.57">
+      <TextObject Name="Text232" Width="94.5" Height="24.57" Border.Lines="All" Text="合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text233" Left="94.5" Width="170.1" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text234" Left="264.6" Width="103.95" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text236" Left="481.95" Width="122.85" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text237" Left="604.8" Width="103.95" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text239" Left="708.75" Width="75.6" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text240" Left="784.35" Width="47.25" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text244" Left="831.6" Width="75.6" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text248" Left="982.8" Width="122.85" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text260" Left="907.2" Width="75.6" Height="24.57" Border.Lines="All" Text="[TotalOne]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text264" Left="368.55" Width="113.4" Height="24.57" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="231.46" Width="1107.54" Height="495.18">
+      <TextObject Name="Text88" Top="472.5" Width="68.04" Height="22.68" Border.Lines="Left, Right, Bottom" Text="下单日期" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text90" Left="68.04" Top="472.5" Width="75.6" Height="22.68" Border.Lines="Left, Right, Bottom" Text="开合同期" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text92" Left="143.64" Top="472.5" Width="85.05" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA033]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text94" Left="228.69" Top="472.5" Width="75.6" Height="22.68" Border.Lines="Left, Right, Bottom" Text="成本审期" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text96" Left="304.29" Top="472.5" Width="85.05" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA035]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text98" Left="389.34" Top="472.5" Width="75.6" Height="22.68" Border.Lines="Left, Right, Bottom" Text="财务审期" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text100" Left="464.94" Top="472.5" Width="85.05" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA037]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text102" Left="549.99" Top="472.5" Width="56.7" Height="22.68" Border.Lines="Left, Right, Bottom" Text="批准期" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text104" Left="606.69" Top="472.5" Width="85.05" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA039]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text106" Left="691.74" Top="472.5" Width="75.6" Height="22.68" Border.Lines="Left, Right, Bottom" Text="生产车间" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text108" Left="767.34" Top="472.5" Width="83.16" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA057]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text110" Left="850.5" Top="472.5" Width="132.3" Height="22.68" Border.Lines="Left, Right, Bottom" Text="乙方签约日期" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text112" Left="982.8" Top="472.5" Width="122.85" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA043]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text51" Top="449.82" Width="68.04" Height="22.68" Border.Lines="Left, Right, Bottom" Text="甲方" HorzAlign="Right" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text89" Left="68.04" Top="449.82" Width="75.6" Height="22.68" Border.Lines="Left, Right, Bottom" Text="开合同人" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text91" Left="143.64" Top="449.82" Width="85.05" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA032]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text93" Left="228.69" Top="449.82" Width="75.6" Height="22.68" Border.Lines="Left, Right, Bottom" Text="成本审人" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text95" Left="304.29" Top="449.82" Width="85.05" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA034]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text97" Left="389.34" Top="449.82" Width="75.6" Height="22.68" Border.Lines="Left, Right, Bottom" Text="财务审核" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text99" Left="464.94" Top="449.82" Width="85.05" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA036]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text101" Left="549.99" Top="449.82" Width="56.7" Height="22.68" Border.Lines="Left, Right, Bottom" Text="批准人" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text103" Left="606.69" Top="449.82" Width="85.05" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA038]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text105" Left="691.74" Top="449.82" Width="75.6" Height="22.68" Border.Lines="Left, Right, Bottom" Text="登记人" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text107" Left="767.34" Top="449.82" Width="83.16" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA040]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text109" Left="850.5" Top="449.82" Width="132.3" Height="22.68" Border.Lines="Left, Right, Bottom" Text="乙代表签字(盖章)" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text111" Left="982.8" Top="449.82" Width="122.85" Height="22.68" Border.Lines="Left, Right, Bottom" Text="[R_PQBAS.BA042]" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text86" Top="408.24" Width="1105.65" Height="41.58" Border.Lines="All" Text="十、本合同一式两份，甲乙双方各执一份备查，未尽事宜，双方另行商定或按《中国人民共和国合同法》的相关规定的执行。本合同适用于产品委外生产和雕刻、冲印、砂皮等无化学品的工序委外加工。" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text84" Top="366.66" Width="1105.65" Height="41.58" Border.Lines="All" Text="九、凭本合同和甲方客户仓库回单或甲方使用生产部门收货人在本合同上签字并经部门负责人审核签字做为结算付款的原始依据，委外产品生产加工的经甲方总经理审批后生效" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text82" Top="325.08" Width="1105.65" Height="41.58" Border.Lines="All" Text="八、乙方（包括其工人）不得把甲方产品（样品）拿给外单位。违者根据情节处以乙方五千元至五万元的罚款。乙方不能绕过甲方直接向甲方的现有客人以降价或其他方式抢业务订单。一经发现，甲方有权拒付乙方的全部货款，同时有权向乙方追溯10万元以上的违约经济责任。" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text80" Top="283.5" Width="1105.65" Height="41.58" Border.Lines="Left, Right, Top" Text="七、由数家合作的产品，因乙方产品质量问题或交货拖期而造成客户不接受整批产品者，由甲方代扣乙方按合作产品金额之和的70%去支付其余承制人，但产品要经甲方验收合格后支付，产品送甲方仓库。" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text78" Top="241.92" Width="1105.65" Height="41.58" Border.Lines="Left, Right, Top" Text="六、乙方延期交货，但客户仍能接收产品的情况下，则作如下规定：延迟时间在三天内，承担该批产值的5%的经济损失，一周内承担15%的经济损失，以后每延迟一周增加30%（该款在上批货款中扣除）。若因延迟交货造成拒收者，其损失全部自负。" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text74" Top="158.76" Width="1105.65" Height="22.68" Border.Lines="All" Text="四、材质要求：无霉变、开裂、弯曲、虫蛀、松脂等。本色产品无黑点、结疤、裂纹、变形。含水率不得高于14%（特殊要求由甲方开合同人注明）。" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text75" Top="181.44" Width="1105.65" Height="60.48" Border.Lines="Left, Right, Top" Text="五、产品要求：1.涉及化学品方面的必须满足进入国有关法规或客户指定要求,2.按照甲方签发鉴定的标准样及其图纸尺寸制作.产品要求平整光滑、无毛刺、刮、划、压、碰伤、撕边、变形型、利边尖端、功能灵活牢固。油漆色彩按客户要求，光滑美观、无色差、无挂漆、剥脱、色转移、汗液唾液、流痕和泛白等现象。符合欧、美或其他进口国最新的法规安全标准。（客户提出退货、返工或索赔者，所有经济损失由乙方负担）" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text71" Top="113.4" Width="1105.65" Height="45.36" Border.Lines="Left, Right" Text="三、本合同产品（物品）的知识产权及处置权属甲方，未经甲方书面同意，乙方不得处置本合同产品，否则承担5万-30万元违约责任及其他经济和法律责任。因不可合同不能履行时，按实际损失，甲乙双方各承担50%。本合同一经双方签字或盖章（手印）即确认生效。如遇特殊情况需要更改者，凭更改通知行更改单执行更改抗拒" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text69" Top="68.04" Width="1105.65" Height="45.36" Border.Lines="All" Text="二、合同签订后调整的项目费用（客人变动除外），由甲方开合同人和乙方自行解决处理。凡从甲方仓库领用的产品物资都做为甲方代购，下单时应计算在单价内，结算时甲方财务扣除。本合同价格含乙方所管理员工的工伤及所有相关费用。" VertAlign="Center" Font="宋体, 10.5pt"/>
+      <TextObject Name="Text62" Left="18.9" Top="45.36" Width="113.4" Height="22.68" Border.Lines="All" Text="林业出口" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox10" Top="45.36" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA025]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text63" Left="151.2" Top="45.36" Width="122.85" Height="22.68" Border.Lines="All" Text="质量赔偿款" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox11" Left="132.3" Top="45.36" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA026]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text64" Left="292.95" Top="45.36" Width="141.75" Height="22.68" Border.Lines="All" Text="物品领用款" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox12" Left="274.05" Top="45.36" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA027]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text65" Left="453.6" Top="45.36" Width="122.85" Height="22.68" Border.Lines="All" Text="其它包装物" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox13" Left="434.7" Top="45.36" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA028]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text66" Left="595.35" Top="45.36" Width="132.3" Height="22.68" Border.Lines="All" Text="商检费" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox14" Left="576.45" Top="45.36" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA029]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text67" Left="746.55" Top="45.36" Width="132.3" Height="22.68" Border.Lines="All" Text="车木件款" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox15" Left="727.65" Top="45.36" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA030]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text68" Left="897.75" Top="45.36" Width="207.9" Height="22.68" Border.Lines="All" Text="包装、检验工资" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox16" Left="878.85" Top="45.36" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA031]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text207" Left="85.05" Top="47.25" Width="18.9" Height="18.9" Visible="false" Text="[R_PQBAS.BA025]" Font="宋体, 9pt"/>
+      <TextObject Name="Text208" Left="236.25" Top="47.25" Width="18.9" Height="18.9" Visible="false" Text="[R_PQBAS.BA026]" Font="宋体, 9pt"/>
+      <TextObject Name="Text209" Left="378" Top="47.25" Width="18.9" Height="18.9" Visible="false" Text="[R_PQBAS.BA027]" Font="宋体, 9pt"/>
+      <TextObject Name="Text210" Left="538.65" Top="47.25" Width="18.9" Height="18.9" Visible="false" Text="[R_PQBAS.BA028]" Font="宋体, 9pt"/>
+      <TextObject Name="Text211" Left="661.5" Top="47.25" Width="28.35" Height="18.9" Visible="false" Text="[R_PQBAS.BA029]" Font="宋体, 9pt"/>
+      <TextObject Name="Text212" Left="822.15" Top="47.25" Width="28.35" Height="18.9" Visible="false" Text="[R_PQBAS.BA030]" Font="宋体, 9pt"/>
+      <TextObject Name="Text213" Left="1011.15" Top="47.25" Width="75.6" Height="18.9" Visible="false" Text="[R_PQBAS.BA031]" Font="宋体, 9pt"/>
+      <TextObject Name="Text53" Left="18.9" Top="22.68" Width="85.05" Height="22.68" Border.Lines="All" Text="木材款" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox1" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA015]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text54" Left="122.85" Top="22.68" Width="94.5" Height="22.68" Border.Lines="All" Text="外箱款" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox2" Left="103.95" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA016]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text55" Left="236.25" Top="22.68" Width="83.16" Height="22.68" Border.Lines="All" Text="运费" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox3" Left="217.35" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA017]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text56" Left="338.31" Top="22.68" Width="105.84" Height="22.68" Border.Lines="All" Text="税收_____%" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox4" Left="319.41" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA018]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text57" Left="463.05" Top="22.68" Width="103.95" Height="22.68" Border.Lines="All" Text="返修返工费" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox5" Left="444.15" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA020]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text58" Left="585.9" Top="22.68" Width="103.95" Height="22.68" Border.Lines="All" Text="预支或借款" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox6" Left="567" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA021]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text59" Left="708.75" Top="22.68" Width="94.5" Height="22.68" Border.Lines="All" Text="胶合板款" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox7" Left="689.85" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA022]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text60" Left="822.15" Top="22.68" Width="122.85" Height="22.68" Border.Lines="All" Text="内盒、彩盒款" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox8" Left="803.25" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA023]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text61" Left="963.9" Top="22.68" Width="141.75" Height="22.68" Border.Lines="All" Text="装卸费" VertAlign="Bottom" Font="宋体, 10.5pt"/>
+      <CheckBoxObject Name="CheckBox9" Left="945" Top="22.68" Width="18.9" Height="22.68" Border.Lines="All" Expression="IIf([R_PQBAS.BA024]==&quot;T&quot;,true,false)"/>
+      <TextObject Name="Text113" Left="85.05" Top="22.68" Width="18.9" Height="22.68" Visible="false" Text="[R_PQBAS.BA015]" Font="宋体, 9pt"/>
+      <TextObject Name="Text199" Left="189" Top="22.68" Width="18.9" Height="22.68" Visible="false" Text="[R_PQBAS.BA016]" Font="宋体, 9pt"/>
+      <TextObject Name="Text200" Left="283.5" Top="22.68" Width="18.9" Height="22.68" Visible="false" Text="[R_PQBAS.BA017]" Font="宋体, 9pt"/>
+      <TextObject Name="Text201" Left="415.8" Top="22.68" Width="18.9" Height="22.68" Visible="false" Text="[R_PQBAS.BA018]" Font="宋体, 9pt"/>
+      <TextObject Name="Text202" Left="538.65" Top="22.68" Width="18.9" Height="22.68" Visible="false" Text="[R_PQBAS.BA020]" Font="宋体, 9pt"/>
+      <TextObject Name="Text203" Left="661.5" Top="22.68" Width="18.9" Height="22.68" Visible="false" Text="[R_PQBAS.BA021]" Font="宋体, 9pt"/>
+      <TextObject Name="Text204" Left="774.9" Top="22.68" Width="18.9" Height="22.68" Visible="false" Text="[R_PQBAS.BA022]" Font="宋体, 9pt"/>
+      <TextObject Name="Text205" Left="916.65" Top="22.68" Width="18.9" Height="22.68" Visible="false" Text="[R_PQBAS.BA023]" Font="宋体, 9pt"/>
+      <TextObject Name="Text206" Left="1011.15" Top="22.68" Width="94.5" Height="22.68" Visible="false" Text="[R_PQBAS.BA024]" Font="宋体, 9pt"/>
+      <TextObject Name="Text52" Width="1105.65" Height="22.68" Border.Lines="All" Text="一、本合同产品（物品）由甲方承担的费用和物资项目有：（在相应的项目序号前筐打&quot;√&quot;或划&quot;○&quot;如①,未画则视为由乙方承担,甲方代付并在结算时扣除）" VertAlign="Center" Font="宋体, 10.5pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

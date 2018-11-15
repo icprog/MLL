@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/09/2016 16:48:37" ReportInfo.Modified="01/24/2018 14:45:10" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary>
+    <OleDbDataConnection Name="Connection1" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuA1xLHWipKEL+OnlhDbnsrcImIGhC22fRN9YFmFIkQiNA==">
+      <TableDataSource Name="Table1" Alias="R_PQNA" DataType="System.Int32" Enabled="true" SelectCommand="SELECT NA002,NA003,NA004,NA005,NA006,NA007,NA008,NA009 FROM R_PQNA WHERE NA001='R_369-201712300001'&#13;&#10;">
+        <Column Name="NA002" DataType="System.String"/>
+        <Column Name="NA003" DataType="System.String"/>
+        <Column Name="NA004" DataType="System.String"/>
+        <Column Name="NA005" DataType="System.String"/>
+        <Column Name="NA006" DataType="System.String"/>
+        <Column Name="NA007" DataType="System.String"/>
+        <Column Name="NA008" DataType="System.String"/>
+        <Column Name="NA009" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table2" Alias="R_PQN" DataType="System.Int32" Enabled="true" SelectCommand="SELECT KH01,KH02,KH05,KH03,KH04,KH06,KH08,KH11,KH12,KH13,KH14,KH15,KH16,KH17,KH18,KH19,KH20,KH21,KH22,KH23,KH24,KH25,KH26,KH27,KH28,KH29,KH30,KH32,KH31,KH33,KH35 FROM R_PQN WHERE KH01='R_369-201712300001'">
+        <Column Name="KH01" DataType="System.String"/>
+        <Column Name="KH02" DataType="System.String"/>
+        <Column Name="KH03" DataType="System.String"/>
+        <Column Name="KH04" DataType="System.String"/>
+        <Column Name="KH05" DataType="System.String"/>
+        <Column Name="KH06" DataType="System.Int32"/>
+        <Column Name="KH08" DataType="System.String"/>
+        <Column Name="KH11" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH12" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH13" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH14" DataType="System.String"/>
+        <Column Name="KH15" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH16" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH17" DataType="System.String"/>
+        <Column Name="KH18" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH19" DataType="System.String"/>
+        <Column Name="KH20" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH21" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH22" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH23" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH24" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH25" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="KH26" DataType="System.String"/>
+        <Column Name="KH27" DataType="System.String"/>
+        <Column Name="KH28" DataType="System.String"/>
+        <Column Name="KH29" DataType="System.String"/>
+        <Column Name="KH30" DataType="System.String"/>
+        <Column Name="KH31" DataType="System.String"/>
+        <Column Name="KH32" DataType="System.String"/>
+        <Column Name="KH33" DataType="System.String"/>
+        <Column Name="KH35" DataType="System.String"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="396.9" CanBreak="true">
+      <TextObject Name="Text1" Width="718.2" Height="28.35" Text="客户信息传递记录表(R_369)" HorzAlign="Center" VertAlign="Center" Font="宋体, 15pt, style=Bold"/>
+      <TextObject Name="Text3" Left="604.8" Top="47.25" Width="113.4" Height="28.35" Border.Lines="All" Text="交货期" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text4" Left="491.4" Top="47.25" Width="113.4" Height="28.35" Border.Lines="All" Text="数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text6" Left="359.1" Top="47.25" Width="132.3" Height="28.35" Border.Lines="All" Text="货号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text7" Left="264.6" Top="47.25" Width="94.5" Height="28.35" Border.Lines="All" Text="合同号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text8" Left="132.3" Top="47.25" Width="132.3" Height="28.35" Border.Lines="All" Text="产品名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text9" Top="47.25" Width="132.3" Height="28.35" Border.Lines="All" Text="样品名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text10" Top="75.6" Width="132.3" Height="28.35" Border.Lines="All" Text="[R_PQN.KH02]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text11" Left="132.3" Top="75.6" Width="132.3" Height="28.35" Border.Lines="All" Text="[R_PQN.KH05]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text12" Left="264.6" Top="75.6" Width="94.5" Height="28.35" Border.Lines="All" Text="[R_PQN.KH03]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text13" Left="359.1" Top="75.6" Width="132.3" Height="28.35" Border.Lines="All" Text="[R_PQN.KH04]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text15" Left="491.4" Top="75.6" Width="113.4" Height="28.35" Border.Lines="All" Text="[R_PQN.KH06]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text16" Left="604.8" Top="75.6" Width="113.4" Height="28.35" Border.Lines="All" Text="[R_PQN.KH08]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text17" Top="103.95" Width="75.6" Height="37.8" Border.Lines="Left" Text="提供信息:" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text18" Left="94.5" Top="113.4" Width="75.6" Height="18.9" Text="工艺文件" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text19" Left="198.45" Top="113.4" Width="37.8" Height="18.9" Text="图纸" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text20" Left="264.6" Top="113.4" Width="75.6" Height="18.9" Text="法规要求" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text21" Left="368.55" Top="113.4" Width="85.05" Height="18.9" Text="鉴定标准样" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text24" Left="472.5" Top="103.95" Width="56.7" Height="28.35" Text="输入国" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text25" Left="529.2" Top="103.95" Width="189" Height="28.35" Border.Lines="Right, Bottom" Text="[R_PQN.KH17]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text26" Left="18.9" Top="141.75" Width="56.7" Height="18.9" Text="年龄段" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text27" Left="75.6" Top="141.75" Width="56.7" Height="18.9" Border.Lines="Bottom" Text="[R_PQN.KH14]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text28" Left="132.3" Top="141.75" Width="37.8" Height="18.9" Text="岁" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text29" Left="189" Top="141.75" Width="113.4" Height="18.9" Text="首件检测报告号" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text30" Left="302.4" Top="132.3" Width="415.8" Height="28.35" Border.Lines="Right, Bottom" Text="[R_PQN.KH19]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text31" Top="170.1" Width="718.2" Height="28.35" Border.Lines="All" Text="1、合同约定质量和交期要求：" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text32" Top="160.65" Width="718.2" Height="9.45" Border.Lines="Left, Right" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text33" Top="198.45" Width="718.2" Height="28.35" Border.Lines="All" Text="[R_PQN.KH26]" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text34" Top="226.8" Width="718.2" Height="28.35" Border.Lines="Left, Right, Top" Text="2、装箱率和包装要求说明：" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text35" Top="255.15" Width="718.2" Height="28.35" Border.Lines="All" Text="[R_PQN.KH27]" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <TextObject Name="Text36" Top="283.5" Width="132.3" Height="28.35" Border.Lines="Left, Bottom" Text="3、材料要求说明：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text37" Left="132.3" Top="283.5" Width="585.9" Height="28.35" Border.Lines="Right, Bottom" Text="[R_PQN.KH28]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text38" Top="311.85" Width="132.3" Height="28.35" Border.Lines="Left, Bottom" Text="4、延期交货罚金：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text39" Left="132.3" Top="311.85" Width="585.9" Height="28.35" Border.Lines="Right, Bottom" Text="[R_PQN.KH29]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text40" Top="340.2" Width="652.05" Height="28.35" Border.Lines="Left, Right, Bottom" Text="以下各部件物料安全行测试要求和功能、作用要求，色卡、色板号、印刷等要求用图、版、文说明" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text41" Left="652.05" Top="340.2" Width="66.15" Height="56.7" Border.Lines="Right, Bottom" Text="客人要求确定状态" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text42" Top="368.55" Width="75.6" Height="28.35" Border.Lines="Left, Right, Bottom" Text="原客供(更改后)" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text43" Left="75.6" Top="368.55" Width="94.5" Height="28.35" Border.Lines="Right, Bottom" Text="部件名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text44" Left="170.1" Top="368.55" Width="94.5" Height="28.35" Border.Lines="Right, Bottom" Text="材料名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text45" Left="264.6" Top="368.55" Width="75.6" Height="28.35" Border.Lines="Right, Bottom" Text="规格尺寸" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text46" Left="340.2" Top="368.55" Width="75.6" Height="28.35" Border.Lines="Right, Bottom" Text="色号.色名" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text47" Left="415.8" Top="368.55" Width="236.25" Height="28.35" Border.Lines="Right, Bottom" Text="要点说明" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text5" Left="463.05" Top="28.35" Width="255.15" Height="18.9" Text="[R_PQN.KH01]" HorzAlign="Right" Font="宋体, 9pt"/>
+      <CheckBoxObject Name="CheckBox1" Left="75.6" Top="113.4" Width="18.9" Height="18.9" Border.Lines="All" DataColumn="R_PQN.KH11"/>
+      <CheckBoxObject Name="CheckBox2" Left="179.55" Top="113.4" Width="18.9" Height="18.9" Border.Lines="All" DataColumn="R_PQN.KH12"/>
+      <CheckBoxObject Name="CheckBox3" Top="141.75" Width="18.9" Height="18.9" Border.Lines="All" DataColumn="R_PQN.KH13"/>
+      <CheckBoxObject Name="CheckBox4" Left="349.65" Top="113.4" Width="18.9" Height="18.9" Border.Lines="All" DataColumn="R_PQN.KH15"/>
+      <CheckBoxObject Name="CheckBox5" Left="453.6" Top="113.4" Width="18.9" Height="18.9" Border.Lines="All" DataColumn="R_PQN.KH16"/>
+      <CheckBoxObject Name="CheckBox6" Left="170.1" Top="141.75" Width="18.9" Height="18.9" Border.Lines="All" DataColumn="R_PQN.KH18"/>
+      <CheckBoxObject Name="CheckBox7" Left="245.7" Top="113.4" Width="18.9" Height="18.9" Border.Lines="All" DataColumn="R_PQN.KH20"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="400.9" Width="718.2" Height="28.35" CanBreak="true" DataSource="Table1">
+      <TextObject Name="Text48" Width="75.6" Height="28.35" Border.Lines="All" Text="[R_PQNA.NA002]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text49" Left="75.6" Width="94.5" Height="28.35" Border.Lines="All" Text="[R_PQNA.NA004]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text50" Left="170.1" Width="94.5" Height="28.35" Border.Lines="All" Text="[R_PQNA.NA005]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text51" Left="264.6" Width="75.6" Height="28.35" Border.Lines="All" Text="[R_PQNA.NA006]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text52" Left="340.2" Width="75.6" Height="28.35" Border.Lines="All" Text="[R_PQNA.NA007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text53" Left="415.8" Width="236.25" Height="28.35" Border.Lines="All" Text="[R_PQNA.NA008]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text54" Left="652.05" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQNA.NA009]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="433.25" Width="718.2" Height="75.6" CanBreak="true">
+      <TextObject Name="Text55" Width="37.8" Height="47.25" Border.Lines="All" Text="确认人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text56" Left="37.8" Width="94.5" Height="47.25" Border.Lines="All" Text="[R_PQN.KH30]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text57" Left="132.3" Width="37.8" Height="47.25" Border.Lines="All" Text="确认日期" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text58" Left="170.1" Width="94.5" Height="47.25" Border.Lines="All" Text="[R_PQN.KH31]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text59" Left="264.6" Width="47.25" Height="47.25" Border.Lines="All" Text="接受人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text60" Left="311.85" Width="85.05" Height="47.25" Border.Lines="All" Text="[R_PQN.KH32]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text61" Left="396.9" Width="37.8" Height="47.25" Border.Lines="All" Text="接受日期" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text62" Left="434.7" Width="113.4" Height="47.25" Border.Lines="All" Text="[R_PQN.KH33]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text63" Left="548.1" Width="47.25" Height="47.25" Border.Lines="All" Text="监督人" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text64" Left="595.35" Width="56.7" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text65" Left="652.05" Width="28.35" Height="47.25" Border.Lines="All" Text="监督期" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text66" Left="680.4" Width="37.8" Height="47.25" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text67" Top="47.25" Width="718.2" Height="28.35" Text="注:以上&quot;客人要求确定状态&quot;栏中√,&quot;确定&quot;的为客人已经明确规定,&quot;自定&quot;为由我方决定要求标准" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </ReportSummaryBand>
+  </ReportPage>
+</Report>

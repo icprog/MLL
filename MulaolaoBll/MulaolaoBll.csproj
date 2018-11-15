@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD4B9CD3-7F64-4E7F-9903-F4D84B7C02ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MulaolaoBll</RootNamespace>
+    <AssemblyName>MulaolaoBll</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DengFen\Report\Base\bin\Debug\DevExpress.Printing.v16.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DengFen\Report\Base\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DengFen\Report\Base\bin\Debug\DevExpress.XtraCharts.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DengFen\Report\Base\bin\Debug\DevExpress.XtraCharts.v16.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DengFen\Report\Base\bin\Debug\DevExpress.XtraCharts.v16.2.Wizard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Mulaolao\bin\Debug\DevExpress.XtraEditors.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="MulaolaoLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MulaolaoLibrary\bin\Debug\MulaolaoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bll\AnnualPayrollSummaryBll.cs" />
+    <Compile Include="Bll\BatchNumManagementBll.cs" />
+    <Compile Include="Bll\ChangPingGaiShanBll.cs" />
+    <Compile Include="Bll\ChanPinGaiShanBll.cs" />
+    <Compile Include="Bll\ChanPinGongZiKaoQinBll.cs" />
+    <Compile Include="Bll\ChanPinGongZiKaoQinReportBll.cs" />
+    <Compile Include="Bll\ChanPinGonZiKaoQinHuiZongBll.cs" />
+    <Compile Include="Bll\ChanPinZhiBaoBll.cs" />
+    <Compile Include="Bll\CheckOutBll.cs" />
+    <Compile Include="Bll\CheJianZhuRenKaoHeBll.cs" />
+    <Compile Include="Bll\CheMuJiancontractBll.cs" />
+    <Compile Include="Bll\ChengBenYuHeSuanAllBll.cs" />
+    <Compile Include="Bll\ContCheckTablBll.cs" />
+    <Compile Include="Bll\ContractreviewBll.cs" />
+    <Compile Include="Bll\ContractToDoAJobBll.cs" />
+    <Compile Include="Bll\ContractUncollectUnpaidBll.cs" />
+    <Compile Include="Bll\CostIndexBll.cs" />
+    <Compile Include="Bll\CustomerInspectionTableBll.cs" />
+    <Compile Include="Bll\CustomerrecordBll.cs" />
+    <Compile Include="Bll\DailyCollectionRecordBll.cs" />
+    <Compile Include="Bll\DailyUseOfChemicalsBll.cs" />
+    <Compile Include="Bll\DaunLiaoBll.cs" />
+    <Compile Include="Bll\DetailedDeductionBll.cs" />
+    <Compile Include="Bll\FeedTestBll.cs" />
+    <Compile Include="Bll\GongXuGongZiBll.cs" />
+    <Compile Include="Bll\GongZiCeBll.cs" />
+    <Compile Include="Bll\GunQiChenBenBll.cs" />
+    <Compile Include="Bll\GunQiChengLanJiaGongBll.cs" />
+    <Compile Include="Bll\GunQiContractBll.cs" />
+    <Compile Include="Bll\HuaXuePingCiChenBenBll.cs" />
+    <Compile Include="Bll\InvenAdSheetBll.cs" />
+    <Compile Include="Bll\InventoryProcurementBll.cs" />
+    <Compile Include="Bll\JiaomiducontractBll.cs" />
+    <Compile Include="Bll\JiaoMiDuJunHenTableBll.cs" />
+    <Compile Include="Bll\ManagePayrollBll.cs" />
+    <Compile Include="Bll\MaterialBLL.cs" />
+    <Compile Include="Bll\MaterialProcurementSummaryBll.cs" />
+    <Compile Include="Bll\MaterialPurchaseCompariaseBll.cs" />
+    <Compile Include="Bll\MucaiContractBll.cs" />
+    <Compile Include="Bll\OtherExpenseStatementBll.cs" />
+    <Compile Include="Bll\OutbandChoiceBll.cs" />
+    <Compile Include="Bll\PaintBll.cs" />
+    <Compile Include="Bll\PayMentBll.cs" />
+    <Compile Include="Bll\PenYouQiChenBll.cs" />
+    <Compile Include="Bll\PeraggBll.cs" />
+    <Compile Include="Bll\PerformanceAppraisalBll.cs" />
+    <Compile Include="Bll\PowerBll.cs" />
+    <Compile Include="Bll\ProcessingDelayBll.cs" />
+    <Compile Include="Bll\ProductCostSummaryBll.cs" />
+    <Compile Include="Bll\ProductQualityBll.cs" />
+    <Compile Include="Bll\ProductSpecificationBll.cs" />
+    <Compile Include="Bll\PurchaseDelaySummaryBll.cs" />
+    <Compile Include="Bll\QualityFinalInspsctionBll.cs" />
+    <Compile Include="Bll\QualityReportBll.cs" />
+    <Compile Include="Bll\QualityTestingBll.cs" />
+    <Compile Include="Bll\QuoBll.cs" />
+    <Compile Include="Bll\ReadyOfNumBll.cs" />
+    <Compile Include="Bll\RemindBll.cs" />
+    <Compile Include="Bll\SafetyManegerAndControlBll.cs" />
+    <Compile Include="Bll\SailesBll.cs" />
+    <Compile Include="Bll\SailsPaymentTaxRefundAndElectricityBillBll.cs" />
+    <Compile Include="Bll\SanitationBroadBll.cs" />
+    <Compile Include="Bll\SanitationCheckBll.cs" />
+    <Compile Include="Bll\ShenChanJinDuJiHuaBll.cs" />
+    <Compile Include="Bll\shenchanjindujihuaReportBll.cs" />
+    <Compile Include="Bll\SiReYiYincontractBll.cs" />
+    <Compile Include="Bll\StandardAuditFivBll.cs" />
+    <Compile Include="Bll\StandardAuditForBll.cs" />
+    <Compile Include="Bll\StandardAuditOneBll.cs" />
+    <Compile Include="Bll\StandardAuditTreBll.cs" />
+    <Compile Include="Bll\StandardAuditTwoBll.cs" />
+    <Compile Include="Bll\StandardTestBll.cs" />
+    <Compile Include="Bll\SuLiaoBucontractBll.cs" />
+    <Compile Include="Bll\SystemDrityBll.cs" />
+    <Compile Include="Bll\TargetActualWarnBll.cs" />
+    <Compile Include="Bll\TeamLeaderRoutineCheckBll.cs" />
+    <Compile Include="Bll\TestReportForAQBll.cs" />
+    <Compile Include="Bll\TestResultRecordBll.cs" />
+    <Compile Include="Bll\TestResultRecordOneBll.cs" />
+    <Compile Include="Bll\UserInfoBll.cs" />
+    <Compile Include="Bll\WagesBll.cs" />
+    <Compile Include="Bll\WagesContrastTableBll.cs" />
+    <Compile Include="Bll\WagesCostComparisonBll.cs" />
+    <Compile Include="Bll\WaiXianBll.cs" />
+    <Compile Include="Bll\WaiXiancontractBll.cs" />
+    <Compile Include="Bll\WarehouseReceiptBll.cs" />
+    <Compile Include="Bll\WorkWagesBll.cs" />
+    <Compile Include="Bll\WuJincontractBll.cs" />
+    <Compile Include="Bll\yanpinchangqiancehuaBll.cs" />
+    <Compile Include="Bll\YouQiBomBll.cs" />
+    <Compile Include="Bll\YouQicontractBll.cs" />
+    <Compile Include="Bll\ZuZhangBomBll.cs" />
+    <Compile Include="Bll\ZuZhangGongZiKaoHdBll.cs" />
+    <Compile Include="Bll\ZuZhangGongZiKaoHeBll.cs" />
+    <Compile Include="ContractAddPrintTime.cs" />
+    <Compile Include="Dao\AnnualPayrollSummaryDao.cs" />
+    <Compile Include="Dao\BatchNumManagementDao.cs" />
+    <Compile Include="Dao\ChangPingGaiShanDao.cs" />
+    <Compile Include="Dao\ChanPinGaiShanDao.cs" />
+    <Compile Include="Dao\ChanPinGongZiKaoQinDao.cs" />
+    <Compile Include="Dao\ChanPinGongZiKaoQinReportDao.cs" />
+    <Compile Include="Dao\ChanPinGonZiKaoQinHuiZongDao.cs" />
+    <Compile Include="Dao\ChanPinZhiBaoDao.cs" />
+    <Compile Include="Dao\CheckOutDao.cs" />
+    <Compile Include="Dao\CheJianZhuRenKaoHeDao.cs" />
+    <Compile Include="Dao\CheMuJiancontractDao.cs" />
+    <Compile Include="Dao\ChengBenYuHeSuanALLDao.cs" />
+    <Compile Include="Dao\ContCheckTableDao.cs" />
+    <Compile Include="Dao\ContractreviewDao.cs" />
+    <Compile Include="Dao\ContractToDoAJobDao.cs" />
+    <Compile Include="Dao\ContractUncollectUnpaidDao.cs" />
+    <Compile Include="Dao\CostIndexDao.cs" />
+    <Compile Include="Dao\CustomerInspectionTableDao.cs" />
+    <Compile Include="Dao\CustomerrecordDao.cs" />
+    <Compile Include="Dao\DailyCollectionRecordDao.cs" />
+    <Compile Include="Dao\DailyUseOfChemicalsDao.cs" />
+    <Compile Include="Dao\DetailedDeductionDao.cs" />
+    <Compile Include="Dao\DuanLiaoDao.cs" />
+    <Compile Include="Dao\FeedTestDao.cs" />
+    <Compile Include="Dao\GongZiCeDao.cs" />
+    <Compile Include="Dao\GunQiChenBenDao.cs" />
+    <Compile Include="Dao\GunQiChengLanJiaGongDao.cs" />
+    <Compile Include="Dao\GunQiContractDao.cs" />
+    <Compile Include="Dao\HuaXuePingCiChenBenDao.cs" />
+    <Compile Include="Dao\InvenAdSheetDao.cs" />
+    <Compile Include="Dao\InventoryProcurementDao.cs" />
+    <Compile Include="Dao\JiaomiducontractDao.cs" />
+    <Compile Include="Dao\JiaoMiDuJunHenTableDao.cs" />
+    <Compile Include="Dao\ManagePayrollDao.cs" />
+    <Compile Include="Dao\MaterialDao.cs" />
+    <Compile Include="Dao\MaterialProcurementSummaryDao.cs" />
+    <Compile Include="Dao\MaterialPurchaseCompariaseDao.cs" />
+    <Compile Include="Dao\MucaiContractDao.cs" />
+    <Compile Include="Dao\OtherExpenseStatementDao.cs" />
+    <Compile Include="Dao\OutbandChoiceDao.cs" />
+    <Compile Include="Dao\PaintDao.cs" />
+    <Compile Include="Dao\PayMentDao.cs" />
+    <Compile Include="Dao\PenYouQiChenDao.cs" />
+    <Compile Include="Dao\PeraggDao.cs" />
+    <Compile Include="Dao\PerformanceAppraisalDao.cs" />
+    <Compile Include="Dao\PowerDao.cs" />
+    <Compile Include="Dao\ProcessingDelayDao.cs" />
+    <Compile Include="Dao\ProductCostSummaryDao.cs" />
+    <Compile Include="Dao\ProductQualityDao.cs" />
+    <Compile Include="Dao\ProductSpecificationDao.cs" />
+    <Compile Include="Dao\PurchaseDelaySummaryDao.cs" />
+    <Compile Include="Dao\QualityFinalInspsctionDao.cs" />
+    <Compile Include="Dao\QualityReportDao.cs" />
+    <Compile Include="Dao\QualityTestingDao.cs" />
+    <Compile Include="Dao\QuoDao.cs" />
+    <Compile Include="Dao\ReadyOfNumDao.cs" />
+    <Compile Include="Dao\RemindDao.cs" />
+    <Compile Include="Dao\SafetyManegerAndControlDao.cs" />
+    <Compile Include="Dao\SailesDao.cs" />
+    <Compile Include="Dao\SailsPaymentTaxRefundAndElectricityBillDao.cs" />
+    <Compile Include="Dao\SanitationBroadDao.cs" />
+    <Compile Include="Dao\SanitationCheckDao.cs" />
+    <Compile Include="Dao\ShenChanJinDuJiHuaDao.cs" />
+    <Compile Include="Dao\shenchanjindujihuaReportDao.cs" />
+    <Compile Include="Dao\SiReYiYincontractDao.cs" />
+    <Compile Include="Dao\StandardAuditFivDao.cs" />
+    <Compile Include="Dao\StandardAuditForDao.cs" />
+    <Compile Include="Dao\StandardAuditOneDao.cs" />
+    <Compile Include="Dao\StandardAuditTreDao.cs" />
+    <Compile Include="Dao\StandardAuditTwoDao.cs" />
+    <Compile Include="Dao\StandardTestDao.cs" />
+    <Compile Include="Dao\SuLiaoBucontractDao.cs" />
+    <Compile Include="Dao\SystemDrityDao.cs" />
+    <Compile Include="Dao\TargetActualWarnDao.cs" />
+    <Compile Include="Dao\TeamLeaderRoutineCheckDao.cs" />
+    <Compile Include="Dao\TestReportForAQDao.cs" />
+    <Compile Include="Dao\TestResultRecordDao.cs" />
+    <Compile Include="Dao\TestResultRecordOneDao.cs" />
+    <Compile Include="Dao\UserInfoDao.cs" />
+    <Compile Include="Dao\WagesContrastTableDao.cs" />
+    <Compile Include="Dao\WagesCostComparisonDao.cs" />
+    <Compile Include="Dao\WagesDao.cs" />
+    <Compile Include="Dao\WaiXiancontractDao.cs" />
+    <Compile Include="Dao\WaiXianDao.cs" />
+    <Compile Include="Dao\WarehouseReceiptDao.cs" />
+    <Compile Include="Dao\WorkWagesDao.cs" />
+    <Compile Include="Dao\WuJincontractDao.cs" />
+    <Compile Include="Dao\yanpinchangqiancehuaDao.cs" />
+    <Compile Include="Dao\YouQiBomDao.cs" />
+    <Compile Include="Dao\YouQicontractDao.cs" />
+    <Compile Include="Dao\GongXuGongZiDao.cs" />
+    <Compile Include="Dao\ZuZhangBomDao.cs" />
+    <Compile Include="Dao\ZuZhangGongZiKaoHdDao.cs" />
+    <Compile Include="Dao\ZuZhangGongZiKaoHeDao.cs" />
+    <Compile Include="Drity.cs" />
+    <Compile Include="generateOddNum.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="LogHelperToSql.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="UserInfoMation.cs" />
+    <Compile Include="WriteReceivableToGeneralLedger.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

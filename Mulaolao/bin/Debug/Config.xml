@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Files>
+  <description>1:更新壳界面，新增快捷键功能</description>
+  <Count>510</Count>
+  <remarks />
+           <File Ver="1.0.0.3" Name="R_050.frx" />
+           <File Ver="1.0.0.3" Name="R_195.frx" />
+           <File Ver="1.0.0.3" Name="R_199.frx" />
+           <File Ver="1.0.0.3" Name="R_196.frx" />
+           <File Ver="1.0.0.3" Name="R_341_mc.frx" />
+           <File Ver="1.0.0.3" Name="R_337.frx" />
+           <File Ver="1.0.0.3" Name="R_338.frx" />
+           <File Ver="1.0.0.3" Name="R_323.frx" />
+           <File Ver="1.0.0.3" Name="R_340.frx" />
+           <File Ver="1.0.0.3" Name="R_339.frx" />
+           <File Ver="1.0.0.3" Name="R_343.frx" />
+           <File Ver="1.0.0.3" Name="R_344.frx" />
+           <File Ver="1.0.0.3" Name="R_347.frx" />
+           <File Ver="1.0.0.3" Name="R_349.frx" />
+           <File Ver="1.0.0.3" Name="R_345.frx" />
+           <File Ver="1.0.0.3" Name="R_345-1.frx" />
+           <File Ver="1.0.0.3" Name="R_345-2.frx" />
+           <File Ver="1.0.0.3" Name="R_495.frx" />
+           <File Ver="1.0.0.3" Name="R_505.frx" />
+           <File Ver="1.0.0.3" Name="R_509.frx" />
+           <File Ver="1.0.0.3" Name="R_526.frx" />
+           <File Ver="1.0.0.1" Name="Microsoft.MSXML.dll" />
+           <File Ver="1.0.0.2" Name="Microsoft.VisualStudio.VSHelp.dll" />
+           <File Ver="1.0.0.2" Name="MulaolaoBll.dll" />
+           <File Ver="1.0.0.2" Name="MulaolaoLibrary.dll" />
+           <File Ver="1.0.0.2" Name="SelectAll.dll" />
+           <File Ver="1.0.0.3" Name="stdole.dll" />
+           <File Ver="1.0.0.2" Name="Mulaolao.exe" />
+</Files>

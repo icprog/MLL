@@ -1,0 +1,828 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="Columns" iskey="true" value="48">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="VisibleIndex">0</property>
+      <property name="Name">PQX38</property>
+      <property name="Visible">true</property>
+      <property name="Width">71</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="VisibleIndex">1</property>
+      <property name="Name">PQX13</property>
+      <property name="Visible">true</property>
+      <property name="Width">44</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="VisibleIndex">2</property>
+      <property name="Name">PQX14</property>
+      <property name="Visible">true</property>
+      <property name="Width">78</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="VisibleIndex">4</property>
+      <property name="Name">PQX16</property>
+      <property name="Visible">true</property>
+      <property name="Width">57</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">PQX17</property>
+      <property name="Width">34</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="VisibleIndex">3</property>
+      <property name="Name">PQX15</property>
+      <property name="Visible">true</property>
+      <property name="Width">82</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="VisibleIndex">7</property>
+      <property name="Name">PQX30</property>
+      <property name="Visible">true</property>
+      <property name="Width">66</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="VisibleIndex">8</property>
+      <property name="Name">PQX25</property>
+      <property name="Visible">true</property>
+      <property name="Width">85</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="VisibleIndex">11</property>
+      <property name="Name">U0</property>
+      <property name="Visible">true</property>
+      <property name="Width">59</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="VisibleIndex">5</property>
+      <property name="Name">PQX19</property>
+      <property name="Visible">true</property>
+      <property name="Width">67</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="VisibleIndex">6</property>
+      <property name="Name">PQX18</property>
+      <property name="Visible">true</property>
+      <property name="Width">59</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="VisibleIndex">13</property>
+      <property name="Name">U1</property>
+      <property name="Visible">true</property>
+      <property name="Width">62</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="VisibleIndex">9</property>
+      <property name="Name">PQX26</property>
+      <property name="Visible">true</property>
+      <property name="Width">81</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="VisibleIndex">10</property>
+      <property name="Name">U3</property>
+      <property name="Visible">true</property>
+      <property name="Width">82</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="VisibleIndex">14</property>
+      <property name="Name">U2</property>
+      <property name="Visible">true</property>
+      <property name="Width">80</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="VisibleIndex">15</property>
+      <property name="Name">U4</property>
+      <property name="Visible">true</property>
+      <property name="Width">64</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">PQX36</property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="VisibleIndex">16</property>
+      <property name="Name">PQX32</property>
+      <property name="Visible">true</property>
+      <property name="Width">68</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">PQX32</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="VisibleIndex">22</property>
+      <property name="Name">U19</property>
+      <property name="Visible">true</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U19</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="VisibleIndex">24</property>
+      <property name="Name">U5</property>
+      <property name="Visible">true</property>
+      <property name="Width">69</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U5</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="VisibleIndex">31</property>
+      <property name="Name">PQX22</property>
+      <property name="Visible">true</property>
+      <property name="Width">73</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">PQX22</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="VisibleIndex">32</property>
+      <property name="Name">PQX23</property>
+      <property name="Visible">true</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">PQX23</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="VisibleIndex">33</property>
+      <property name="Name">U6</property>
+      <property name="Visible">true</property>
+      <property name="Width">65</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U6</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="VisibleIndex">26</property>
+      <property name="Name">U7</property>
+      <property name="Visible">true</property>
+      <property name="Width">83</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U7</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="VisibleIndex">29</property>
+      <property name="Name">U8</property>
+      <property name="Visible">true</property>
+      <property name="Width">68</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U8</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item26" isnull="true" iskey="true">
+      <property name="VisibleIndex">28</property>
+      <property name="Name">U9</property>
+      <property name="Visible">true</property>
+      <property name="Width">69</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U9</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item27" isnull="true" iskey="true">
+      <property name="VisibleIndex">27</property>
+      <property name="Name">PQX24</property>
+      <property name="Visible">true</property>
+      <property name="Width">68</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">PQX24</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item28" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">U11</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U11</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item29" isnull="true" iskey="true">
+      <property name="VisibleIndex">23</property>
+      <property name="Name">PQX34</property>
+      <property name="Visible">true</property>
+      <property name="Width">68</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">PQX34</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item30" isnull="true" iskey="true">
+      <property name="VisibleIndex">25</property>
+      <property name="Name">U12</property>
+      <property name="Visible">true</property>
+      <property name="Width">84</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U12</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item31" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">U13</property>
+      <property name="Width">99</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U13</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item32" isnull="true" iskey="true">
+      <property name="VisibleIndex">34</property>
+      <property name="Name">U14</property>
+      <property name="Visible">true</property>
+      <property name="Width">76</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U14</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item33" isnull="true" iskey="true">
+      <property name="VisibleIndex">30</property>
+      <property name="Name">U15</property>
+      <property name="Visible">true</property>
+      <property name="Width">60</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U15</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item34" isnull="true" iskey="true">
+      <property name="VisibleIndex">100000</property>
+      <property name="Name">U16</property>
+      <property name="Visible">true</property>
+      <property name="Width">78</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U16</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item35" isnull="true" iskey="true">
+      <property name="VisibleIndex">100000</property>
+      <property name="Name">U17</property>
+      <property name="Visible">true</property>
+      <property name="Width">83</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U17</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item36" isnull="true" iskey="true">
+      <property name="VisibleIndex">100000</property>
+      <property name="Name">U18</property>
+      <property name="Visible">true</property>
+      <property name="Width">84</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U18</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item37" isnull="true" iskey="true">
+      <property name="VisibleIndex">100000</property>
+      <property name="Name">PQX20</property>
+      <property name="Visible">true</property>
+      <property name="Width">101</property>
+    </property>
+    <property name="Item38" isnull="true" iskey="true">
+      <property name="VisibleIndex">36</property>
+      <property name="Name">PQX21</property>
+      <property name="Visible">true</property>
+      <property name="Width">82</property>
+    </property>
+    <property name="Item39" isnull="true" iskey="true">
+      <property name="VisibleIndex">21</property>
+      <property name="Name">U20</property>
+      <property name="Visible">true</property>
+      <property name="Width">66</property>
+    </property>
+    <property name="Item40" isnull="true" iskey="true">
+      <property name="VisibleIndex">17</property>
+      <property name="Name">U21</property>
+      <property name="Visible">true</property>
+      <property name="Width">84</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">U21</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">{0:0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item41" isnull="true" iskey="true">
+      <property name="VisibleIndex">18</property>
+      <property name="Name">U22</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item42" isnull="true" iskey="true">
+      <property name="VisibleIndex">19</property>
+      <property name="Name">U23</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item43" isnull="true" iskey="true">
+      <property name="VisibleIndex">20</property>
+      <property name="Name">U24</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item44" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">U25</property>
+    </property>
+    <property name="Item45" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">U26</property>
+    </property>
+    <property name="Item46" isnull="true" iskey="true">
+      <property name="VisibleIndex">-1</property>
+      <property name="Name">U27</property>
+    </property>
+    <property name="Item47" isnull="true" iskey="true">
+      <property name="VisibleIndex">35</property>
+      <property name="Name">U28</property>
+      <property name="Visible">true</property>
+      <property name="Width">55</property>
+    </property>
+    <property name="Item48" isnull="true" iskey="true">
+      <property name="VisibleIndex">12</property>
+      <property name="Name">U29</property>
+      <property name="Visible">true</property>
+    </property>
+  </property>
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="ColumnAutoWidth">false</property>
+    <property name="AllowCellMerge">true</property>
+    <property name="ShowAutoFilterRow">true</property>
+    <property name="ShowFooter">true</property>
+    <property name="ShowGroupPanel">false</property>
+  </property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="Bands" iskey="true" value="24">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Width">59</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand11</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Width">93</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand7</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="Width">71</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">PQX38</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand10</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="Width">44</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">PQX13</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand1</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="Width">68</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand18</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="Width">59</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand9</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="Width">85</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand8</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="Width">75</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand39</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="Width">78</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">PQX14</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand2</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="Width">82</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">PQX15</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand5</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="Width">249</property>
+      <property name="Columns" iskey="true" value="4">
+        <property name="Item1">PQX16</property>
+        <property name="Item2">PQX19</property>
+        <property name="Item3">PQX18</property>
+        <property name="Item4">PQX30</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand79</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="Width">248</property>
+      <property name="Columns" iskey="true" value="3">
+        <property name="Item1">PQX25</property>
+        <property name="Item2">PQX26</property>
+        <property name="Item3">U3</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand3</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="Width">340</property>
+      <property name="Columns" iskey="true" value="5">
+        <property name="Item1">U0</property>
+        <property name="Item2">U29</property>
+        <property name="Item3">U1</property>
+        <property name="Item4">U2</property>
+        <property name="Item5">U4</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand6</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="Width">377</property>
+      <property name="Columns" iskey="true" value="6">
+        <property name="Item1">PQX32</property>
+        <property name="Item2">U21</property>
+        <property name="Item3">U22</property>
+        <property name="Item4">U23</property>
+        <property name="Item5">U24</property>
+        <property name="Item6">PQX17</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand4</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="Width">84</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="3">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">84</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand33</property>
+        </property>
+        <property name="Item2" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">83</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand34</property>
+        </property>
+        <property name="Item3" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">84</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand35</property>
+        </property>
+      </property>
+      <property name="Name">gridBand32</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="Width">66</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">U20</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand21</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="Width">296</property>
+      <property name="Columns" iskey="true" value="4">
+        <property name="Item1">U19</property>
+        <property name="Item2">PQX34</property>
+        <property name="Item3">U5</property>
+        <property name="Item4">U12</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand20</property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="Width">561</property>
+      <property name="Columns" iskey="true" value="8">
+        <property name="Item1">U7</property>
+        <property name="Item2">PQX24</property>
+        <property name="Item3">U9</property>
+        <property name="Item4">U8</property>
+        <property name="Item5">U15</property>
+        <property name="Item6">PQX22</property>
+        <property name="Item7">PQX23</property>
+        <property name="Item8">U6</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand27</property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="Width">76</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">U14</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand26</property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="Width">137</property>
+      <property name="Columns" iskey="true" value="6">
+        <property name="Item1">U25</property>
+        <property name="Item2">U26</property>
+        <property name="Item3">U27</property>
+        <property name="Item4">U13</property>
+        <property name="Item5">U28</property>
+        <property name="Item6">PQX21</property>
+      </property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand38</property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="Width">60</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="13">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">80</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand14</property>
+        </property>
+        <property name="Item2" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">82</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand15</property>
+        </property>
+        <property name="Item3" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">80</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand16</property>
+        </property>
+        <property name="Item4" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">100</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand17</property>
+        </property>
+        <property name="Item5" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">69</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand19</property>
+        </property>
+        <property name="Item6" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">83</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand23</property>
+        </property>
+        <property name="Item7" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">69</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand25</property>
+        </property>
+        <property name="Item8" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">84</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand28</property>
+        </property>
+        <property name="Item9" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">65</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand22</property>
+        </property>
+        <property name="Item10" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">68</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand24</property>
+        </property>
+        <property name="Item11" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">89</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand29</property>
+        </property>
+        <property name="Item12" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">76</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand30</property>
+        </property>
+        <property name="Item13" isnull="true" iskey="true">
+          <property name="Fixed">None</property>
+          <property name="Width">60</property>
+          <property name="AutoFillDown">true</property>
+          <property name="Columns" iskey="true" value="0" />
+          <property name="RowCount">1</property>
+          <property name="Visible">false</property>
+          <property name="Children" iskey="true" value="0" />
+          <property name="Name">gridBand31</property>
+        </property>
+      </property>
+      <property name="Name">gridBand13</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="Width">245</property>
+      <property name="Columns" iskey="true" value="3">
+        <property name="Item1">U16</property>
+        <property name="Item2">U17</property>
+        <property name="Item3">U18</property>
+      </property>
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand12</property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="Width">101</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">PQX20</property>
+      </property>
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand36</property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="Width">82</property>
+      <property name="Columns" iskey="true" value="0" />
+      <property name="Visible">false</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Name">gridBand37</property>
+    </property>
+  </property>
+  <property name="ActiveFilterString" />
+  <property name="SortInfo">~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAF1EZXZFeHByZXNzLlh0cmFHcmlkLnYxNi4yLCBWZXJzaW9uPTE2LjIuNi4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEFAQAAADhEZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvQ29sbGVjdGlvbgQAAAAKZ3JvdXBDb3VudAVjbG9uZQ9jbG9uZUdyb3VwQ291bnQTQ29sbGVjdGlvbkJhc2UrbGlzdAADAAMIsgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RldkV4cHJlc3MuWHRyYUdyaWQuQ29sdW1ucy5HcmlkQ29sdW1uU29ydEluZm8sIERldkV4cHJlc3MuWHRyYUdyaWQudjE2LjIsIFZlcnNpb249MTYuMi42LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dCBxTeXN0ZW0uQ29sbGVjdGlvbnMuQXJyYXlMaXN0AgAAAAEAAAAJAwAAAAAAAAAJBAAAAAQDAAAAsgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RldkV4cHJlc3MuWHRyYUdyaWQuQ29sdW1ucy5HcmlkQ29sdW1uU29ydEluZm8sIERldkV4cHJlc3MuWHRyYUdyaWQudjE2LjIsIFZlcnNpb249MTYuMi42LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAwRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mb1tdAgAAAAgICQUAAAAAAAAAAAAAAAQEAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5BcnJheUxpc3QDAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgUAAAgICQYAAAACAAAAAgAAAAcFAAAAAAEAAAAAAAAABC5EZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvAgAAABAGAAAABAAAAAkHAAAACQgAAAANAgwJAAAAGURldkV4cHJlc3MuWHRyYUdyaWQudjE2LjIFBwAAAC5EZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvAgAAAAlTb3J0T3JkZXIKQ29sdW1uTmFtZQABCAkAAAACAAAABgoAAAAFUFFYMTcBCAAAAAcAAAABAAAABgsAAAAFUFFYMTYL</property>
+  <property name="GroupSummarySortInfoState" />
+  <property name="FindFilterText" />
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

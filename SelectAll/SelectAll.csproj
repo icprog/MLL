@@ -1,0 +1,1294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7C52DB3-A8FB-4E13-9E0F-AA5DFE430617}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SelectAll</RootNamespace>
+    <AssemblyName>SelectAll</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MulaolaoBll">
+      <HintPath>..\MulaolaoBll\bin\Debug\MulaolaoBll.dll</HintPath>
+    </Reference>
+    <Reference Include="MulaolaoLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MulaolaoLibrary\bin\Debug\MulaolaoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="519BatchGunQi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="519BatchGunQi.Designer.cs">
+      <DependentUpon>519BatchGunQi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchEdit.Designer.cs">
+      <DependentUpon>BatchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchEditNumChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchEditNumChoice.Designer.cs">
+      <DependentUpon>BatchEditNumChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchPayMentTimeAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchPayMentTimeAll.Designer.cs">
+      <DependentUpon>BatchPayMentTimeAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeingLoaded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeingLoaded.Designer.cs">
+      <DependentUpon>BeingLoaded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangPingGaiShanNumAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangPingGaiShanNumAll.Designer.cs">
+      <DependentUpon>ChangPingGaiShanNumAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangPingGongZiKaoQingAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangPingGongZiKaoQingAll.Designer.cs">
+      <DependentUpon>ChangPingGongZiKaoQingAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChanPinGongZiKaiQinBatchEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChanPinGongZiKaiQinBatchEdit.Designer.cs">
+      <DependentUpon>ChanPinGongZiKaiQinBatchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChanPinGongZiKaoQinAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChanPinGongZiKaoQinAll.Designer.cs">
+      <DependentUpon>ChanPinGongZiKaoQinAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChanPinZhiBaoAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChanPinZhiBaoAll.Designer.cs">
+      <DependentUpon>ChanPinZhiBaoAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutBatchEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOutBatchEdit.Designer.cs">
+      <DependentUpon>CheckOutBatchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOutQueryAll.Designer.cs">
+      <DependentUpon>CheckOutQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheJianZhuRenKaoHeAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheJianZhuRenKaoHeAll.Designer.cs">
+      <DependentUpon>CheJianZhuRenKaoHeAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheMuJiancontractQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheMuJiancontractQueryAll.Designer.cs">
+      <DependentUpon>CheMuJiancontractQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChengBenYuSuanAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChengBenYuSuanAll.Designer.cs">
+      <DependentUpon>ChengBenYuSuanAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\DataTableToList.cs" />
+    <Compile Include="Class\DateDayAll.cs" />
+    <Compile Include="Class\GridViewMoHuSelect.cs" />
+    <Compile Include="Class\LoginUser.cs" />
+    <Compile Include="Class\PassDataWinFormEventArgs.cs" />
+    <Compile Include="Class\SailesCombobox.cs" />
+    <Compile Include="ContracToDoAJobAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContracToDoAJobAll.Designer.cs">
+      <DependentUpon>ContracToDoAJobAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractreviewQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractreviewQuery.Designer.cs">
+      <DependentUpon>ContractreviewQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractToDoAJobNumAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractToDoAJobNumAll.Designer.cs">
+      <DependentUpon>ContractToDoAJobNumAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractUncollectUnpaidAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractUncollectUnpaidAll.Designer.cs">
+      <DependentUpon>ContractUncollectUnpaidAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CostIndexAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CostIndexAll.Designer.cs">
+      <DependentUpon>CostIndexAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerrecordAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerrecordAll.Designer.cs">
+      <DependentUpon>CustomerrecordAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyCollectionRecordAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyCollectionRecordAll.Designer.cs">
+      <DependentUpon>DailyCollectionRecordAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedDeductionAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailedDeductionAll.Designer.cs">
+      <DependentUpon>DetailedDeductionAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedDeductionNumQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailedDeductionNumQuery.Designer.cs">
+      <DependentUpon>DetailedDeductionNumQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedDeductionSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailedDeductionSupplier.Designer.cs">
+      <DependentUpon>DetailedDeductionSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuanLiaoAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuanLiaoAll.Designer.cs">
+      <DependentUpon>DuanLiaoAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuanLiaoNumSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuanLiaoNumSelect.Designer.cs">
+      <DependentUpon>DuanLiaoNumSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedTestAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedTestAll.Designer.cs">
+      <DependentUpon>FeedTestAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedTestPartAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedTestPartAll.Designer.cs">
+      <DependentUpon>FeedTestPartAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBatchAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBatchAdd.Designer.cs">
+      <DependentUpon>FormBatchAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGongXuBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGongXuBatch.Designer.cs">
+      <DependentUpon>FormGongXuBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInvenAdSheetQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInvenAdSheetQueryAll.Designer.cs">
+      <DependentUpon>FormInvenAdSheetQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuotationQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuotationQuery.Designer.cs">
+      <DependentUpon>FormQuotationQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShenchenJinDu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShenchenJinDu.Designer.cs">
+      <DependentUpon>FormShenchenJinDu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupplier.Designer.cs">
+      <DependentUpon>FormSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmchanpingaishanQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmchanpingaishanQuery.Designer.cs">
+      <DependentUpon>FrmchanpingaishanQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromSanitationCheckQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromSanitationCheckQuery.Designer.cs">
+      <DependentUpon>FromSanitationCheckQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongXuGongZiAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongXuGongZiAll.Designer.cs">
+      <DependentUpon>GongXuGongZiAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongXuGongZiNumAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongXuGongZiNumAll.Designer.cs">
+      <DependentUpon>GongXuGongZiNumAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongZiCeAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongZiCeAll.Designer.cs">
+      <DependentUpon>GongZiCeAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrivColumnStyle.cs" />
+    <Compile Include="GunQiChenBenAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunQiChenBenAll.Designer.cs">
+      <DependentUpon>GunQiChenBenAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunQiChenBenLibraryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunQiChenBenLibraryAll.Designer.cs">
+      <DependentUpon>GunQiChenBenLibraryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunQiChenBenLibraryEditAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunQiChenBenLibraryEditAll.Designer.cs">
+      <DependentUpon>GunQiChenBenLibraryEditAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunQiChengLanAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunQiChengLanAll.Designer.cs">
+      <DependentUpon>GunQiChengLanAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunQiChengLanNumAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunQiChengLanNumAll.Designer.cs">
+      <DependentUpon>GunQiChengLanNumAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunQiContractAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunQiContractAll.Designer.cs">
+      <DependentUpon>GunQiContractAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunQiContractChoiceAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunQiContractChoiceAll.Designer.cs">
+      <DependentUpon>GunQiContractChoiceAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GunQiContractPartAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GunQiContractPartAll.Designer.cs">
+      <DependentUpon>GunQiContractPartAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JiaoHeBanJunHengNumAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JiaoHeBanJunHengNumAll.Designer.cs">
+      <DependentUpon>JiaoHeBanJunHengNumAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JiaomiducontractQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JiaomiducontractQueryAll.Designer.cs">
+      <DependentUpon>JiaomiducontractQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JiaoMiDuJunHengAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JiaoMiDuJunHengAll.Designer.cs">
+      <DependentUpon>JiaoMiDuJunHengAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePayrollAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePayrollAll.Designer.cs">
+      <DependentUpon>ManagePayrollAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MucaiContractQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MucaiContractQueryAll.Designer.cs">
+      <DependentUpon>MucaiContractQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumberEditContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NumberEditContract.Designer.cs">
+      <DependentUpon>NumberEditContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherExpenseStatementAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpenseStatementAll.Designer.cs">
+      <DependentUpon>OtherExpenseStatementAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherExpenseStatementNumAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpenseStatementNumAll.Designer.cs">
+      <DependentUpon>OtherExpenseStatementNumAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutbandChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutbandChoice.Designer.cs">
+      <DependentUpon>OutbandChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayMentCheckOutAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayMentCheckOutAll.Designer.cs">
+      <DependentUpon>PayMentCheckOutAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayMentDetailed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayMentDetailed.Designer.cs">
+      <DependentUpon>PayMentDetailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayMentFivAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayMentFivAll.Designer.cs">
+      <DependentUpon>PayMentFivAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayMentForAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayMentForAll.Designer.cs">
+      <DependentUpon>PayMentForAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayMentOneAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayMentOneAll.Designer.cs">
+      <DependentUpon>PayMentOneAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayMentTreAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayMentTreAll.Designer.cs">
+      <DependentUpon>PayMentTreAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayMentTwoAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayMentTwoAll.Designer.cs">
+      <DependentUpon>PayMentTwoAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayMentWages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayMentWages.Designer.cs">
+      <DependentUpon>PayMentWages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PenYouQiChenAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PenYouQiChenAll.Designer.cs">
+      <DependentUpon>PenYouQiChenAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeraggAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeraggAll.Designer.cs">
+      <DependentUpon>PeraggAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAgentFeeAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductAgentFeeAll.Designer.cs">
+      <DependentUpon>ProductAgentFeeAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBeforeAndAfterRoadWagesAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductBeforeAndAfterRoadWagesAll.Designer.cs">
+      <DependentUpon>ProductBeforeAndAfterRoadWagesAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductContractProcessAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductContractProcessAll.Designer.cs">
+      <DependentUpon>ProductContractProcessAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCostSummaryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCostSummaryAll.Designer.cs">
+      <DependentUpon>ProductCostSummaryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCostSummaryBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCostSummaryBatch.Designer.cs">
+      <DependentUpon>ProductCostSummaryBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductFinishedProductOutsourcingAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductFinishedProductOutsourcingAll.Designer.cs">
+      <DependentUpon>ProductFinishedProductOutsourcingAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductGunPaintAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductGunPaintAll.Designer.cs">
+      <DependentUpon>ProductGunPaintAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductLron.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductLron.Designer.cs">
+      <DependentUpon>ProductLron.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductLronAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductLronAll.Designer.cs">
+      <DependentUpon>ProductLronAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPackageMaterialAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductPackageMaterialAll.Designer.cs">
+      <DependentUpon>ProductPackageMaterialAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPaintAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductPaintAll.Designer.cs">
+      <DependentUpon>ProductPaintAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPlywoodAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductPlywoodAll.Designer.cs">
+      <DependentUpon>ProductPlywoodAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductQualityAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductQualityAll.Designer.cs">
+      <DependentUpon>ProductQualityAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSpecificationAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductSpecificationAll.Designer.cs">
+      <DependentUpon>ProductSpecificationAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductVehicleWoodPiecesAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductVehicleWoodPiecesAll.Designer.cs">
+      <DependentUpon>ProductVehicleWoodPiecesAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductWoodAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductWoodAll.Designer.cs">
+      <DependentUpon>ProductWoodAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBar.Designer.cs">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QualityFinalInspsctionAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityFinalInspsctionAll.Designer.cs">
+      <DependentUpon>QualityFinalInspsctionAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityReportAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityReportAll.Designer.cs">
+      <DependentUpon>QualityReportAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityTestingALL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityTestingALL.Designer.cs">
+      <DependentUpon>QualityTestingALL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityTestingNumQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityTestingNumQuery.Designer.cs">
+      <DependentUpon>QualityTestingNumQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityTestingQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityTestingQueryAll.Designer.cs">
+      <DependentUpon>QualityTestingQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadyOfNumAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadyOfNumAll.Designer.cs">
+      <DependentUpon>ReadyOfNumAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemindAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemindAuto.Designer.cs">
+      <DependentUpon>RemindAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidualPaintAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidualPaintAll.Designer.cs">
+      <DependentUpon>ResidualPaintAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SafetyManegerAndControlAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SafetyManegerAndControlAll.Designer.cs">
+      <DependentUpon>SafetyManegerAndControlAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SailesQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SailesQueryAll.Designer.cs">
+      <DependentUpon>SailesQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SailsPayAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SailsPayAll.Designer.cs">
+      <DependentUpon>SailsPayAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SailsPaymentTaxRefundAndElectricityBillAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SailsPaymentTaxRefundAndElectricityBillAll.Designer.cs">
+      <DependentUpon>SailsPaymentTaxRefundAndElectricityBillAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShenChanJinDuJiHuaAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShenChanJinDuJiHuaAll.Designer.cs">
+      <DependentUpon>ShenChanJinDuJiHuaAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShenChanJinDuJiHuaCopyPartAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShenChanJinDuJiHuaCopyPartAll.Designer.cs">
+      <DependentUpon>ShenChanJinDuJiHuaCopyPartAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiReYiYincontractAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiReYiYincontractAll.Designer.cs">
+      <DependentUpon>SiReYiYincontractAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpessOfProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpessOfProgress.designer.cs">
+      <DependentUpon>SpessOfProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAuditFivAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StandardAuditFivAll.Designer.cs">
+      <DependentUpon>StandardAuditFivAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAuditForAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StandardAuditForAll.Designer.cs">
+      <DependentUpon>StandardAuditForAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAuditOneAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StandardAuditOneAll.Designer.cs">
+      <DependentUpon>StandardAuditOneAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAuditTreAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StandardAuditTreAll.Designer.cs">
+      <DependentUpon>StandardAuditTreAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAuditTwoAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StandardAuditTwoAll.Designer.cs">
+      <DependentUpon>StandardAuditTwoAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuLiaoBucontractQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuLiaoBucontractQueryAll.Designer.cs">
+      <DependentUpon>SuLiaoBucontractQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TargetActualWarnAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TargetActualWarnAll.Designer.cs">
+      <DependentUpon>TargetActualWarnAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamLeaderRoutineCheckAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamLeaderRoutineCheckAll.Designer.cs">
+      <DependentUpon>TeamLeaderRoutineCheckAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestReportForAQAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestReportForAQAll.Designer.cs">
+      <DependentUpon>TestReportForAQAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestResultRecordAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestResultRecordAll.Designer.cs">
+      <DependentUpon>TestResultRecordAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestResultRecordOneAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestResultRecordOneAll.Designer.cs">
+      <DependentUpon>TestResultRecordOneAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WagesCostComparisonAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WagesCostComparisonAll.Designer.cs">
+      <DependentUpon>WagesCostComparisonAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaiXianAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaiXianAll.Designer.cs">
+      <DependentUpon>WaiXianAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaiXiancontractAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaiXiancontractAll.Designer.cs">
+      <DependentUpon>WaiXiancontractAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaiXianNumAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaiXianNumAll.Designer.cs">
+      <DependentUpon>WaiXianNumAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseReceiptAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseReceiptAdd.Designer.cs">
+      <DependentUpon>WarehouseReceiptAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseReceiptEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseReceiptEdit.Designer.cs">
+      <DependentUpon>WarehouseReceiptEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseReceiptLibr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseReceiptLibr.Designer.cs">
+      <DependentUpon>WarehouseReceiptLibr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWagesAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkWagesAll.Designer.cs">
+      <DependentUpon>WorkWagesAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WuJinContractQueryAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WuJinContractQueryAll.Designer.cs">
+      <DependentUpon>WuJinContractQueryAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yanpinchangqiancehuaAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yanpinchangqiancehuaAll.Designer.cs">
+      <DependentUpon>yanpinchangqiancehuaAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YouqiBomAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YouqiBomAll.Designer.cs">
+      <DependentUpon>YouqiBomAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YouQicontractAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YouQicontractAll.Designer.cs">
+      <DependentUpon>YouQicontractAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YouQiSelectAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YouQiSelectAll.Designer.cs">
+      <DependentUpon>YouQiSelectAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZuZhangGongZiKaoHeAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZuZhangGongZiKaoHeAll.Designer.cs">
+      <DependentUpon>ZuZhangGongZiKaoHeAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZuZhangGongZiKaoHeHdAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZuZhangGongZiKaoHeHdAll.Designer.cs">
+      <DependentUpon>ZuZhangGongZiKaoHeHdAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZuZhangGongZiKaoHeOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZuZhangGongZiKaoHeOne.Designer.cs">
+      <DependentUpon>ZuZhangGongZiKaoHeOne.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="519BatchGunQi.resx">
+      <DependentUpon>519BatchGunQi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchEdit.resx">
+      <DependentUpon>BatchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchEditNumChoice.resx">
+      <DependentUpon>BatchEditNumChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchPayMentTimeAll.resx">
+      <DependentUpon>BatchPayMentTimeAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeingLoaded.resx">
+      <DependentUpon>BeingLoaded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangPingGaiShanNumAll.resx">
+      <DependentUpon>ChangPingGaiShanNumAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangPingGongZiKaoQingAll.resx">
+      <DependentUpon>ChangPingGongZiKaoQingAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChanPinGongZiKaiQinBatchEdit.resx">
+      <DependentUpon>ChanPinGongZiKaiQinBatchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChanPinGongZiKaoQinAll.resx">
+      <DependentUpon>ChanPinGongZiKaoQinAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChanPinZhiBaoAll.resx">
+      <DependentUpon>ChanPinZhiBaoAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOutBatchEdit.resx">
+      <DependentUpon>CheckOutBatchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOutQueryAll.resx">
+      <DependentUpon>CheckOutQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheJianZhuRenKaoHeAll.resx">
+      <DependentUpon>CheJianZhuRenKaoHeAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheMuJiancontractQueryAll.resx">
+      <DependentUpon>CheMuJiancontractQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChengBenYuSuanAll.resx">
+      <DependentUpon>ChengBenYuSuanAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContracToDoAJobAll.resx">
+      <DependentUpon>ContracToDoAJobAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractreviewQuery.resx">
+      <DependentUpon>ContractreviewQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractToDoAJobNumAll.resx">
+      <DependentUpon>ContractToDoAJobNumAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractUncollectUnpaidAll.resx">
+      <DependentUpon>ContractUncollectUnpaidAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostIndexAll.resx">
+      <DependentUpon>CostIndexAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerrecordAll.resx">
+      <DependentUpon>CustomerrecordAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyCollectionRecordAll.resx">
+      <DependentUpon>DailyCollectionRecordAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailedDeductionAll.resx">
+      <DependentUpon>DetailedDeductionAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailedDeductionNumQuery.resx">
+      <DependentUpon>DetailedDeductionNumQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailedDeductionSupplier.resx">
+      <DependentUpon>DetailedDeductionSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DuanLiaoAll.resx">
+      <DependentUpon>DuanLiaoAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DuanLiaoNumSelect.resx">
+      <DependentUpon>DuanLiaoNumSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedTestAll.resx">
+      <DependentUpon>FeedTestAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedTestPartAll.resx">
+      <DependentUpon>FeedTestPartAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBatchAdd.resx">
+      <DependentUpon>FormBatchAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGongXuBatch.resx">
+      <DependentUpon>FormGongXuBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInvenAdSheetQueryAll.resx">
+      <DependentUpon>FormInvenAdSheetQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuotationQuery.resx">
+      <DependentUpon>FormQuotationQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShenchenJinDu.resx">
+      <DependentUpon>FormShenchenJinDu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupplier.resx">
+      <DependentUpon>FormSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmchanpingaishanQuery.resx">
+      <DependentUpon>FrmchanpingaishanQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromSanitationCheckQuery.resx">
+      <DependentUpon>FromSanitationCheckQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GongXuGongZiAll.resx">
+      <DependentUpon>GongXuGongZiAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GongXuGongZiNumAll.resx">
+      <DependentUpon>GongXuGongZiNumAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GongZiCeAll.resx">
+      <DependentUpon>GongZiCeAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunQiChenBenAll.resx">
+      <DependentUpon>GunQiChenBenAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunQiChenBenLibraryAll.resx">
+      <DependentUpon>GunQiChenBenLibraryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunQiChenBenLibraryEditAll.resx">
+      <DependentUpon>GunQiChenBenLibraryEditAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunQiChengLanAll.resx">
+      <DependentUpon>GunQiChengLanAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunQiChengLanNumAll.resx">
+      <DependentUpon>GunQiChengLanNumAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunQiContractAll.resx">
+      <DependentUpon>GunQiContractAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunQiContractChoiceAll.resx">
+      <DependentUpon>GunQiContractChoiceAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GunQiContractPartAll.resx">
+      <DependentUpon>GunQiContractPartAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JiaoHeBanJunHengNumAll.resx">
+      <DependentUpon>JiaoHeBanJunHengNumAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JiaomiducontractQueryAll.resx">
+      <DependentUpon>JiaomiducontractQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JiaoMiDuJunHengAll.resx">
+      <DependentUpon>JiaoMiDuJunHengAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePayrollAll.resx">
+      <DependentUpon>ManagePayrollAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MucaiContractQueryAll.resx">
+      <DependentUpon>MucaiContractQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumberEditContract.resx">
+      <DependentUpon>NumberEditContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpenseStatementAll.resx">
+      <DependentUpon>OtherExpenseStatementAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpenseStatementNumAll.resx">
+      <DependentUpon>OtherExpenseStatementNumAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutbandChoice.resx">
+      <DependentUpon>OutbandChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayMentCheckOutAll.resx">
+      <DependentUpon>PayMentCheckOutAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayMentDetailed.resx">
+      <DependentUpon>PayMentDetailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayMentFivAll.resx">
+      <DependentUpon>PayMentFivAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayMentForAll.resx">
+      <DependentUpon>PayMentForAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayMentOneAll.resx">
+      <DependentUpon>PayMentOneAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayMentTreAll.resx">
+      <DependentUpon>PayMentTreAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayMentTwoAll.resx">
+      <DependentUpon>PayMentTwoAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayMentWages.resx">
+      <DependentUpon>PayMentWages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PenYouQiChenAll.resx">
+      <DependentUpon>PenYouQiChenAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeraggAll.resx">
+      <DependentUpon>PeraggAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAgentFeeAll.resx">
+      <DependentUpon>ProductAgentFeeAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductBeforeAndAfterRoadWagesAll.resx">
+      <DependentUpon>ProductBeforeAndAfterRoadWagesAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductContractProcessAll.resx">
+      <DependentUpon>ProductContractProcessAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCostSummaryAll.resx">
+      <DependentUpon>ProductCostSummaryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCostSummaryBatch.resx">
+      <DependentUpon>ProductCostSummaryBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductFinishedProductOutsourcingAll.resx">
+      <DependentUpon>ProductFinishedProductOutsourcingAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductGunPaintAll.resx">
+      <DependentUpon>ProductGunPaintAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductLron.resx">
+      <DependentUpon>ProductLron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductLronAll.resx">
+      <DependentUpon>ProductLronAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductPackageMaterialAll.resx">
+      <DependentUpon>ProductPackageMaterialAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductPaintAll.resx">
+      <DependentUpon>ProductPaintAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductPlywoodAll.resx">
+      <DependentUpon>ProductPlywoodAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductQualityAll.resx">
+      <DependentUpon>ProductQualityAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductSpecificationAll.resx">
+      <DependentUpon>ProductSpecificationAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductVehicleWoodPiecesAll.resx">
+      <DependentUpon>ProductVehicleWoodPiecesAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductWoodAll.resx">
+      <DependentUpon>ProductWoodAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QualityFinalInspsctionAll.resx">
+      <DependentUpon>QualityFinalInspsctionAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityReportAll.resx">
+      <DependentUpon>QualityReportAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityTestingALL.resx">
+      <DependentUpon>QualityTestingALL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityTestingNumQuery.resx">
+      <DependentUpon>QualityTestingNumQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityTestingQueryAll.resx">
+      <DependentUpon>QualityTestingQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadyOfNumAll.resx">
+      <DependentUpon>ReadyOfNumAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemindAuto.resx">
+      <DependentUpon>RemindAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidualPaintAll.resx">
+      <DependentUpon>ResidualPaintAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SafetyManegerAndControlAll.resx">
+      <DependentUpon>SafetyManegerAndControlAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SailesQueryAll.resx">
+      <DependentUpon>SailesQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SailsPayAll.resx">
+      <DependentUpon>SailsPayAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SailsPaymentTaxRefundAndElectricityBillAll.resx">
+      <DependentUpon>SailsPaymentTaxRefundAndElectricityBillAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShenChanJinDuJiHuaAll.resx">
+      <DependentUpon>ShenChanJinDuJiHuaAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShenChanJinDuJiHuaCopyPartAll.resx">
+      <DependentUpon>ShenChanJinDuJiHuaCopyPartAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiReYiYincontractAll.resx">
+      <DependentUpon>SiReYiYincontractAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpessOfProgress.resx">
+      <DependentUpon>SpessOfProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardAuditFivAll.resx">
+      <DependentUpon>StandardAuditFivAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardAuditForAll.resx">
+      <DependentUpon>StandardAuditForAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardAuditOneAll.resx">
+      <DependentUpon>StandardAuditOneAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardAuditTreAll.resx">
+      <DependentUpon>StandardAuditTreAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardAuditTwoAll.resx">
+      <DependentUpon>StandardAuditTwoAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuLiaoBucontractQueryAll.resx">
+      <DependentUpon>SuLiaoBucontractQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TargetActualWarnAll.resx">
+      <DependentUpon>TargetActualWarnAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamLeaderRoutineCheckAll.resx">
+      <DependentUpon>TeamLeaderRoutineCheckAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestReportForAQAll.resx">
+      <DependentUpon>TestReportForAQAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestResultRecordAll.resx">
+      <DependentUpon>TestResultRecordAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestResultRecordOneAll.resx">
+      <DependentUpon>TestResultRecordOneAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WagesCostComparisonAll.resx">
+      <DependentUpon>WagesCostComparisonAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaiXianAll.resx">
+      <DependentUpon>WaiXianAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaiXiancontractAll.resx">
+      <DependentUpon>WaiXiancontractAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaiXianNumAll.resx">
+      <DependentUpon>WaiXianNumAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseReceiptAdd.resx">
+      <DependentUpon>WarehouseReceiptAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseReceiptEdit.resx">
+      <DependentUpon>WarehouseReceiptEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseReceiptLibr.resx">
+      <DependentUpon>WarehouseReceiptLibr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkWagesAll.resx">
+      <DependentUpon>WorkWagesAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WuJinContractQueryAll.resx">
+      <DependentUpon>WuJinContractQueryAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yanpinchangqiancehuaAll.resx">
+      <DependentUpon>yanpinchangqiancehuaAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YouqiBomAll.resx">
+      <DependentUpon>YouqiBomAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YouQicontractAll.resx">
+      <DependentUpon>YouQicontractAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YouQiSelectAll.resx">
+      <DependentUpon>YouQiSelectAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZuZhangGongZiKaoHeAll.resx">
+      <DependentUpon>ZuZhangGongZiKaoHeAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZuZhangGongZiKaoHeHdAll.resx">
+      <DependentUpon>ZuZhangGongZiKaoHeHdAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZuZhangGongZiKaoHeOne.resx">
+      <DependentUpon>ZuZhangGongZiKaoHeOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timg.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

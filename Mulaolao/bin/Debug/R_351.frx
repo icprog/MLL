@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="04/21/2017 15:39:51" ReportInfo.Modified="01/19/2018 10:39:57" ReportInfo.CreatorVersion="2013.2.5.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+
+    private void Data1_AfterData(object sender, EventArgs e)
+    {
+      
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGmpXzxTZgUAjISq3RkDjjM5ZdA0Eie6dOX00uEjsgFbs2P21LCiEodm4mXhqbVVd2+NHmgBNATe/lpCdduLYhuA1xLHWipKEL+OnlhDbnsrcraFXnVAMWwbB/RqtUNJH2g==">
+      <TableDataSource Name="Table" Alias="R_PQQZ" DataType="System.Int32" Enabled="true" SelectCommand="WITH CET AS (SELECT QZ003,QZ004,QZ005,QZ006,QZ007,QZ008,CONVERT(FLOAT,QZ009) QZ009,QZ011,QZ014,CONVERT(FLOAT,QZ012) QZ012,QZ013,QZ017,CONVERT(FLOAT,QZ018) QZ018,QZ019,CONVERT(FLOAT,QZ020) QZ020,QZ021,QZ022,QZ023,QZ024,QZ025,QZ026,QZ027,QZ028,QZ029,QZ030,QZ039,DBA960,CONVERT(FLOAT,QZ015) QZ015,CONVERT(FLOAT,QZ040) QZ040,QZ016,QZ041,CONVERT(FLOAT,QZ042) QZ042,CONVERT(FLOAT,QZ043) QZ043,QZ044,QZ045 FROM R_PQQZ A LEFT JOIN TPADBA B ON A.QZ004=B.DBA002 WHERE QZ001='R_351-20180108005' UNION SELECT QZ003,QZ004,'累计' QZ005,SUM(QZ006) QZ006,SUM(QZ007) QZ007,SUM(QZ008) QZ008,CONVERT(FLOAT,QZ009) QZ009,QZ011,SUM(QZ014) QZ014,CONVERT(FLOAT,QZ012) QZ012,SUM(QZ013) QZ013,QZ017,CONVERT(FLOAT,QZ018) QZ018,SUM(QZ019) QZ019,CONVERT(FLOAT,QZ020) QZ020,SUM(QZ021) QZ021,QZ022,SUM(QZ023) QZ023,QZ024,SUM(QZ025) QZ025,QZ026,SUM(QZ027) QZ027,QZ028,SUM(QZ029) QZ029,QZ030,SUM(QZ039) QZ039,DBA960,CONVERT(FLOAT,QZ015) QZ015,CONVERT(FLOAT,QZ040) QZ040,QZ016,QZ041,CONVERT(FLOAT,QZ042) QZ042,CONVERT(FLOAT,QZ043) QZ043,QZ044,QZ045 FROM R_PQQZ A LEFT JOIN TPADBA B ON A.QZ004=B.DBA002 WHERE QZ002&lt;=(SELECT DISTINCT QZ002 FROM R_PQQZ WHERE QZ001='R_351-20180108005') GROUP BY QZ003,QZ004,QZ005,QZ009,QZ011,QZ012,QZ017,QZ018,QZ020,QZ022,QZ024,QZ026,QZ028,QZ030,DBA960,QZ015,QZ040,QZ016,QZ041,QZ042,QZ043,QZ044,QZ045),CFT AS(SELECT B.QZ003,B.QZ004,B.QZ005,B.QZ006,B.QZ007,CONVERT(DECIMAL(11,0),B.QZ008) QZ008,CONVERT(DECIMAL(11,0),CASE WHEN DBA960='男' THEN B.QZ008*B.QZ009 WHEN DBA960='女' THEN B.QZ008*B.QZ015 ELSE B.QZ008*B.QZ040 END) U0,CONVERT(DECIMAL(11,1),CASE WHEN B.QZ006=0 THEN 0 ELSE CASE WHEN DBA960='男' THEN B.QZ008*B.QZ009/B.QZ006 WHEN DBA960='女' THEN B.QZ008*B.QZ015/B.QZ006 ELSE B.QZ008*B.QZ040/B.QZ006 END END) U1,CONVERT(DECIMAL(11,0),CASE WHEN DBA960='男' THEN B.QZ006*B.QZ011 WHEN DBA960='女' THEN B.QZ006*B.QZ016 ELSE B.QZ006*B.QZ041 END) U2,CONVERT(DECIMAL(11,0),CASE WHEN B.QZ006=0 THEN 0 ELSE CASE WHEN DBA960='男' THEN B.QZ006*B.QZ011/B.QZ006 WHEN DBA960='女' THEN B.QZ006*B.QZ016/B.QZ006 ELSE B.QZ006*B.QZ041/B.QZ006 END END) U3,B.QZ014,CONVERT(DECIMAL(11,1),CASE WHEN B.QZ006=0 THEN 0 ELSE B.QZ014/B.QZ006 END) U4,B.QZ013,CONVERT(DECIMAL(11,0),CASE WHEN DBA960='男' THEN B.QZ013*B.QZ012 WHEN DBA960='女' THEN B.QZ013*B.QZ042 ELSE B.QZ013*B.QZ043 END) U5,CONVERT(DECIMAL(11,1),CASE WHEN B.QZ006=0 THEN 0 ELSE CASE WHEN DBA960='男' THEN B.QZ013*B.QZ012/B.QZ006 WHEN DBA960='女' THEN B.QZ013*B.QZ042/B.QZ006 ELSE B.QZ013*B.QZ043/B.QZ006 END END) U6,CONVERT(DECIMAL(11,0),CASE WHEN DBA960='男' THEN B.QZ006*B.QZ017 WHEN DBA960='女' THEN B.QZ006*B.QZ044 ELSE B.QZ006*B.QZ045 END) U7,B.QZ027,B.QZ027*B.QZ028 U8,B.QZ029,B.QZ029*B.QZ030 U9,B.QZ018,B.QZ019*B.QZ020+B.QZ021*B.QZ022+B.QZ023*B.QZ024+B.QZ025*B.QZ026+B.QZ027*B.QZ028+B.QZ029*B.QZ030 U06 FROM R_PQQZ A LEFT JOIN CET B ON A.QZ003=B.QZ003 AND A.QZ004=B.QZ004 WHERE A.QZ001='R_351-20180108005') SELECT QZ003,QZ004,QZ005,SUM(QZ006) QZ006,SUM(QZ007) QZ007,SUM(QZ008) QZ008,QZ018,SUM(U0) U0,SUM(U1) U1,SUM(U2) U2,SUM(U3) U3,SUM(QZ014) QZ014,SUM(U4) U4,SUM(QZ013) QZ013,SUM(U5) U5,SUM(U6) U6,SUM(U7) U7,SUM(QZ027) QZ027,SUM(U8) U8,SUM(QZ029) QZ029,SUM(U9) U9,CONVERT(DECIMAL(11,1),SUM(CASE WHEN QZ006=0 THEN U1+U3+U4+U6 ELSE U1+U3+U4+U6+U06/QZ006 END)) U00,SUM(U0+U2+QZ014+U5+U06) U01,SUM(U0+U2+QZ014+U5+U06-U7) U02,SUM(QZ018*(U0+U2+QZ014+U5+U06-U7)) U03,SUM(U7+QZ018*(U0+U2+QZ014+U5+U06-U7)) U04,SUM(CONVERT(DECIMAL(11,0),CASE WHEN QZ006=0 THEN 0 ELSE (U7+QZ018*(U0+U2+QZ014+U5+U9-U7))/QZ006 END)) U05,SUM(CONVERT(DECIMAL(11,1),CASE WHEN QZ006=0 THEN 0 ELSE U06/QZ006 END)) U07,SUM(U0+U2+QZ014+U5+U06-U7-QZ018*(U0+U2+QZ014+U5+U06-U7)) U08,SUM(U06) U06 FROM CFT GROUP BY QZ003,QZ004,QZ005,QZ018 ORDER BY QZ003,QZ004,QZ005">
+        <Column Name="QZ003" DataType="System.String"/>
+        <Column Name="QZ004" DataType="System.String"/>
+        <Column Name="QZ005" DataType="System.String"/>
+        <Column Name="QZ006" DataType="System.Decimal"/>
+        <Column Name="QZ007" DataType="System.Decimal"/>
+        <Column Name="U0" DataType="System.Decimal"/>
+        <Column Name="U1" DataType="System.Decimal"/>
+        <Column Name="U2" DataType="System.Decimal"/>
+        <Column Name="U3" DataType="System.Decimal"/>
+        <Column Name="QZ014" DataType="System.Decimal"/>
+        <Column Name="U4" DataType="System.Decimal"/>
+        <Column Name="QZ013" DataType="System.Int32"/>
+        <Column Name="U5" DataType="System.Decimal"/>
+        <Column Name="U6" DataType="System.Decimal"/>
+        <Column Name="U7" DataType="System.Decimal"/>
+        <Column Name="QZ027" DataType="System.Int32"/>
+        <Column Name="U8" DataType="System.Int32"/>
+        <Column Name="QZ029" DataType="System.Int32"/>
+        <Column Name="U9" DataType="System.Int32"/>
+        <Column Name="U00" DataType="System.Decimal"/>
+        <Column Name="U01" DataType="System.Decimal"/>
+        <Column Name="U02" DataType="System.Decimal"/>
+        <Column Name="U03" DataType="System.Double"/>
+        <Column Name="U04" DataType="System.Double"/>
+        <Column Name="U05" DataType="System.Decimal"/>
+        <Column Name="U07" DataType="System.Decimal"/>
+        <Column Name="U08" DataType="System.Double"/>
+        <Column Name="QZ018" DataType="System.Double"/>
+        <Column Name="U06" DataType="System.Double"/>
+        <Column Name="QZ008" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="R_PQQZO" DataType="System.Int32" Enabled="true" SelectCommand="SELECT DISTINCT QZ001,QZ009,QZ015,QZ040,QZ011,QZ016,QZ041,QZ012,QZ042,QZ043,QZ017,QZ044,QZ045,QZ018,QZ020,QZ028,QZ030,QZ031,CONVERT(VARCHAR(20),QZ032,102) QZ032,QZ033,CASE WHEN QZ033='' OR QZ033 IS NULL THEN '' ELSE CONVERT(VARCHAR(20),QZ034,102) END QZ034 FROM R_PQQZ WHERE QZ001='R_351-20180108005'&#13;&#10;">
+        <Column Name="QZ001" DataType="System.String"/>
+        <Column Name="QZ009" DataType="System.Decimal"/>
+        <Column Name="QZ015" DataType="System.Decimal"/>
+        <Column Name="QZ040" DataType="System.Decimal"/>
+        <Column Name="QZ011" DataType="System.Int32"/>
+        <Column Name="QZ016" DataType="System.Int32"/>
+        <Column Name="QZ041" DataType="System.Int32"/>
+        <Column Name="QZ012" DataType="System.Decimal"/>
+        <Column Name="QZ042" DataType="System.Decimal"/>
+        <Column Name="QZ043" DataType="System.Decimal"/>
+        <Column Name="QZ017" DataType="System.Int32"/>
+        <Column Name="QZ044" DataType="System.Int32"/>
+        <Column Name="QZ045" DataType="System.Int32"/>
+        <Column Name="QZ018" DataType="System.Decimal"/>
+        <Column Name="QZ020" DataType="System.Decimal"/>
+        <Column Name="QZ028" DataType="System.Int32"/>
+        <Column Name="QZ030" DataType="System.Int32"/>
+        <Column Name="QZ031" DataType="System.String"/>
+        <Column Name="QZ032" DataType="System.String"/>
+        <Column Name="QZ033" DataType="System.String"/>
+        <Column Name="QZ034" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table2" Alias="PrintOne" DataType="System.Int32" Enabled="true" SelectCommand="WITH CET AS (SELECT QZ001,QZ006,QZ007,QZ008,CASE WHEN DBA960='男' THEN QZ008*QZ009 WHEN DBA960='女' THEN QZ008*QZ015 WHEN DBA960='其他' THEN QZ008*QZ040 ELSE 0 END U22,CASE WHEN QZ006=0 THEN 0 ELSE CASE WHEN DBA960='男' THEN QZ008*QZ009/QZ006 WHEN DBA960='女' THEN QZ008*QZ015/QZ006 WHEN DBA960='其他' THEN QZ008*QZ040/QZ006 ELSE 0 END END U0,CASE WHEN DBA960='男' THEN QZ006*QZ011 WHEN DBA960='女' THEN QZ006*QZ016 WHEN DBA960='其他' THEN QZ006*QZ041 ELSE 0 END U23,CASE WHEN QZ006=0 THEN 0 ELSE CASE WHEN DBA960='男' THEN QZ011 WHEN DBA960='女' THEN QZ016 WHEN DBA960='其他' THEN QZ041 ELSE 0 END END U1,QZ014,CASE WHEN QZ006=0 THEN 0 ELSE QZ014/QZ006 END U4,QZ013,CASE WHEN DBA960='男' THEN QZ013*QZ012 WHEN DBA960='女' THEN QZ013*QZ042 WHEN DBA960='其他' THEN QZ013*QZ043 ELSE 0 END U5,CASE WHEN QZ006=0 THEN 0 ELSE CASE WHEN DBA960='男' THEN QZ013*QZ012/QZ006 WHEN DBA960='女' THEN QZ013*QZ042/QZ006 WHEN DBA960='其他' THEN QZ013*QZ043/QZ006 ELSE 0 END END U6,CASE WHEN DBA960='男' THEN QZ006*QZ017 WHEN DBA960='女' THEN QZ006*QZ044 WHEN DBA960='其他' THEN QZ006*QZ045 ELSE 0 END U7,QZ018,QZ019,QZ020,QZ019*QZ020 U13,QZ021,QZ022,QZ021*QZ022 U14,QZ023,QZ024,QZ023*QZ024 U15,QZ025,QZ026,QZ025*QZ026 U16,QZ027,QZ028,QZ027*QZ028 U17,QZ029,QZ030,QZ029*QZ030+ISNULL(QZ046*QZ047,0)+ISNULL(QZ048*QZ049,0) U18,QZ039,ISNULL(QZ046,0) QZ046,ISNULL(QZ048,0) QZ048 FROM R_PQQZ A LEFT JOIN TPADBA B ON A.QZ004=B.DBA002 WHERE QZ001='R_351-20180108005'),CFT AS (SELECT DISTINCT QZ001,QZ008 FROM R_PQQZ WHERE QZ001='R_351-20180108005'),CHT AS (SELECT QZ001,CONVERT(DECIMAL(11,0),SUM(QZ008)) QZ008 FROM CFT GROUP BY QZ001),CJT AS (SELECT CONVERT(DECIMAL(11,0),SUM(QZ006)) QZ006,CONVERT(DECIMAL(11,0),SUM(QZ007)) QZ007,B.QZ008,CONVERT(DECIMAL(11,0),SUM(U22)) U22,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U22)/SUM(QZ006) END ) U0,CONVERT(DECIMAL(11,0),SUM(U23)) U23,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U23)/SUM(QZ006) END) U1,CONVERT(DECIMAL(11,0),SUM(QZ014)) QZ014,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(QZ014)/SUM(QZ006) END) U4,CONVERT(DECIMAL(11,0),SUM(QZ013)) QZ013,CONVERT(DECIMAL(11,0),SUM(U5)) U5,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U5)/SUM(QZ006) END) U6,CONVERT(DECIMAL(11,0),SUM(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18)) U24,CONVERT(DECIMAL(11,0),SUM(U7)) U7,CONVERT(DECIMAL(11,0),SUM(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7)) U9,CONVERT(DECIMAL(11,0),SUM(QZ018*(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7))) U10,CONVERT(DECIMAL(11,0),SUM(U7+QZ018*(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7))) U11,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U7+QZ018*(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7))/SUM(QZ006) END) U12,CONVERT(DECIMAL(11,0),SUM(QZ019)) QZ019,CONVERT(DECIMAL(11,0),SUM(U13)) U13,CONVERT(DECIMAL(11,0),SUM(QZ021)) QZ021,CONVERT(DECIMAL(11,0),SUM(U14)) U14,CONVERT(DECIMAL(11,0),SUM(QZ023)) QZ023,CONVERT(DECIMAL(11,0),SUM(U15)) U15,CONVERT(DECIMAL(11,0),SUM(QZ025)) QZ025,CONVERT(DECIMAL(11,0),SUM(U16)) U16,CONVERT(DECIMAL(11,0),SUM(QZ027)) QZ027,CONVERT(DECIMAL(11,0),SUM(U17)) U17,CONVERT(DECIMAL(11,0),SUM(QZ029)) QZ029,CONVERT(DECIMAL(11,0),SUM(U18)) U18,CONVERT(DECIMAL(11,0),SUM(U13+U14+U15+U16+U17+U18)) U19,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U13+U14+U15+U16+U17+U18)/SUM(QZ006) END) U20,CONVERT(DECIMAL(11,0),SUM(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7-QZ018*(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7))) U21,CONVERT(DECIMAL(11,0),SUM(QZ039)) QZ039,SUM(QZ046) QZ046,SUM(QZ048) QZ048 FROM CET A INNER JOIN CHT B ON A.QZ001=B.QZ001 GROUP BY B.QZ008) SELECT *,U0+U1+U4+U6+U20 U3 FROM CJT">
+        <Column Name="QZ006" DataType="System.Decimal"/>
+        <Column Name="QZ007" DataType="System.Decimal"/>
+        <Column Name="QZ008" DataType="System.Decimal"/>
+        <Column Name="U22" DataType="System.Decimal"/>
+        <Column Name="U0" DataType="System.Decimal"/>
+        <Column Name="U23" DataType="System.Decimal"/>
+        <Column Name="U1" DataType="System.Decimal"/>
+        <Column Name="QZ014" DataType="System.Decimal"/>
+        <Column Name="U4" DataType="System.Decimal"/>
+        <Column Name="QZ013" DataType="System.Decimal"/>
+        <Column Name="U5" DataType="System.Decimal"/>
+        <Column Name="U6" DataType="System.Decimal"/>
+        <Column Name="U3" DataType="System.Decimal"/>
+        <Column Name="U24" DataType="System.Decimal"/>
+        <Column Name="U7" DataType="System.Decimal"/>
+        <Column Name="U9" DataType="System.Decimal"/>
+        <Column Name="U10" DataType="System.Decimal"/>
+        <Column Name="U11" DataType="System.Decimal"/>
+        <Column Name="U12" DataType="System.Decimal"/>
+        <Column Name="QZ019" DataType="System.Decimal"/>
+        <Column Name="U13" DataType="System.Decimal"/>
+        <Column Name="QZ021" DataType="System.Decimal"/>
+        <Column Name="U14" DataType="System.Decimal"/>
+        <Column Name="QZ023" DataType="System.Decimal"/>
+        <Column Name="U15" DataType="System.Decimal"/>
+        <Column Name="QZ025" DataType="System.Decimal"/>
+        <Column Name="U16" DataType="System.Decimal"/>
+        <Column Name="QZ027" DataType="System.Decimal"/>
+        <Column Name="U17" DataType="System.Decimal"/>
+        <Column Name="QZ029" DataType="System.Decimal"/>
+        <Column Name="U18" DataType="System.Decimal"/>
+        <Column Name="U19" DataType="System.Decimal"/>
+        <Column Name="U20" DataType="System.Decimal"/>
+        <Column Name="U21" DataType="System.Decimal"/>
+        <Column Name="QZ039" DataType="System.Decimal"/>
+        <Column Name="QZ046" DataType="System.Int32"/>
+        <Column Name="QZ048" DataType="System.Int32"/>
+      </TableDataSource>
+      <TableDataSource Name="Table3" Alias="PrintTwo" DataType="System.Int32" Enabled="true" SelectCommand="WITH CET AS (SELECT DISTINCT A.QZ002,A.QZ008 FROM R_PQQZC A RIGHT JOIN R_PQQZ B ON A.QZ004=B.QZ004 AND A.QZ003=B.QZ003 WHERE A.QZ002='2017/5/1' AND B.QZ002='2017/5/1'&#13;&#10;&#13;&#10;),CFT AS(SELECT QZ002,CONVERT(DECIMAL(11,0),SUM(QZ008)) QZ008 FROM CET GROUP BY QZ002&#13;&#10;&#13;&#10;),CJT AS (SELECT CONVERT(DECIMAL(11,0),SUM(QZ006)) QZ006,CONVERT(DECIMAL(11,0),SUM(QZ007)) QZ007,B.QZ008,CONVERT(DECIMAL(11,0),SUM(ISNULL(U22,0))) U22,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U22)/SUM(QZ006) END) U0,CONVERT(DECIMAL(11,0),SUM(U23)) U23,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U23)/SUM(QZ006) END) U1,CONVERT(DECIMAL(11,0),SUM(QZ014)) QZ014,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(QZ014)/SUM(QZ006) END) U4,CONVERT(DECIMAL(11,0),SUM(QZ013)) QZ013,CONVERT(DECIMAL(11,0),SUM(U5)) U5,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U5)/SUM(QZ006) END) U6,CONVERT(DECIMAL(11,0),SUM(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18)) U24,CONVERT(DECIMAL(11,0),SUM(U7)) U7,CONVERT(DECIMAL(11,0),SUM(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7)) U9,CONVERT(DECIMAL(11,0),SUM(QZ018*(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7))) U10,CONVERT(DECIMAL(11,0),SUM(U7+QZ018*(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7))) U11,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U7+QZ018*(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7))/SUM(QZ006) END) U12,CONVERT(DECIMAL(11,0),SUM(QZ019)) QZ019,CONVERT(DECIMAL(11,0),SUM(U13)) U13,CONVERT(DECIMAL(11,0),SUM(QZ021)) QZ021,CONVERT(DECIMAL(11,0),SUM(U14)) U14,CONVERT(DECIMAL(11,0),SUM(QZ023)) QZ023,CONVERT(DECIMAL(11,0),SUM(U15)) U15,CONVERT(DECIMAL(11,0),SUM(QZ025)) QZ025,CONVERT(DECIMAL(11,0),SUM(U16)) U16,CONVERT(DECIMAL(11,0),SUM(QZ027)) QZ027,CONVERT(DECIMAL(11,0),SUM(U17)) U17,CONVERT(DECIMAL(11,0),SUM(QZ029)) QZ029,CONVERT(DECIMAL(11,0),SUM(U18)) U18,CONVERT(DECIMAL(11,0),SUM(U13+U14+U15+U16+U17+U18)) U19,CONVERT(DECIMAL(11,0),CASE WHEN SUM(QZ006)=0 THEN 0 ELSE SUM(U13+U14+U15+U16+U17+U18)/SUM(QZ006) END) U20,CONVERT(DECIMAL(11,0),SUM(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7-QZ018*(U22+U23+QZ014+U5+U13+U14+U15+U16+U17+U18-U7))) U21,CONVERT(DECIMAL(11,0),SUM(QZ039)) QZ039,SUM(QZ046) QZ046,SUM(QZ048) QZ048 FROM R_PQQZC A INNER JOIN CFT B ON A.QZ002=B.QZ002 WHERE A.QZ002='2017/5/1' GROUP BY B.QZ008)   &#13;&#10;&#13;&#10;SELECT *,U0+U1+U4+U6+U20 U3 FROM CJT">
+        <Column Name="QZ006" DataType="System.Decimal"/>
+        <Column Name="QZ007" DataType="System.Decimal"/>
+        <Column Name="QZ008" DataType="System.Decimal"/>
+        <Column Name="U22" DataType="System.Decimal"/>
+        <Column Name="U0" DataType="System.Decimal"/>
+        <Column Name="U23" DataType="System.Decimal"/>
+        <Column Name="U1" DataType="System.Decimal"/>
+        <Column Name="QZ014" DataType="System.Decimal"/>
+        <Column Name="U4" DataType="System.Decimal"/>
+        <Column Name="QZ013" DataType="System.Decimal"/>
+        <Column Name="U5" DataType="System.Decimal"/>
+        <Column Name="U6" DataType="System.Decimal"/>
+        <Column Name="U3" DataType="System.Decimal"/>
+        <Column Name="U24" DataType="System.Decimal"/>
+        <Column Name="U7" DataType="System.Decimal"/>
+        <Column Name="U9" DataType="System.Decimal"/>
+        <Column Name="U10" DataType="System.Decimal"/>
+        <Column Name="U11" DataType="System.Decimal"/>
+        <Column Name="U12" DataType="System.Decimal"/>
+        <Column Name="QZ019" DataType="System.Decimal"/>
+        <Column Name="U13" DataType="System.Decimal"/>
+        <Column Name="QZ021" DataType="System.Decimal"/>
+        <Column Name="U14" DataType="System.Decimal"/>
+        <Column Name="QZ023" DataType="System.Decimal"/>
+        <Column Name="U15" DataType="System.Decimal"/>
+        <Column Name="QZ025" DataType="System.Decimal"/>
+        <Column Name="U16" DataType="System.Decimal"/>
+        <Column Name="QZ027" DataType="System.Decimal"/>
+        <Column Name="U17" DataType="System.Decimal"/>
+        <Column Name="QZ029" DataType="System.Decimal"/>
+        <Column Name="U18" DataType="System.Decimal"/>
+        <Column Name="U19" DataType="System.Decimal"/>
+        <Column Name="U20" DataType="System.Decimal"/>
+        <Column Name="U21" DataType="System.Decimal"/>
+        <Column Name="QZ039" DataType="System.Decimal"/>
+        <Column Name="QZ046" DataType="System.Int32"/>
+        <Column Name="QZ048" DataType="System.Int32"/>
+      </TableDataSource>
+    </OleDbDataConnection>
+    <Total Name="TotalQZ006" Expression="[R_PQQZ.QZ006]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ006ONE" Expression="[R_PQQZ.QZ006]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ007" Expression="[R_PQQZ.QZ007]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ007ONE" Expression="[R_PQQZ.QZ007]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ008" Expression="[R_PQQZ.QZ008]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ008ONE" Expression="[R_PQQZ.QZ008]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU0" Expression="[R_PQQZ.U0]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU0ONE" Expression="[R_PQQZ.U0]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU1" TotalType="Avg" Expression="[R_PQQZ.U1]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU1ONE" Expression="[R_PQQZ.U1]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU2" Expression="[R_PQQZ.U2]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU2ONE" Expression="[R_PQQZ.U2]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU3" TotalType="Avg" Expression="[R_PQQZ.U3]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU3ONE" Expression="[R_PQQZ.U3]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ014" Expression="[R_PQQZ.QZ014]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ014ONE" Expression="[R_PQQZ.QZ014]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU4" TotalType="Avg" Expression="[R_PQQZ.U4]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU4ONE" Expression="[R_PQQZ.U4]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ013" Expression="[R_PQQZ.QZ013]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ013ONE" Expression="[R_PQQZ.QZ013]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU5" Expression="[R_PQQZ.U5]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU5ONE" Expression="[R_PQQZ.U5]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU6" Expression="[R_PQQZ.U6]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU6ONE" Expression="[R_PQQZ.U6]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU00" Expression="[R_PQQZ.U00]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU00ONE" Expression="[R_PQQZ.U00]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU01" Expression="[R_PQQZ.U01]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU01ONE" Expression="[R_PQQZ.U01]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU7" Expression="[R_PQQZ.U7]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU7ONE" Expression="[R_PQQZ.U7]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU02" Expression="[R_PQQZ.U02]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU02ONE" Expression="[R_PQQZ.U02]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU03" Expression="[R_PQQZ.U03]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU03ONE" Expression="[R_PQQZ.U03]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU04" Expression="[R_PQQZ.U04]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU04ONE" Expression="[R_PQQZ.U04]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU05" Expression="[R_PQQZ.U05]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU05ONE" Expression="[R_PQQZ.U05]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ027" Expression="[R_PQQZ.QZ027]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ027ONE" Expression="[R_PQQZ.QZ027]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU8" Expression="[R_PQQZ.U8]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU8ONE" Expression="[R_PQQZ.U8]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ029" Expression="[R_PQQZ.QZ029]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ029ONE" Expression="[R_PQQZ.QZ029]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU9" Expression="[R_PQQZ.U9]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU9ONE" Expression="[R_PQQZ.U9]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU06" Expression="[R_PQQZ.U06]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU06ONE" Expression="[R_PQQZ.U06]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU07" Expression="[R_PQQZ.U07]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU07ONE" Expression="[R_PQQZ.U07]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU08" Expression="[R_PQQZ.U08]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU08ONE" Expression="[R_PQQZ.U08]" Evaluator="Data1" PrintOn="GroupFooter1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ006SUM" Expression="[R_PQQZ.QZ006]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ006SUMONE" Expression="[R_PQQZ.QZ006]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ007SUM" Expression="[R_PQQZ.QZ007]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ007SUMONE" Expression="[R_PQQZ.QZ007]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ008SUM" Expression="[R_PQQZ.QZ008]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ008SUMONE" Expression="[R_PQQZ.QZ008]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU0SUM" Expression="[R_PQQZ.U0]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU0SUMONE" Expression="[R_PQQZ.U0]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU1SUM" Expression="[R_PQQZ.U1]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU1SUMONE" Expression="[R_PQQZ.U1]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU2SUM" Expression="[R_PQQZ.U2]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU2SUMONE" Expression="[R_PQQZ.U2]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU3SUM" Expression="[R_PQQZ.U3]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU3SUMONE" Expression="[R_PQQZ.U3]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ014SUM" Expression="[R_PQQZ.QZ014]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ014SUMONE" Expression="[R_PQQZ.QZ014]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU4SUM" Expression="[R_PQQZ.U4]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU4SUMONE" Expression="[R_PQQZ.U4]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ013SUM" Expression="[R_PQQZ.QZ013]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ013SUMONE" Expression="[R_PQQZ.QZ013]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU5SUM" Expression="[R_PQQZ.U5]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU5SUMONE" Expression="[R_PQQZ.U5]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU6SUM" Expression="[R_PQQZ.U6]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU6SUMONE" Expression="[R_PQQZ.U6]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU00SUM" Expression="[R_PQQZ.U00]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU00SUMONE" Expression="[R_PQQZ.U00]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU01SUM" Expression="[R_PQQZ.U01]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU01SUMONE" Expression="[R_PQQZ.U01]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU7SUM" Expression="[R_PQQZ.U7]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU7SUMONE" Expression="[R_PQQZ.U7]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU02SUM" Expression="[R_PQQZ.U02]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU02SUMONE" Expression="[R_PQQZ.U02]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU03SUM" Expression="[R_PQQZ.U03]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU03SUMONE" Expression="[R_PQQZ.U03]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU04SUM" Expression="[R_PQQZ.U04]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU04SUMONE" Expression="[R_PQQZ.U04]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU05SUM" Expression="[R_PQQZ.U05]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU05SUMONE" Expression="[R_PQQZ.U05]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ027SUM" Expression="[R_PQQZ.QZ027]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ027SUMONE" Expression="[R_PQQZ.QZ027]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU8SUM" Expression="[R_PQQZ.U8]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU8SUMONE" Expression="[R_PQQZ.U8]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalQZ029SUM" Expression="[R_PQQZ.QZ029]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalQZ029SUMONE" Expression="[R_PQQZ.QZ029]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU9SUM" Expression="[R_PQQZ.U9]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU9SUMONE" Expression="[R_PQQZ.U9]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU06SUM" Expression="[R_PQQZ.U06]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU06SUMONE" Expression="[R_PQQZ.U06]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU07SUM" Expression="[R_PQQZ.U07]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU07SUMONE" Expression="[R_PQQZ.U07]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+    <Total Name="TotalU08SUM" Expression="[R_PQQZ.U08]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;本月&quot;"/>
+    <Total Name="TotalU08SUMONE" Expression="[R_PQQZ.U08]" Evaluator="Data1" PrintOn="ReportSummary1" EvaluateCondition="[R_PQQZ.QZ005]==&quot;累计&quot;"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="420" LeftMargin="1" TopMargin="1" RightMargin="1" BottomMargin="1">
+    <PageHeaderBand Name="PageHeader1" Width="1580.04" Height="164.43">
+      <TextObject Name="Text1" Width="1521.45" Height="47.25" Text="组长日常工资考核" HorzAlign="Center" VertAlign="Center" Font="宋体, 22pt, style=Bold"/>
+      <TextObject Name="Text2" Left="1379.7" Top="18.9" Width="94.5" Height="18.9" Text="R_351" HorzAlign="Center" VertAlign="Center" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text3" Top="47.25" Width="66.15" Height="117.18" Border.Lines="All" Text="部门" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text4" Left="66.15" Top="47.25" Width="56.7" Height="117.18" Border.Lines="All" Text="姓名" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text5" Left="122.85" Top="47.25" Width="47.25" Height="117.18" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text6" Left="170.1" Top="47.25" Width="47.25" Height="117.18" Border.Lines="All" Text="月考勤工数R502" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text7" Left="217.35" Top="47.25" Width="47.25" Height="117.18" Border.Lines="All" Text="月出勤日R502" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text8" Left="264.6" Top="109.62" Width="69.93" Height="54.81" Border.Lines="All" Text="月出产值元R468" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text10" Left="264.6" Top="68.04" Width="69.93" Height="20.79" Border.Lines="All" Text="产值提成" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text11" Left="264.6" Top="88.83" Width="69.93" Height="20.79" Border.Lines="All" Text="系数" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text12" Left="334.53" Top="68.04" Width="94.5" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ009]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text13" Left="334.53" Top="88.83" Width="94.5" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ015]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text14" Left="381.78" Top="109.62" Width="47.25" Height="54.81" Border.Lines="All" Text="产值日均工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text15" Left="264.6" Top="47.25" Width="164.43" Height="20.79" Border.Lines="All" Text="产值提成" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text16" Left="429.03" Top="47.25" Width="102.06" Height="20.79" Border.Lines="All" Text="基本工资" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text19" Left="429.03" Top="68.04" Width="60.48" Height="41.58" Border.Lines="All" Text="系数" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text21" Left="489.51" Top="68.04" Width="41.58" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ011]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text22" Left="489.51" Top="88.83" Width="41.58" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ016]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text23" Left="429.03" Top="109.62" Width="60.48" Height="54.81" Border.Lines="All" Text="月基本工资额" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text24" Left="489.51" Top="109.62" Width="41.58" Height="54.81" Border.Lines="All" Text="基本日工资" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text25" Left="531.09" Top="47.25" Width="103.95" Height="20.79" Border.Lines="All" Text="体系提成" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text26" Left="531.09" Top="68.04" Width="56.7" Height="96.39" Border.Lines="All" Text="月体系提资额R502" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text27" Left="587.79" Top="68.04" Width="47.25" Height="96.39" Border.Lines="All" Text="体系提日工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text28" Left="635.04" Top="47.25" Width="143.64" Height="20.79" Border.Lines="All" Text="利润提成" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text29" Left="635.04" Top="68.04" Width="51.03" Height="41.58" Border.Lines="All" Text="系数" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text30" Left="686.07" Top="68.04" Width="92.61" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ012]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text31" Left="686.07" Top="88.83" Width="92.61" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ042]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text32" Left="635.04" Top="109.62" Width="60.48" Height="54.81" Border.Lines="All" Text="本组创利润额R241" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text33" Left="695.52" Top="109.62" Width="41.58" Height="54.81" Border.Lines="All" Text="月利润提成额" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text34" Left="737.1" Top="109.62" Width="41.58" Height="54.81" Border.Lines="All" Text="利润提日工资" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text35" Left="778.68" Top="47.25" Width="111.51" Height="20.79" Border.Lines="All" Text="合计" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text36" Left="778.68" Top="68.04" Width="51.03" Height="96.39" Border.Lines="All" Text="日均合计提成工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text37" Left="829.71" Top="68.04" Width="60.48" Height="96.39" Border.Lines="All" Text="月考核实得工资额" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text38" Left="890.19" Top="47.25" Width="109.62" Height="20.79" Border.Lines="All" Text="定日资" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text39" Left="890.19" Top="68.04" Width="54.81" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ017]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text40" Left="890.19" Top="88.83" Width="54.81" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ044]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text41" Left="890.19" Top="109.62" Width="54.81" Height="54.81" Border.Lines="All" Text="预发月工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text43" Left="945" Top="68.04" Width="54.81" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ045]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text44" Left="945" Top="88.83" Width="54.81" Height="75.6" Border.Lines="All" Text="盈亏月工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text45" Left="999.81" Top="47.25" Width="73.71" Height="20.79" Border.Lines="All" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text46" Left="999.81" Top="68.04" Width="73.71" Height="20.79" Border.Lines="All" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text47" Left="999.81" Top="88.83" Width="73.71" Height="75.6" Border.Lines="All" Text="可发月盈工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text48" Left="1073.52" Top="47.25" Width="60.48" Height="117.18" Border.Lines="All" Text="本月实发月工资额" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text49" Left="1134" Top="47.25" Width="69.93" Height="117.18" Border.Lines="All" Text="本月实发日均工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text50" Left="1203.93" Top="47.25" Width="83.16" Height="20.79" Border.Lines="All" Text="跟单出货" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text51" Left="1203.93" Top="68.04" Width="41.58" Height="20.79" Border.Lines="All" Text="批价" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text52" Left="1245.51" Top="68.04" Width="41.58" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ028]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text53" Left="1203.93" Top="88.83" Width="41.58" Height="75.6" Border.Lines="All" Text="跟单批数R299R253" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text54" Left="1245.51" Top="88.83" Width="41.58" Height="75.6" Border.Lines="All" Text="提成额" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text55" Left="1287.09" Top="47.25" Width="83.16" Height="20.79" Border.Lines="All" Text="延误出货" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text56" Left="1287.09" Top="68.04" Width="41.58" Height="20.79" Border.Lines="All" Text="批价" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text57" Left="1328.67" Top="68.04" Width="41.58" Height="20.79" Border.Lines="All" Text="[R_PQQZO.QZ030]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text58" Left="1287.09" Top="88.83" Width="41.58" Height="75.6" Border.Lines="All" Text="跟单批数R299R253" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text59" Left="1328.67" Top="88.83" Width="41.58" Height="75.6" Border.Lines="All" Text="提成额" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text60" Left="1370.25" Top="47.25" Width="73.71" Height="41.58" Border.Lines="All" Text="跟单小计提成额" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text61" Left="1370.25" Top="88.83" Width="73.71" Height="75.6" Border.Lines="All" Text="月跟单小计提成额" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text62" Left="1443.96" Top="47.25" Width="64.26" Height="41.58" Border.Lines="All" Text="跟单日均提成工资" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text63" Left="1443.96" Top="88.83" Width="64.26" Height="75.6" Border.Lines="All" Text="跟单日均提成工资" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text64" Left="1508.22" Top="47.25" Width="73.71" Height="41.58" Border.Lines="All" Text="结余额" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text65" Left="1508.22" Top="88.83" Width="73.71" Height="75.6" Border.Lines="All" Text="结余额" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text66" Top="18.9" Width="217.35" Height="18.9" Text="[R_PQQZO.QZ001]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text129" Left="334.53" Top="109.62" Width="47.25" Height="54.81" Border.Lines="All" Text="月产值提成额" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="168.43" Width="1580.04" Condition="[R_PQQZ.QZ003]">
+      <DataBand Name="Data1" Top="172.43" Width="1580.04" Height="28.35" AfterDataEvent="Data1_AfterData" DataSource="Table">
+        <TextObject Name="Text9" Width="66.15" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ003]" Duplicates="Merge" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text67" Left="66.15" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ004]" Duplicates="Merge" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text68" Left="122.85" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ005]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text69" Left="170.1" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ006]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text70" Left="217.35" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text71" Left="264.6" Width="69.93" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ008]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text72" Left="381.78" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text73" Left="429.03" Width="60.48" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text74" Left="489.51" Width="41.58" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text75" Left="531.09" Width="56.7" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ014]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text76" Left="587.79" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text77" Left="635.04" Width="60.48" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ013]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text78" Left="695.52" Width="41.58" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text79" Left="737.1" Width="41.58" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U6]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text80" Left="778.68" Width="51.03" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U00]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text81" Left="829.71" Width="60.48" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U01]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text82" Left="890.19" Width="54.81" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U7]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text83" Left="945" Width="54.81" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U02]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text84" Left="999.81" Width="73.71" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U03]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text85" Left="1073.52" Width="60.48" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U04]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text86" Left="1134" Width="69.93" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U05]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text87" Left="1203.93" Width="41.58" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ027]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text88" Left="1245.51" Width="41.58" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U8]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text89" Left="1287.09" Width="41.58" Height="28.35" Border.Lines="All" Text="[R_PQQZ.QZ029]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text90" Left="1328.67" Width="41.58" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U9]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text91" Left="1370.25" Width="73.71" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U06]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text92" Left="1443.96" Width="64.26" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U07]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text93" Left="1508.22" Width="73.71" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U08]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text130" Left="334.53" Width="47.25" Height="28.35" Border.Lines="All" Text="[R_PQQZ.U0]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <Sort>
+          <Sort Expression="[R_PQQZ.QZ003]"/>
+          <Sort Expression="[R_PQQZ.QZ004]"/>
+          <Sort Expression="[R_PQQZ.QZ005]"/>
+        </Sort>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="204.78" Width="1580.04" Height="28.35">
+        <TextObject Name="Text133" Width="170.1" Height="28.35" Border.Lines="All" Text="本月小计" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text135" Left="170.1" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalQZ006]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text136" Left="217.35" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalQZ007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text137" Left="264.6" Width="69.93" Height="28.35" Border.Lines="All" Text="[[TotalQZ008]*0.5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text138" Left="381.78" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalU1]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text139" Left="429.03" Width="60.48" Height="28.35" Border.Lines="All" Text="[TotalU2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text140" Left="489.51" Width="41.58" Height="28.35" Border.Lines="All" Text="[TotalU3]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text141" Left="531.09" Width="56.7" Height="28.35" Border.Lines="All" Text="[TotalQZ014]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text142" Left="587.79" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalU4]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text143" Left="635.04" Width="60.48" Height="28.35" Border.Lines="All" Text="[TotalQZ013]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text144" Left="695.52" Width="41.58" Height="28.35" Border.Lines="All" Text="[TotalU5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text145" Left="737.1" Width="41.58" Height="28.35" Border.Lines="All" Text="[TotalU6]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text146" Left="778.68" Width="51.03" Height="28.35" Border.Lines="All" Text="[TotalU00]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text147" Left="829.71" Width="60.48" Height="28.35" Border.Lines="All" Text="[TotalU01]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text148" Left="890.19" Width="54.81" Height="28.35" Border.Lines="All" Text="[TotalU7]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text149" Left="945" Width="54.81" Height="28.35" Border.Lines="All" Text="[TotalU02]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text150" Left="999.81" Width="73.71" Height="28.35" Border.Lines="All" Text="[TotalU03]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text151" Left="1073.52" Width="60.48" Height="28.35" Border.Lines="All" Text="[TotalU04]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text152" Left="1134" Width="69.93" Height="28.35" Border.Lines="All" Text="[TotalU05]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text153" Left="1203.93" Width="41.58" Height="28.35" Border.Lines="All" Text="[TotalQZ027]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text154" Left="1245.51" Width="41.58" Height="28.35" Border.Lines="All" Text="[TotalU8]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text155" Left="1287.09" Width="41.58" Height="28.35" Border.Lines="All" Text="[TotalQZ029]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text156" Left="1328.67" Width="41.58" Height="28.35" Border.Lines="All" Text="[TotalU9]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text157" Left="1370.25" Width="73.71" Height="28.35" Border.Lines="All" Text="[TotalU06]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text158" Left="1443.96" Width="64.26" Height="28.35" Border.Lines="All" Text="[TotalU07]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text159" Left="1508.22" Width="73.71" Height="28.35" Border.Lines="All" Text="[TotalU08]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+        <TextObject Name="Text160" Left="334.53" Width="47.25" Height="28.35" Border.Lines="All" Text="[TotalU0]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="237.13" Width="1580.04" Height="56.7">
+      <TextObject Name="Text187" Width="170.1" Height="28.35" Border.Lines="All" Text="本月合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text188" Left="170.1" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintOne.QZ006]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text189" Top="28.35" Width="170.1" Height="28.35" Border.Lines="All" Text="累计合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text190" Left="170.1" Top="28.35" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintTwo.QZ006]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text191" Left="217.35" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintOne.QZ007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text192" Left="264.6" Width="69.93" Height="28.35" Border.Lines="All" Text="[PrintOne.QZ008]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text193" Left="381.78" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintOne.U0]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text194" Left="429.03" Width="60.48" Height="28.35" Border.Lines="All" Text="[PrintOne.U23]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text195" Left="489.51" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintOne.U1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text196" Left="531.09" Width="56.7" Height="28.35" Border.Lines="All" Text="[PrintOne.QZ014]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text197" Left="587.79" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintOne.U4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text198" Left="635.04" Width="60.48" Height="28.35" Border.Lines="All" Text="[PrintOne.QZ013]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text199" Left="695.52" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintOne.U5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text200" Left="737.1" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintOne.U6]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text201" Left="778.68" Width="51.03" Height="28.35" Border.Lines="All" Text="[PrintOne.U3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text202" Left="829.71" Width="60.48" Height="28.35" Border.Lines="All" Text="[PrintOne.U24]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text203" Left="890.19" Width="54.81" Height="28.35" Border.Lines="All" Text="[PrintOne.U7]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text204" Left="945" Width="54.81" Height="28.35" Border.Lines="All" Text="[PrintOne.U9]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text205" Left="999.81" Width="73.71" Height="28.35" Border.Lines="All" Text="[PrintOne.U10]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text206" Left="1073.52" Width="60.48" Height="28.35" Border.Lines="All" Text="[PrintOne.U11]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text207" Left="1134" Width="69.93" Height="28.35" Border.Lines="All" Text="[PrintOne.U12]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text208" Left="1203.93" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintOne.QZ027]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text209" Left="1245.51" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintOne.U17]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text210" Left="1287.09" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintOne.QZ029]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text211" Left="1328.67" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintOne.U18]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text212" Left="1370.25" Width="73.71" Height="28.35" Border.Lines="All" Text="[PrintOne.U19]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text213" Left="1443.96" Width="64.26" Height="28.35" Border.Lines="All" Text="[PrintOne.U20]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text214" Left="1508.22" Width="73.71" Height="28.35" Border.Lines="All" Text="[PrintOne.U21]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text215" Left="334.53" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintOne.U22]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text216" Left="217.35" Top="28.35" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintTwo.QZ007]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text217" Left="264.6" Top="28.35" Width="69.93" Height="28.35" Border.Lines="All" Text="[PrintTwo.QZ008]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text218" Left="381.78" Top="28.35" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintTwo.U0]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text219" Left="429.03" Top="28.35" Width="60.48" Height="28.35" Border.Lines="All" Text="[PrintTwo.U23]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text220" Left="489.51" Top="28.35" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintTwo.U1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text221" Left="531.09" Top="28.35" Width="56.7" Height="28.35" Border.Lines="All" Text="[PrintTwo.QZ014]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text222" Left="587.79" Top="28.35" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintTwo.U4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text223" Left="635.04" Top="28.35" Width="60.48" Height="28.35" Border.Lines="All" Text="[PrintTwo.QZ013]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text224" Left="695.52" Top="28.35" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintTwo.U5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text225" Left="737.1" Top="28.35" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintTwo.U6]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text226" Left="778.68" Top="28.35" Width="51.03" Height="28.35" Border.Lines="All" Text="[PrintTwo.U3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text227" Left="829.71" Top="28.35" Width="60.48" Height="28.35" Border.Lines="All" Text="[PrintTwo.U24]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text228" Left="890.19" Top="28.35" Width="54.81" Height="28.35" Border.Lines="All" Text="[PrintTwo.U7]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text229" Left="945" Top="28.35" Width="54.81" Height="28.35" Border.Lines="All" Text="[PrintTwo.U9]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text230" Left="999.81" Top="28.35" Width="73.71" Height="28.35" Border.Lines="All" Text="[PrintTwo.U10]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text231" Left="1073.52" Top="28.35" Width="60.48" Height="28.35" Border.Lines="All" Text="[PrintTwo.U11]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text232" Left="1134" Top="28.35" Width="69.93" Height="28.35" Border.Lines="All" Text="[PrintTwo.U12]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="1" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text233" Left="1203.93" Top="28.35" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintTwo.QZ027]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text234" Left="1245.51" Top="28.35" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintTwo.U17]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text235" Left="1287.09" Top="28.35" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintTwo.QZ029]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text236" Left="1328.67" Top="28.35" Width="41.58" Height="28.35" Border.Lines="All" Text="[PrintTwo.U18]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text237" Left="1370.25" Top="28.35" Width="73.71" Height="28.35" Border.Lines="All" Text="[PrintTwo.U19]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text238" Left="1443.96" Top="28.35" Width="64.26" Height="28.35" Border.Lines="All" Text="[PrintTwo.U20]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text239" Left="1508.22" Top="28.35" Width="73.71" Height="28.35" Border.Lines="All" Text="[PrintTwo.U21]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text240" Left="334.53" Top="28.35" Width="47.25" Height="28.35" Border.Lines="All" Text="[PrintTwo.U22]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="297.83" Width="1580.04" Height="37.8">
+      <TextObject Name="Text17" Width="94.5" Height="37.8" Border.Lines="All" Text="填表人" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text123" Left="274.05" Width="94.5" Height="37.8" Border.Lines="All" Text="填表期" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text124" Left="368.55" Width="179.55" Height="37.8" Border.Lines="All" Text="[R_PQQZO.QZ032]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text125" Left="548.1" Width="94.5" Height="37.8" Border.Lines="All" Text="审核期" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text126" Left="642.6" Width="179.55" Height="37.8" Border.Lines="All" Text="[R_PQQZO.QZ033]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text127" Left="822.15" Width="94.5" Height="37.8" Border.Lines="All" Text="审核人" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text128" Left="916.65" Width="179.55" Height="37.8" Border.Lines="All" Text="[R_PQQZO.QZ034]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text122" Left="94.5" Width="179.55" Height="37.8" Border.Lines="All" Text="[R_PQQZO.QZ031]" HorzAlign="Center" VertAlign="Center" Font="宋体, 11pt, style=Bold"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

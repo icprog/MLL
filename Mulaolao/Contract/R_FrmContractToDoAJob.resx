@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="labelControl42.Text" xml:space="preserve">
+    <value>二、合同签订后调整的项目费用（客人变动除外），由甲方开合同人和乙方自行解决处理。凡从甲方仓库领用的产品物资都作为甲方代购，下单时应计算在单价
+
+    结算时甲方财务扣除。本合同价格含乙方所管理员工的工伤及所有相关费用。
+
+三、本合同产品（物品）的知识产权及处置权属甲方，未经甲方书面同意，乙方不得处置本合同产品，否则承担5万∽30万元违约责任及其他经济和法律责任。因
+
+    不可抗拒的因素造成本 合同不能履行时，按实际损失，甲乙双方各承担50%。本合同一经双方签字或盖章（手印）即确认生效。如遇特殊情况需要更改者，凭
+
+    更改通知单执行更改。
+
+四、材质要求：无酶变、开裂、弯曲、虫蛀、松脂等。本色产品无黑点、节疤、裂纹、变形。含水率不得高于14%（特殊要求由甲方开合同人注明）。
+
+五、产品要求：1.涉及化学品方面的必须满足进入国有关法规或客户指定要求，2.按照甲方签发鉴定的标准样及其图纸尺寸制作。产品要平整光滑、无毛刺、刮、
+
+    划、压、碰伤、撕边、变形型、利边尖端、功能灵活牢固。油漆色彩按客户要求，光滑美观，无色差、无挂漆、剥脱、色转移、汗液吐液、流痕和泛白等现
+
+    象。符合欧、美或其他进口
+
+    国最新的法规安全标准。（客户提出退货、返工或索赔者，全部经济损失由乙方负责）。
+
+六、乙方延期交货，但客户仍能接受产品的情况下，则作如下规定：延迟时间在三天内，承担该批产值的5%的经济损失，一周内承担15%的经济损失，以后
+
+    每延迟一周增加30%（该款在上批货中扣除）。若因延迟交货造成拒收者，其损失全部自负。
+
+七、由数家合作的产品，因乙方产品质量问题或交货拖期而造成客户不接受整批产品者，由甲方代扣乙方按合作产品金额之和的70%以去付其余承制人，但产
+
+    品要经甲方验收合格后支付，产品送甲方仓库。
+
+八、乙方（包括其工人）不得把甲方产品（样品）拿给外单位。违者根据情节处以乙方五千元至五万元的罚款。乙方不能绕过甲方直接向甲方的现有客人以降价
+
+    或其他方式抢业务订单。一经发现，甲方有权拒付乙方的全部货款，同时有权向乙方追溯10万元以上的违约经济责任。
+
+九、凭本合同和甲方客户仓库回单或甲方使用生产部门收货人在本合同上签字并经部门负责人审核签字作为结算付款的原始依据，委外成品生产加工的经甲方总
+
+   经理审批后生 效。
+
+十、本合同一式两份，甲乙双方各执一份备查，未尽事宜，双方另行商定或按《中华人民共和国合同法》的相关规定的执行。
+
+    本合同适用于产品委外生产和雕刻、冲印、砂皮等无化学物品的工序委外加工。</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>30</value>
+  </metadata>
+</root>
