@@ -515,7 +515,7 @@ namespace MulaolaoBll.Dao
         public DataTable GetDataTablePqo (string strWhere )
         {
             StringBuilder strSql = new StringBuilder( );
-            strSql.Append( "SELECT AL001 idx,JM09,JM94,JM95,JM96,JM10,JM11,JM103,JM107,C.idx idx_338 FROM R_PQAL A,R_PQAK B,R_PQO C WHERE A.AL001=B.idx AND A.AL002=C.JM01 AND A.AL003=C.idx" );
+            strSql.Append( "SELECT AL001 idx,JM09,JM94,JM95,JM96,JM10,JM11,JM103,JM107,ISNULL(JM118,0) JM118,convert(decimal(11,0),JM103/JM10+isnull(JM118,0))*JM11 U3_1,C.idx idx_338 FROM R_PQAL A,R_PQAK B,R_PQO C WHERE A.AL001=B.idx AND A.AL002=C.JM01 AND A.AL003=C.idx" );
             if ( !string.IsNullOrEmpty( strWhere ) )
             {
                 strSql.Append( " AND " + strWhere );

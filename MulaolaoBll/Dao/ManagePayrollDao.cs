@@ -445,7 +445,7 @@ namespace MulaolaoBll.Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             if ( dt . Day == 31 )
-                strSql . Append ( "SELECT idx,XZ002,XZ003,XZ004,XZ005,XZ006,XZ007,XZ008,XZ009,XZ010,XZ011,XZ012,XZ013,XZ014,XZ021,XZ022,XZ023,XZ024,XZ027,XZ028,XZ029,CONVERT(DECIMAL(18,5),XZ005/day(dateadd(d,-day(@XZ13),dateadd(m,0,@XZ13)))) U4,CONVERT(DECIMAL(18,5),XZ005/day(dateadd(d,-day(@XZ13),dateadd(m,0,@XZ13)))*(XZ006+XZ007)) U6,XZ030,XZ031,XZ032 FROM R_PQXZ" );
+                strSql . Append ( "SELECT idx,XZ002,XZ003,XZ004,XZ005,XZ006,XZ007,XZ008,XZ009,XZ010,XZ011,XZ012,XZ013,XZ014,XZ021,XZ022,XZ023,XZ024,XZ027,XZ028,XZ029,CONVERT(DECIMAL(18,5),XZ005/(day(dateadd(d,-day(@XZ13),dateadd(m,0,@XZ13)))+1)) U4,CONVERT(DECIMAL(18,5),XZ005/(day(dateadd(d,-day(@XZ13),dateadd(m,0,@XZ13)))+1)*(XZ006+XZ007)) U6,XZ030,XZ031,XZ032 FROM R_PQXZ" );
             else
                 strSql . Append ( "SELECT idx,XZ002,XZ003,XZ004,XZ005,XZ006,XZ007,XZ008,XZ009,XZ010,XZ011,XZ012,XZ013,XZ014,XZ021,XZ022,XZ023,XZ024,XZ027,XZ028,XZ029,CONVERT(DECIMAL(18,5),XZ005/day(dateadd(d,-day(@XZ13),dateadd(m,1,@XZ13)))) U4,CONVERT(DECIMAL(18,5),XZ005/day(dateadd(d,-day(@XZ13),dateadd(m,1,@XZ13)))*(XZ006+XZ007)) U6,XZ030,XZ031,XZ032 FROM R_PQXZ" );
             strSql . Append ( " WHERE " + strWhere );

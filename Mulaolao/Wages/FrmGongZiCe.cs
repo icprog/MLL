@@ -28,7 +28,7 @@ namespace Mulaolao.Wages
         DataSet set;
         DataSet RDataSet; Report report = new Report( ); EcanRMB rmb = new EcanRMB( );
         List<string> idxList = new List<string>( ); 
-
+        
         private void FrmGongZiCe_Load ( object sender ,EventArgs e )
         {
             Power( this );

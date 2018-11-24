@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent ( )
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
@@ -54,7 +55,7 @@
             this.CP56 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.idx_195 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MenuItemOne = new System.Windows.Forms.ToolStripMenuItem();
             this.R_196_view = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.idx_Two = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -82,6 +83,7 @@
             this.JM103 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.JM107 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.idx_338 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.JM118 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.R_339_view = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.idx_For = new DevExpress.XtraGrid.Columns.GridColumn();
             this.YQ10 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -848,7 +850,8 @@
             this.JM11,
             this.JM103,
             this.JM107,
-            this.idx_338});
+            this.idx_338,
+            this.JM118});
             this.R_338_view.GridControl = this.gridControl1;
             this.R_338_view.Name = "R_338_view";
             this.R_338_view.OptionsBehavior.Editable = false;
@@ -872,6 +875,7 @@
             this.idx_Thr.Name = "idx_Thr";
             this.idx_Thr.Visible = true;
             this.idx_Thr.VisibleIndex = 0;
+            this.idx_Thr.Width = 107;
             // 
             // JM09
             // 
@@ -890,6 +894,7 @@
             this.JM09.Name = "JM09";
             this.JM09.Visible = true;
             this.JM09.VisibleIndex = 1;
+            this.JM09.Width = 107;
             // 
             // JM94
             // 
@@ -908,6 +913,7 @@
             this.JM94.Name = "JM94";
             this.JM94.Visible = true;
             this.JM94.VisibleIndex = 2;
+            this.JM94.Width = 107;
             // 
             // JM95
             // 
@@ -926,6 +932,7 @@
             this.JM95.Name = "JM95";
             this.JM95.Visible = true;
             this.JM95.VisibleIndex = 3;
+            this.JM95.Width = 107;
             // 
             // JM96
             // 
@@ -944,6 +951,7 @@
             this.JM96.Name = "JM96";
             this.JM96.Visible = true;
             this.JM96.VisibleIndex = 4;
+            this.JM96.Width = 107;
             // 
             // U12
             // 
@@ -965,6 +973,7 @@
             this.U12.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.U12.Visible = true;
             this.U12.VisibleIndex = 6;
+            this.U12.Width = 107;
             // 
             // U3_1
             // 
@@ -979,15 +988,14 @@
             this.U3_1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U3_1.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.U3_1.Caption = "按张结算款";
-            this.U3_1.DisplayFormat.FormatString = "N2";
-            this.U3_1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.U3_1.DisplayFormat.FormatString = "0.#";
+            this.U3_1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.U3_1.FieldName = "U3_1";
             this.U3_1.Name = "U3_1";
-            this.U3_1.ToolTip = "[产品数量] * [每张单价] / [每张套数]";
-            this.U3_1.UnboundExpression = "[JM103] * [JM11] / [JM10]";
-            this.U3_1.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.U3_1.ToolTip = "([产品数量] / [每张套数] + [余量]) * [每张单价]";
             this.U3_1.Visible = true;
-            this.U3_1.VisibleIndex = 7;
+            this.U3_1.VisibleIndex = 8;
+            this.U3_1.Width = 128;
             // 
             // JM10
             // 
@@ -1012,6 +1020,7 @@
             this.JM11.Name = "JM11";
             this.JM11.Visible = true;
             this.JM11.VisibleIndex = 5;
+            this.JM11.Width = 107;
             // 
             // JM103
             // 
@@ -1035,13 +1044,33 @@
             this.JM107.FieldName = "JM107";
             this.JM107.Name = "JM107";
             this.JM107.Visible = true;
-            this.JM107.VisibleIndex = 8;
+            this.JM107.VisibleIndex = 9;
+            this.JM107.Width = 139;
             // 
             // idx_338
             // 
             this.idx_338.Caption = "编号";
             this.idx_338.FieldName = "idx_338";
             this.idx_338.Name = "idx_338";
+            // 
+            // JM118
+            // 
+            this.JM118.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.JM118.AppearanceCell.Options.UseFont = true;
+            this.JM118.AppearanceCell.Options.UseTextOptions = true;
+            this.JM118.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.JM118.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.JM118.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.JM118.AppearanceHeader.Options.UseFont = true;
+            this.JM118.AppearanceHeader.Options.UseTextOptions = true;
+            this.JM118.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.JM118.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.JM118.Caption = "余量";
+            this.JM118.FieldName = "JM118";
+            this.JM118.Name = "JM118";
+            this.JM118.Visible = true;
+            this.JM118.VisibleIndex = 7;
+            this.JM118.Width = 62;
             // 
             // R_339_view
             // 
@@ -4881,5 +4910,6 @@
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn18;
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn19;
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn20;
+        private DevExpress . XtraGrid . Columns . GridColumn JM118;
     }
 }

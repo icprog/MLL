@@ -19,7 +19,7 @@ namespace MulaolaoBll . Dao
             StringBuilder strSql = new StringBuilder ( );
 
             strSql . AppendFormat ( "DELETE FROM R_PQDM WHERE DM001='{0}'" ,year );
-
+            
             SQLString . Add ( strSql ,null );
             if ( SQLString . Count > 0 && SqlHelper . ExecuteSqlTran ( SQLString ) )
             {
@@ -236,7 +236,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableCount ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038!='二次通过' GROUP BY MONTH(DK015),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038!='二次通过' GROUP BY MONTH(DK012),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -250,7 +250,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableCountAll ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038!='二次通过' GROUP BY MONTH(DK015),DK008" ,year );
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038!='二次通过' GROUP BY MONTH(DK012),DK008" ,year );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -264,7 +264,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableOneCount ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038='通过'  GROUP BY MONTH(DK015),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );//AND DK011=1
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='通过'  GROUP BY MONTH(DK012),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );//AND DK011=1
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -278,7 +278,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableOneCountAll ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038='通过' GROUP BY MONTH(DK015),DK008" ,year );//DK011=1
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='通过' GROUP BY MONTH(DK012),DK008" ,year );//DK011=1
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -292,7 +292,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableThanOneCount ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038='二次通过' GROUP BY MONTH(DK015),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );//DK011>1
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='二次通过' GROUP BY MONTH(DK012),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );//DK011>1
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -306,7 +306,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableThanOneCountAll ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038='二次通过' GROUP BY MONTH(DK015),DK008" ,year );//DK011>1
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='二次通过' GROUP BY MONTH(DK012),DK008" ,year );//DK011>1
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -320,7 +320,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableThCount ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038='退货' GROUP BY MONTH(DK015),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );//DK011>1
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='退货' GROUP BY MONTH(DK012),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );//DK011>1
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -334,7 +334,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableThCountAll ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038='退货' GROUP BY MONTH(DK015),DK008" ,year );//DK011>1
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='退货' GROUP BY MONTH(DK012),DK008" ,year );//DK011>1
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -348,7 +348,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableTjCount ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038='条件接收' GROUP BY MONTH(DK015),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );//DK011>1
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='条件接收' GROUP BY MONTH(DK012),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );//DK011>1
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -362,7 +362,7 @@ namespace MulaolaoBll . Dao
         DataTable getTableTjCountAll ( int year )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT MONTH(DK015) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK015)={0} AND DK038='条件接收' GROUP BY MONTH(DK015),DK008" ,year );//DK011>1
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='条件接收' GROUP BY MONTH(DK012),DK008" ,year );//DK011>1
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

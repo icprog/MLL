@@ -1,0 +1,1112 @@
+08:54:57.000  异常信息：由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.0.222:80
+  堆栈信息:   在 AutoUpdate.AppUpdate.DownloadFile(String url, String localFilePath) 位置 D:\ProjectData\MLL\Mulaolao\Mulaolao\Class\AppUpdate.cs:行号 242
+   在 AutoUpdate.AppUpdate.CheckAppVersion(String& msg) 位置 D:\ProjectData\MLL\Mulaolao\Mulaolao\Class\AppUpdate.cs:行号 310
+08:55:26.000 UPDATE R_PQP SET GS73='T' FROM R_PQQ WHERE GS01=CP01 AND GS35=CP09 AND (GS35  LIKE '%丝印%' OR GS35 LIKE '%雕刻%' OR GS35  LIKE '%砂皮%' OR GS35  LIKE '%走台印%' OR GS35  LIKE '%冲印%') 
+08:55:26.000 UPDATE R_PQP SET GS73='T' FROM R_PQAH WHERE GS01=AH01 AND GS35=AH18 AND (GS35  LIKE '%丝印%' OR GS35 LIKE '%雕刻%' OR GS35  LIKE '%砂皮%' OR GS35  LIKE '%走台印%' OR GS35  LIKE '%冲印%')
+08:55:26.000 UPDATE R_PQP SET GS73='T' FROM R_PQI WHERE GS01=YQ03 AND  GS35 LIKE '%油漆%'  AND YQ139='1'
+08:55:26.000 UPDATE R_PQP SET GS73='T' FROM R_PQAF WHERE GS01=AF002 AND GS07=AF015 AND GS02=AF084 AND GS08 ='Φ'+CONVERT(VARCHAR,CONVERT(FLOAT,AF022*10))+'*'+CONVERT(VARCHAR,CONVERT(FLOAT,AF020*10)) 
+08:55:27.000 UPDATE R_PQP SET GS73='T' FROM R_PQU WHERE GS01=PQU01 AND GS07=PQU10 AND GS08=PQU12  
+08:55:27.000 UPDATE R_PQP SET GS73='T' FROM R_PQS WHERE GS01=PJ01 AND GS56=PJ09 AND GS57=PJ89  
+08:55:27.000 UPDATE R_PQP SET GS73='T' FROM R_PQT WHERE GS01=WX01 AND GS56=WX10 AND GS57=WX11 
+08:55:27.000 WITH CET AS (select GS70,GS01,GS46,GS49,GS71,GS02,right(GS08,len(GS08) - charindex('*',GS08) ) a from R_PQP  WHERE GS70='R_338' AND GS73='F' ),CFT AS (SELECT GS70,GS01,GS46,GS49,GS71,GS02,right(a,LEN(a)-charindex('*',a)) GS08 FROM CET  ),CHT AS( SELECT DISTINCT GS70,GS01,GS46,GS49,GS71,GS02,CONVERT(FLOAT,CONVERT(DECIMAL(11,2),GS08)*1.0/10) GS08 FROM CFT  )SELECT GS70,GS01,GS46,GS49,GS71,GS02,CONVERT(VARCHAR,GS08) GS08,'' GS07,PQF13,PQF31 FROM CHT A INNER JOIN R_PQF B ON A.GS01=B.PQF01  WHERE (SELECT COUNT(1) FROM R_PQO WHERE GS01=JM90 AND GS02=JM09 AND CONVERT(VARCHAR,GS08)=CONVERT(VARCHAR,CONVERT(FLOAT,CONVERT(DECIMAL(11,4),JM96))))=0 and GS01 not in (SELECT JM90 FROM R_PQO WHERE JM116='1' )
+08:55:27.000 从数据类型 nvarchar 转换为 numeric 时出错。
+08:55:33.000 DELETE FROM R_PQDM WHERE DM001='2018'
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','张朝云',4,4,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','委外',8,1,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','吴兴俭',1,1,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',3,6,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',4,4,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',7,8,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',7,12,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',2,4,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','委外',7,2,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',5,10,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',6,11,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',8,9,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',9,12,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','委外',1,2,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','张朝云',3,2,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','赖仁通',10,4,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','阙宪富',4,1,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',1,3,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',9,19,0,0,0,0)
+08:55:33.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:33.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','赖仁通',8,12,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','阙宪富',8,10,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','张朝云',10,1,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','委外',5,4,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',1,5,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','委外',9,2,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',6,6,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','吴兴俭',9,1,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','委外',3,3,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','赖仁通',7,1,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',3,6,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','夏汝伟',10,1,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',3,7,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',2,2,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',10,10,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',6,4,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',4,8,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',8,11,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',8,17,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','委外',6,1,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','委外',4,1,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',7,8,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','张朝云',1,4,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',4,11,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','委外',8,2,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','夏汝伟',8,2,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','委外',10,1,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',9,14,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',5,11,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',10,17,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','阙宪富',1,3,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','委外',6,2,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',5,7,0,0,0,0)
+08:55:34.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:34.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','周家任',10,12,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','周家任',8,6,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','赖仁通',2,6,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'怡人','王夏英',1,1,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','委外',5,2,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'非怡人','委外',9,2,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',6,3,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',6,6,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','王夏英',1,1,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',4,8,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',2,4,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','张朝云',3,2,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',6,11,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',10,12,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',2,2,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',8,27,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',4,5,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',9,19,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','夏汝伟',10,1,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',3,3,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',7,12,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',5,10,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',1,3,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','吴兴俭',9,1,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',7,8,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',2,6,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',9,12,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',7,2,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','张朝云',4,4,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',10,1,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',8,23,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','吴兴俭',1,1,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',9,14,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',3,7,0,0,0,0)
+08:55:35.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:35.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',6,4,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',4,11,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',10,21,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',8,3,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','张朝云',1,4,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',9,4,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',5,11,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',5,6,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',4,1,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',7,9,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','赖仁通',1,5,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',1,3,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',5,7,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','张朝云',10,1,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',3,6,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','夏汝伟',8,2,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',3,6,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','委外',1,2,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','阙宪富',10,10,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 INSERT INTO R_PQDM (DM001,DM002,DM003,DM004,DM005,DM006,DM007,DM008,DM009) VALUES (2018,'班组合计','周家任',8,15,0,0,0,0)
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=1 AND DM002='怡人' AND DM003='吴兴俭'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=8 AND DM002='非怡人' AND DM003='夏汝伟'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='阙宪富'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=3 AND DM002='怡人' AND DM003='张朝云'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=2 AND DM002='怡人' AND DM003='赖仁通'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=8 AND DM002='怡人' AND DM003='赖仁通'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=14 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='周家任'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=9 AND DM002='非怡人' AND DM003='委外'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=7 AND DM002='怡人' AND DM003='阙宪富'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=10 AND DM002='非怡人' AND DM003='赖仁通'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=5 WHERE DM001=2018 AND DM004=1 AND DM002='怡人' AND DM003='赖仁通'
+08:55:36.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:36.000 UPDATE R_PQDM SET DM006=16 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='赖仁通'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=5 AND DM002='非怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=8 AND DM002='非怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=19 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='赖仁通'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=10 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=15 WHERE DM001=2018 AND DM004=8 AND DM002='怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=1 AND DM002='怡人' AND DM003='张朝云'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=5 AND DM002='怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=7 AND DM002='怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='赖仁通'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=1 AND DM002='怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=2 AND DM002='怡人' AND DM003='周家任'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='张朝云'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=4 AND DM002='非怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=10 WHERE DM001=2018 AND DM004=8 AND DM002='非怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=7 AND DM002='非怡人' AND DM003='赖仁通'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=6 AND DM002='非怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=12 WHERE DM001=2018 AND DM004=8 AND DM002='非怡人' AND DM003='赖仁通'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=1 AND DM002='怡人' AND DM003='周家任'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='周家任'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=5 AND DM002='怡人' AND DM003='周家任'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=2 AND DM002='怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=5 AND DM002='怡人' AND DM003='赖仁通'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=3 AND DM002='怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=8 WHERE DM001=2018 AND DM004=5 AND DM002='怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=10 AND DM002='非怡人' AND DM003='夏汝伟'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=8 WHERE DM001=2018 AND DM004=8 AND DM002='怡人' AND DM003='周家任'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=6 AND DM002='怡人' AND DM003='阙宪富'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=8 AND DM002='怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=6 AND DM002='怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=3 AND DM002='非怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='委外'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='吴兴俭'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=10 WHERE DM001=2018 AND DM004=6 AND DM002='怡人' AND DM003='赖仁通'
+08:55:37.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:37.000 UPDATE R_PQDM SET DM006=8 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='周家任'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='张朝云'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=8 WHERE DM001=2018 AND DM004=7 AND DM002='怡人' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=8 AND DM002='非怡人' AND DM003='周家任'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=3 AND DM002='怡人' AND DM003='周家任'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='阙宪富'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=6 AND DM002='怡人' AND DM003='周家任'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=8 WHERE DM001=2018 AND DM004=7 AND DM002='怡人' AND DM003='周家任'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=1 AND DM002='怡人' AND DM003='委外'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=1 AND DM002='怡人' AND DM003='王夏英'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=3 AND DM002='怡人' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=5 AND DM002='班组合计' AND DM003='委外'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=1 AND DM002='班组合计' AND DM003='委外'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=2 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=6 AND DM002='班组合计' AND DM003='委外'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=1 AND DM002='班组合计' AND DM003='吴兴俭'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=8 AND DM002='班组合计' AND DM003='夏汝伟'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=1 AND DM002='班组合计' AND DM003='王夏英'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=8 WHERE DM001=2018 AND DM004=5 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='张朝云'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='张朝云'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='周家任'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=5 WHERE DM001=2018 AND DM004=1 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=19 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=1 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=25 WHERE DM001=2018 AND DM004=8 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=5 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=20 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=8 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='周家任'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=6 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:38.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:38.000 UPDATE R_PQDM SET DM006=2 WHERE DM001=2018 AND DM004=2 AND DM002='班组合计' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=10 WHERE DM001=2018 AND DM004=6 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='委外'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=23 WHERE DM001=2018 AND DM004=8 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='委外'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=14 WHERE DM001=2018 AND DM004=8 AND DM002='班组合计' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=10 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='委外'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=6 AND DM002='班组合计' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=8 AND DM002='班组合计' AND DM003='委外'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=1 AND DM002='班组合计' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=11 WHERE DM001=2018 AND DM004=7 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=7 AND DM002='班组合计' AND DM003='委外'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='吴兴俭'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=9 WHERE DM001=2018 AND DM004=7 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=5 AND DM002='班组合计' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=2 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=4 WHERE DM001=2018 AND DM004=1 AND DM002='班组合计' AND DM003='张朝云'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=8 WHERE DM001=2018 AND DM004=7 AND DM002='班组合计' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='夏汝伟'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=6 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=3 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='张朝云'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM006=14 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='委外'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='赖仁通'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='阙宪富'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='张朝云'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=3 AND DM002='怡人' AND DM003='阙宪富'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=7 AND DM002='怡人' AND DM003='委外'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=5 AND DM002='怡人' AND DM003='周家任'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='赖仁通'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='阙宪富'
+08:55:39.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:39.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='周家任'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='委外'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=2 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=3 WHERE DM001=2018 AND DM004=8 AND DM002='怡人' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=6 AND DM002='怡人' AND DM003='赖仁通'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='委外'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=5 AND DM002='班组合计' AND DM003='周家任'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=2 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='周家任'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='张朝云'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=7 AND DM002='班组合计' AND DM003='委外'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='委外'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='周家任'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=3 WHERE DM001=2018 AND DM004=8 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=6 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM007=1 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=7 AND DM002='怡人' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=7 AND DM002='怡人' AND DM003='委外'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=5 AND DM002='怡人' AND DM003='周家任'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='赖仁通'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='委外'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='委外'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=2 WHERE DM001=2018 AND DM004=8 AND DM002='怡人' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=3 AND DM002='怡人' AND DM003='张朝云'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=3 WHERE DM001=2018 AND DM004=3 AND DM002='怡人' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=2 WHERE DM001=2018 AND DM004=4 AND DM002='怡人' AND DM003='阙宪富'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=10 AND DM002='怡人' AND DM003='周家任'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=8 AND DM002='怡人' AND DM003='周家任'
+08:55:40.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:40.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=6 AND DM002='怡人' AND DM003='赖仁通'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=3 AND DM002='怡人' AND DM003='赖仁通'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=7 AND DM002='班组合计' AND DM003='委外'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='委外'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='张朝云'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=2 WHERE DM001=2018 AND DM004=8 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=3 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=10 AND DM002='班组合计' AND DM003='周家任'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=6 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=8 AND DM002='班组合计' AND DM003='周家任'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='委外'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=2 WHERE DM001=2018 AND DM004=4 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=5 AND DM002='班组合计' AND DM003='周家任'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=3 AND DM002='班组合计' AND DM003='赖仁通'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM008=1 WHERE DM001=2018 AND DM004=7 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM009=1 WHERE DM001=2018 AND DM004=9 AND DM002='怡人' AND DM003='阙宪富'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM009=2 WHERE DM001=2018 AND DM004=5 AND DM002='怡人' AND DM003='委外'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM009=2 WHERE DM001=2018 AND DM004=5 AND DM002='怡人' AND DM003='阙宪富'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM009=1 WHERE DM001=2018 AND DM004=9 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM009=2 WHERE DM001=2018 AND DM004=5 AND DM002='班组合计' AND DM003='阙宪富'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
+08:55:41.000 UPDATE R_PQDM SET DM009=2 WHERE DM001=2018 AND DM004=5 AND DM002='班组合计' AND DM003='委外'
+08:55:41.000 未将对象引用设置到对象的实例。
+   在 MulaolaoBll.LogHelperToSql.SaveLog(String cmdText, Object[] parameters) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\LogHelperToSql.cs:行号 69
+   在 StudentMgr.SqlHelper.ExecuteSqlTran(Hashtable SQLStringList) 位置 D:\ProjectData\MLL\Mulaolao\MulaolaoBll\SqlHelper.cs:行号 652
