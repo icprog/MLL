@@ -2270,5 +2270,146 @@ namespace Mulaolao.Class
 
             return result;
         }
+        
+        /// <summary>
+        /// 341保存检查是否和509一致,不一致就改
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool check341And509 ( MulaolaoLibrary.MuCaiContractLibrary model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "select case when a='/' or a='\' then '0' else a end a from ( select right(a,LEN(a)-charindex('*',a)) a from ( SELECT right(GS08,len(GS08)-charindex('*',GS08)) a FROM R_PQP WHERE  GS70='R_341' AND GS01='{0}' AND GS02='{1}' AND GS07='{2}' ) a) a" ,model . PQV01 ,model . PQV86 ,model . PQV10 );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+                return false;
+            else
+            {
+                string result = table . Rows [ 0 ] [ "a" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( result ) )
+                    return false;
+                else if ( ( Convert . ToDecimal ( result ) - model . PQV73 ) != 0 )
+                    return false;
+                else
+                    return true;
+            }
+        }
+
+        /// <summary>
+        /// 342保存检查是否和509一致
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool check342And509 ( MulaolaoLibrary . CheMuJianContractLibrary model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT GS08 FROM R_PQP WHERE  GS70='R_342' AND GS01='{0}' AND GS02='{1}' AND GS07='{2}' " ,model . AF002 ,model . AF084 ,model . AF015 );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+                return false;
+            else
+            {
+                string result = table . Rows [ 0 ] [ "GS08" ] . ToString ( );
+                string code = string . Empty;
+                if ( string . IsNullOrEmpty ( result ) )
+                    return false;
+                else if ( result . Contains ( "Φ" ) )
+                {
+                    code = "Φ" + ( model . AF022 * 10 ) . ToString ( "0.####" ) +"*"+ ( model . AF020 * 10 ) . ToString ( "0.####" );
+                    if ( result . Equals ( code ) )
+                        return true;
+                    else
+                        return false;
+                }
+                else if ( !result . Contains ( "Φ" ) )
+                {
+                    code = ( model . AF020 * 10 ) . ToString ( "0.####" ) + "*" + ( model . AF021 * 10 ) . ToString ( "0.####" ) + "*" + ( model . AF022 * 10 ) . ToString ( "0.####" );
+                    if ( result . Equals ( code ) )
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                    return true;
+            }
+        }
+
+        /// <summary>
+        /// 343保存检查是否和509一致
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool check343And509 ( MulaolaoLibrary . WuJinContractLibrary model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT GS08 FROM R_PQP WHERE GS70='R_343' AND GS01='{0}' AND GS07='{1}' " ,model . PQU01 ,model . PQU10 );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+                return false;
+            else
+            {
+                string result = table . Rows [ 0 ] [ "GS08" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( result ) )
+                    return false;
+                else if ( result . Equals ( model . PQU12 ) )
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        /// <summary>
+        /// 347保存检查是否和509一致
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool check347And509 ( MulaolaoLibrary . SuLiaoBuQiContractLibrary model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT GS08 FROM R_PQP WHERE GS70='R_347' AND GS01='{0}' AND GS07='{1}' " ,model . PJ01 ,model . PJ09 );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+                return false;
+            else
+            {
+                string result = table . Rows [ 0 ] [ "GS08" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( result ) )
+                    return false;
+                else if ( result . Equals ( model . PJ89 ) )
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        /// <summary>
+        /// 347保存检查是否和509一致
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool check349And509 ( MulaolaoLibrary . WaiXianContractLibrary model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT GS57 FROM R_PQP WHERE GS01='{0}' AND GS56='{1}' " ,model . WX01 ,model . WX10 );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+                return false;
+            else
+            {
+                string result = table . Rows [ 0 ] [ "GS57" ] . ToString ( );
+                if ( string . IsNullOrEmpty ( result ) )
+                    return false;
+                else if ( result . Equals ( model . WX11 ) )
+                    return true;
+                else
+                    return false;
+            }
+        }
+
     }
 }

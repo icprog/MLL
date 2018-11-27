@@ -141,29 +141,33 @@ namespace Mulaolao.Contract
             //    if ( !string . IsNullOrEmpty ( PJ01 ) )
             //        wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PJ09,GS08 PJ89,GS09 PJ17,GS10 PJ11 FROM R_PQP WHERE GS07!=''  AND GS01=@GS01 UNION SELECT DISTINCT GS52 PJ09,GS57 PJ89,GS58 PJ11,GS59 PJ17 FROM R_PQP WHERE GS52!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,PJ01 ) );
             //}
-            every( );
+            //every( );
         }
         void every ( )
         {
             PJ95 = comboBox5 . Text;
-            if ( string . IsNullOrEmpty ( textBox17 . Text ) )
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PJ09,GS08 PJ89,GS09 PJ17,GS10 PJ11 FROM R_PQP WHERE GS07!=''  AND GS48 =@GS48" ,new SqlParameter ( "@GS48" ,PJ95 ) );
-            // UNION SELECT DISTINCT GS52 PJ09,GS57 PJ89,GS58 PJ11,GS59 PJ17 FROM R_PQP WHERE GS52!='' AND GS48=@GS48
-            else
+            if ( !string . IsNullOrEmpty ( textBox17 . Text ) )
             {
                 PJ01 = textBox17 . Text;
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PJ09,GS08 PJ89,GS09 PJ17,GS10 PJ11 FROM R_PQP WHERE GS07!=''  AND GS01=@GS01 " ,new SqlParameter ( "@GS01" ,PJ01 ) );
+
+                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PJ09,GS08 PJ89,GS09 PJ17,GS10 PJ11 FROM R_PQP WHERE GS07!='' AND GS70='R_347' AND GS01 =@GS01" ,new SqlParameter ( "@GS01" ,PJ01 ) );
+                // UNION SELECT DISTINCT GS52 PJ09,GS57 PJ89,GS58 PJ11,GS59 PJ17 FROM R_PQP WHERE GS52!='' AND GS48=@GS48
+
+
+                //wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PJ09,GS08 PJ89,GS09 PJ17,GS10 PJ11 FROM R_PQP WHERE GS07!=''  AND GS01=@GS01 " ,new SqlParameter ( "@GS01" ,PJ01 ) );
                 //UNION SELECT DISTINCT GS52 PJ09,GS57 PJ89,GS58 PJ11,GS59 PJ17 FROM R_PQP WHERE GS52!='' AND GS01=@GS01
+
+                biao = SqlHelper . ExecuteDataTable ( "SELECT '' PJ09,PJ10,0.0 PJ11,PJ12,PJ13,PJ14,PJ15,PJ16,'' PJ17,PJ18,'' PJ89 FROM R_PQS WHERE PJ01=@PJ01" ,new SqlParameter ( "@PJ01" ,PJ01 ) );
             }
 
             if ( string.IsNullOrEmpty( textBox17.Text ) )
                 biao = SqlHelper.ExecuteDataTable( "SELECT PJ09,PJ10,PJ11,PJ12,PJ13,PJ14,PJ15,PJ16,PJ17,PJ18,PJ89 FROM R_PQS WHERE PJ95=@PJ95" ,new SqlParameter( "@PJ95" ,PJ95 ) );
-            else
-            {
-                PJ01 = textBox17.Text;
-                if ( !string . IsNullOrEmpty ( PJ01 ) )
-                    biao = SqlHelper.ExecuteDataTable( "SELECT PJ09,PJ10,PJ11,PJ12,PJ13,PJ14,PJ15,PJ16,PJ17,PJ18,PJ89 FROM R_PQS WHERE PJ01=@PJ01" ,new SqlParameter( "@PJ01" ,PJ01 ) );
-            }
+            //else
+            //{
+            //    PJ01 = textBox17.Text;
+            //    if ( !string . IsNullOrEmpty ( PJ01 ) )
+            //        biao = SqlHelper.ExecuteDataTable( "SELECT PJ09,PJ10,PJ11,PJ12,PJ13,PJ14,PJ15,PJ16,PJ17,PJ18,PJ89 FROM R_PQS WHERE PJ01=@PJ01" ,new SqlParameter( "@PJ01" ,PJ01 ) );
+            //}
             if ( wpmc != null )
                 biao.Merge( wpmc );
             if ( biao != null && biao . Rows . Count > 0 )
@@ -566,8 +570,8 @@ namespace Mulaolao.Contract
                 #region
                 textBox1 . Text = PJ03 = dei . Rows [ 0 ] [ "PJ03" ] . ToString ( );
                 comboBox4.Text = dei.Rows[0]["PJ93"].ToString( );
-                comboBox5.Text = dei.Rows[0]["PJ95"].ToString( );
-                textBox17.Text = dei.Rows[0]["PJ01"].ToString( );
+                textBox17 . Text = dei . Rows [ 0 ] [ "PJ01" ] . ToString ( );
+                comboBox5 .Text = dei.Rows[0]["PJ95"].ToString( );
                 textBox13.Text = dei.Rows[0]["PJ94"].ToString( );
                 textBox21.Text = dei.Rows[0]["PJ96"].ToString( );
                 textBox9.Text = dei.Rows[0]["PJ04"].ToString( );
@@ -946,27 +950,27 @@ namespace Mulaolao.Contract
         private void query_PassDataBetweenForm ( Object sender ,PassDataWinFormEventArgs e )
         {
             PJ01 = e.ConTre;
-            textBox17.Text = e.ConTre;
+            //textBox17.Text = e.ConTre;
             PJ93 = e.ConOne;
-            comboBox4.Text = e.ConOne;
+            //comboBox4.Text = e.ConOne;
             PJ94 = e.ConTwo;
-            textBox13.Text = e.ConTwo;
+            //textBox13.Text = e.ConTwo;
             //PJ02 = e.ConFor;
             //lookUpEdit1.Text = e.ConFiv;
             PJ03 = e.ConSix;
-            textBox1.Text = e.ConSev;
+            //textBox1.Text = e.ConSev;
             if ( e.ConEgi == "执行" )
                 label78.Visible = true;
             else
                 label78.Visible = false;
             model.PJ92 = e.ConNin;
             PJ95 = e.ConTen;
-            comboBox5.Text = e.ConTen;
+            //comboBox5.Text = e.ConTen;
             if ( e.ConEleven == "" )
                 PJ096 = 0;
             else
                 PJ096 = Convert.ToInt64( e.ConEleven );
-            textBox21.Text = e.ConEleven;
+            //textBox21.Text = e.ConEleven;
         }
         //流水号查询 销售合同
         Youqicaigou yq = new Youqicaigou( );
@@ -1906,6 +1910,13 @@ namespace Mulaolao.Contract
                                 {
                                     if ( yesOrNoHaveStock( ) == false )
                                         return;
+
+                                    if ( !string . IsNullOrEmpty ( textBox17 . Text ) )
+                                    {
+                                        if ( checkThisAnd509 ( ) == false )
+                                            return;
+                                    }
+
                                     if ( dru.Select( "PJ09='" + gridView1.GetDataRow( i )["PJ09"].ToString( ) + "' AND PJ89='" + gridView1.GetDataRow( i )["PJ89"].ToString( ) + "' AND PJ01='" + PJ01 + "'" ).Length > 0 )
                                     {
                                         if ( PJ08.Length > 8 && PJ08.Substring( 0 ,8 ) == "MLL-0001" )
@@ -1953,6 +1964,7 @@ namespace Mulaolao.Contract
         }
         bool yesOrNoHaveStock ( )
         {
+            result = true;
             //PJ15:使用库存OR外购
             //PJ96:产品数量
             //PJ09:物料名称
@@ -1974,6 +1986,23 @@ namespace Mulaolao.Contract
             }
             else
                 result = true;
+            return result;
+        }
+        bool checkThisAnd509 ( )
+        {
+            result = true;
+            model . PJ01 = textBox17 . Text;
+            for ( int i = 0 ; i < gridView1 . RowCount ; i++ )
+            {
+                model . PJ09 = gridView1 . GetDataRow ( i ) [ "PJ09" ] . ToString ( );
+                model . PJ89 = gridView1 . GetDataRow ( i ) [ "PJ89" ] . ToString ( );
+                result = fc . check347And509 ( model );
+                if ( result == false )
+                {
+                    MessageBox . Show ( "流水号:" + model . PJ01 + "\n\r物品名称:" + model . PJ09 + "\n\r规格:" + model . PJ89 + "\n\r与509不一致,请核实" );
+                    break;
+                }
+            }
             return result;
         }
         //取消
@@ -2925,11 +2954,11 @@ namespace Mulaolao.Contract
                     if ( model.PJ15 == "外购" )
                     {
                         model.PJ14 = 0;
-                        model.PJ97 = Math.Round( model.PJ96 * model.PJ11 + model.PJ10 ,0 );
+                        model.PJ97 = Math.Round(Convert.ToDecimal( model.PJ96 * model.PJ11 + model.PJ10) ,0 );
                     }
                     else if ( model.PJ15 == "库存" )
                     {
-                        model.PJ14 = Math.Round( model.PJ96 * model.PJ11 + model.PJ10 ,0 );
+                        model.PJ14 = Math.Round(Convert.ToDecimal( model.PJ96 * model.PJ11 + model.PJ10) ,0 );
                         model.PJ97 = 0;
                     }
                     else

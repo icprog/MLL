@@ -408,27 +408,27 @@ namespace Mulaolao.Contract
         private void query_PassDataBetweenForm ( Object sender ,PassDataWinFormEventArgs e )
         {
             PQU01 = e.ConTre;
-            textBox49.Text = e.ConTre;
+            //textBox49.Text = e.ConTre;
             PQU98 = e.ConOne;
-            comboBox4.Text = e.ConOne;
+            //comboBox4.Text = e.ConOne;
             PQU99 = e.ConTwo;
-            textBox50.Text = e.ConTwo;
+            //textBox50.Text = e.ConTwo;
             //PQU02 = e.ConFor;
             //lookUpEdit1.Text = e.ConFiv;
             PQU03 = e.ConSix;
-            textBox2.Text = e.ConSev;
+            //textBox2.Text = e.ConSev;
             if ( e.ConEgi == "执行" )
                 label3.Visible = true;
             else
                 label3.Visible = false;
             PQU97 = e.ConNin;
             PQU100 = e.ConTen;
-            comboBox6.Text = e.ConTen;
+            //comboBox6.Text = e.ConTen;
             if ( e.ConEleven == "" )
                 PQU0101 = 0;
             else
                 PQU0101 = Convert.ToInt64( e.ConEleven );
-            textBox53.Text = e.ConEleven;
+            //textBox53.Text = e.ConEleven;
         }
         R_FrmTPADGA tpadga = new R_FrmTPADGA( );
         //供应商查询
@@ -587,23 +587,29 @@ namespace Mulaolao.Contract
         void every ( )
         {
             PQU100 = comboBox6 . Text;
-            if ( string . IsNullOrEmpty ( textBox49 . Text ) )
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PQU10,GS08 PQU12,GS10 PQU13,GS09 PQU21 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS48=@GS48" ,new SqlParameter ( "@GS48" ,PQU100 ) );
-            else
+            if ( !string . IsNullOrEmpty ( textBox49 . Text ) )
             {
                 PQU01 = textBox49 . Text;
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PQU10,GS08 PQU12,GS10 PQU13,GS09 PQU21 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,PQU01 ) );
+
+                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PQU10,GS08 PQU12,GS10 PQU13,GS09 PQU21 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS70='R_343' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,PQU01 ) );
+            //else
+            //{
+                
+                //wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PQU10,GS08 PQU12,GS10 PQU13,GS09 PQU21 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,PQU01 ) );
+                biao = SqlHelper . ExecuteDataTable ( "SELECT '' PQU10,PQU11,'' PQU12,0.0 PQU13,PQU14,PQU15,PQU16,PQU17,PQU18,PQU19,PQU20,'' PQU21,PQU22,PQU23 FROM R_PQU WHERE PQU01=@PQU01" ,new SqlParameter ( "@PQU01" ,PQU01 ) );
             }
 
             if ( string.IsNullOrEmpty( textBox49.Text ) )
                 biao = SqlHelper.ExecuteDataTable( "SELECT PQU10,PQU11,PQU12,PQU13,PQU14,PQU15,PQU16,PQU17,PQU18,PQU19,PQU20,PQU21,PQU22,PQU23 FROM R_PQU WHERE PQU100=@PQU100" ,new SqlParameter( "@PQU100" ,PQU100 ) );
-            else
-            {
-                PQU01 = textBox49.Text;
-                biao = SqlHelper.ExecuteDataTable( "SELECT PQU10,PQU11,PQU12,PQU13,PQU14,PQU15,PQU16,PQU17,PQU18,PQU19,PQU20,PQU21,PQU22,PQU23 FROM R_PQU WHERE PQU01=@PQU01" ,new SqlParameter( "@PQU01" ,PQU01 ) );
-            }
+            //else
+            //{
+            //    PQU01 = textBox49.Text;
+            //    biao = SqlHelper.ExecuteDataTable( "SELECT PQU10,PQU11,PQU12,PQU13,PQU14,PQU15,PQU16,PQU17,PQU18,PQU19,PQU20,PQU21,PQU22,PQU23 FROM R_PQU WHERE PQU01=@PQU01" ,new SqlParameter( "@PQU01" ,PQU01 ) );
+            //}
             if ( wpmc != null )
                 biao.Merge( wpmc );
+
+
             partable = biao . DefaultView . ToTable ( true ,"PQU10" ,"PQU12" ,"PQU13" );
             gridLookUpEdit1 . Properties . DataSource = partable;
             gridLookUpEdit1 . Properties . DisplayMember = "PQU10";
@@ -1822,6 +1828,13 @@ namespace Mulaolao.Contract
                                 {
                                     if ( yesOrNoHaveStock ( ) == false )
                                         return;
+
+                                    if ( !string . IsNullOrEmpty ( textBox49 . Text ) )
+                                    {
+                                        if ( checkThisAnd509 ( ) == false )
+                                            return;
+                                    }
+
                                     if ( dyu . Select ( "PQU10='" + gridView1 . GetDataRow ( i ) [ "PQU10" ] . ToString ( ) + "' AND PQU12='" + gridView1 . GetDataRow ( i ) [ "PQU12" ] . ToString ( ) + "'AND PQU01='" + PQU01 + "'" ) . Length > 0 )
                                     {
                                         if ( PQU09 . Length > 8 && PQU09 . Substring ( 0 ,8 ) == "MLL-0001" )
@@ -1855,6 +1868,7 @@ namespace Mulaolao.Contract
         }
         bool yesOrNoHaveStock ( )
         {
+            result = true;
             //PQU19:使用库存OR外购
             //PQU101:产品数量
             //PQU10:物料名称
@@ -1872,6 +1886,23 @@ namespace Mulaolao.Contract
                     }
                     else if ( i == gridView1.RowCount - 1 )
                         result = true;
+                }
+            }
+            return result;
+        }
+        bool checkThisAnd509 ( )
+        {
+            result = true;
+            model . PQU01 = textBox49 . Text;
+            for ( int i = 0 ; i < gridView1 . RowCount ; i++ )
+            {
+                model . PQU10 = gridView1 . GetDataRow ( i ) [ "PQU10" ] . ToString ( );
+                model . PQU12 = gridView1 . GetDataRow ( i ) [ "PQU12" ] . ToString ( );
+                result = fc . check343And509 ( model );
+                if ( result == false )
+                {
+                    MessageBox . Show ( "流水号:" + model . PQU01 + "\n\r部件名称:" + model . PQU10 + "\n\r规格尺寸:" + model . PQU12 + "\n\r与509不一致,请核实" );
+                    break;
                 }
             }
             return result;
@@ -2844,12 +2875,12 @@ namespace Mulaolao.Contract
                     if ( model.PQU19 == "外购" )
                     {
                         model.PQU18 = PQU018 = 0;
-                        model.PQU104 = PQU0104 = Math.Round( model.PQU101 * model.PQU13 + model.PQU14 ,0 );
+                        model . PQU104 = PQU0104 = Math . Round ( Convert . ToDecimal ( model . PQU101 * model . PQU13 + model . PQU14 ) ,0 );
                     }
                     else if ( model.PQU19 == "库存" )
                     {
                         model.PQU104 = PQU0104 = 0;
-                        model.PQU18 = PQU018 = Math.Round( model.PQU101 * model.PQU13 + model.PQU14 ,0 );
+                        model . PQU18 = PQU018 = Math . Round ( Convert . ToDecimal ( model . PQU101 * model . PQU13 + model . PQU14 ) ,0 );
                     }
                     else
                     {

@@ -210,16 +210,16 @@ namespace MulaolaoBll . Dao
             //341
             strSql = new StringBuilder ( );
             strSql . Append ( " WITH CET AS (" );
-            strSql . Append ( " select GS70 ,GS01 ,GS46 ,GS49 ,GS71 ,GS02 ,right ( GS08 ,len ( GS08 ) - charindex ( '*' ,GS08 ) ) a from R_PQP WHERE GS73='F'" );
+            strSql . Append ( " select GS70 ,GS01 ,GS46 ,GS49 ,GS71 ,GS02,GS07 ,right ( GS08 ,len ( GS08 ) - charindex ( '*' ,GS08 ) ) a from R_PQP WHERE GS73='F'" );
             strSql . Append ( "AND GS70 = 'R_341'" );
             strSql . Append ( " ),CFT AS (" );
-            strSql . Append ( "SELECT GS70 ,GS01 ,GS46 ,GS49 ,GS71 ,GS02 ,right( a ,LEN( a ) - charindex ( '*' ,a )) GS08 FROM CET" );
+            strSql . Append ( "SELECT GS70 ,GS01 ,GS46 ,GS49 ,GS71 ,GS02,GS07 ,right( a ,LEN( a ) - charindex ( '*' ,a )) GS08 FROM CET" );
             strSql . Append ( " ) ,CGT AS(" );
-            strSql . Append ( " SELECT DISTINCT GS70 ,GS01 ,GS46 ,GS49 ,GS71 ,GS02 ,CASE WHEN GS08 = '/' OR GS08 = '\' OR GS08='' THEN '0' ELSE GS08 END GS08 " );
+            strSql . Append ( " SELECT DISTINCT GS70 ,GS01 ,GS46 ,GS49 ,GS71 ,GS02,GS07 ,CASE WHEN GS08 = '/' OR GS08 = '\' OR GS08='' THEN '0' ELSE GS08 END GS08 " );
             strSql . Append ( "  FROM CFT" );
             strSql . Append ( "  ) ,CHT AS(" );
-            strSql . Append ( "  SELECT DISTINCT GS70 ,GS01 ,GS46 ,GS49 ,GS71 ,GS02 ,CONVERT ( FLOAT ,CONVERT ( DECIMAL ( 11 ,2 ) ,GS08 ) * 1.0 / 10 ) GS08 FROM CGT" );
-            strSql . Append ( "  )SELECT GS70, GS01, GS46, GS49, GS71, GS02,CONVERT(VARCHAR,GS08) GS08,'' GS07,PQF13,PQF31 FROM CHT A INNER JOIN R_PQF B ON A.GS01=B.PQF01 WHERE (SELECT COUNT(1) FROM R_PQV WHERE GS01=PQV01 AND GS02=PQV86 AND CONVERT(VARCHAR,GS08) = CONVERT(VARCHAR,CONVERT(FLOAT,PQV73)))=0 and GS01 not in (SELECT PQV01 FROM R_PQV WHERE PQV98='1' )" );
+            strSql . Append ( "  SELECT DISTINCT GS70 ,GS01 ,GS46 ,GS49 ,GS71 ,GS02,GS07 ,CONVERT ( FLOAT ,CONVERT ( DECIMAL ( 11 ,2 ) ,GS08 ) * 1.0 / 10 ) GS08 FROM CGT" );
+            strSql . Append ( "  )SELECT GS70, GS01, GS46, GS49, GS71, GS02,CONVERT(VARCHAR,GS08) GS08,GS07,PQF13,PQF31 FROM CHT A INNER JOIN R_PQF B ON A.GS01=B.PQF01 WHERE (SELECT COUNT(1) FROM R_PQV WHERE GS01=PQV01 AND GS02=PQV86 AND PQV10=GS07 AND CONVERT(VARCHAR,GS08) = CONVERT(VARCHAR,CONVERT(FLOAT,PQV73)))=0 and GS01 not in (SELECT PQV01 FROM R_PQV WHERE PQV98='1' )" );
             tableOne = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
 
             if ( table != null )
@@ -232,8 +232,11 @@ namespace MulaolaoBll . Dao
 
             //342
             strSql = new StringBuilder ( );
-            //strSql . Append ( "SELECT DISTINCT GS70,GS01,GS46,GS49,GS71,GS02,GS08,GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS70 = 'R_342' AND ( SELECT COUNT ( 1 ) as num FROM R_PQAF B WHERE A . GS01 = B . AF002 AND A . GS07 = B . AF015 AND A . GS02 = B . AF084 AND A . GS08 = CONVERT(VARCHAR,B.AF020)+'*'+CONVERT(VARCHAR,B. AF021)+'*'+CONVERT(VARCHAR,B.AF022)) = 0 ORDER BY GS01" );
-            strSql . Append ( "SELECT DISTINCT GS70,GS01,GS46,GS49,GS71,GS02,GS08,GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS70 = 'R_342' AND GS73='F' AND ( SELECT COUNT(1) as num FROM R_PQAF B WHERE A.GS01=B.AF002 AND A.GS07=B.AF015 AND A.GS02=B.AF084 AND A.GS08 ='Φ'+CONVERT(VARCHAR,CONVERT(FLOAT,AF022*10))+'*'+CONVERT(VARCHAR,CONVERT(FLOAT,AF020*10))) = 0 and GS01 not in (SELECT AF002 FROM R_PQAF WHERE AF089='1' )  ORDER BY GS01" );
+            strSql . Append ( "with cet as (" );
+            strSql . Append ( "SELECT DISTINCT GS70,GS01,GS46,GS49,GS71,GS02,GS08,GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS70 = 'R_342' AND GS73='F' AND ( SELECT COUNT(1) as num FROM R_PQAF B WHERE A.GS01=B.AF002 AND A.GS07=B.AF015 AND A.GS02=B.AF084 AND A.GS08 ='Φ'+CONVERT(VARCHAR,CONVERT(FLOAT,AF022*10))+'*'+CONVERT(VARCHAR,CONVERT(FLOAT,AF020*10))) = 0 and GS01 not in (SELECT AF002 FROM R_PQAF WHERE AF089='1' )" );
+            strSql . Append ( "),cft as (" );
+            strSql . Append ( "SELECT DISTINCT GS70,GS01,GS46,GS49,GS71,GS02,GS08,GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS70 = 'R_342' AND GS73='F' AND ( SELECT COUNT(1) as num FROM R_PQAF B WHERE A.GS01=B.AF002 AND A.GS07=B.AF015 AND A.GS02=B.AF084 AND A.GS08 =CONVERT(VARCHAR,CONVERT(FLOAT,AF020*10))+'*'+CONVERT(VARCHAR,CONVERT(FLOAT,AF021*10))+'*'+CONVERT(VARCHAR,CONVERT(FLOAT,AF022*10))) = 0 and GS01 not in (SELECT AF002 FROM R_PQAF WHERE AF089='1'))" );
+            strSql . Append ( " select a.* from cet a inner join cft b on a.GS01=b.GS01 and a.GS02=b.GS02 and a.GS07=b.GS07 and a.GS08=b.GS08" );
             tableOne = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
 
             if ( table != null )

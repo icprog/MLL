@@ -141,7 +141,6 @@ namespace Mulaolao . Contract
         //货号
         private void comboBox32_TextChanged ( object sender ,EventArgs e )
         {
-           
             every( );
         }
         void every ( )
@@ -150,31 +149,34 @@ namespace Mulaolao . Contract
             if ( !string . IsNullOrEmpty ( textBox68 . Text ) )
             {
                 cmj . AF002 = textBox68 . Text;
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS02 AF084,GS07 AF015 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,cmj . AF002 ) );
+                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS02 AF084,GS07 AF015 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS70='R_342' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,cmj . AF002 ) );
+
+                biao = SqlHelper . ExecuteDataTable ( " SELECT '' AF015,AF019,AF020,AF021,AF022,AF023,AF026,AF027,AF028,AF029,AF029,AF030,AF031,AF032,AF033,AF034,'' AF084 FROM R_PQAF WHERE AF002=@AF002" ,new SqlParameter ( "@AF002" ,cmj . AF002 ) );
             }
-            else
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS02 AF084,GS07 AF015 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS48=@GS48" ,new SqlParameter ( "@GS48" ,cmj . AF004 ) );
+            //else
+            //    wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS02 AF084,GS07 AF015 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS48=@GS48" ,new SqlParameter ( "@GS48" ,cmj . AF004 ) );
 
             if ( string.IsNullOrEmpty( textBox68.Text ) )
                 biao = SqlHelper.ExecuteDataTable( " SELECT AF015,AF019,AF020,AF021,AF022,AF023,AF026,AF027,AF028,AF029,AF029,AF030,AF031,AF032,AF033,AF034,AF084 FROM R_PQAF WHERE AF004=@AF004" ,new SqlParameter( "@AF004" ,cmj.AF004 ) );
-            else
-            {
-                cmj.AF002 = textBox68.Text;
-                biao = SqlHelper.ExecuteDataTable( " SELECT AF015,AF019,AF020,AF021,AF022,AF023,AF026,AF027,AF028,AF029,AF029,AF030,AF031,AF032,AF033,AF034,AF084 FROM R_PQAF WHERE AF002=@AF002" ,new SqlParameter( "@AF002" ,cmj.AF002 ) );
-            }
+            //else
+            //{
+            //    cmj.AF002 = textBox68.Text;
+            //    biao = SqlHelper.ExecuteDataTable( " SELECT AF015,AF019,AF020,AF021,AF022,AF023,AF026,AF027,AF028,AF029,AF029,AF030,AF031,AF032,AF033,AF034,AF084 FROM R_PQAF WHERE AF002=@AF002" ,new SqlParameter( "@AF002" ,cmj.AF002 ) );
+            //}
             if ( wpmc != null )
                 biao.Merge( wpmc );
             //材料名称
-            lookUpEdit3 . Properties . DataSource = biao . DefaultView . ToTable ( true ,"AF084" );
-            lookUpEdit3 . Properties . DisplayMember = "AF084";
+            //lookUpEdit3 . Properties . DataSource = biao . DefaultView . ToTable ( true ,"AF084" );
+            //lookUpEdit3 . Properties . DisplayMember = "AF084";
             //每个单价
             comboBox12 .DataSource = biao.DefaultView.ToTable( true ,"AF023" );
             comboBox12.DisplayMember = "AF023";
-            //物料或部件名称
-            comboBox2.DataSource = biao.DefaultView.ToTable( true ,"AF015" );
-            comboBox2.DisplayMember = "AF015";
+            //材料名称  物料或部件名称
+            partInfo . Properties . DataSource = biao . DefaultView . ToTable ( true ,new string [ ] { "AF084","AF015" } );
+            partInfo . Properties . DisplayMember = "AF084";
+            partInfo . Properties . ValueMember = "AF084";
             //每套用量
-            comboBox1.DataSource = biao.DefaultView.ToTable( true ,"AF019" );
+            comboBox1 .DataSource = biao.DefaultView.ToTable( true ,"AF019" );
             comboBox1.DisplayMember = "AF019";
             //含水率
             comboBox16.DataSource = biao.DefaultView.ToTable( true ,"AF027" );
@@ -204,58 +206,25 @@ namespace Mulaolao . Contract
         //物料名称
         private void comboBox2_SelectedValueChanged ( object sender ,EventArgs e )
         {
-            //if ( !string.IsNullOrEmpty( comboBox2.Text ) && biao.Select( "AF015='" + comboBox2.Text + "'" ).Length > 0 )
+            //if ( !string.IsNullOrEmpty( partInfo.Text ) && biao.Select( "AF015='" + partInfo.Text + "'" ).Length > 0 )
             //{
-            //    comboBox12.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF023"].ToString( );
-            //    comboBox1.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF019"].ToString( );
-            //    textBox32.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF020"].ToString( );
-            //    textBox33.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF021"].ToString( );
-            //    textBox34.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF022"].ToString( );
-            //    comboBox15.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF026"].ToString( );
-            //    comboBox16.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF027"].ToString( );
-            //    comboBox17.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF028"].ToString( );
-            //    comboBox18.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF029"].ToString( );
-            //    comboBox19.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF030"].ToString( );
-            //    comboBox21.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF031"].ToString( );
-            //    comboBox20.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF032"].ToString( );
-            //    comboBox3.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF033"].ToString( );
-            //    comboBox22.Text = biao.Select( "AF015='" + comboBox2.Text + "'" )[0]["AF034"].ToString( );
+            //    comboBox12.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF023"].ToString( );
+            //    comboBox1.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF019"].ToString( );
+            //    textBox32.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF020"].ToString( );
+            //    textBox33.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF021"].ToString( );
+            //    textBox34.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF022"].ToString( );
+            //    comboBox15.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF026"].ToString( );
+            //    comboBox16.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF027"].ToString( );
+            //    comboBox17.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF028"].ToString( );
+            //    comboBox18.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF029"].ToString( );
+            //    comboBox19.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF030"].ToString( );
+            //    comboBox21.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF031"].ToString( );
+            //    comboBox20.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF032"].ToString( );
+            //    comboBox3.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF033"].ToString( );
+            //    comboBox22.Text = biao.Select( "AF015='" + partInfo.Text + "'" )[0]["AF034"].ToString( );
             //}
 
-            string strWhere = "1=1";
-            if ( !string . IsNullOrEmpty ( textBox68 . Text ) )
-                strWhere = strWhere + " AND GS01='" + textBox68 . Text + "'";
-            if ( !string . IsNullOrEmpty ( comboBox2 . Text ) )
-                strWhere = strWhere + " AND GS07='" + comboBox2 . Text + "'";
-
-            textBox34 . Text = textBox33 . Text = textBox32 . Text = string . Empty;
-
-            DataTable table = bll . getPartInfo ( strWhere );
-            if ( table != null && table . Rows . Count > 0 )
-            {
-                comboBox1 . Text = table . Rows [ 0 ] [ "GS10" ] . ToString ( );
-                strWhere = string . Empty;
-                strWhere = table . Rows [ 0 ] [ "GS08" ] . ToString ( );
-                if ( strWhere . Contains ( "*" ) )
-                {
-                    string [ ] str = strWhere . Split ( '*' );
-                    if ( !str [ 0 ] . Contains ( "Φ" ) )
-                    {
-                        textBox32 . Text = string . IsNullOrEmpty ( str [ 0 ] ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( str [ 0 ] ) / 10 ,2 ) . ToString ( );
-                        if ( str . Length >= 2 )
-                            textBox33 . Text = string . IsNullOrEmpty ( str [ 1 ] ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( str [ 1 ] ) / 10 ,2 ) . ToString ( );
-                        if ( str . Length >= 3 )
-                            textBox34 . Text = string . IsNullOrEmpty ( str [ 2 ] ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( str [ 2 ] ) / 10 ,2 ) . ToString ( );
-                    }
-                    else
-                    {
-                        textBox34 . Text = textBox33 . Text = str [ 0 ] . Replace ( 'Φ' ,' ' );
-                        textBox34 . Text = textBox33 . Text = string . IsNullOrEmpty ( textBox34 . Text ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( textBox34 . Text ) / 10 ,2 ) . ToString ( );
-                        if ( str . Length >= 2 )
-                            textBox32 . Text = string . IsNullOrEmpty ( str [ 1 ] ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( str [ 1 ] ) / 10 ,2 ) . ToString ( );
-                    }
-                }
-            }
+            
         }
         //采购员
         private void lookUpEdit1_EditValueChanged ( object sender ,EventArgs e )
@@ -320,7 +289,7 @@ namespace Mulaolao . Contract
         {
             if ( radioButton13.Checked && ( ord == "实际" || !string.IsNullOrEmpty( textBox68.Text ) ) )
             {
-                fc.yesOrNoOf( comboBox32.Text ,comboBox2.Text ,textBox32.Text + "*" + textBox33.Text + "*" + textBox34.Text ,textBox27 ,textBox29 ,textBox71.Text );
+                fc.yesOrNoOf( comboBox32.Text ,partName.Text ,textBox32.Text + "*" + textBox33.Text + "*" + textBox34.Text ,textBox27 ,textBox29 ,textBox71.Text );
 
                 textBox28.Text = Math.Round( Convert.ToDecimal( Operation.MultiThrTbC( textBox71 ,comboBox1 ,textBox27.Text ) ) ,0 ).ToString( );
 
@@ -344,7 +313,7 @@ namespace Mulaolao . Contract
                 get( );
             else
             {
-                fc.yesOrNoOf( comboBox32.Text ,comboBox2.Text ,textBox32.Text + "*" + textBox33.Text + "*" + textBox34.Text ,textBox27 ,textBox29 ,textBox71.Text );
+                fc.yesOrNoOf( comboBox32.Text ,partName.Text ,textBox32.Text + "*" + textBox33.Text + "*" + textBox34.Text ,textBox27 ,textBox29 ,textBox71.Text );
                 textBox28.Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbCbes( textBox71 ,comboBox1 ) ) ,0 ).ToString( );
             }
             if ( !string.IsNullOrEmpty( textBox27.Text ) )
@@ -358,7 +327,7 @@ namespace Mulaolao . Contract
         {
             string str = "";
             cmj.AF004 = comboBox32.Text;
-            cmj.AF015 = comboBox2.Text;
+            cmj.AF015 = partName.Text;
             if ( string.IsNullOrEmpty( textBox32.Text ) )
                 cmj.AF020 = 0;
             else
@@ -425,17 +394,17 @@ namespace Mulaolao . Contract
         private void textBox32_TextChanged ( object sender ,EventArgs e )
         {
             DateDayRegise . fill ( textBox32 );
-            textBox30 . Text = bll . getOriPri ( textBox68 . Text ,comboBox32 . Text ,comboBox2 . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
+            textBox30 . Text = bll . getOriPri ( textBox68 . Text ,comboBox32 . Text ,partName . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
         }
         private void textBox33_TextChanged ( object sender ,EventArgs e )
         {
             DateDayRegise . fill ( textBox32 );
-            textBox30 . Text = bll . getOriPri ( textBox68 . Text ,comboBox32 . Text ,comboBox2 . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
+            textBox30 . Text = bll . getOriPri ( textBox68 . Text ,comboBox32 . Text ,partName . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
         }
         private void textBox34_TextChanged ( object sender ,EventArgs e )
         {
             DateDayRegise . fill ( textBox32 );
-            textBox30 . Text = bll . getOriPri ( textBox68 . Text ,comboBox32 . Text ,comboBox2 . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
+            textBox30 . Text = bll . getOriPri ( textBox68 . Text ,comboBox32 . Text ,partName . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
         }
         //AQL
         private void textBox11_KeyPress ( object sender ,KeyPressEventArgs e )
@@ -564,8 +533,8 @@ namespace Mulaolao . Contract
             DataRow row = bandedGridView1 . GetFocusedDataRow ( );
             if ( row == null )
                 return;
-            lookUpEdit3 . Text = row [ "AF084" ] . ToString ( );
-            comboBox2 . Text = row [ "AF015" ] . ToString ( );
+            partInfo . Text = row [ "AF084" ] . ToString ( );
+            partName . Text = row [ "AF015" ] . ToString ( );
             comboBox1 . Text = row [ "AF019" ] . ToString ( );
             textBox32 . Text = row [ "AF020" ] . ToString ( );
             textBox33 . Text = row [ "AF021" ] . ToString ( );
@@ -596,7 +565,7 @@ namespace Mulaolao . Contract
                 radioButton14_CheckedChanged ( null ,null );
                 textBox28 . Text = row [ "AF017" ] . ToString ( );
             }
-            af15 = comboBox2 . Text;
+            af15 = partName . Text;
             if ( string . IsNullOrEmpty ( textBox32 . Text ) )
                 af20 = 0M;
             else
@@ -619,10 +588,53 @@ namespace Mulaolao . Contract
             if ( toolSave.Enabled == true )
                 cancel( );
         }
-        private void comboBox2_TextChanged ( object sender ,EventArgs e )
+        private void partName_TextChanged ( object sender ,EventArgs e )
         {
-            textBox30 . Text = bll . getOriPri ( textBox68 . Text ,comboBox32 . Text ,comboBox2 . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
-            textBox31 . Text = bll . getOriPrice ( textBox68 . Text ,comboBox32 . Text ,comboBox2 . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
+            textBox30 . Text = bll . getOriPri ( textBox68 . Text ,comboBox32 . Text ,partName . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
+            textBox31 . Text = bll . getOriPrice ( textBox68 . Text ,comboBox32 . Text ,partName . Text ,textBox32 . Text ,textBox33 . Text ,textBox34 . Text ) . ToString ( );
+
+
+            string strWhere = "1=1";
+            if ( !string . IsNullOrEmpty ( textBox68 . Text ) )
+                strWhere = strWhere + " AND GS01='" + textBox68 . Text + "'";
+            if ( !string . IsNullOrEmpty ( partName . Text ) )
+                strWhere = strWhere + " AND GS07='" + partName . Text + "'";
+
+            textBox34 . Text = textBox33 . Text = textBox32 . Text = string . Empty;
+
+            DataTable table = bll . getPartInfo ( strWhere );
+            if ( table != null && table . Rows . Count > 0 )
+            {
+                comboBox1 . Text = table . Rows [ 0 ] [ "GS10" ] . ToString ( );
+                strWhere = string . Empty;
+                strWhere = table . Rows [ 0 ] [ "GS08" ] . ToString ( );
+                if ( strWhere . Contains ( "*" ) )
+                {
+                    string [ ] str = strWhere . Split ( '*' );
+                    if ( !str [ 0 ] . Contains ( "Φ" ) )
+                    {
+                        textBox32 . Text = string . IsNullOrEmpty ( str [ 0 ] ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( str [ 0 ] ) / 10 ,2 ) . ToString ( );
+                        if ( str . Length >= 2 )
+                            textBox33 . Text = string . IsNullOrEmpty ( str [ 1 ] ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( str [ 1 ] ) / 10 ,2 ) . ToString ( );
+                        if ( str . Length >= 3 )
+                            textBox34 . Text = string . IsNullOrEmpty ( str [ 2 ] ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( str [ 2 ] ) / 10 ,2 ) . ToString ( );
+                    }
+                    else
+                    {
+                        textBox34 . Text = textBox33 . Text = str [ 0 ] . Replace ( 'Φ' ,' ' );
+                        textBox34 . Text = textBox33 . Text = string . IsNullOrEmpty ( textBox34 . Text ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( textBox34 . Text ) / 10 ,2 ) . ToString ( );
+                        if ( str . Length >= 2 )
+                            textBox32 . Text = string . IsNullOrEmpty ( str [ 1 ] ) == true ? 0 . ToString ( ) : Math . Round ( Convert . ToDecimal ( str [ 1 ] ) / 10 ,2 ) . ToString ( );
+                    }
+                }
+            }
+        }
+        private void partInfo_EditValueChanged ( object sender ,EventArgs e )
+        {
+            DataRow row = ViewInfo . GetFocusedDataRow ( );
+            if ( row == null )
+                return;
+            partName . Text = row [ "AF015" ] . ToString ( );
         }
         #endregion
 
@@ -1111,6 +1123,11 @@ namespace Mulaolao . Contract
                                 {
                                     if ( yesOrNoHaveStock( ) == false )
                                         return;
+                                    if ( !string . IsNullOrEmpty ( textBox68 . Text ) )
+                                    {
+                                        if ( checkThisAnd509 ( ) == false )
+                                            return;
+                                    }
                                     if ( dyu.Select( "AF015='" + bandedGridView1.GetDataRow( i )["AF015"].ToString( ) + "' AND AF020='" + bandedGridView1.GetDataRow( i )["AF020"].ToString( ) + "' AND AF021='" + bandedGridView1.GetDataRow( i )["AF021"].ToString( ) + "' AND AF022='" + bandedGridView1.GetDataRow( i )["AF022"].ToString( ) + "' AND AF002='" + cmj.AF002 + "'" ).Length > 0 )
                                     {
                                         if ( cmj.AF011.Length > 8 && cmj.AF011.Substring( 0 ,8 ) == "MLL-0001" )
@@ -1141,6 +1158,7 @@ namespace Mulaolao . Contract
         }
         bool yesOrNoHaveStock ( )
         {
+            result = true;
             //AF016:使用库存OR外购
             //AF006:产品数量
             //AF015:物料名称
@@ -1163,6 +1181,27 @@ namespace Mulaolao . Contract
                         result = true;
                 }
             }
+            return result;
+        }
+        bool checkThisAnd509 ( )
+        {
+            result = true;
+            cmj . AF002 = textBox68 . Text;
+            for ( int i = 0 ; i < bandedGridView1 . RowCount ; i++ )
+            {
+                cmj . AF015 = bandedGridView1 . GetDataRow ( i ) [ "AF015" ] . ToString ( );
+                cmj . AF084 = bandedGridView1 . GetDataRow ( i ) [ "AF084" ] . ToString ( );
+                cmj . AF020 = string . IsNullOrEmpty ( bandedGridView1 . GetDataRow ( i ) [ "AF020" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( bandedGridView1 . GetDataRow ( i ) [ "AF020" ] );
+                cmj . AF021 = string . IsNullOrEmpty ( bandedGridView1 . GetDataRow ( i ) [ "AF021" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( bandedGridView1 . GetDataRow ( i ) [ "AF021" ] );
+                cmj . AF022 = string . IsNullOrEmpty ( bandedGridView1 . GetDataRow ( i ) [ "AF022" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( bandedGridView1 . GetDataRow ( i ) [ "AF022" ] );
+                result = fc . check342And509 ( cmj );
+                if ( result == false )
+                {
+                    MessageBox . Show ( "流水号:" + cmj . AF002 + "\n\r材料名称:" + cmj . AF084 + "\n\r物料或部件名称:" + cmj . AF015 + "\n\r长:" + cmj . AF020 . ToString ( "0.####" ) + "\n\r宽:" + cmj . AF021 . ToString ( "0.####" ) + "\n\r高:" + cmj . AF022 . ToString ( "0.####" ) + "\n\r与509数据不一致,请核实" );
+                    break;
+                }
+            }
+
             return result;
         }
         //打印
@@ -1592,8 +1631,8 @@ namespace Mulaolao . Contract
                 cmj.AF007 = de.Rows[0]["AF007"].ToString( );
                 textBox13.Text = de.Rows[0]["AF010"].ToString( );
                 comboBox31.Text = de.Rows[0]["AF003"].ToString( );
-                comboBox32.Text = de.Rows[0]["AF004"].ToString( );
-                textBox68.Text = de.Rows[0]["AF002"].ToString( );
+                textBox68 . Text = de . Rows [ 0 ] [ "AF002" ] . ToString ( );
+                comboBox32 .Text = de.Rows[0]["AF004"].ToString( );
                 textBox2.Text = de.Rows[0]["AF005"].ToString( );
                 textBox71.Text = de.Rows[0]["AF006"].ToString( );
                 textBox14.Text = de.Rows[0]["AF012"].ToString( );
@@ -1760,28 +1799,25 @@ namespace Mulaolao . Contract
         {
             cmj.AF001 = e.ConOne;
             cmj.AF002 = e.ConTwo;
-            textBox68.Text = e.ConTwo;
+            //textBox68.Text = e.ConTwo;
             cmj.AF003 = e.ConTre;
-            comboBox31.Text = e.ConTre;
+            //comboBox31.Text = e.ConTre;
             cmj.AF004 = e.ConFor;
-            comboBox32.Text = e.ConFor;
+            //comboBox32.Text = e.ConFor;
             cmj.AF005 = e.ConFiv;
-            textBox2.Text = e.ConFiv;
+            //textBox2.Text = e.ConFiv;
             if ( !string.IsNullOrEmpty( e.ConSix ) )
                 cmj.AF006 = Convert.ToInt64( e.ConSix );
             else
                 cmj.AF006 = 0;
-            textBox71.Text = e.ConSix;
-            //lookUpEdit1.Text = e.ConSev;
-            textBox19.Text = e.ConEgi;
+            //textBox71.Text = e.ConSix;
+            //textBox19.Text = e.ConEgi;
             if ( e.ConNin == "执行" )
                 label107.Visible = true;
             else
                 label107.Visible = false;
-            //cmj.AF007 = e.ConTen;
             cmj.AF008 = e.ConEleven;
             cmj.AF010 = e.ConTwelve;
-            //textBox13.Text = e.ConTwelve;
         }
         //流水号
         Youqicaigou yq = new Youqicaigou( );
@@ -1899,7 +1935,7 @@ namespace Mulaolao . Contract
                 cmj.AF006 = Convert.ToInt64( textBox71.Text );
             else
                 cmj.AF006 = 0;
-            cmj.AF015 = comboBox2.Text;
+            cmj.AF015 = partName . Text;
             if ( radioButton13.Checked )
             {
                 cmj.AF016 = "库存";
@@ -1974,7 +2010,7 @@ namespace Mulaolao . Contract
             else
                 cmj.AF034 = 0;
             //cmj.AF078 = checkBox1.Checked == true ? "T" : "F";
-            cmj . AF084 = lookUpEdit3 . Text;
+            cmj . AF084 = partInfo . Text;
             cmj . AF087 = string . IsNullOrEmpty ( textBox30 . Text ) == true ? 0 : Convert . ToDecimal ( textBox30 . Text );
             cmj . AF088 = string . IsNullOrEmpty ( textBox31 . Text ) == true ? 0 : Convert . ToDecimal ( textBox31 . Text );
         }
@@ -2009,7 +2045,7 @@ namespace Mulaolao . Contract
                     catch { }
                     finally
                     {
-                        every( );
+                        //every( );
                         button12_Click( null ,null );
                     }
                 }
@@ -2133,12 +2169,12 @@ namespace Mulaolao . Contract
                 MessageBox.Show( "产品数量不可为空" );
                 return;
             }
-            if ( string . IsNullOrEmpty ( lookUpEdit3 . Text ) )
+            if ( string . IsNullOrEmpty ( partInfo . Text ) )
             {
                 MessageBox . Show ( "材料名称不可为空" );
                 return;
             }
-            if ( string.IsNullOrEmpty( comboBox2.Text ) )
+            if ( string.IsNullOrEmpty( partName . Text ) )
             {
                 MessageBox.Show( "物料名称不可为空" );
                 return;
@@ -2370,7 +2406,7 @@ namespace Mulaolao . Contract
                 row . EndEdit ( );
             }
 
-            every ( );
+            //every ( );
         }
         void upda_One ( )
         {
@@ -2502,12 +2538,12 @@ namespace Mulaolao . Contract
                 MessageBox.Show( "产品数量不可为空" );
                 return;
             }
-            if ( string . IsNullOrEmpty ( lookUpEdit3 . Text ) )
+            if ( string . IsNullOrEmpty ( partInfo . Text ) )
             {
                 MessageBox . Show ( "材料名称不可为空" );
                 return;
             }
-            if ( string.IsNullOrEmpty( comboBox2.Text ) )
+            if ( string.IsNullOrEmpty( partName . Text ) )
             {
                 MessageBox.Show( "物料名称不可为空" );
                 return;
@@ -2794,10 +2830,10 @@ namespace Mulaolao . Contract
         yanpinSelect ys = new yanpinSelect( );
         private void button13_Click ( object sender ,EventArgs e )
         {
-            if ( MessageBox.Show( "流水号:" + cmj.AF002 + "\n\r物料名称:" + comboBox2.Text + "\n\r长:" + textBox32.Text + "\n\r宽:" + textBox33.Text + "\n\r高:" + textBox34.Text + "\n\r已经到货？" ,"提示" ,MessageBoxButtons.OKCancel ) == DialogResult.OK )
+            if ( MessageBox.Show( "流水号:" + cmj.AF002 + "\n\r物料名称:" + partName . Text + "\n\r长:" + textBox32.Text + "\n\r宽:" + textBox33.Text + "\n\r高:" + textBox34.Text + "\n\r已经到货？" ,"提示" ,MessageBoxButtons.OKCancel ) == DialogResult.OK )
             {
                 ys.ysOne = cmj.AF001;
-                ys.ysTwo = comboBox2.Text;
+                ys.ysTwo = partName . Text;
                 ys.ysThr = textBox32.Text;
                 ys.ysFou = textBox33.Text;
                 ys.ysFiv = textBox34.Text;

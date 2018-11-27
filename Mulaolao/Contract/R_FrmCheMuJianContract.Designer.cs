@@ -47,7 +47,6 @@
             this.label48 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.label86 = new System.Windows.Forms.Label();
@@ -328,11 +327,15 @@
             this.tabPageOne = new System.Windows.Forms.TabPage();
             this.tabPageTwo = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.partName = new System.Windows.Forms.TextBox();
+            this.partInfo = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.ViewInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.lookUpEdit3 = new DevExpress.XtraEditors.LookUpEdit();
             this.label97 = new System.Windows.Forms.Label();
             this.tabPageTre = new System.Windows.Forms.TabPage();
             this.label29 = new System.Windows.Forms.Label();
@@ -378,7 +381,8 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partInfo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewInfo)).BeginInit();
             this.tabPageTre.SuspendLayout();
             this.tabPageFor.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -574,18 +578,6 @@
             this.label25.Size = new System.Drawing.Size(76, 16);
             this.label25.TabIndex = 90;
             this.label25.Text = "每套用量";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 41);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(141, 24);
-            this.comboBox2.TabIndex = 89;
-            this.comboBox2.SelectedValueChanged += new System.EventHandler(this.comboBox2_SelectedValueChanged);
-            this.comboBox2.TextChanged += new System.EventHandler(this.comboBox2_TextChanged);
             // 
             // label34
             // 
@@ -3851,14 +3843,14 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.partName);
+            this.splitContainer2.Panel1.Controls.Add(this.partInfo);
             this.splitContainer2.Panel1.Controls.Add(this.textBox31);
             this.splitContainer2.Panel1.Controls.Add(this.label36);
             this.splitContainer2.Panel1.Controls.Add(this.textBox30);
             this.splitContainer2.Panel1.Controls.Add(this.label30);
-            this.splitContainer2.Panel1.Controls.Add(this.lookUpEdit3);
             this.splitContainer2.Panel1.Controls.Add(this.label97);
             this.splitContainer2.Panel1.Controls.Add(this.button15);
-            this.splitContainer2.Panel1.Controls.Add(this.comboBox2);
             this.splitContainer2.Panel1.Controls.Add(this.textBox29);
             this.splitContainer2.Panel1.Controls.Add(this.label34);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox3);
@@ -3906,6 +3898,68 @@
             this.splitContainer2.SplitterDistance = 203;
             this.splitContainer2.TabIndex = 0;
             // 
+            // partName
+            // 
+            this.partName.Location = new System.Drawing.Point(143, 39);
+            this.partName.Name = "partName";
+            this.partName.ReadOnly = true;
+            this.partName.Size = new System.Drawing.Size(141, 26);
+            this.partName.TabIndex = 152;
+            this.partName.TextChanged += new System.EventHandler(this.partName_TextChanged);
+            // 
+            // partInfo
+            // 
+            this.partInfo.Location = new System.Drawing.Point(143, 11);
+            this.partInfo.Name = "partInfo";
+            this.partInfo.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.partInfo.Properties.Appearance.Options.UseFont = true;
+            this.partInfo.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.partInfo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.partInfo.Properties.ImmediatePopup = true;
+            this.partInfo.Properties.NullText = "";
+            this.partInfo.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.partInfo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.partInfo.Properties.View = this.ViewInfo;
+            this.partInfo.Size = new System.Drawing.Size(141, 22);
+            this.partInfo.TabIndex = 151;
+            this.partInfo.EditValueChanged += new System.EventHandler(this.partInfo_EditValueChanged);
+            // 
+            // ViewInfo
+            // 
+            this.ViewInfo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn2,
+            this.gridColumn1});
+            this.ViewInfo.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.ViewInfo.Name = "ViewInfo";
+            this.ViewInfo.OptionsBehavior.Editable = false;
+            this.ViewInfo.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.ViewInfo.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn2.AppearanceCell.Options.UseFont = true;
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn2.Caption = "材料名称";
+            this.gridColumn2.FieldName = "AF084";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn1.AppearanceCell.Options.UseFont = true;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn1.Caption = "物料或部件名称";
+            this.gridColumn1.FieldName = "AF015";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            // 
             // textBox31
             // 
             this.textBox31.Location = new System.Drawing.Point(764, 166);
@@ -3939,20 +3993,6 @@
             this.label30.Size = new System.Drawing.Size(110, 16);
             this.label30.TabIndex = 147;
             this.label30.Text = "每立方米原价";
-            // 
-            // lookUpEdit3
-            // 
-            this.lookUpEdit3.Location = new System.Drawing.Point(143, 11);
-            this.lookUpEdit3.Name = "lookUpEdit3";
-            this.lookUpEdit3.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lookUpEdit3.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit3.Properties.NullText = "";
-            this.lookUpEdit3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.lookUpEdit3.Properties.ShowHeader = false;
-            this.lookUpEdit3.Size = new System.Drawing.Size(141, 22);
-            this.lookUpEdit3.TabIndex = 145;
             // 
             // label97
             // 
@@ -4237,7 +4277,8 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partInfo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewInfo)).EndInit();
             this.tabPageTre.ResumeLayout(false);
             this.tabPageTre.PerformLayout();
             this.tabPageFor.ResumeLayout(false);
@@ -4270,7 +4311,6 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.Label label86;
@@ -4501,7 +4541,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TabPage tabPageFor;
         private System.Windows.Forms.TextBox textBox25;
-        private DevExpress . XtraEditors . LookUpEdit lookUpEdit3;
         private System . Windows . Forms . Label label97;
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn AF084;
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn U6;
@@ -4575,5 +4614,10 @@
         private System . Windows . Forms . TextBox textBox46;
         private System . Windows . Forms . RadioButton radioButton19;
         private System . Windows . Forms . RadioButton radioButton20;
+        private DevExpress . XtraEditors . GridLookUpEdit partInfo;
+        private DevExpress . XtraGrid . Views . Grid . GridView ViewInfo;
+        private DevExpress . XtraGrid . Columns . GridColumn gridColumn1;
+        private DevExpress . XtraGrid . Columns . GridColumn gridColumn2;
+        private System . Windows . Forms . TextBox partName;
     }
 }

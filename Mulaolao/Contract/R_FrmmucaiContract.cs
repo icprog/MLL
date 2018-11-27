@@ -147,77 +147,86 @@ namespace Mulaolao.Contract
         void table ( )
         {
             model . PQV79 = comboBox32 . Text;
-            if ( string . IsNullOrEmpty ( textBox68 . Text ) )
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT  DISTINCT GS02 PQV86,GS07 PQV10 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS48=@GS48" ,new SqlParameter ( "@GS48" ,model . PQV79 ) );
-            else
+            //if ( string . IsNullOrEmpty ( textBox68 . Text ) )
+            //    wpmc = SqlHelper . ExecuteDataTable ( "SELECT  DISTINCT GS02 PQV86,GS07 PQV10 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS70='R_341' AND GS48=@GS48" ,new SqlParameter ( "@GS48" ,model . PQV79 ) );
+            if ( !string . IsNullOrEmpty ( textBox68 . Text ) )
             {
                 model . PQV01 = textBox68 . Text;
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT  DISTINCT GS02 PQV86,GS07 PQV10 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,model . PQV01 ) );
+                wpmc = SqlHelper . ExecuteDataTable ( "SELECT  DISTINCT GS02 PQV86,GS07 PQV10 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS70='R_341' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,model . PQV01 ) );
+
+                biao = SqlHelper . ExecuteDataTable ( "SELECT '' PQV10,PQV11,PQV12,PQV13,PQV14,PQV15,PQV17,PQV18,PQV19,PQV20,PQV21,PQV22,PQV23,PQV24,PQV64,PQV65,PQV66,PQV67,PQV68,PQV69,PQV70,PQV71,PQV72,PQV73,PQV81,'' PQV86 FROM R_PQV WHERE PQV79=@PQV79" ,new SqlParameter ( "@PQV79" ,model . PQV79 ) );
             }
 
-            if ( string.IsNullOrEmpty( textBox68.Text ) )
-                biao = SqlHelper.ExecuteDataTable( "SELECT PQV10,PQV11,PQV12,PQV13,PQV14,PQV15,PQV17,PQV18,PQV19,PQV20,PQV21,PQV22,PQV23,PQV24,PQV64,PQV65,PQV66,PQV67,PQV68,PQV69,PQV70,PQV71,PQV72,PQV73,PQV81,PQV86 FROM R_PQV WHERE PQV79=@PQV79" ,new SqlParameter( "@PQV79" ,model.PQV79 ) );
-            else
+            if ( string . IsNullOrEmpty ( textBox68 . Text ) )
             {
-                model.PQV01 = textBox68.Text;
-                biao = SqlHelper.ExecuteDataTable( "SELECT PQV10,PQV11,PQV12,PQV13,PQV14,PQV15,PQV17,PQV18,PQV19,PQV20,PQV21,PQV22,PQV23,PQV24,PQV64,PQV65,PQV66,PQV67,PQV68,PQV69,PQV70,PQV71,PQV72,PQV73,PQV81,PQV86 FROM R_PQV WHERE PQV01=@PQV01" ,new SqlParameter( "@PQV01" ,model.PQV01 ) );
+                biao = SqlHelper . ExecuteDataTable ( "SELECT PQV10,PQV11,PQV12,PQV13,PQV14,PQV15,PQV17,PQV18,PQV19,PQV20,PQV21,PQV22,PQV23,PQV24,PQV64,PQV65,PQV66,PQV67,PQV68,PQV69,PQV70,PQV71,PQV72,PQV73,PQV81,PQV86 FROM R_PQV WHERE PQV79=@PQV79" ,new SqlParameter ( "@PQV79" ,model . PQV79 ) );
             }
+
             if ( wpmc != null )
-                biao.Merge( wpmc );
+                biao . Merge ( wpmc );
+
             //物料名称
-            comboBox2.DataSource = biao.DefaultView.ToTable( true ,"PQV10" );
-            comboBox2.DisplayMember = "PQV10";
-            //材料名称
-            lookUpEdit2.Properties.DataSource = biao.DefaultView.ToTable( true ,"PQV86" );
-            lookUpEdit2.Properties.DisplayMember = "PQV86";
+            partInfo . Properties . DataSource = biao . DefaultView . ToTable ( true ,new string [ ] { "PQV10" ,"PQV86" } );
+            partInfo . Properties . DisplayMember = "PQV86";
+            partInfo . Properties . ValueMember = "PQV86";
+            ////材料名称
+            //lookUpEdit2 . Properties . DataSource = biao . DefaultView . ToTable ( true ,"PQV86" );
+            //lookUpEdit2 . Properties . DisplayMember = "PQV86";
             //每立方米现价
-            comboBox12.DataSource = biao.DefaultView.ToTable( true ,"PQV11" );
-            comboBox12.DisplayMember = "PQV11";
+            comboBox12 . DataSource = biao . DefaultView . ToTable ( true ,"PQV11" );
+            comboBox12 . DisplayMember = "PQV11";
             //每套部件数量
-            comboBox1.DataSource = biao.DefaultView.ToTable( true ,"PQV12" );
-            comboBox1.DisplayMember = "PQV12";
+            comboBox1 . DataSource = biao . DefaultView . ToTable ( true ,"PQV12" );
+            comboBox1 . DisplayMember = "PQV12";
             //购规格料条数
-            comboBox13.DataSource = biao.DefaultView.ToTable( true ,"PQV13" );
-            comboBox13.DisplayMember = "PQV13";
+            comboBox13 . DataSource = biao . DefaultView . ToTable ( true ,"PQV13" );
+            comboBox13 . DisplayMember = "PQV13";
             //不开裂率
-            comboBox17.DataSource = biao.DefaultView.ToTable( true ,"PQV17" );
-            comboBox17.DisplayMember = "PQV17";
+            comboBox17 . DataSource = biao . DefaultView . ToTable ( true ,"PQV17" );
+            comboBox17 . DisplayMember = "PQV17";
             //碰.压.划伤合格率%
-            comboBox19.DataSource = biao.DefaultView.ToTable( true ,"PQV18" );
-            comboBox19.DisplayMember = "PQV18";
+            comboBox19 . DataSource = biao . DefaultView . ToTable ( true ,"PQV18" );
+            comboBox19 . DisplayMember = "PQV18";
             //开裂、弯曲、变形合格率%
-            comboBox21.DataSource = biao.DefaultView.ToTable( true ,"PQV19" );
-            comboBox21.DisplayMember = "PQV19";
+            comboBox21 . DataSource = biao . DefaultView . ToTable ( true ,"PQV19" );
+            comboBox21 . DisplayMember = "PQV19";
             //利边、尖点合格率%
-            comboBox20.DataSource = biao.DefaultView.ToTable( true ,"PQV21" );
-            comboBox20.DisplayMember = "PQV21";
+            comboBox20 . DataSource = biao . DefaultView . ToTable ( true ,"PQV21" );
+            comboBox20 . DisplayMember = "PQV21";
             //含水率
-            comboBox16.DataSource = biao.DefaultView.ToTable( true ,"PQV14" );
-            comboBox16.DisplayMember = "PQV14";
+            comboBox16 . DataSource = biao . DefaultView . ToTable ( true ,"PQV14" );
+            comboBox16 . DisplayMember = "PQV14";
             //实际含水率
-            comboBox18.DataSource = biao.DefaultView.ToTable( true ,"PQV15" );
-            comboBox18.DisplayMember = "PQV15";
+            comboBox18 . DataSource = biao . DefaultView . ToTable ( true ,"PQV15" );
+            comboBox18 . DisplayMember = "PQV15";
             //长
-            comboBox3.DataSource = biao.DefaultView.ToTable( true ,"PQV66" );
-            comboBox3.DisplayMember = "PQV66";
+            comboBox3 . DataSource = biao . DefaultView . ToTable ( true ,"PQV66" );
+            comboBox3 . DisplayMember = "PQV66";
             //木材宽
-            comboBox33.DataSource = biao.DefaultView.ToTable( true ,"PQV81" );
-            comboBox33.DisplayMember = "PQV81";
+            comboBox33 . DataSource = biao . DefaultView . ToTable ( true ,"PQV81" );
+            comboBox33 . DisplayMember = "PQV81";
             //高(厚)
-            comboBox4.DataSource = biao.DefaultView.ToTable( true ,"PQV67" );
-            comboBox4.DisplayMember = "PQV67";
+            comboBox4 . DataSource = biao . DefaultView . ToTable ( true ,"PQV67" );
+            comboBox4 . DisplayMember = "PQV67";
             //长
-            comboBox5.DataSource = biao.DefaultView.ToTable( true ,"PQV68" );
-            comboBox5.DisplayMember = "PQV68";
+            comboBox5 . DataSource = biao . DefaultView . ToTable ( true ,"PQV68" );
+            comboBox5 . DisplayMember = "PQV68";
             //宽
-            comboBox7.DataSource = biao.DefaultView.ToTable( true ,"PQV69" );
-            comboBox7.DisplayMember = "PQV69";
+            comboBox7 . DataSource = biao . DefaultView . ToTable ( true ,"PQV69" );
+            comboBox7 . DisplayMember = "PQV69";
             //高(厚)
-            comboBox8.DataSource = biao.DefaultView.ToTable( true ,"PQV70" );
-            comboBox8.DisplayMember = "PQV70";
+            comboBox8 . DataSource = biao . DefaultView . ToTable ( true ,"PQV70" );
+            comboBox8 . DisplayMember = "PQV70";
             //虫蛀.腐变.节疤合格率%
-            comboBox22.DataSource = biao.DefaultView.ToTable( true ,"PQV22" );
-            comboBox22.DisplayMember = "PQV22";
+            comboBox22 . DataSource = biao . DefaultView . ToTable ( true ,"PQV22" );
+            comboBox22 . DisplayMember = "PQV22";
+            //else
+            //{
+            //    model.PQV01 = textBox68.Text;
+            //    biao = SqlHelper.ExecuteDataTable( "SELECT '' PQV10,PQV11,PQV12,PQV13,PQV14,PQV15,PQV17,PQV18,PQV19,PQV20,PQV21,PQV22,PQV23,PQV24,PQV64,PQV65,PQV66,PQV67,PQV68,PQV69,PQV70,PQV71,PQV72,PQV73,PQV81,PQV86 FROM R_PQV WHERE PQV01=@PQV01" ,new SqlParameter( "@PQV01" ,model.PQV01 ) );
+            //}
+            //if ( wpmc != null && biao!=null )
+            //    biao.Merge( wpmc );
         }
         //干燥度
         private void textBox31_KeyPress ( object sender ,KeyPressEventArgs e )
@@ -343,8 +352,10 @@ namespace Mulaolao.Contract
             model = bll.GetModel( model.IDX );
             if ( model == null )
                 return;
-            comboBox2.Text = model.PQV10;
-            comboBox12.Text = model.PQV11.ToString( );
+            partInfo . Text = model . PQV86;
+            partName . Text = model . PQV10;
+
+            comboBox12 .Text = model.PQV11.ToString( );
             comboBox1.Text = model.PQV12.ToString( );
             comboBox13.Text = model.PQV13.ToString( );
             comboBox16.Text = model.PQV14.ToString( );
@@ -368,9 +379,9 @@ namespace Mulaolao.Contract
             textBox35.Text = model.PQV71.ToString( );
             textBox36.Text = model.PQV72.ToString( );
             textBox37.Text = model.PQV73.ToString( );
-            lookUpEdit2.Text = model.PQV86;
+            
             //textBox71.Text = model.PQV80.ToString( );
-            comboBox33.Text = model.PQV81.ToString( );
+            comboBox33 .Text = model.PQV81.ToString( );
             if ( model.PQV65.Trim( ) == "库存" )
             {
                 radioButton13.Checked = true;
@@ -454,7 +465,7 @@ namespace Mulaolao.Contract
         {
             if ( radioButton13.Checked && ( ord == "实际" || !string.IsNullOrEmpty( textBox68.Text ) ) )
             {
-                fc.yesOrNoThrForOneOf( /*comboBox32.Text*/"" ,lookUpEdit2.Text ,/*comboBox3.Text + "*" +*/ comboBox4.Text ,textBox27 ,textBox33 ,textBox71.Text );
+                fc.yesOrNoThrForOneOf( /*comboBox32.Text*/"" ,partInfo.Text ,/*comboBox3.Text + "*" +*/ comboBox4.Text ,textBox27 ,textBox33 ,textBox71.Text );
 
                 textBox28.Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbes( comboBox5 ,comboBox7 ,comboBox8 ,textBox71 ,comboBox1 ,textBox27 ) ) ,4 ).ToString( );
 
@@ -468,7 +479,7 @@ namespace Mulaolao.Contract
                 get( );
             else
             {
-                fc.yesOrNoThrForOneOf( /*comboBox32.Text*/"" ,lookUpEdit2.Text ,/*comboBox3.Text + "*" +*/ comboBox4.Text ,textBox27 ,textBox33 ,textBox71.Text );
+                fc.yesOrNoThrForOneOf( /*comboBox32.Text*/"" ,partInfo.Text ,/*comboBox3.Text + "*" +*/ comboBox4.Text ,textBox27 ,textBox33 ,textBox71.Text );
                 textBox28.Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbes( comboBox5 ,comboBox7 ,comboBox8 ,textBox71 ,comboBox1 ) ) ,4 ).ToString( );
                 /*Thr * For * Fiv * One * Nin * Convert.ToDecimal( 0.000001 )*/
             }
@@ -477,7 +488,7 @@ namespace Mulaolao.Contract
         void get ( )
         {
             string str = "";
-            model.PQV86 = lookUpEdit2.Text;
+            model.PQV86 = partInfo.Text;
             if ( string.IsNullOrEmpty( comboBox4.Text ) )
                 model.PQV67 = 0M;
             else
@@ -802,12 +813,17 @@ namespace Mulaolao.Contract
                     comboBox32.Text = comboBox31.SelectedValue.ToString( );
             }
         }
-        private void comboBox2_TextChanged ( object sender ,EventArgs e )
+        private void partInfo_EditValueChanged ( object sender ,EventArgs e )
         {
+            DataRow row = ViewInfo . GetFocusedDataRow ( );
+            if ( row == null )
+                return;
+            partName . Text = row [ "PQV10" ] . ToString ( );
+
             getPreCost ( );
             getSpe ( );
         }
-        private void lookUpEdit2_TextChanged ( object sender ,EventArgs e )
+        private void partName_TextChanged ( object sender ,EventArgs e )
         {
             getPreCost ( );
             getSpe ( );
@@ -824,9 +840,9 @@ namespace Mulaolao.Contract
         {
             if ( string . IsNullOrEmpty ( comboBox32 . Text ) )
                 return;
-            if ( string . IsNullOrEmpty ( comboBox2 . Text ) )
+            if ( string . IsNullOrEmpty ( partName . Text ) )
                 return;
-            if ( string . IsNullOrEmpty ( lookUpEdit2 . Text ) )
+            if ( string . IsNullOrEmpty ( partInfo . Text ) )
                 return;
             if ( string . IsNullOrEmpty ( comboBox5 . Text ) )
                 return;
@@ -834,17 +850,17 @@ namespace Mulaolao.Contract
                 return;
             if ( string . IsNullOrEmpty ( comboBox8 . Text ) )
                 return;
-            textBox34 . Text = bll . getPreviousCost ( comboBox32 . Text ,lookUpEdit2 . Text ,comboBox2 . Text ,comboBox5 . Text ,comboBox7 . Text ,comboBox8 . Text ,model . PQV76 ) . ToString ( );
+            textBox34 . Text = bll . getPreviousCost ( comboBox32 . Text ,partInfo . Text ,partName . Text ,comboBox5 . Text ,comboBox7 . Text ,comboBox8 . Text ,model . PQV76 ) . ToString ( );
         }
         void getSpe ( )
         {
-            if ( string . IsNullOrEmpty ( comboBox2 . Text ) )
+            if ( string . IsNullOrEmpty ( partName . Text ) )
                 return;
-            if ( string . IsNullOrEmpty ( lookUpEdit2 . Text ) )
+            if ( string . IsNullOrEmpty ( partInfo . Text ) )
                 return;
             if ( string . IsNullOrEmpty ( textBox68 . Text ) )
                 return;
-            DataTable dtSpe= bll . getSpe ( textBox68 . Text ,lookUpEdit2 . Text ,comboBox2 . Text );
+            DataTable dtSpe= bll . getSpe ( textBox68 . Text ,partInfo . Text ,partName . Text );
             if ( dtSpe == null || dtSpe . Rows . Count < 1 )
                 return;
             string strSpe = dtSpe . Rows [ 0 ] [ "GS08" ] . ToString ( );
@@ -1495,6 +1511,11 @@ namespace Mulaolao.Contract
                                 {
                                     if ( yesOrNoHaveStock( ) == false )
                                         break;
+                                    if ( !string . IsNullOrEmpty ( textBox68 . Text ) )
+                                    {
+                                        if ( checkThisAnd509 ( ) == false )
+                                            break;
+                                    }
                                     if ( dru.Select( "PQV10='" + bandedGridView1.GetDataRow( i )["PQV10"].ToString( ) + "' AND PQV66='" + bandedGridView1.GetDataRow( i )["PQV66"].ToString( ) + "' AND PQV81='" + bandedGridView1.GetDataRow( i )["PQV81"].ToString( ) + "' AND PQV67='" + bandedGridView1.GetDataRow( i )["PQV67"].ToString( ) + "' AND PQV01='" + model.PQV01 + "'" ).Length > 0 )
                                     {
                                         if ( model.PQV09.Length > 8 && model.PQV09.Substring( 0 ,8 ) == "MLL-0001" )
@@ -1525,6 +1546,7 @@ namespace Mulaolao.Contract
         }
         bool yesOrNoHaveStock ( )
         {
+            result = true;
             //PQV65:使用库存OR外购
             //PQV64:物料数量
             //PQV86:物料名称
@@ -1544,6 +1566,24 @@ namespace Mulaolao.Contract
                     }
                     else if ( i == bandedGridView1.RowCount - 1 )
                         result = true;
+                }
+            }
+            return result;
+        }
+        bool checkThisAnd509 ( )
+        {
+            result = true;
+            model . PQV01 = textBox68 . Text;
+            for ( int i = 0 ; i < bandedGridView1 . RowCount ; i++ )
+            {
+                model . PQV86 = bandedGridView1 . GetDataRow ( i ) [ "PQV86" ] . ToString ( );
+                model . PQV10 = bandedGridView1 . GetDataRow ( i ) [ "PQV10" ] . ToString ( );
+                model . PQV73 = string . IsNullOrEmpty ( bandedGridView1 . GetDataRow ( i ) [ "PQV73" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( bandedGridView1 . GetDataRow ( i ) [ "PQV73" ] ) * 10;
+                result = fc . check341And509 ( model );
+                if ( result == false )
+                {
+                    MessageBox . Show ( "流水号:" + model . PQV01 + "\n\r材料名称:" + model . PQV86 + "\n\r物料或部件名称:" + model . PQV10 + "\n\r部件净规格:" + model . PQV73 + "\n\r与509的数据不对应,请核实" );
+                    break;
                 }
             }
             return result;
@@ -1627,7 +1667,7 @@ namespace Mulaolao.Contract
                 MessageBox.Show( "非执行单据不能入库" );
                 return;
             }
-            if ( string.IsNullOrEmpty( comboBox2.Text ) )
+            if ( string.IsNullOrEmpty( partInfo.Text ) )
             {
                 MessageBox.Show( "物料名称不可为空" );
                 return;
@@ -1826,7 +1866,7 @@ namespace Mulaolao.Contract
         {
             model . PQV01 = textBox68 . Text;
             model . PQV09 = textBox15 . Text;
-            model . PQV10 = comboBox2 . Text;
+            model . PQV10 = partName . Text;
             model . PQV11 = string . IsNullOrEmpty ( comboBox12 . Text ) == true ? 0 : Convert . ToDecimal ( comboBox12 . Text );
             model . PQV12 = string . IsNullOrEmpty ( comboBox1 . Text ) == true ? 0 : Convert . ToInt32 ( comboBox1 . Text );
             model . PQV13 = string . IsNullOrEmpty ( comboBox13 . Text ) == true ? 0 : Convert . ToInt32 ( comboBox13 . Text );
@@ -1852,7 +1892,7 @@ namespace Mulaolao.Contract
             model . PQV73 = string . IsNullOrEmpty ( textBox37 . Text ) == true ? 0 : Convert . ToDecimal ( textBox37 . Text );
             model . PQV77 = comboBox31 . Text;
             model . PQV79 = comboBox32 . Text;
-            model . PQV86 = lookUpEdit2 . Text;
+            model . PQV86 = partInfo . Text;
             model . PQV80 = string . IsNullOrEmpty ( textBox71 . Text ) == true ? 0 : Convert . ToInt64 ( textBox71 . Text );
             model . PQV81 = string . IsNullOrEmpty ( comboBox33 . Text ) == true ? 0 : Convert . ToDecimal ( comboBox33 . Text );
             if ( radioButton13 . Checked )
@@ -1924,7 +1964,7 @@ namespace Mulaolao.Contract
                 {
                     MessageBox.Show( "成功录入数据" );
 
-                    table( );
+                    //table( );
                     button12_Click( null ,null );
                 }
             }
@@ -2023,12 +2063,12 @@ namespace Mulaolao.Contract
                 MessageBox . Show ( "请选择供应商" );
                 return;
             }
-            if ( string . IsNullOrEmpty ( lookUpEdit2 . Text ) )
+            if ( string . IsNullOrEmpty ( partInfo . Text ) )
             {
                 MessageBox . Show ( "请选择材料名称" );
                 return;
             }
-            if ( string . IsNullOrEmpty ( comboBox2 . Text ) )
+            if ( string . IsNullOrEmpty ( partName . Text ) )
             {
                 MessageBox . Show ( "请选择物品或部件名称" );
                 return;
@@ -2212,7 +2252,7 @@ namespace Mulaolao.Contract
             //    row.EndEdit( );
             //}
 
-            table( );
+            //table( );
             button12_Click( null ,null );
         }
         void edit ( )
@@ -2322,12 +2362,12 @@ namespace Mulaolao.Contract
                 MessageBox.Show( "合同批号不可为空" );
                 return;
             }
-            if ( string.IsNullOrEmpty( lookUpEdit2.Text ) )
+            if ( string.IsNullOrEmpty( partInfo.Text ) )
             {
                 MessageBox.Show( "请选择材料名称" );
                 return;
             }
-            if ( string.IsNullOrEmpty( comboBox2.Text ) )
+            if ( string.IsNullOrEmpty( partName.Text ) )
             {
                 MessageBox.Show( "请选择物品或部件名称" );
                 return;
@@ -2545,10 +2585,10 @@ namespace Mulaolao.Contract
         yanpinSelect ys = new yanpinSelect( );
         private void button13_Click ( object sender ,EventArgs e )
         {
-            if ( MessageBox.Show( "流水号:" + model.PQV01 + "\n\r物料名称:" + comboBox2.Text + "\n\r毛规格长:" + comboBox3.Text + "\n\r宽:" + comboBox33.Text + "\n\r高:" + comboBox4.Text + "\n\r已经到货？" ,"提示" ,MessageBoxButtons.OKCancel ) == DialogResult.OK )
+            if ( MessageBox.Show( "流水号:" + model.PQV01 + "\n\r物料名称:" + partName.Text + "\n\r毛规格长:" + comboBox3.Text + "\n\r宽:" + comboBox33.Text + "\n\r高:" + comboBox4.Text + "\n\r已经到货？" ,"提示" ,MessageBoxButtons.OKCancel ) == DialogResult.OK )
             {
                 ys.ysOne = model.PQV76;
-                ys.ysTwo = comboBox2.Text;
+                ys.ysTwo = partName . Text;
                 ys.ysThr = comboBox3.Text;
                 ys.ysFou = comboBox33.Text;
                 ys.ysFiv = comboBox4.Text;
@@ -2739,33 +2779,33 @@ namespace Mulaolao.Contract
         }
         private void query_PassDataBetweenForm( Object sender, PassDataWinFormEventArgs e )
         {
-            comboBox31.Text = e.ConOne;
+            //comboBox31.Text = e.ConOne;
             model.PQV77 = e.ConOne;
-            textBox2.Text = e.ConTwo;
+            //textBox2.Text = e.ConTwo;
             model.PQV78 = e.ConTwo;
-            textBox68.Text = e.ConTre;
+            //textBox68.Text = e.ConTre;
             model.PQV01 = e.ConTre;
             //PQV02 = e.ConFor;        
             //lookUpEdit1.Text = e.ConFiv;
             model.PQV03 = e.ConSix;
-            textBox19.Text = e.ConSev;
+            //textBox19.Text = e.ConSev;
             if(e.ConEgi=="执行")
                 label107.Visible = true;
             else
                 label107.Visible = false;
             model.PQV76 = e.ConNin;
             model.PQV79 = e.ConTen;
-            comboBox32.Text = e.ConTen;
+            //comboBox32.Text = e.ConTen;
             if ( e.ConEleven == "" )
                 model.PQV80 = 0;
             else
                 model.PQV80 = Convert.ToInt64(e.ConEleven);
-            textBox71.Text = e.ConEleven;
+           // textBox71.Text = e.ConEleven;
 
             //DataTable wpmc = SqlHelper.ExecuteDataTable( "SELECT  DISTINCT GS02,GS07 FROM R_PQP WHERE GS07 IS NOT NULL AND GS07!='' AND GS01=@GS01 UNION SELECT DISTINCT PQV86,PQV10 FROM R_PQV WHERE PQV10!='' AND PQV10 IS NOT NULL AND PQV01=@PQV01" ,new SqlParameter( "@GS01" ,PQV01 ) ,new SqlParameter( "@PQV01" ,PQV01 ) );
             //DataTable wpmcOne = wpmc.DefaultView.ToTable( true ,"GS07" );
-            //comboBox2.DataSource = wpmc;
-            //comboBox2.DisplayMember = "GS07";
+            //partInfo.DataSource = wpmc;
+            //partInfo.DisplayMember = "GS07";
             //DataTable wpmcTwo = wpmc.DefaultView.ToTable( true ,"GS02" );
             //lookUpEdit2.DataSource = wpmcTwo;
             //lookUpEdit2.DisplayMember = "GS02";

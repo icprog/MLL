@@ -188,7 +188,6 @@
             this.PQV90 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.PQV91 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.button17 = new System.Windows.Forms.Button();
-            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
             this.textBox33 = new System.Windows.Forms.TextBox();
             this.label97 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
@@ -254,7 +253,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
@@ -368,6 +366,9 @@
             this.tabPageOne = new System.Windows.Forms.TabPage();
             this.tabPageTwo = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.partInfo = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.ViewInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.PQV1001 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.label102 = new System.Windows.Forms.Label();
             this.tabPageTre = new System.Windows.Forms.TabPage();
@@ -388,10 +389,11 @@
             this.textBox41 = new System.Windows.Forms.TextBox();
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.partName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
             this.groupBox22.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -417,6 +419,8 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.partInfo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewInfo)).BeginInit();
             this.tabPageTre.SuspendLayout();
             this.tabPageFor.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1132,6 +1136,8 @@
             this.PQV64.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV64.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV64.Caption = "使用库存数量";
+            this.PQV64.DisplayFormat.FormatString = "0.######";
+            this.PQV64.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.PQV64.FieldName = "PQV64";
             this.PQV64.Name = "PQV64";
             this.PQV64.Visible = true;
@@ -1163,6 +1169,8 @@
             this.PQV82.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV82.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.PQV82.Caption = "使用外购数量";
+            this.PQV82.DisplayFormat.FormatString = "0.######";
+            this.PQV82.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.PQV82.FieldName = "PQV82";
             this.PQV82.Name = "PQV82";
             this.PQV82.Visible = true;
@@ -1221,6 +1229,8 @@
             this.PQV80.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV80.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV80.Caption = "产品数量";
+            this.PQV80.DisplayFormat.FormatString = "0.######";
+            this.PQV80.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.PQV80.FieldName = "PQV80";
             this.PQV80.Name = "PQV80";
             this.PQV80.Visible = true;
@@ -1249,6 +1259,8 @@
             this.PQV12.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV12.Caption = "每套部件数量";
+            this.PQV12.DisplayFormat.FormatString = "0.######";
+            this.PQV12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.PQV12.FieldName = "PQV12";
             this.PQV12.Name = "PQV12";
             this.PQV12.Visible = true;
@@ -1279,7 +1291,7 @@
             this.U0.AppearanceHeader.Options.UseTextOptions = true;
             this.U0.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U0.Caption = "每条切部件数";
-            this.U0.DisplayFormat.FormatString = "N2";
+            this.U0.DisplayFormat.FormatString = "0.##";
             this.U0.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U0.FieldName = "U0";
             this.U0.Name = "U0";
@@ -1316,7 +1328,7 @@
             this.U15.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U15.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.U15.Caption = "每套成本(立方算)";
-            this.U15.DisplayFormat.FormatString = "N3";
+            this.U15.DisplayFormat.FormatString = "0.###";
             this.U15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U15.FieldName = "U15";
             this.U15.Name = "U15";
@@ -1355,7 +1367,7 @@
             this.U16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U16.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.U16.Caption = "每套成本(切削算)";
-            this.U16.DisplayFormat.FormatString = "N3";
+            this.U16.DisplayFormat.FormatString = "0.###";
             this.U16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U16.FieldName = "U16";
             this.U16.Name = "U16";
@@ -1383,6 +1395,8 @@
             // PQV97
             // 
             this.PQV97.Caption = "原每套成本(切削算)";
+            this.PQV97.DisplayFormat.FormatString = "0.######";
+            this.PQV97.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.PQV97.FieldName = "PQV97";
             this.PQV97.Name = "PQV97";
             this.PQV97.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -1428,7 +1442,7 @@
             this.PQV66.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV66.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV66.Caption = "长";
-            this.PQV66.DisplayFormat.FormatString = "N2";
+            this.PQV66.DisplayFormat.FormatString = "0.##";
             this.PQV66.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV66.FieldName = "PQV66";
             this.PQV66.Name = "PQV66";
@@ -1458,7 +1472,7 @@
             this.PQV81.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV81.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV81.Caption = "木材宽";
-            this.PQV81.DisplayFormat.FormatString = "N3";
+            this.PQV81.DisplayFormat.FormatString = "0.###";
             this.PQV81.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV81.FieldName = "PQV81";
             this.PQV81.Name = "PQV81";
@@ -1488,7 +1502,7 @@
             this.PQV67.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV67.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV67.Caption = "高(厚)";
-            this.PQV67.DisplayFormat.FormatString = "N3";
+            this.PQV67.DisplayFormat.FormatString = "0.###";
             this.PQV67.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV67.FieldName = "PQV67";
             this.PQV67.Name = "PQV67";
@@ -1534,7 +1548,7 @@
             this.PQV68.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV68.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV68.Caption = "长";
-            this.PQV68.DisplayFormat.FormatString = "N2";
+            this.PQV68.DisplayFormat.FormatString = "0.##";
             this.PQV68.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV68.FieldName = "PQV68";
             this.PQV68.Name = "PQV68";
@@ -1564,7 +1578,7 @@
             this.PQV69.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV69.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV69.Caption = "宽";
-            this.PQV69.DisplayFormat.FormatString = "N2";
+            this.PQV69.DisplayFormat.FormatString = "0.##";
             this.PQV69.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV69.FieldName = "PQV69";
             this.PQV69.Name = "PQV69";
@@ -1594,7 +1608,7 @@
             this.PQV70.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV70.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV70.Caption = "高(厚)";
-            this.PQV70.DisplayFormat.FormatString = "N2";
+            this.PQV70.DisplayFormat.FormatString = "0.##";
             this.PQV70.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV70.FieldName = "PQV70";
             this.PQV70.Name = "PQV70";
@@ -1640,7 +1654,7 @@
             this.PQV71.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV71.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV71.Caption = "长";
-            this.PQV71.DisplayFormat.FormatString = "N3";
+            this.PQV71.DisplayFormat.FormatString = "0.###";
             this.PQV71.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV71.FieldName = "PQV71";
             this.PQV71.Name = "PQV71";
@@ -1670,7 +1684,7 @@
             this.PQV72.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV72.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV72.Caption = "宽";
-            this.PQV72.DisplayFormat.FormatString = "N3";
+            this.PQV72.DisplayFormat.FormatString = "0.###";
             this.PQV72.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV72.FieldName = "PQV72";
             this.PQV72.Name = "PQV72";
@@ -1700,7 +1714,7 @@
             this.PQV73.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV73.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV73.Caption = "高(厚)";
-            this.PQV73.DisplayFormat.FormatString = "N3";
+            this.PQV73.DisplayFormat.FormatString = "0.###";
             this.PQV73.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV73.FieldName = "PQV73";
             this.PQV73.Name = "PQV73";
@@ -1731,7 +1745,7 @@
             this.PQV20.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV20.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV20.Caption = "切削净立方倍率";
-            this.PQV20.DisplayFormat.FormatString = "N3";
+            this.PQV20.DisplayFormat.FormatString = "0.###";
             this.PQV20.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV20.FieldName = "PQV20";
             this.PQV20.Name = "PQV20";
@@ -1764,7 +1778,7 @@
             this.PQV84.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV84.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.PQV84.Caption = "切削净立方倍率";
-            this.PQV84.DisplayFormat.FormatString = "N3";
+            this.PQV84.DisplayFormat.FormatString = "0.###";
             this.PQV84.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV84.FieldName = "PQV84";
             this.PQV84.Name = "PQV84";
@@ -1794,7 +1808,7 @@
             this.U11.AppearanceHeader.Options.UseTextOptions = true;
             this.U11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U11.Caption = "净长度利用%";
-            this.U11.DisplayFormat.FormatString = "N2";
+            this.U11.DisplayFormat.FormatString = "0.##";
             this.U11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U11.FieldName = "U11";
             this.U11.Name = "U11";
@@ -1828,7 +1842,7 @@
             this.U12.AppearanceHeader.Options.UseTextOptions = true;
             this.U12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U12.Caption = "净立方利用%";
-            this.U12.DisplayFormat.FormatString = "N2";
+            this.U12.DisplayFormat.FormatString = "0.##";
             this.U12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U12.FieldName = "U12";
             this.U12.Name = "U12";
@@ -1863,7 +1877,7 @@
             this.U3.AppearanceHeader.Options.UseTextOptions = true;
             this.U3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U3.Caption = "部件毛料体积m³";
-            this.U3.DisplayFormat.FormatString = "N4";
+            this.U3.DisplayFormat.FormatString = "0.####";
             this.U3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U3.FieldName = "U3";
             this.U3.Name = "U3";
@@ -1900,7 +1914,7 @@
             this.U14.AppearanceHeader.Options.UseTextOptions = true;
             this.U14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U14.Caption = "部件毛料体积m³";
-            this.U14.DisplayFormat.FormatString = "N4";
+            this.U14.DisplayFormat.FormatString = "0.####";
             this.U14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U14.FieldName = "U14";
             this.U14.Name = "U14";
@@ -1937,7 +1951,7 @@
             this.U4.AppearanceHeader.Options.UseTextOptions = true;
             this.U4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U4.Caption = "每个部件净体积cm³";
-            this.U4.DisplayFormat.FormatString = "N4";
+            this.U4.DisplayFormat.FormatString = "0.####";
             this.U4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U4.FieldName = "U4";
             this.U4.Name = "U4";
@@ -1973,7 +1987,7 @@
             this.PQV11.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV11.Caption = "每立方米现价";
-            this.PQV11.DisplayFormat.FormatString = "N1";
+            this.PQV11.DisplayFormat.FormatString = "0.#";
             this.PQV11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PQV11.FieldName = "PQV11";
             this.PQV11.Name = "PQV11";
@@ -2004,6 +2018,8 @@
             this.PQV13.AppearanceHeader.Options.UseTextOptions = true;
             this.PQV13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PQV13.Caption = "购规格料条数";
+            this.PQV13.DisplayFormat.FormatString = "0.######";
+            this.PQV13.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.PQV13.FieldName = "PQV13";
             this.PQV13.Name = "PQV13";
             this.PQV13.Visible = true;
@@ -2049,7 +2065,7 @@
             this.U5.AppearanceHeader.Options.UseTextOptions = true;
             this.U5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U5.Caption = "按毛板料算购量立方";
-            this.U5.DisplayFormat.FormatString = "N4";
+            this.U5.DisplayFormat.FormatString = "0.####";
             this.U5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U5.FieldName = "U5";
             this.U5.Name = "U5";
@@ -2085,7 +2101,7 @@
             this.U6.AppearanceHeader.Options.UseTextOptions = true;
             this.U6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U6.Caption = "切削算购量m³";
-            this.U6.DisplayFormat.FormatString = "N4";
+            this.U6.DisplayFormat.FormatString = "0.####";
             this.U6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U6.FieldName = "U6";
             this.U6.Name = "U6";
@@ -2121,7 +2137,7 @@
             this.U7.AppearanceHeader.Options.UseTextOptions = true;
             this.U7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U7.Caption = "倍率算购量";
-            this.U7.DisplayFormat.FormatString = "N4";
+            this.U7.DisplayFormat.FormatString = "0.####";
             this.U7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U7.FieldName = "U7";
             this.U7.Name = "U7";
@@ -2173,7 +2189,7 @@
             this.U8.AppearanceHeader.Options.UseTextOptions = true;
             this.U8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U8.Caption = "按毛板、立方计算结算款";
-            this.U8.DisplayFormat.FormatString = "N2";
+            this.U8.DisplayFormat.FormatString = "0.##";
             this.U8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U8.FieldName = "U8";
             this.U8.Name = "U8";
@@ -2209,7 +2225,7 @@
             this.U9.AppearanceHeader.Options.UseTextOptions = true;
             this.U9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U9.Caption = "按切削计算结算款";
-            this.U9.DisplayFormat.FormatString = "N2";
+            this.U9.DisplayFormat.FormatString = "0.##";
             this.U9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U9.FieldName = "U9";
             this.U9.Name = "U9";
@@ -2245,7 +2261,7 @@
             this.U10.AppearanceHeader.Options.UseTextOptions = true;
             this.U10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.U10.Caption = "按倍率计算结算款";
-            this.U10.DisplayFormat.FormatString = "N2";
+            this.U10.DisplayFormat.FormatString = "0.##";
             this.U10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.U10.FieldName = "U10";
             this.U10.Name = "U10";
@@ -2596,21 +2612,6 @@
             this.button17.Text = "批量编辑";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // lookUpEdit2
-            // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(140, 3);
-            this.lookUpEdit2.Name = "lookUpEdit2";
-            this.lookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lookUpEdit2.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit2.Properties.NullText = "";
-            this.lookUpEdit2.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.lookUpEdit2.Properties.ShowHeader = false;
-            this.lookUpEdit2.Size = new System.Drawing.Size(176, 22);
-            this.lookUpEdit2.TabIndex = 103;
-            this.lookUpEdit2.TextChanged += new System.EventHandler(this.lookUpEdit2_TextChanged);
             // 
             // textBox33
             // 
@@ -3236,15 +3237,6 @@
             this.label25.Size = new System.Drawing.Size(110, 16);
             this.label25.TabIndex = 90;
             this.label25.Text = "每套部件数量";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(140, 32);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(176, 24);
-            this.comboBox2.TabIndex = 89;
-            this.comboBox2.TextChanged += new System.EventHandler(this.comboBox2_TextChanged);
             // 
             // label34
             // 
@@ -4403,13 +4395,13 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.partName);
+            this.splitContainer2.Panel1.Controls.Add(this.partInfo);
             this.splitContainer2.Panel1.Controls.Add(this.textBox34);
             this.splitContainer2.Panel1.Controls.Add(this.label102);
             this.splitContainer2.Panel1.Controls.Add(this.button17);
-            this.splitContainer2.Panel1.Controls.Add(this.lookUpEdit2);
             this.splitContainer2.Panel1.Controls.Add(this.label34);
             this.splitContainer2.Panel1.Controls.Add(this.textBox33);
-            this.splitContainer2.Panel1.Controls.Add(this.comboBox2);
             this.splitContainer2.Panel1.Controls.Add(this.label97);
             this.splitContainer2.Panel1.Controls.Add(this.label25);
             this.splitContainer2.Panel1.Controls.Add(this.button15);
@@ -4461,6 +4453,47 @@
             this.splitContainer2.Size = new System.Drawing.Size(1348, 582);
             this.splitContainer2.SplitterDistance = 259;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // partInfo
+            // 
+            this.partInfo.Location = new System.Drawing.Point(140, 6);
+            this.partInfo.Name = "partInfo";
+            this.partInfo.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.partInfo.Properties.Appearance.Options.UseFont = true;
+            this.partInfo.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.partInfo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.partInfo.Properties.ImmediatePopup = true;
+            this.partInfo.Properties.NullText = "";
+            this.partInfo.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.partInfo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.partInfo.Properties.View = this.ViewInfo;
+            this.partInfo.Size = new System.Drawing.Size(176, 22);
+            this.partInfo.TabIndex = 149;
+            this.partInfo.EditValueChanged += new System.EventHandler(this.partInfo_EditValueChanged);
+            // 
+            // ViewInfo
+            // 
+            this.ViewInfo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.PQV1001});
+            this.ViewInfo.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.ViewInfo.Name = "ViewInfo";
+            this.ViewInfo.OptionsBehavior.Editable = false;
+            this.ViewInfo.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.ViewInfo.OptionsView.ShowGroupPanel = false;
+            // 
+            // PQV1001
+            // 
+            this.PQV1001.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
+            this.PQV1001.AppearanceCell.Options.UseFont = true;
+            this.PQV1001.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.PQV1001.AppearanceHeader.Options.UseFont = true;
+            this.PQV1001.Caption = "物料或部件名称";
+            this.PQV1001.FieldName = "PQV10";
+            this.PQV1001.Name = "PQV1001";
+            this.PQV1001.Visible = true;
+            this.PQV1001.VisibleIndex = 1;
             // 
             // textBox34
             // 
@@ -4703,6 +4736,27 @@
             this.radioButton16.Text = "使用库存数量";
             this.radioButton16.UseVisualStyleBackColor = true;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn1.AppearanceCell.Options.UseFont = true;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn1.Caption = "材料名称";
+            this.gridColumn1.FieldName = "PQV86";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // partName
+            // 
+            this.partName.Location = new System.Drawing.Point(140, 32);
+            this.partName.Name = "partName";
+            this.partName.ReadOnly = true;
+            this.partName.Size = new System.Drawing.Size(176, 26);
+            this.partName.TabIndex = 150;
+            this.partName.TextChanged += new System.EventHandler(this.partName_TextChanged);
+            // 
             // R_FrmmucaiContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4720,7 +4774,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
             this.groupBox22.ResumeLayout(false);
             this.groupBox22.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -4761,6 +4814,8 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.partInfo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewInfo)).EndInit();
             this.tabPageTre.ResumeLayout(false);
             this.tabPageTre.PerformLayout();
             this.tabPageFor.ResumeLayout(false);
@@ -4823,7 +4878,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label25;
@@ -5050,7 +5104,6 @@
         private System.Windows.Forms.Label label99;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn idx;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit3;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn PQV90;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn PQV91;
@@ -5137,5 +5190,10 @@
         private System . Windows . Forms . TextBox textBox45;
         private System . Windows . Forms . RadioButton radioButton17;
         private System . Windows . Forms . RadioButton radioButton18;
+        private DevExpress . XtraEditors . GridLookUpEdit partInfo;
+        private DevExpress . XtraGrid . Views . Grid . GridView ViewInfo;
+        private DevExpress . XtraGrid . Columns . GridColumn PQV1001;
+        private DevExpress . XtraGrid . Columns . GridColumn gridColumn1;
+        private System . Windows . Forms . TextBox partName;
     }
 }

@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject53 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject54 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject55 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject56 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject57 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject65 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject58 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject59 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject60 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject61 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject62 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject63 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject64 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MenuItemRefresh = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,6 +95,8 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.btnOver = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.R338 = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
@@ -232,27 +234,25 @@
             this.gridColumn88 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn349 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.btnOver = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -274,6 +274,8 @@
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
+            this.splitContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
             this.R338.SuspendLayout();
@@ -313,8 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn349)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
-            this.splitContainerControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -324,7 +324,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1251, 218);
+            this.gridControl1.Size = new System.Drawing.Size(1251, 230);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -508,7 +508,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainerControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1251, 399);
+            this.splitContainer1.Size = new System.Drawing.Size(1251, 418);
             this.splitContainer1.SplitterDistance = 40;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -543,8 +543,8 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1251, 355);
-            this.splitContainerControl1.SplitterPosition = 218;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1251, 374);
+            this.splitContainerControl1.SplitterPosition = 230;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -557,7 +557,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.gridControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1251, 132);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1251, 139);
             this.splitContainerControl2.SplitterPosition = 730;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -568,7 +568,7 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.bandedGridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(730, 132);
+            this.gridControl2.Size = new System.Drawing.Size(730, 139);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView2});
@@ -695,7 +695,7 @@
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDate});
-            this.gridControl3.Size = new System.Drawing.Size(516, 132);
+            this.gridControl3.Size = new System.Drawing.Size(516, 139);
             this.gridControl3.TabIndex = 1;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
@@ -885,16 +885,16 @@
             // btnDate
             // 
             this.btnDate.AutoHeight = false;
-            serializableAppearanceObject53.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serializableAppearanceObject53.Options.UseFont = true;
-            serializableAppearanceObject54.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serializableAppearanceObject54.Options.UseFont = true;
-            serializableAppearanceObject55.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serializableAppearanceObject55.Options.UseFont = true;
-            serializableAppearanceObject56.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serializableAppearanceObject56.Options.UseFont = true;
+            serializableAppearanceObject1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serializableAppearanceObject1.Options.UseFont = true;
+            serializableAppearanceObject2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serializableAppearanceObject2.Options.UseFont = true;
+            serializableAppearanceObject3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serializableAppearanceObject3.Options.UseFont = true;
+            serializableAppearanceObject4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serializableAppearanceObject4.Options.UseFont = true;
             this.btnDate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "实际到货日期", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject53, serializableAppearanceObject54, serializableAppearanceObject55, serializableAppearanceObject56, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "实际到货日期", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, true)});
             this.btnDate.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btnDate.Name = "btnDate";
             this.btnDate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -929,7 +929,7 @@
             this.xtraTabPage1.Appearance.Header.Options.UseFont = true;
             this.xtraTabPage1.Controls.Add(this.splitContainer1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1251, 399);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1251, 418);
             this.xtraTabPage1.Text = "待处理事项";
             // 
             // xtraTabPage2
@@ -940,6 +940,32 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1251, 418);
             this.xtraTabPage2.Text = "待开合同";
+            // 
+            // splitContainerControl3
+            // 
+            this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl3.Horizontal = false;
+            this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl3.Name = "splitContainerControl3";
+            this.splitContainerControl3.Panel1.Controls.Add(this.btnOver);
+            this.splitContainerControl3.Panel1.Text = "Panel1";
+            this.splitContainerControl3.Panel2.Controls.Add(this.xtraTabControl2);
+            this.splitContainerControl3.Panel2.Text = "Panel2";
+            this.splitContainerControl3.Size = new System.Drawing.Size(1251, 418);
+            this.splitContainerControl3.SplitterPosition = 34;
+            this.splitContainerControl3.TabIndex = 2;
+            this.splitContainerControl3.Text = "splitContainerControl3";
+            // 
+            // btnOver
+            // 
+            this.btnOver.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOver.Appearance.Options.UseFont = true;
+            this.btnOver.Location = new System.Drawing.Point(11, 6);
+            this.btnOver.Name = "btnOver";
+            this.btnOver.Size = new System.Drawing.Size(71, 22);
+            this.btnOver.TabIndex = 0;
+            this.btnOver.Text = "已开";
+            this.btnOver.Click += new System.EventHandler(this.btnOver_Click);
             // 
             // xtraTabControl2
             // 
@@ -1013,7 +1039,7 @@
             this.GS70.Name = "GS70";
             this.GS70.OptionsColumn.AllowEdit = false;
             this.GS70.Visible = true;
-            this.GS70.VisibleIndex = 0;
+            this.GS70.VisibleIndex = 1;
             this.GS70.Width = 78;
             // 
             // GS01
@@ -1025,7 +1051,7 @@
             this.GS01.Name = "GS01";
             this.GS01.OptionsColumn.AllowEdit = false;
             this.GS01.Visible = true;
-            this.GS01.VisibleIndex = 1;
+            this.GS01.VisibleIndex = 2;
             this.GS01.Width = 131;
             // 
             // GS46
@@ -1037,7 +1063,7 @@
             this.GS46.Name = "GS46";
             this.GS46.OptionsColumn.AllowEdit = false;
             this.GS46.Visible = true;
-            this.GS46.VisibleIndex = 2;
+            this.GS46.VisibleIndex = 3;
             this.GS46.Width = 131;
             // 
             // GS49
@@ -1049,7 +1075,7 @@
             this.GS49.Name = "GS49";
             this.GS49.OptionsColumn.AllowEdit = false;
             this.GS49.Visible = true;
-            this.GS49.VisibleIndex = 3;
+            this.GS49.VisibleIndex = 4;
             this.GS49.Width = 71;
             // 
             // GS71
@@ -1061,7 +1087,7 @@
             this.GS71.Name = "GS71";
             this.GS71.OptionsColumn.AllowEdit = false;
             this.GS71.Visible = true;
-            this.GS71.VisibleIndex = 4;
+            this.GS71.VisibleIndex = 5;
             this.GS71.Width = 145;
             // 
             // GS02
@@ -1073,7 +1099,7 @@
             this.GS02.Name = "GS02";
             this.GS02.OptionsColumn.AllowEdit = false;
             this.GS02.Visible = true;
-            this.GS02.VisibleIndex = 5;
+            this.GS02.VisibleIndex = 6;
             this.GS02.Width = 137;
             // 
             // GS07
@@ -1085,7 +1111,7 @@
             this.GS07.Name = "GS07";
             this.GS07.OptionsColumn.AllowEdit = false;
             this.GS07.Visible = true;
-            this.GS07.VisibleIndex = 6;
+            this.GS07.VisibleIndex = 7;
             this.GS07.Width = 127;
             // 
             // GS08
@@ -1095,7 +1121,7 @@
             this.GS08.Name = "GS08";
             this.GS08.OptionsColumn.AllowEdit = false;
             this.GS08.Visible = true;
-            this.GS08.VisibleIndex = 7;
+            this.GS08.VisibleIndex = 8;
             this.GS08.Width = 122;
             // 
             // PQF13
@@ -1105,7 +1131,7 @@
             this.PQF13.Name = "PQF13";
             this.PQF13.OptionsColumn.AllowEdit = false;
             this.PQF13.Visible = true;
-            this.PQF13.VisibleIndex = 8;
+            this.PQF13.VisibleIndex = 9;
             this.PQF13.Width = 78;
             // 
             // PQF3101
@@ -1116,7 +1142,7 @@
             this.PQF3101.OptionsColumn.AllowEdit = false;
             this.PQF3101.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.PQF3101.Visible = true;
-            this.PQF3101.VisibleIndex = 9;
+            this.PQF3101.VisibleIndex = 10;
             this.PQF3101.Width = 160;
             // 
             // PQF
@@ -1133,7 +1159,7 @@
             // 
             this.btn338.AutoHeight = false;
             this.btn338.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject57, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btn338.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn338.Name = "btn338";
             this.btn338.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1191,7 +1217,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 1;
             this.gridColumn1.Width = 78;
             // 
             // gridColumn2
@@ -1203,7 +1229,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
             this.gridColumn2.Width = 131;
             // 
             // gridColumn3
@@ -1215,7 +1241,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 3;
             this.gridColumn3.Width = 131;
             // 
             // gridColumn4
@@ -1227,7 +1253,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 4;
             this.gridColumn4.Width = 71;
             // 
             // gridColumn5
@@ -1239,7 +1265,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 5;
             this.gridColumn5.Width = 145;
             // 
             // gridColumn6
@@ -1251,7 +1277,7 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 6;
             this.gridColumn6.Width = 137;
             // 
             // gridColumn7
@@ -1263,7 +1289,7 @@
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.VisibleIndex = 7;
             this.gridColumn7.Width = 127;
             // 
             // gridColumn8
@@ -1273,7 +1299,7 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.VisibleIndex = 8;
             this.gridColumn8.Width = 122;
             // 
             // gridColumn9
@@ -1283,7 +1309,7 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.VisibleIndex = 9;
             this.gridColumn9.Width = 78;
             // 
             // gridColumn10
@@ -1294,7 +1320,7 @@
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 9;
+            this.gridColumn10.VisibleIndex = 10;
             this.gridColumn10.Width = 160;
             // 
             // gridColumn11
@@ -1311,7 +1337,7 @@
             // 
             this.btn195.AutoHeight = false;
             this.btn195.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject65, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btn195.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn195.Name = "btn195";
             this.btn195.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1369,7 +1395,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 0;
+            this.gridColumn12.VisibleIndex = 1;
             this.gridColumn12.Width = 78;
             // 
             // gridColumn13
@@ -1381,7 +1407,7 @@
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 1;
+            this.gridColumn13.VisibleIndex = 2;
             this.gridColumn13.Width = 131;
             // 
             // gridColumn14
@@ -1393,7 +1419,7 @@
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 2;
+            this.gridColumn14.VisibleIndex = 3;
             this.gridColumn14.Width = 131;
             // 
             // gridColumn15
@@ -1405,7 +1431,7 @@
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 3;
+            this.gridColumn15.VisibleIndex = 4;
             this.gridColumn15.Width = 71;
             // 
             // gridColumn16
@@ -1417,7 +1443,7 @@
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 4;
+            this.gridColumn16.VisibleIndex = 5;
             this.gridColumn16.Width = 145;
             // 
             // gridColumn17
@@ -1429,7 +1455,7 @@
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.OptionsColumn.AllowEdit = false;
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 5;
+            this.gridColumn17.VisibleIndex = 6;
             this.gridColumn17.Width = 137;
             // 
             // gridColumn18
@@ -1441,7 +1467,7 @@
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.OptionsColumn.AllowEdit = false;
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 6;
+            this.gridColumn18.VisibleIndex = 7;
             this.gridColumn18.Width = 127;
             // 
             // gridColumn19
@@ -1451,7 +1477,7 @@
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.OptionsColumn.AllowEdit = false;
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 7;
+            this.gridColumn19.VisibleIndex = 8;
             this.gridColumn19.Width = 122;
             // 
             // gridColumn20
@@ -1461,7 +1487,7 @@
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.OptionsColumn.AllowEdit = false;
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 8;
+            this.gridColumn20.VisibleIndex = 9;
             this.gridColumn20.Width = 78;
             // 
             // gridColumn21
@@ -1472,7 +1498,7 @@
             this.gridColumn21.OptionsColumn.AllowEdit = false;
             this.gridColumn21.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 9;
+            this.gridColumn21.VisibleIndex = 10;
             this.gridColumn21.Width = 160;
             // 
             // gridColumn22
@@ -1489,7 +1515,7 @@
             // 
             this.btn196.AutoHeight = false;
             this.btn196.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject58, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.btn196.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn196.Name = "btn196";
             this.btn196.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1547,7 +1573,7 @@
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 0;
+            this.gridColumn23.VisibleIndex = 1;
             this.gridColumn23.Width = 78;
             // 
             // gridColumn24
@@ -1559,7 +1585,7 @@
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.OptionsColumn.AllowEdit = false;
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 1;
+            this.gridColumn24.VisibleIndex = 2;
             this.gridColumn24.Width = 131;
             // 
             // gridColumn25
@@ -1571,7 +1597,7 @@
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.OptionsColumn.AllowEdit = false;
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 2;
+            this.gridColumn25.VisibleIndex = 3;
             this.gridColumn25.Width = 131;
             // 
             // gridColumn26
@@ -1583,7 +1609,7 @@
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.OptionsColumn.AllowEdit = false;
             this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 3;
+            this.gridColumn26.VisibleIndex = 4;
             this.gridColumn26.Width = 71;
             // 
             // gridColumn27
@@ -1595,7 +1621,7 @@
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.OptionsColumn.AllowEdit = false;
             this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 4;
+            this.gridColumn27.VisibleIndex = 5;
             this.gridColumn27.Width = 145;
             // 
             // gridColumn28
@@ -1607,7 +1633,7 @@
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.OptionsColumn.AllowEdit = false;
             this.gridColumn28.Visible = true;
-            this.gridColumn28.VisibleIndex = 5;
+            this.gridColumn28.VisibleIndex = 6;
             this.gridColumn28.Width = 137;
             // 
             // gridColumn29
@@ -1619,7 +1645,7 @@
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.OptionsColumn.AllowEdit = false;
             this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 6;
+            this.gridColumn29.VisibleIndex = 7;
             this.gridColumn29.Width = 127;
             // 
             // gridColumn30
@@ -1629,7 +1655,7 @@
             this.gridColumn30.Name = "gridColumn30";
             this.gridColumn30.OptionsColumn.AllowEdit = false;
             this.gridColumn30.Visible = true;
-            this.gridColumn30.VisibleIndex = 7;
+            this.gridColumn30.VisibleIndex = 8;
             this.gridColumn30.Width = 122;
             // 
             // gridColumn31
@@ -1639,7 +1665,7 @@
             this.gridColumn31.Name = "gridColumn31";
             this.gridColumn31.OptionsColumn.AllowEdit = false;
             this.gridColumn31.Visible = true;
-            this.gridColumn31.VisibleIndex = 8;
+            this.gridColumn31.VisibleIndex = 9;
             this.gridColumn31.Width = 78;
             // 
             // gridColumn32
@@ -1650,7 +1676,7 @@
             this.gridColumn32.OptionsColumn.AllowEdit = false;
             this.gridColumn32.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 9;
+            this.gridColumn32.VisibleIndex = 10;
             this.gridColumn32.Width = 160;
             // 
             // gridColumn33
@@ -1667,7 +1693,7 @@
             // 
             this.btn339.AutoHeight = false;
             this.btn339.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject59, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btn339.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn339.Name = "btn339";
             this.btn339.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1725,7 +1751,7 @@
             this.gridColumn34.Name = "gridColumn34";
             this.gridColumn34.OptionsColumn.AllowEdit = false;
             this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 0;
+            this.gridColumn34.VisibleIndex = 1;
             this.gridColumn34.Width = 78;
             // 
             // gridColumn35
@@ -1737,7 +1763,7 @@
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.OptionsColumn.AllowEdit = false;
             this.gridColumn35.Visible = true;
-            this.gridColumn35.VisibleIndex = 1;
+            this.gridColumn35.VisibleIndex = 2;
             this.gridColumn35.Width = 131;
             // 
             // gridColumn36
@@ -1749,7 +1775,7 @@
             this.gridColumn36.Name = "gridColumn36";
             this.gridColumn36.OptionsColumn.AllowEdit = false;
             this.gridColumn36.Visible = true;
-            this.gridColumn36.VisibleIndex = 2;
+            this.gridColumn36.VisibleIndex = 3;
             this.gridColumn36.Width = 131;
             // 
             // gridColumn37
@@ -1761,7 +1787,7 @@
             this.gridColumn37.Name = "gridColumn37";
             this.gridColumn37.OptionsColumn.AllowEdit = false;
             this.gridColumn37.Visible = true;
-            this.gridColumn37.VisibleIndex = 3;
+            this.gridColumn37.VisibleIndex = 4;
             this.gridColumn37.Width = 71;
             // 
             // gridColumn38
@@ -1773,7 +1799,7 @@
             this.gridColumn38.Name = "gridColumn38";
             this.gridColumn38.OptionsColumn.AllowEdit = false;
             this.gridColumn38.Visible = true;
-            this.gridColumn38.VisibleIndex = 4;
+            this.gridColumn38.VisibleIndex = 5;
             this.gridColumn38.Width = 145;
             // 
             // gridColumn39
@@ -1785,7 +1811,7 @@
             this.gridColumn39.Name = "gridColumn39";
             this.gridColumn39.OptionsColumn.AllowEdit = false;
             this.gridColumn39.Visible = true;
-            this.gridColumn39.VisibleIndex = 5;
+            this.gridColumn39.VisibleIndex = 6;
             this.gridColumn39.Width = 137;
             // 
             // gridColumn40
@@ -1797,7 +1823,7 @@
             this.gridColumn40.Name = "gridColumn40";
             this.gridColumn40.OptionsColumn.AllowEdit = false;
             this.gridColumn40.Visible = true;
-            this.gridColumn40.VisibleIndex = 6;
+            this.gridColumn40.VisibleIndex = 7;
             this.gridColumn40.Width = 127;
             // 
             // gridColumn41
@@ -1807,7 +1833,7 @@
             this.gridColumn41.Name = "gridColumn41";
             this.gridColumn41.OptionsColumn.AllowEdit = false;
             this.gridColumn41.Visible = true;
-            this.gridColumn41.VisibleIndex = 7;
+            this.gridColumn41.VisibleIndex = 8;
             this.gridColumn41.Width = 122;
             // 
             // gridColumn42
@@ -1817,7 +1843,7 @@
             this.gridColumn42.Name = "gridColumn42";
             this.gridColumn42.OptionsColumn.AllowEdit = false;
             this.gridColumn42.Visible = true;
-            this.gridColumn42.VisibleIndex = 8;
+            this.gridColumn42.VisibleIndex = 9;
             this.gridColumn42.Width = 78;
             // 
             // gridColumn43
@@ -1828,7 +1854,7 @@
             this.gridColumn43.OptionsColumn.AllowEdit = false;
             this.gridColumn43.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 9;
+            this.gridColumn43.VisibleIndex = 10;
             this.gridColumn43.Width = 160;
             // 
             // gridColumn44
@@ -1845,7 +1871,7 @@
             // 
             this.btn341.AutoHeight = false;
             this.btn341.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject60, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.btn341.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn341.Name = "btn341";
             this.btn341.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1903,7 +1929,7 @@
             this.gridColumn45.Name = "gridColumn45";
             this.gridColumn45.OptionsColumn.AllowEdit = false;
             this.gridColumn45.Visible = true;
-            this.gridColumn45.VisibleIndex = 0;
+            this.gridColumn45.VisibleIndex = 1;
             this.gridColumn45.Width = 78;
             // 
             // gridColumn46
@@ -1915,7 +1941,7 @@
             this.gridColumn46.Name = "gridColumn46";
             this.gridColumn46.OptionsColumn.AllowEdit = false;
             this.gridColumn46.Visible = true;
-            this.gridColumn46.VisibleIndex = 1;
+            this.gridColumn46.VisibleIndex = 2;
             this.gridColumn46.Width = 131;
             // 
             // gridColumn47
@@ -1927,7 +1953,7 @@
             this.gridColumn47.Name = "gridColumn47";
             this.gridColumn47.OptionsColumn.AllowEdit = false;
             this.gridColumn47.Visible = true;
-            this.gridColumn47.VisibleIndex = 2;
+            this.gridColumn47.VisibleIndex = 3;
             this.gridColumn47.Width = 131;
             // 
             // gridColumn48
@@ -1939,7 +1965,7 @@
             this.gridColumn48.Name = "gridColumn48";
             this.gridColumn48.OptionsColumn.AllowEdit = false;
             this.gridColumn48.Visible = true;
-            this.gridColumn48.VisibleIndex = 3;
+            this.gridColumn48.VisibleIndex = 4;
             this.gridColumn48.Width = 71;
             // 
             // gridColumn49
@@ -1951,7 +1977,7 @@
             this.gridColumn49.Name = "gridColumn49";
             this.gridColumn49.OptionsColumn.AllowEdit = false;
             this.gridColumn49.Visible = true;
-            this.gridColumn49.VisibleIndex = 4;
+            this.gridColumn49.VisibleIndex = 5;
             this.gridColumn49.Width = 145;
             // 
             // gridColumn50
@@ -1963,7 +1989,7 @@
             this.gridColumn50.Name = "gridColumn50";
             this.gridColumn50.OptionsColumn.AllowEdit = false;
             this.gridColumn50.Visible = true;
-            this.gridColumn50.VisibleIndex = 5;
+            this.gridColumn50.VisibleIndex = 6;
             this.gridColumn50.Width = 137;
             // 
             // gridColumn51
@@ -1975,7 +2001,7 @@
             this.gridColumn51.Name = "gridColumn51";
             this.gridColumn51.OptionsColumn.AllowEdit = false;
             this.gridColumn51.Visible = true;
-            this.gridColumn51.VisibleIndex = 6;
+            this.gridColumn51.VisibleIndex = 7;
             this.gridColumn51.Width = 127;
             // 
             // gridColumn52
@@ -1985,7 +2011,7 @@
             this.gridColumn52.Name = "gridColumn52";
             this.gridColumn52.OptionsColumn.AllowEdit = false;
             this.gridColumn52.Visible = true;
-            this.gridColumn52.VisibleIndex = 7;
+            this.gridColumn52.VisibleIndex = 8;
             this.gridColumn52.Width = 122;
             // 
             // gridColumn53
@@ -1995,7 +2021,7 @@
             this.gridColumn53.Name = "gridColumn53";
             this.gridColumn53.OptionsColumn.AllowEdit = false;
             this.gridColumn53.Visible = true;
-            this.gridColumn53.VisibleIndex = 8;
+            this.gridColumn53.VisibleIndex = 9;
             this.gridColumn53.Width = 78;
             // 
             // gridColumn54
@@ -2006,7 +2032,7 @@
             this.gridColumn54.OptionsColumn.AllowEdit = false;
             this.gridColumn54.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.gridColumn54.Visible = true;
-            this.gridColumn54.VisibleIndex = 9;
+            this.gridColumn54.VisibleIndex = 10;
             this.gridColumn54.Width = 160;
             // 
             // gridColumn55
@@ -2023,7 +2049,7 @@
             // 
             this.btn342.AutoHeight = false;
             this.btn342.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject61, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.btn342.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn342.Name = "btn342";
             this.btn342.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2081,7 +2107,7 @@
             this.gridColumn56.Name = "gridColumn56";
             this.gridColumn56.OptionsColumn.AllowEdit = false;
             this.gridColumn56.Visible = true;
-            this.gridColumn56.VisibleIndex = 0;
+            this.gridColumn56.VisibleIndex = 1;
             this.gridColumn56.Width = 78;
             // 
             // gridColumn57
@@ -2093,7 +2119,7 @@
             this.gridColumn57.Name = "gridColumn57";
             this.gridColumn57.OptionsColumn.AllowEdit = false;
             this.gridColumn57.Visible = true;
-            this.gridColumn57.VisibleIndex = 1;
+            this.gridColumn57.VisibleIndex = 2;
             this.gridColumn57.Width = 131;
             // 
             // gridColumn58
@@ -2105,7 +2131,7 @@
             this.gridColumn58.Name = "gridColumn58";
             this.gridColumn58.OptionsColumn.AllowEdit = false;
             this.gridColumn58.Visible = true;
-            this.gridColumn58.VisibleIndex = 2;
+            this.gridColumn58.VisibleIndex = 3;
             this.gridColumn58.Width = 131;
             // 
             // gridColumn59
@@ -2117,7 +2143,7 @@
             this.gridColumn59.Name = "gridColumn59";
             this.gridColumn59.OptionsColumn.AllowEdit = false;
             this.gridColumn59.Visible = true;
-            this.gridColumn59.VisibleIndex = 3;
+            this.gridColumn59.VisibleIndex = 4;
             this.gridColumn59.Width = 71;
             // 
             // gridColumn60
@@ -2129,7 +2155,7 @@
             this.gridColumn60.Name = "gridColumn60";
             this.gridColumn60.OptionsColumn.AllowEdit = false;
             this.gridColumn60.Visible = true;
-            this.gridColumn60.VisibleIndex = 4;
+            this.gridColumn60.VisibleIndex = 5;
             this.gridColumn60.Width = 145;
             // 
             // gridColumn61
@@ -2141,7 +2167,7 @@
             this.gridColumn61.Name = "gridColumn61";
             this.gridColumn61.OptionsColumn.AllowEdit = false;
             this.gridColumn61.Visible = true;
-            this.gridColumn61.VisibleIndex = 5;
+            this.gridColumn61.VisibleIndex = 6;
             this.gridColumn61.Width = 137;
             // 
             // gridColumn62
@@ -2153,7 +2179,7 @@
             this.gridColumn62.Name = "gridColumn62";
             this.gridColumn62.OptionsColumn.AllowEdit = false;
             this.gridColumn62.Visible = true;
-            this.gridColumn62.VisibleIndex = 6;
+            this.gridColumn62.VisibleIndex = 7;
             this.gridColumn62.Width = 127;
             // 
             // gridColumn63
@@ -2163,7 +2189,7 @@
             this.gridColumn63.Name = "gridColumn63";
             this.gridColumn63.OptionsColumn.AllowEdit = false;
             this.gridColumn63.Visible = true;
-            this.gridColumn63.VisibleIndex = 7;
+            this.gridColumn63.VisibleIndex = 8;
             this.gridColumn63.Width = 122;
             // 
             // gridColumn64
@@ -2173,7 +2199,7 @@
             this.gridColumn64.Name = "gridColumn64";
             this.gridColumn64.OptionsColumn.AllowEdit = false;
             this.gridColumn64.Visible = true;
-            this.gridColumn64.VisibleIndex = 8;
+            this.gridColumn64.VisibleIndex = 9;
             this.gridColumn64.Width = 78;
             // 
             // gridColumn65
@@ -2184,7 +2210,7 @@
             this.gridColumn65.OptionsColumn.AllowEdit = false;
             this.gridColumn65.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.gridColumn65.Visible = true;
-            this.gridColumn65.VisibleIndex = 9;
+            this.gridColumn65.VisibleIndex = 10;
             this.gridColumn65.Width = 160;
             // 
             // gridColumn66
@@ -2201,7 +2227,7 @@
             // 
             this.btn343.AutoHeight = false;
             this.btn343.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject62, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
             this.btn343.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn343.Name = "btn343";
             this.btn343.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2259,7 +2285,7 @@
             this.gridColumn67.Name = "gridColumn67";
             this.gridColumn67.OptionsColumn.AllowEdit = false;
             this.gridColumn67.Visible = true;
-            this.gridColumn67.VisibleIndex = 0;
+            this.gridColumn67.VisibleIndex = 1;
             this.gridColumn67.Width = 78;
             // 
             // gridColumn68
@@ -2271,7 +2297,7 @@
             this.gridColumn68.Name = "gridColumn68";
             this.gridColumn68.OptionsColumn.AllowEdit = false;
             this.gridColumn68.Visible = true;
-            this.gridColumn68.VisibleIndex = 1;
+            this.gridColumn68.VisibleIndex = 2;
             this.gridColumn68.Width = 131;
             // 
             // gridColumn69
@@ -2283,7 +2309,7 @@
             this.gridColumn69.Name = "gridColumn69";
             this.gridColumn69.OptionsColumn.AllowEdit = false;
             this.gridColumn69.Visible = true;
-            this.gridColumn69.VisibleIndex = 2;
+            this.gridColumn69.VisibleIndex = 3;
             this.gridColumn69.Width = 131;
             // 
             // gridColumn70
@@ -2295,7 +2321,7 @@
             this.gridColumn70.Name = "gridColumn70";
             this.gridColumn70.OptionsColumn.AllowEdit = false;
             this.gridColumn70.Visible = true;
-            this.gridColumn70.VisibleIndex = 3;
+            this.gridColumn70.VisibleIndex = 4;
             this.gridColumn70.Width = 71;
             // 
             // gridColumn71
@@ -2307,7 +2333,7 @@
             this.gridColumn71.Name = "gridColumn71";
             this.gridColumn71.OptionsColumn.AllowEdit = false;
             this.gridColumn71.Visible = true;
-            this.gridColumn71.VisibleIndex = 4;
+            this.gridColumn71.VisibleIndex = 5;
             this.gridColumn71.Width = 145;
             // 
             // gridColumn72
@@ -2319,7 +2345,7 @@
             this.gridColumn72.Name = "gridColumn72";
             this.gridColumn72.OptionsColumn.AllowEdit = false;
             this.gridColumn72.Visible = true;
-            this.gridColumn72.VisibleIndex = 5;
+            this.gridColumn72.VisibleIndex = 6;
             this.gridColumn72.Width = 137;
             // 
             // gridColumn73
@@ -2331,7 +2357,7 @@
             this.gridColumn73.Name = "gridColumn73";
             this.gridColumn73.OptionsColumn.AllowEdit = false;
             this.gridColumn73.Visible = true;
-            this.gridColumn73.VisibleIndex = 6;
+            this.gridColumn73.VisibleIndex = 7;
             this.gridColumn73.Width = 127;
             // 
             // gridColumn74
@@ -2341,7 +2367,7 @@
             this.gridColumn74.Name = "gridColumn74";
             this.gridColumn74.OptionsColumn.AllowEdit = false;
             this.gridColumn74.Visible = true;
-            this.gridColumn74.VisibleIndex = 7;
+            this.gridColumn74.VisibleIndex = 8;
             this.gridColumn74.Width = 122;
             // 
             // gridColumn75
@@ -2351,7 +2377,7 @@
             this.gridColumn75.Name = "gridColumn75";
             this.gridColumn75.OptionsColumn.AllowEdit = false;
             this.gridColumn75.Visible = true;
-            this.gridColumn75.VisibleIndex = 8;
+            this.gridColumn75.VisibleIndex = 9;
             this.gridColumn75.Width = 78;
             // 
             // gridColumn76
@@ -2362,7 +2388,7 @@
             this.gridColumn76.OptionsColumn.AllowEdit = false;
             this.gridColumn76.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.gridColumn76.Visible = true;
-            this.gridColumn76.VisibleIndex = 9;
+            this.gridColumn76.VisibleIndex = 10;
             this.gridColumn76.Width = 160;
             // 
             // gridColumn77
@@ -2379,7 +2405,7 @@
             // 
             this.btn347.AutoHeight = false;
             this.btn347.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject63, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, "", null, null, true)});
             this.btn347.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn347.Name = "btn347";
             this.btn347.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2437,7 +2463,7 @@
             this.gridColumn78.Name = "gridColumn78";
             this.gridColumn78.OptionsColumn.AllowEdit = false;
             this.gridColumn78.Visible = true;
-            this.gridColumn78.VisibleIndex = 0;
+            this.gridColumn78.VisibleIndex = 1;
             this.gridColumn78.Width = 78;
             // 
             // gridColumn79
@@ -2449,7 +2475,7 @@
             this.gridColumn79.Name = "gridColumn79";
             this.gridColumn79.OptionsColumn.AllowEdit = false;
             this.gridColumn79.Visible = true;
-            this.gridColumn79.VisibleIndex = 1;
+            this.gridColumn79.VisibleIndex = 2;
             this.gridColumn79.Width = 131;
             // 
             // gridColumn80
@@ -2461,7 +2487,7 @@
             this.gridColumn80.Name = "gridColumn80";
             this.gridColumn80.OptionsColumn.AllowEdit = false;
             this.gridColumn80.Visible = true;
-            this.gridColumn80.VisibleIndex = 2;
+            this.gridColumn80.VisibleIndex = 3;
             this.gridColumn80.Width = 131;
             // 
             // gridColumn81
@@ -2473,7 +2499,7 @@
             this.gridColumn81.Name = "gridColumn81";
             this.gridColumn81.OptionsColumn.AllowEdit = false;
             this.gridColumn81.Visible = true;
-            this.gridColumn81.VisibleIndex = 3;
+            this.gridColumn81.VisibleIndex = 4;
             this.gridColumn81.Width = 71;
             // 
             // gridColumn82
@@ -2485,7 +2511,7 @@
             this.gridColumn82.Name = "gridColumn82";
             this.gridColumn82.OptionsColumn.AllowEdit = false;
             this.gridColumn82.Visible = true;
-            this.gridColumn82.VisibleIndex = 4;
+            this.gridColumn82.VisibleIndex = 5;
             this.gridColumn82.Width = 145;
             // 
             // gridColumn83
@@ -2497,7 +2523,7 @@
             this.gridColumn83.Name = "gridColumn83";
             this.gridColumn83.OptionsColumn.AllowEdit = false;
             this.gridColumn83.Visible = true;
-            this.gridColumn83.VisibleIndex = 5;
+            this.gridColumn83.VisibleIndex = 6;
             this.gridColumn83.Width = 137;
             // 
             // gridColumn84
@@ -2509,7 +2535,7 @@
             this.gridColumn84.Name = "gridColumn84";
             this.gridColumn84.OptionsColumn.AllowEdit = false;
             this.gridColumn84.Visible = true;
-            this.gridColumn84.VisibleIndex = 6;
+            this.gridColumn84.VisibleIndex = 7;
             this.gridColumn84.Width = 127;
             // 
             // gridColumn85
@@ -2519,7 +2545,7 @@
             this.gridColumn85.Name = "gridColumn85";
             this.gridColumn85.OptionsColumn.AllowEdit = false;
             this.gridColumn85.Visible = true;
-            this.gridColumn85.VisibleIndex = 7;
+            this.gridColumn85.VisibleIndex = 8;
             this.gridColumn85.Width = 122;
             // 
             // gridColumn86
@@ -2529,7 +2555,7 @@
             this.gridColumn86.Name = "gridColumn86";
             this.gridColumn86.OptionsColumn.AllowEdit = false;
             this.gridColumn86.Visible = true;
-            this.gridColumn86.VisibleIndex = 8;
+            this.gridColumn86.VisibleIndex = 9;
             this.gridColumn86.Width = 78;
             // 
             // gridColumn87
@@ -2540,7 +2566,7 @@
             this.gridColumn87.OptionsColumn.AllowEdit = false;
             this.gridColumn87.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.gridColumn87.Visible = true;
-            this.gridColumn87.VisibleIndex = 9;
+            this.gridColumn87.VisibleIndex = 10;
             this.gridColumn87.Width = 160;
             // 
             // gridColumn88
@@ -2557,7 +2583,7 @@
             // 
             this.btn349.AutoHeight = false;
             this.btn349.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject64, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, "", null, null, true)});
             this.btn349.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn349.Name = "btn349";
             this.btn349.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2585,78 +2611,108 @@
             this.xtraTabPage3.Controls.Add(this.labelControl2);
             this.xtraTabPage3.Controls.Add(this.labelControl1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1245, 389);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1245, 350);
             this.xtraTabPage3.Text = "数据来源";
             // 
-            // labelControl1
+            // labelControl18
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(39, 28);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(404, 20);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "349读取辅料,195/196/339读取工段,其它合同按509合同代号分类";
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl18.Appearance.Options.UseFont = true;
+            this.labelControl18.Location = new System.Drawing.Point(915, 83);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(216, 20);
+            this.labelControl18.TabIndex = 18;
+            this.labelControl18.Text = "509：流水号、工段是(油漆、工资)";
             // 
-            // labelControl2
+            // labelControl19
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(39, 63);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(178, 20);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "338：流水号、物料名称、厚";
+            this.labelControl19.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl19.Appearance.Options.UseFont = true;
+            this.labelControl19.Location = new System.Drawing.Point(915, 63);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(80, 20);
+            this.labelControl19.TabIndex = 17;
+            this.labelControl19.Text = "339：流水号";
             // 
-            // labelControl3
+            // labelControl16
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(39, 83);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(220, 20);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "509：流水号、部件或材料、规格厚";
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Location = new System.Drawing.Point(513, 273);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(122, 20);
+            this.labelControl16.TabIndex = 16;
+            this.labelControl16.Text = "509：流水号、工段";
             // 
-            // labelControl4
+            // labelControl17
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(39, 140);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(220, 20);
-            this.labelControl4.TabIndex = 4;
-            this.labelControl4.Text = "509：流水号、部件或材料、规格厚";
+            this.labelControl17.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl17.Appearance.Options.UseFont = true;
+            this.labelControl17.Location = new System.Drawing.Point(513, 253);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(355, 20);
+            this.labelControl17.TabIndex = 15;
+            this.labelControl17.Text = "196：(丝印/移印/热转印/走台印/冲印)流水号、加工.工序";
             // 
-            // labelControl5
+            // labelControl14
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(39, 120);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(290, 20);
-            this.labelControl5.TabIndex = 3;
-            this.labelControl5.Text = "341：流水号、物料或部件名称、部件净规格厚";
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl14.Appearance.Options.UseFont = true;
+            this.labelControl14.Location = new System.Drawing.Point(513, 205);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(122, 20);
+            this.labelControl14.TabIndex = 14;
+            this.labelControl14.Text = "509：流水号、工段";
             // 
-            // labelControl6
+            // labelControl15
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(39, 205);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(276, 20);
-            this.labelControl6.TabIndex = 6;
-            this.labelControl6.Text = "509：流水号、零件名称、部件或材料、规格";
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl15.Appearance.Options.UseFont = true;
+            this.labelControl15.Location = new System.Drawing.Point(513, 185);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(258, 20);
+            this.labelControl15.TabIndex = 13;
+            this.labelControl15.Text = "195：(雕刻、砂皮)流水号、加工工序名称";
             // 
-            // labelControl7
+            // labelControl12
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(39, 185);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(360, 20);
-            this.labelControl7.TabIndex = 5;
-            this.labelControl7.Text = "342：流水号、物料或部件名称、材料名称、Φ+高(厚)+长";
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(513, 140);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(220, 20);
+            this.labelControl12.TabIndex = 12;
+            this.labelControl12.Text = "509：流水号、计算公式名称、规格";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Appearance.Options.UseFont = true;
+            this.labelControl13.Location = new System.Drawing.Point(513, 120);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(220, 20);
+            this.labelControl13.TabIndex = 11;
+            this.labelControl13.Text = "349：流水号、计算公式名称、规格";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(513, 83);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(206, 20);
+            this.labelControl10.TabIndex = 10;
+            this.labelControl10.Text = "509：流水号、部件或材料、规格";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(513, 63);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(276, 20);
+            this.labelControl11.TabIndex = 9;
+            this.labelControl11.Text = "347：流水号、物品名称、公差尺寸含长宽高";
             // 
             // labelControl8
             // 
@@ -2678,131 +2734,75 @@
             this.labelControl9.TabIndex = 7;
             this.labelControl9.Text = "343：流水号、零件名称、规格尺寸按图纸或样板";
             // 
-            // labelControl10
+            // labelControl6
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(468, 83);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(206, 20);
-            this.labelControl10.TabIndex = 10;
-            this.labelControl10.Text = "509：流水号、部件或材料、规格";
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(39, 205);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(276, 20);
+            this.labelControl6.TabIndex = 6;
+            this.labelControl6.Text = "509：流水号、零件名称、部件或材料、规格";
             // 
-            // labelControl11
+            // labelControl7
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(468, 63);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(276, 20);
-            this.labelControl11.TabIndex = 9;
-            this.labelControl11.Text = "347：流水号、物品名称、公差尺寸含长宽高";
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(39, 185);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(430, 20);
+            this.labelControl7.TabIndex = 5;
+            this.labelControl7.Text = "342：流水号、物料或部件名称、材料名称、Φ*高(厚)*长(或)长*宽*厚";
             // 
-            // labelControl12
+            // labelControl4
             // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(468, 140);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(220, 20);
-            this.labelControl12.TabIndex = 12;
-            this.labelControl12.Text = "509：流水号、计算公式名称、规格";
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(39, 140);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(290, 20);
+            this.labelControl4.TabIndex = 4;
+            this.labelControl4.Text = "509：流水号、部件或材料、零件名称、规格厚";
             // 
-            // labelControl13
+            // labelControl5
             // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(468, 120);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(220, 20);
-            this.labelControl13.TabIndex = 11;
-            this.labelControl13.Text = "349：流水号、计算公式名称、规格";
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(39, 120);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(360, 20);
+            this.labelControl5.TabIndex = 3;
+            this.labelControl5.Text = "341：流水号、材料名称、物料或部件名称、部件净规格厚";
             // 
-            // labelControl14
+            // labelControl3
             // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(468, 205);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(122, 20);
-            this.labelControl14.TabIndex = 14;
-            this.labelControl14.Text = "509：流水号、工段";
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(39, 83);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(220, 20);
+            this.labelControl3.TabIndex = 2;
+            this.labelControl3.Text = "509：流水号、部件或材料、规格厚";
             // 
-            // labelControl15
+            // labelControl2
             // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Location = new System.Drawing.Point(468, 185);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(258, 20);
-            this.labelControl15.TabIndex = 13;
-            this.labelControl15.Text = "195：(雕刻、砂皮)流水号、加工工序名称";
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(39, 63);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(178, 20);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "338：流水号、物料名称、厚";
             // 
-            // labelControl16
+            // labelControl1
             // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(468, 273);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(122, 20);
-            this.labelControl16.TabIndex = 16;
-            this.labelControl16.Text = "509：流水号、工段";
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl17.Appearance.Options.UseFont = true;
-            this.labelControl17.Location = new System.Drawing.Point(468, 253);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(355, 20);
-            this.labelControl17.TabIndex = 15;
-            this.labelControl17.Text = "196：(丝印/移印/热转印/走台印/冲印)流水号、加工.工序";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Location = new System.Drawing.Point(870, 83);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(216, 20);
-            this.labelControl18.TabIndex = 18;
-            this.labelControl18.Text = "509：流水号、工段是(油漆、工资)";
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(870, 63);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(80, 20);
-            this.labelControl19.TabIndex = 17;
-            this.labelControl19.Text = "339：流水号";
-            // 
-            // splitContainerControl3
-            // 
-            this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl3.Horizontal = false;
-            this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl3.Name = "splitContainerControl3";
-            this.splitContainerControl3.Panel1.Controls.Add(this.btnOver);
-            this.splitContainerControl3.Panel1.Text = "Panel1";
-            this.splitContainerControl3.Panel2.Controls.Add(this.xtraTabControl2);
-            this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(1251, 418);
-            this.splitContainerControl3.SplitterPosition = 34;
-            this.splitContainerControl3.TabIndex = 2;
-            this.splitContainerControl3.Text = "splitContainerControl3";
-            // 
-            // btnOver
-            // 
-            this.btnOver.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOver.Appearance.Options.UseFont = true;
-            this.btnOver.Location = new System.Drawing.Point(11, 6);
-            this.btnOver.Name = "btnOver";
-            this.btnOver.Size = new System.Drawing.Size(71, 22);
-            this.btnOver.TabIndex = 0;
-            this.btnOver.Text = "已开";
-            this.btnOver.Click += new System.EventHandler(this.btnOver_Click);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(39, 28);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(404, 20);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "349读取辅料,195/196/339读取工段,其它合同按509合同代号分类";
             // 
             // Remind
             // 
@@ -2837,6 +2837,8 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
+            this.splitContainerControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
             this.R338.ResumeLayout(false);
@@ -2877,8 +2879,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn349)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
-            this.splitContainerControl3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -68,6 +68,53 @@ namespace MulaolaoBll . Dao
                         }
                     }
 
+                    if ( SQLString . Count > 0 && SqlHelper . ExecuteSqlTran ( SQLString ) )
+                    {
+                        SQLString . Clear ( );
+                        da = getTableCountTwo ( year );
+                        if ( da != null && da . Rows . Count > 0 )
+                        {
+                            for ( int i = 0 ; i < da . Rows . Count ; i++ )
+                            {
+                                model . DM002 = da . Rows [ i ] [ "DK007" ] . ToString ( );
+                                model . DM003 = da . Rows [ i ] [ "DK008" ] . ToString ( );
+                                model . DM004 = string . IsNullOrEmpty ( da . Rows [ i ] [ "DK015" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "DK015" ] . ToString ( ) );
+                                model . DM005 = 0;
+                                model . DM007 = string . IsNullOrEmpty ( da . Rows [ i ] [ "COUN" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "COUN" ] . ToString ( ) );
+                                if ( model . DM004 > 0 )
+                                {
+                                    if ( Exists ( model ) )
+                                        editdm005 ( SQLString ,strSql ,model );
+                                    else
+                                        adddm005 ( SQLString ,strSql ,model );
+                                }
+                            }
+                        }
+                    }
+
+                    if ( SQLString . Count > 0 && SqlHelper . ExecuteSqlTran ( SQLString ) )
+                    {
+                        SQLString . Clear ( );
+                        da = getTableCountAllTwo ( year );
+                        if ( da != null && da . Rows . Count > 0 )
+                        {
+                            for ( int i = 0 ; i < da . Rows . Count ; i++ )
+                            {
+                                model . DM002 = da . Rows [ i ] [ "DK007" ] . ToString ( );
+                                model . DM003 = da . Rows [ i ] [ "DK008" ] . ToString ( );
+                                model . DM004 = string . IsNullOrEmpty ( da . Rows [ i ] [ "DK015" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "DK015" ] . ToString ( ) );
+                                model . DM005 = 0;
+                                model . DM007 = string . IsNullOrEmpty ( da . Rows [ i ] [ "COUN" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "COUN" ] . ToString ( ) );
+                                if ( model . DM004 > 0 )
+                                {
+                                    if ( Exists ( model ) )
+                                        editdm005 ( SQLString ,strSql ,model );
+                                    else
+                                        adddm005 ( SQLString ,strSql ,model );
+                                }
+                            }
+                        }
+                    }
 
                     if ( SQLString . Count > 0 && SqlHelper . ExecuteSqlTran ( SQLString ) )
                     {
@@ -242,6 +289,19 @@ namespace MulaolaoBll . Dao
         }
 
         /// <summary>
+        /// 二次通过
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns></returns>
+        DataTable getTableCountTwo ( int year )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='二次通过' GROUP BY MONTH(DK012),DK008,CASE WHEN DK007 LIKE '%怡人%' THEN '怡人' ELSE '非怡人' END" ,year );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
         /// Obtain the number of documents of this month
         /// 获取本年本月的单据数量
         /// </summary>
@@ -251,6 +311,14 @@ namespace MulaolaoBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038!='二次通过' GROUP BY MONTH(DK012),DK008" ,year );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        DataTable getTableCountAllTwo ( int year )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT MONTH(DK012) DK015,COUNT(1) COUN,DK008,'班组合计' DK007 FROM R_PQDK WHERE YEAR(DK012)={0} AND DK038='二次通过' GROUP BY MONTH(DK012),DK008" ,year );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

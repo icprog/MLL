@@ -329,27 +329,27 @@ namespace Mulaolao.Contract
         private void query_PassDataBetweenForm ( Object sender ,PassDataWinFormEventArgs e )
         {
             WX83 = e.ConOne;
-            comboBox7.Text = e.ConOne;
+            //comboBox7.Text = e.ConOne;
             WX84 = e.ConTwo;
-            textBox10.Text = e.ConTwo;
+            //textBox10.Text = e.ConTwo;
             WX01 = e.ConTre;
-            textBox7.Text = e.ConTre;
+            //textBox7.Text = e.ConTre;
             //WX02 = e.ConFor;
             //lookUpEdit1.Text = e.ConFiv;
             WX03 = e.ConSix;
-            textBox1.Text = e.ConSev;
+            //textBox1.Text = e.ConSev;
             if ( e.ConEgi == "执行" )
                 label83.Visible = true;
             else
                 label83.Visible = false;
             WX82 = e.ConNin;
             WX85 = e.ConTen;
-            comboBox21.Text = e.ConTen;
+            //comboBox21.Text = e.ConTen;
             if ( string.IsNullOrEmpty( e.ConEleven ) )
                 WX086 = 0;
             else
                 WX086 = Convert.ToInt64( e.ConEleven );
-            textBox8.Text = e.ConEleven;
+            //textBox8.Text = e.ConEleven;
         }
         R_FrmTPADGA tpadga = new R_FrmTPADGA( );
         //供应商查询
@@ -1082,6 +1082,12 @@ namespace Mulaolao.Contract
                                         }
                                         else if ( ord == "实际" || !string.IsNullOrEmpty( textBox7.Text ) )
                                         {
+                                            if ( !string . IsNullOrEmpty (textBox7.Text ) )
+                                            {
+                                                if ( checkThisAnd509 ( ) == false )
+                                                    return;
+                                            }
+
                                             if ( dyu.Select( "WX10='" + bandedGridView1.GetDataRow( i )["WX10"].ToString( ) + "' AND WX11='" + bandedGridView1.GetDataRow( i )["WX11"].ToString( ) + "'AND WX01='" + WX01 + "'" ).Length > 0 )
                                             {
                                                 if ( WX09.Length > 8 && WX09.Substring( 0 ,8 ) == "MLL-0001" )
@@ -1111,6 +1117,23 @@ namespace Mulaolao.Contract
                     }
                 }
             }
+        }
+        bool checkThisAnd509 ( )
+        {
+            result = true;
+            model . WX01 = textBox7 . Text;
+            for ( int i = 0 ; i < bandedGridView1 . RowCount ; i++ )
+            {
+                model . WX10 = bandedGridView1 . GetDataRow ( i ) [ "WX10" ] . ToString ( );
+                model . WX11 = bandedGridView1 . GetDataRow ( i ) [ "WX11" ] . ToString ( );
+                result = fc . check349And509 ( model );
+                if ( result == false )
+                {
+                    MessageBox . Show ( "流水号:" + model . WX01 + "\n\r计算公式名称:" + model . WX10 + "\n\r规格:" + model . WX11 + "\n\r与509不一致,请核实" );
+                    break;
+                }
+            }
+            return result;
         }
         //取消
         protected override void cancel ( )
@@ -1413,47 +1436,52 @@ namespace Mulaolao.Contract
         void every ( )
         {
             WX85 = comboBox21 . Text;
-            if ( string . IsNullOrEmpty ( textBox7 . Text ) )
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS56 WX10,GS57 WX11,GS58 WX19,GS59 WX14 FROM R_PQP WHERE GS56 IS NOT NULL AND GS56!='' AND GS58=@GS48" ,new SqlParameter ( "@GS48" ,WX85 ) );
-            else
+            if ( !string . IsNullOrEmpty ( textBox7 . Text ) )
             {
-                WX01 = "";
-                string [ ] str = textBox7 . Text . Split ( ',' );
-                if ( str . Length < 1 )
-                    WX01 = "";
-                else
-                {
-                    foreach ( string s in str )
-                    {
-                        if ( WX01 == "" )
-                            WX01 = "'" + s + "'";
-                        else
-                            WX01 = WX01 + "," + "'" + s + "'";
-                    }
-                }
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS56 WX10,GS57 WX11,GS58 WX19,GS59 WX14 FROM R_PQP WHERE GS56 IS NOT NULL AND GS56!='' AND GS01 IN (" + WX01 + ")" );
+                WX01 = textBox7 . Text;
+                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS56 WX10,GS57 WX11,GS58 WX19,GS59 WX14 FROM R_PQP WHERE GS56 IS NOT NULL AND GS56!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,WX01 ) );
+
+                biao = SqlHelper . ExecuteDataTable ( "SELECT '' WX10,'' WX11,WX12,WX13,0.0 WX14,WX15,WX16,WX17,WX18,'' WX19,WX20,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX01=@WX01" ,new SqlParameter ( "@WX01" ,WX01 ) );
             }
+            //else
+            //{
+            //    WX01 = "";
+                //string [ ] str = textBox7 . Text . Split ( ',' );
+                //if ( str . Length < 1 )
+                //    WX01 = "";
+                //else
+                //{
+                //    foreach ( string s in str )
+                //    {
+                //        if ( WX01 == "" )
+                //            WX01 = "'" + s + "'";
+                //        else
+                //            WX01 = WX01 + "," + "'" + s + "'";
+                //    }
+                //}
+            //    wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS56 WX10,GS57 WX11,GS58 WX19,GS59 WX14 FROM R_PQP WHERE GS56 IS NOT NULL AND GS56!='' AND GS01 IN (" + WX01 + ")" );
+            //}
 
             if ( string.IsNullOrEmpty( textBox7.Text ) )
                 biao = SqlHelper.ExecuteDataTable( "SELECT WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX85=@WX85" ,new SqlParameter( "@WX85" ,WX85 ) );
-            else
-            {
-                WX01 = "";
-                string[] str = textBox7.Text.Split( ',' );
-                if ( str.Length < 1 )
-                    WX01 = "";
-                else
-                {
-                    foreach ( string s in str )
-                    {
-                        if ( WX01 == "" )
-                            WX01 = "'" + s + "'";
-                        else
-                            WX01 = WX01 + "," + "'" + s + "'";
-                    }
-                }
-                biao = SqlHelper.ExecuteDataTable( "SELECT WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX01 IN (" + WX01 + ")" );
-            }
+            //else
+            //{
+            //    WX01 = "";
+                //string[] str = textBox7.Text.Split( ',' );
+                //if ( str.Length < 1 )
+                //    WX01 = "";
+                //else
+                //{
+                //    foreach ( string s in str )
+                //    {
+                //        if ( WX01 == "" )
+                //            WX01 = "'" + s + "'";
+                //        else
+                //            WX01 = WX01 + "," + "'" + s + "'";
+                //    }
+                //}
+            //    biao = SqlHelper.ExecuteDataTable( "SELECT WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX01 IN (" + WX01 + ")" );
+            //}
             if ( wpmc != null )
                 biao.Merge( wpmc );
             //物料名称
@@ -2453,7 +2481,6 @@ namespace Mulaolao.Contract
             #region 实际  更改新建  有流水号
             else if ( ord == "实际" || !string.IsNullOrEmpty( textBox7.Text ) )
             {
-                
                 bool result = pc.PlanActual( WX010 ,WX011 ,WX85 );
                 bool vode = pc.PlanInDataBaseCarton( WX01 ,WX010 ,WX011 );
                 if ( result == true )
@@ -2829,16 +2856,16 @@ namespace Mulaolao.Contract
                     {
 
                         model . WX16 = 0;
-                        model . WX87 = model . WX15 = model . WX18 == 0 ? 0 : Convert . ToInt64 ( Math . Round ( model . WX86 / model . WX18 ,0 ) );
+                        model . WX87 = model . WX15 = model . WX18 == 0 ? 0 : Convert . ToInt64 ( Math . Round (Convert.ToDecimal( model . WX86 / model . WX18) ,0 ) );
                     }
                     else if ( model . WX17 == "库存" )
                     {
-                        model . WX16 = model . WX15 = model . WX18 == 0 ? 0 : Convert . ToInt64 ( Math . Round ( model . WX86 / model . WX18 ,0 ) );
+                        model . WX16 = model . WX15 = model . WX18 == 0 ? 0 : Convert . ToInt64 ( Math . Round (Convert.ToDecimal( model . WX86 / model . WX18) ,0 ) );
                         model . WX87 = 0;
                     }
                     else
                     {
-                        model . WX15 = model . WX18 == 0 ? 0 : Convert . ToInt64 ( Math . Round ( model . WX86 / model . WX18 ,0 ) );
+                        model . WX15 = model . WX18 == 0 ? 0 : Convert . ToInt64 ( Math . Round ( Convert . ToDecimal ( model . WX86 / model . WX18 ) ,0 ) );
                         model . WX16 = 0;
                         model . WX87 = 0;
                     }
