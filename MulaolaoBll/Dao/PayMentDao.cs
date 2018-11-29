@@ -123,23 +123,26 @@ namespace MulaolaoBll.Dao
         /// <returns></returns>
         public DataTable GetDataTableOfPay ( DateTime dt ,string strWhere )
         {
-            StringBuilder strSql = new StringBuilder( );
+            StringBuilder strSql = new StringBuilder ( );
             strSql . Append ( "WITH CET AS (" );
-            strSql.Append( "SELECT idx,XZ002,XZ003,XZ004,XZ005,XZ006,XZ007,XZ008,XZ009,XZ010,XZ011,XZ012,XZ013,XZ014,XZ021,XZ022,XZ023,XZ024,XZ030,XZ031,CONVERT(DECIMAL(18,5),XZ005/day(dateadd(d,-day(@XZ013),dateadd(m,1,@XZ013)))) U4,XZ029 FROM R_PQXZ" );
-            strSql.Append( " WHERE YEAR(XZ013)=@YEAR AND MONTH(XZ013)=@MONTH" );
-            strSql.Append( " AND (XZ025!='执行' OR XZ025 IS NULL OR XZ025='')" );
-            strSql.Append( " AND " + strWhere );
+            if ( dt . Day == 31 )
+                strSql . Append ( "SELECT idx,XZ002,XZ003,XZ004,XZ005,XZ006,XZ007,XZ008,XZ009,XZ010,XZ011,XZ012,XZ013,XZ014,XZ021,XZ022,XZ023,XZ024,XZ030,XZ031,CONVERT(DECIMAL(18,5),XZ005/day(dateadd(d,-day(@XZ013),dateadd(m,1,@XZ013))+1)) U4,XZ029 FROM R_PQXZ" );
+            else
+                strSql . Append ( "SELECT idx,XZ002,XZ003,XZ004,XZ005,XZ006,XZ007,XZ008,XZ009,XZ010,XZ011,XZ012,XZ013,XZ014,XZ021,XZ022,XZ023,XZ024,XZ030,XZ031,CONVERT(DECIMAL(18,5),XZ005/day(dateadd(d,-day(@XZ013),dateadd(m,1,@XZ013)))) U4,XZ029 FROM R_PQXZ" );
+            strSql . Append ( " WHERE YEAR(XZ013)=@YEAR AND MONTH(XZ013)=@MONTH" );
+            strSql . Append ( " AND (XZ025!='执行' OR XZ025 IS NULL OR XZ025='')" );
+            strSql . Append ( " AND " + strWhere );
             strSql . Append ( " ) SELECT *,XZ023+XZ021+U4*(XZ006+XZ007)+XZ029-(XZ010+XZ008+XZ011+XZ009+XZ024+XZ030+XZ031) U3 FROM CET " );
-            SqlParameter[] parameter = {
+            SqlParameter [ ] parameter = {
                 new SqlParameter("@XZ013",SqlDbType.Date),
                 new SqlParameter("@YEAR",SqlDbType.Int),
                 new SqlParameter("@MONTH",SqlDbType.Int)
             };
-            parameter[0].Value = dt;
-            parameter[1].Value = dt.Year;
-            parameter[2].Value = dt.Month;
+            parameter [ 0 ] . Value = dt;
+            parameter [ 1 ] . Value = dt . Year;
+            parameter [ 2 ] . Value = dt . Month;
 
-            return SqlHelper.ExecuteDataTable( strSql.ToString( ) ,parameter );
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) ,parameter );
         }
 
         /// <summary>
