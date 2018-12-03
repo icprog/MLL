@@ -10,7 +10,7 @@ namespace MulaolaoBll.Bll
    public class SiReYiYincontractBll
     {
         Dao.SiReYiYincontractDao dao = new Dao.SiReYiYincontractDao( );
-
+        
         /// <summary>
         /// 获取数据列表  单个字段
         /// </summary>
@@ -362,5 +362,17 @@ namespace MulaolaoBll.Bll
         {
             return dao.UpdateOfRecevable( modelAm ,oddNum );
         }
+
+        /// <summary>
+        /// 获取工序
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public DataTable getTableWorkProce ( string num )
+        {
+            return dao . getTableWorkProce ( num );
+        }
+
+
     }
 }

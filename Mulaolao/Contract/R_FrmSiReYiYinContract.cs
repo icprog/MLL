@@ -926,12 +926,13 @@ namespace Mulaolao . Contract
             model.AH01 = textBox49.Text;
           
             every( );
+            getWorkProce ( );
         }
         void every ( )
         {
             desx = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 AH10,GS08 AH11,GS09 AH21,GS10 AH13 FROM R_PQP A,R_REVIEWS B,R_MLLCXMC C WHERE A.GS34=B.RES06 AND B.RES01=C.CX01 AND RES05='执行' AND CX02='产品每套成本改善控制表(R_509)' AND GS07!='' AND GS01=@GS01 " ,new SqlParameter ( "@GS01" ,model . AH01 ) );
 
-            dl = SqlHelper.ExecuteDataTable( "SELECT AH10,AH11,AH12,AH13,AH14,AH15,AH16,AH17,AH18,AH19,AH20,AH21 FROM R_PQAH WHERE AH01=@AH01" ,new SqlParameter( "@AH01" ,model.AH01 ) );
+            dl = SqlHelper.ExecuteDataTable( "SELECT '' AH10,'' AH11,AH12,AH13,AH14,AH15,AH16,AH17,AH18,AH19,AH20,AH21 FROM R_PQAH WHERE AH01=@AH01" ,new SqlParameter( "@AH01" ,model.AH01 ) );
             if ( desx != null )
                 dl.Merge( desx );
             dls = dl . DefaultView . ToTable ( true ,"AH10" ,"AH11" );
@@ -956,6 +957,13 @@ namespace Mulaolao . Contract
             comboBox12.DisplayMember = "AH19";
             comboBox6.DataSource = dl.DefaultView.ToTable( true ,"AH21" );
             comboBox6.DisplayMember = "AH21";
+        }
+        void getWorkProce ( )
+        {
+            //获取合同编号是195的工序名称
+            DataTable tableWorkProce = bll . getTableWorkProce ( model . AH01 );
+            comboBox4 . DataSource = tableWorkProce;
+            comboBox4 . DisplayMember = "GS35";
         }
         //物料名称
         private void comboBox21_SelectedIndexChanged ( object sender ,EventArgs e )
@@ -1325,6 +1333,11 @@ namespace Mulaolao . Contract
                 MessageBox . Show ( "物料或部件名称不可为空" );
                 return;
             }
+            if ( string . IsNullOrEmpty ( comboBox4 . Text ) )
+            {
+                MessageBox . Show ( "加工工序不可为空" );
+                return;
+            }
             if ( dateTimePicker3 . Value < DateTime . Now . AddDays ( 5 ) )
             {
                 MessageBox . Show ( "约定供期必须在当天的基础上延迟5天" );
@@ -1406,6 +1419,11 @@ namespace Mulaolao . Contract
             if ( string . IsNullOrEmpty ( txtPart . Text ) )
             {
                 MessageBox . Show ( "物料或部件名称不可为空" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( comboBox4 . Text ) )
+            {
+                MessageBox . Show ( "加工工序不可为空" );
                 return;
             }
             if ( string . IsNullOrEmpty ( textBox16 . Text ) )

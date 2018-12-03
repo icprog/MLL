@@ -1506,5 +1506,19 @@ namespace MulaolaoBll.Dao
                 
             }
         }
+
+        /// <summary>
+        /// 获取工序
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public DataTable getTableWorkProce ( string num )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT GS35 FROM R_PQP WHERE GS74='R_196' AND GS01='{0}'" ,num );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
     }
 }

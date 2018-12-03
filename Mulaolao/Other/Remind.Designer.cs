@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -43,7 +42,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.MenuItemRefresh = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAutoMatic = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +72,7 @@
             this.PQF03 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.PQF031 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
             this.MenuItemRe = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -91,7 +90,7 @@
             this.CP = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.btnDate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.idx = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
@@ -324,7 +323,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1251, 230);
+            this.gridControl1.Size = new System.Drawing.Size(1255, 232);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -508,7 +507,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainerControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1251, 418);
+            this.splitContainer1.Size = new System.Drawing.Size(1255, 421);
             this.splitContainer1.SplitterDistance = 40;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -543,8 +542,8 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1251, 374);
-            this.splitContainerControl1.SplitterPosition = 230;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1255, 377);
+            this.splitContainerControl1.SplitterPosition = 232;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -557,7 +556,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.gridControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1251, 139);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1255, 133);
             this.splitContainerControl2.SplitterPosition = 730;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -568,7 +567,7 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.bandedGridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(730, 139);
+            this.gridControl2.Size = new System.Drawing.Size(730, 133);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView2});
@@ -695,7 +694,7 @@
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDate});
-            this.gridControl3.Size = new System.Drawing.Size(516, 139);
+            this.gridControl3.Size = new System.Drawing.Size(513, 133);
             this.gridControl3.TabIndex = 1;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
@@ -929,7 +928,7 @@
             this.xtraTabPage1.Appearance.Header.Options.UseFont = true;
             this.xtraTabPage1.Controls.Add(this.splitContainer1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1251, 418);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1255, 421);
             this.xtraTabPage1.Text = "待处理事项";
             // 
             // xtraTabPage2
@@ -938,7 +937,7 @@
             this.xtraTabPage2.Appearance.Header.Options.UseFont = true;
             this.xtraTabPage2.Controls.Add(this.splitContainerControl3);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1251, 418);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1255, 421);
             this.xtraTabPage2.Text = "待开合同";
             // 
             // splitContainerControl3
@@ -951,7 +950,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.xtraTabControl2);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(1251, 418);
+            this.splitContainerControl3.Size = new System.Drawing.Size(1255, 421);
             this.splitContainerControl3.SplitterPosition = 34;
             this.splitContainerControl3.TabIndex = 2;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -973,7 +972,7 @@
             this.xtraTabControl2.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.R338;
-            this.xtraTabControl2.Size = new System.Drawing.Size(1251, 379);
+            this.xtraTabControl2.Size = new System.Drawing.Size(1255, 375);
             this.xtraTabControl2.TabIndex = 1;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.R195,
@@ -991,7 +990,7 @@
             // 
             this.R338.Controls.Add(this.gridControl4);
             this.R338.Name = "R338";
-            this.R338.Size = new System.Drawing.Size(1245, 350);
+            this.R338.Size = new System.Drawing.Size(1253, 349);
             this.R338.Text = "R338";
             // 
             // gridControl4
@@ -1002,7 +1001,7 @@
             this.gridControl4.Name = "gridControl4";
             this.gridControl4.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn338});
-            this.gridControl4.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl4.Size = new System.Drawing.Size(1253, 349);
             this.gridControl4.TabIndex = 0;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -1169,7 +1168,7 @@
             // 
             this.R195.Controls.Add(this.gridControl5);
             this.R195.Name = "R195";
-            this.R195.Size = new System.Drawing.Size(1245, 350);
+            this.R195.Size = new System.Drawing.Size(1253, 349);
             this.R195.Text = "R195";
             // 
             // gridControl5
@@ -1180,7 +1179,7 @@
             this.gridControl5.Name = "gridControl5";
             this.gridControl5.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn195});
-            this.gridControl5.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl5.Size = new System.Drawing.Size(1253, 349);
             this.gridControl5.TabIndex = 1;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -1347,7 +1346,7 @@
             // 
             this.R196.Controls.Add(this.gridControl6);
             this.R196.Name = "R196";
-            this.R196.Size = new System.Drawing.Size(1245, 350);
+            this.R196.Size = new System.Drawing.Size(1253, 349);
             this.R196.Text = "R196";
             // 
             // gridControl6
@@ -1358,7 +1357,7 @@
             this.gridControl6.Name = "gridControl6";
             this.gridControl6.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn196});
-            this.gridControl6.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl6.Size = new System.Drawing.Size(1253, 349);
             this.gridControl6.TabIndex = 1;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -1525,7 +1524,7 @@
             // 
             this.R339.Controls.Add(this.gridControl7);
             this.R339.Name = "R339";
-            this.R339.Size = new System.Drawing.Size(1245, 350);
+            this.R339.Size = new System.Drawing.Size(1253, 349);
             this.R339.Text = "R339";
             // 
             // gridControl7
@@ -1536,7 +1535,7 @@
             this.gridControl7.Name = "gridControl7";
             this.gridControl7.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn339});
-            this.gridControl7.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl7.Size = new System.Drawing.Size(1253, 349);
             this.gridControl7.TabIndex = 1;
             this.gridControl7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -1703,7 +1702,7 @@
             // 
             this.R341.Controls.Add(this.gridControl8);
             this.R341.Name = "R341";
-            this.R341.Size = new System.Drawing.Size(1245, 350);
+            this.R341.Size = new System.Drawing.Size(1253, 349);
             this.R341.Text = "R341";
             // 
             // gridControl8
@@ -1714,7 +1713,7 @@
             this.gridControl8.Name = "gridControl8";
             this.gridControl8.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn341});
-            this.gridControl8.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl8.Size = new System.Drawing.Size(1253, 349);
             this.gridControl8.TabIndex = 1;
             this.gridControl8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -1881,7 +1880,7 @@
             // 
             this.R342.Controls.Add(this.gridControl9);
             this.R342.Name = "R342";
-            this.R342.Size = new System.Drawing.Size(1245, 350);
+            this.R342.Size = new System.Drawing.Size(1253, 349);
             this.R342.Text = "R342";
             // 
             // gridControl9
@@ -1892,7 +1891,7 @@
             this.gridControl9.Name = "gridControl9";
             this.gridControl9.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn342});
-            this.gridControl9.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl9.Size = new System.Drawing.Size(1253, 349);
             this.gridControl9.TabIndex = 1;
             this.gridControl9.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -2059,7 +2058,7 @@
             // 
             this.R343.Controls.Add(this.gridControl10);
             this.R343.Name = "R343";
-            this.R343.Size = new System.Drawing.Size(1245, 350);
+            this.R343.Size = new System.Drawing.Size(1253, 349);
             this.R343.Text = "R343";
             // 
             // gridControl10
@@ -2070,7 +2069,7 @@
             this.gridControl10.Name = "gridControl10";
             this.gridControl10.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn343});
-            this.gridControl10.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl10.Size = new System.Drawing.Size(1253, 349);
             this.gridControl10.TabIndex = 1;
             this.gridControl10.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView8});
@@ -2237,7 +2236,7 @@
             // 
             this.R347.Controls.Add(this.gridControl11);
             this.R347.Name = "R347";
-            this.R347.Size = new System.Drawing.Size(1245, 350);
+            this.R347.Size = new System.Drawing.Size(1253, 349);
             this.R347.Text = "R347";
             // 
             // gridControl11
@@ -2248,7 +2247,7 @@
             this.gridControl11.Name = "gridControl11";
             this.gridControl11.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn347});
-            this.gridControl11.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl11.Size = new System.Drawing.Size(1253, 349);
             this.gridControl11.TabIndex = 1;
             this.gridControl11.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView9});
@@ -2415,7 +2414,7 @@
             // 
             this.R349.Controls.Add(this.gridControl12);
             this.R349.Name = "R349";
-            this.R349.Size = new System.Drawing.Size(1245, 350);
+            this.R349.Size = new System.Drawing.Size(1253, 349);
             this.R349.Text = "R349";
             // 
             // gridControl12
@@ -2426,7 +2425,7 @@
             this.gridControl12.Name = "gridControl12";
             this.gridControl12.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn349});
-            this.gridControl12.Size = new System.Drawing.Size(1245, 350);
+            this.gridControl12.Size = new System.Drawing.Size(1253, 349);
             this.gridControl12.TabIndex = 1;
             this.gridControl12.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView10});
@@ -2611,7 +2610,7 @@
             this.xtraTabPage3.Controls.Add(this.labelControl2);
             this.xtraTabPage3.Controls.Add(this.labelControl1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1245, 350);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1253, 349);
             this.xtraTabPage3.Text = "数据来源";
             // 
             // labelControl18
@@ -2650,9 +2649,9 @@
             this.labelControl17.Appearance.Options.UseFont = true;
             this.labelControl17.Location = new System.Drawing.Point(513, 253);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(355, 20);
+            this.labelControl17.Size = new System.Drawing.Size(153, 20);
             this.labelControl17.TabIndex = 15;
-            this.labelControl17.Text = "196：(丝印/移印/热转印/走台印/冲印)流水号、加工.工序";
+            this.labelControl17.Text = "196：流水号、加工.工序";
             // 
             // labelControl14
             // 
@@ -2670,9 +2669,9 @@
             this.labelControl15.Appearance.Options.UseFont = true;
             this.labelControl15.Location = new System.Drawing.Point(513, 185);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(258, 20);
+            this.labelControl15.Size = new System.Drawing.Size(178, 20);
             this.labelControl15.TabIndex = 13;
-            this.labelControl15.Text = "195：(雕刻、砂皮)流水号、加工工序名称";
+            this.labelControl15.Text = "195：流水号、加工工序名称";
             // 
             // labelControl12
             // 

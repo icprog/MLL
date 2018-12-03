@@ -170,11 +170,13 @@
             this.AP025 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AP001 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AP026 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.AP027 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AP028 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AP030 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AP031 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AP032 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemBreadCrumbEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit();
             this.tabPageTwoes = new System.Windows.Forms.TabPage();
             this.gridControl7 = new DevExpress.XtraGrid.GridControl();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -303,8 +305,6 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.repositoryItemBreadCrumbEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit();
-            this.repositoryItemButtonEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tabControl1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPageOne.SuspendLayout();
@@ -349,6 +349,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBreadCrumbEdit1)).BeginInit();
             this.tabPageTwoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
@@ -400,8 +402,6 @@
             this.hideContainerLeft.SuspendLayout();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBreadCrumbEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit10)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1447,17 +1447,28 @@
             this.YZ024.AppearanceHeader.Options.UseTextOptions = true;
             this.YZ024.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.YZ024.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.YZ024.Caption = "050 idx  行政";
+            this.YZ024.Caption = "050 idx  生产部";
             this.YZ024.FieldName = "YZ024";
             this.YZ024.Name = "YZ024";
             this.YZ024.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.YZ024.Visible = true;
+            this.YZ024.VisibleIndex = 38;
             // 
             // YZ025
             // 
-            this.YZ025.Caption = "050 idx  生产部";
+            this.YZ025.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.YZ025.AppearanceCell.Options.UseFont = true;
+            this.YZ025.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.YZ025.AppearanceHeader.Options.UseFont = true;
+            this.YZ025.AppearanceHeader.Options.UseTextOptions = true;
+            this.YZ025.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.YZ025.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.YZ025.Caption = "050 idx  行政";
             this.YZ025.FieldName = "YZ025";
             this.YZ025.Name = "YZ025";
             this.YZ025.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.YZ025.Visible = true;
+            this.YZ025.VisibleIndex = 37;
             // 
             // YZ001
             // 
@@ -2754,15 +2765,28 @@
             this.AP024.AppearanceHeader.Options.UseTextOptions = true;
             this.AP024.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.AP024.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.AP024.Caption = "050 idx  行政";
+            this.AP024.Caption = "050 idx  生产部";
             this.AP024.FieldName = "AP024";
             this.AP024.Name = "AP024";
+            this.AP024.OptionsColumn.AllowEdit = false;
+            this.AP024.Visible = true;
+            this.AP024.VisibleIndex = 37;
             // 
             // AP025
             // 
-            this.AP025.Caption = "050 idx  生产部";
+            this.AP025.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.AP025.AppearanceCell.Options.UseFont = true;
+            this.AP025.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.AP025.AppearanceHeader.Options.UseFont = true;
+            this.AP025.AppearanceHeader.Options.UseTextOptions = true;
+            this.AP025.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.AP025.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.AP025.Caption = "050 idx  行政";
             this.AP025.FieldName = "AP025";
             this.AP025.Name = "AP025";
+            this.AP025.OptionsColumn.AllowEdit = false;
+            this.AP025.Visible = true;
+            this.AP025.VisibleIndex = 36;
             // 
             // AP001
             // 
@@ -2792,6 +2816,14 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AP026", "{0:N2}")});
             this.AP026.Visible = true;
             this.AP026.VisibleIndex = 14;
+            // 
+            // repositoryItemButtonEdit10
+            // 
+            this.repositoryItemButtonEdit10.AutoHeight = false;
+            this.repositoryItemButtonEdit10.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit10.Name = "repositoryItemButtonEdit10";
+            this.repositoryItemButtonEdit10.Click += new System.EventHandler(this.repositoryItemButtonEdit10_Click);
             // 
             // AP027
             // 
@@ -2837,13 +2869,20 @@
             this.AP032.FieldName = "AP032";
             this.AP032.Name = "AP032";
             // 
+            // repositoryItemBreadCrumbEdit1
+            // 
+            this.repositoryItemBreadCrumbEdit1.AutoHeight = false;
+            this.repositoryItemBreadCrumbEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemBreadCrumbEdit1.Name = "repositoryItemBreadCrumbEdit1";
+            // 
             // tabPageTwoes
             // 
             this.tabPageTwoes.Controls.Add(this.gridControl7);
             this.tabPageTwoes.Location = new System.Drawing.Point(4, 26);
             this.tabPageTwoes.Name = "tabPageTwoes";
             this.tabPageTwoes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTwoes.Size = new System.Drawing.Size(1188, 391);
+            this.tabPageTwoes.Size = new System.Drawing.Size(178, 38);
             this.tabPageTwoes.TabIndex = 1;
             this.tabPageTwoes.Text = "合计";
             this.tabPageTwoes.UseVisualStyleBackColor = true;
@@ -2854,7 +2893,7 @@
             this.gridControl7.Location = new System.Drawing.Point(3, 3);
             this.gridControl7.MainView = this.gridView6;
             this.gridControl7.Name = "gridControl7";
-            this.gridControl7.Size = new System.Drawing.Size(1182, 385);
+            this.gridControl7.Size = new System.Drawing.Size(172, 32);
             this.gridControl7.TabIndex = 1;
             this.gridControl7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -4799,21 +4838,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "1、";
             // 
-            // repositoryItemBreadCrumbEdit1
-            // 
-            this.repositoryItemBreadCrumbEdit1.AutoHeight = false;
-            this.repositoryItemBreadCrumbEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemBreadCrumbEdit1.Name = "repositoryItemBreadCrumbEdit1";
-            // 
-            // repositoryItemButtonEdit10
-            // 
-            this.repositoryItemButtonEdit10.AutoHeight = false;
-            this.repositoryItemButtonEdit10.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryItemButtonEdit10.Name = "repositoryItemButtonEdit10";
-            this.repositoryItemButtonEdit10.Click += new System.EventHandler(this.repositoryItemButtonEdit10_Click);
-            // 
             // R_FrmPayMent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4871,6 +4895,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBreadCrumbEdit1)).EndInit();
             this.tabPageTwoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
@@ -4923,8 +4949,6 @@
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanel1_Container.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBreadCrumbEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

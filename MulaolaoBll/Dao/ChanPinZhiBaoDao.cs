@@ -394,5 +394,16 @@ namespace MulaolaoBll.Dao
         {
             return bll.UpdateOfOther( model ,oper );
         }
+
+        /// <summary>
+        /// 获取工序
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public DataTable getTableWorkProce ( string num )
+        {
+            return bll . getTableWorkProce ( num );
+        }
+
     }
 }

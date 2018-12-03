@@ -289,7 +289,7 @@ namespace MulaolaoBll . Dao
 
             //195
             strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT DISTINCT 'R_195' GS70,GS01,GS46,GS49,GS35 GS71,'' GS02,'' GS08,'' GS07,PQF13,PQF31  FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE  GS73='F' AND (GS35 LIKE '%雕刻%' OR GS35  LIKE '%砂皮%') AND (SELECT COUNT(1) as num FROM R_PQQ B WHERE A.GS01=B.CP01 AND A.GS35=B.CP09)=0  and GS01 not in (SELECT CP01 FROM R_PQQ WHERE CP62='1') ORDER BY GS01" );
+            strSql . Append ( "SELECT DISTINCT 'R_195' GS70,GS01,GS46,GS49,GS35 GS71,'' GS02,'' GS08,'' GS07,PQF13,PQF31  FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE  GS73='F' AND GS74='R_195' AND (SELECT COUNT(1) as num FROM R_PQQ B WHERE A.GS01=B.CP01 AND A.GS35=B.CP09)=0  and GS01 not in (SELECT CP01 FROM R_PQQ WHERE CP62='1') ORDER BY GS01" );//AND (GS35 LIKE '%雕刻%' OR GS35  LIKE '%砂皮%')
             tableOne = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
 
             if ( table != null )
@@ -302,7 +302,7 @@ namespace MulaolaoBll . Dao
 
             //196
             strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT DISTINCT 'R_196' GS70,GS01,GS46,GS49,GS35 GS71,'' GS02,'' GS08,'' GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS73='F' AND (GS35 LIKE '%丝印%' OR GS35 LIKE '%移印%' OR GS35  LIKE '%热转印%' OR GS35  LIKE '%走台印%' OR GS35  LIKE '%冲印%') AND (SELECT COUNT(1) as num FROM R_PQAH B WHERE A.GS01=B.AH01 AND A.GS35=B.AH18)=0  and GS01 not in (SELECT AH01 FROM R_PQAH WHERE AH117='1')  ORDER BY GS01" );
+            strSql . Append ( "SELECT DISTINCT 'R_196' GS70,GS01,GS46,GS49,GS35 GS71,'' GS02,'' GS08,'' GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS73='F' AND GS74='R_196' AND (SELECT COUNT(1) as num FROM R_PQAH B WHERE A.GS01=B.AH01 AND A.GS35=B.AH18)=0  and GS01 not in (SELECT AH01 FROM R_PQAH WHERE AH117='1')  ORDER BY GS01" );
             tableOne = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
 
             if ( table != null )

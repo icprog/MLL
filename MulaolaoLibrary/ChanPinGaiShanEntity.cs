@@ -1141,7 +1141,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 195  196工序合同代号
         /// </summary>
         public string GS74
         {

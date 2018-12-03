@@ -287,6 +287,9 @@
             this.label68 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.label78 = new System.Windows.Forms.Label();
+            this.comboBox21 = new System.Windows.Forms.ComboBox();
+            this.GS74 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).BeginInit();
@@ -1711,6 +1714,8 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.label78);
+            this.splitContainer2.Panel1.Controls.Add(this.comboBox21);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox13);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox12);
             this.splitContainer2.Panel1.Controls.Add(this.label67);
@@ -1982,9 +1987,9 @@
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(82, 78);
+            this.textBox20.Location = new System.Drawing.Point(262, 77);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(502, 23);
+            this.textBox20.Size = new System.Drawing.Size(476, 23);
             this.textBox20.TabIndex = 65;
             // 
             // label42
@@ -1999,7 +2004,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(9, 81);
+            this.label41.Location = new System.Drawing.Point(189, 80);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(67, 14);
             this.label41.TabIndex = 64;
@@ -2041,7 +2046,8 @@
             this.GS43,
             this.GS44,
             this.GS45,
-            this.GS72});
+            this.GS72,
+            this.GS74});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -2067,7 +2073,7 @@
             this.GS35.Name = "GS35";
             this.GS35.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS35.Visible = true;
-            this.GS35.VisibleIndex = 0;
+            this.GS35.VisibleIndex = 1;
             this.GS35.Width = 140;
             // 
             // GS36
@@ -2089,7 +2095,7 @@
             this.GS36.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS04", "{0}")});
             this.GS36.Visible = true;
-            this.GS36.VisibleIndex = 2;
+            this.GS36.VisibleIndex = 3;
             this.GS36.Width = 96;
             // 
             // GS37
@@ -2111,7 +2117,7 @@
             this.GS37.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS05", "{0}")});
             this.GS37.Visible = true;
-            this.GS37.VisibleIndex = 7;
+            this.GS37.VisibleIndex = 8;
             this.GS37.Width = 111;
             // 
             // U10
@@ -2135,7 +2141,7 @@
             this.U10.UnboundExpression = "[GS36] - [GS37]";
             this.U10.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U10.Visible = true;
-            this.U10.VisibleIndex = 8;
+            this.U10.VisibleIndex = 9;
             this.U10.Width = 111;
             // 
             // GS38
@@ -2153,7 +2159,7 @@
             this.GS38.Name = "GS38";
             this.GS38.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS38.Visible = true;
-            this.GS38.VisibleIndex = 3;
+            this.GS38.VisibleIndex = 4;
             this.GS38.Width = 53;
             // 
             // GS39
@@ -2171,7 +2177,7 @@
             this.GS39.Name = "GS39";
             this.GS39.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.GS39.Visible = true;
-            this.GS39.VisibleIndex = 9;
+            this.GS39.VisibleIndex = 10;
             this.GS39.Width = 62;
             // 
             // GS40
@@ -2189,7 +2195,7 @@
             this.GS40.Name = "GS40";
             this.GS40.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS40.Visible = true;
-            this.GS40.VisibleIndex = 10;
+            this.GS40.VisibleIndex = 11;
             this.GS40.Width = 80;
             // 
             // GS41
@@ -2207,7 +2213,7 @@
             this.GS41.Name = "GS41";
             this.GS41.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS41.Visible = true;
-            this.GS41.VisibleIndex = 11;
+            this.GS41.VisibleIndex = 12;
             this.GS41.Width = 87;
             // 
             // GS42
@@ -2225,7 +2231,7 @@
             this.GS42.Name = "GS42";
             this.GS42.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS42.Visible = true;
-            this.GS42.VisibleIndex = 4;
+            this.GS42.VisibleIndex = 5;
             this.GS42.Width = 96;
             // 
             // GS43
@@ -2243,7 +2249,7 @@
             this.GS43.Name = "GS43";
             this.GS43.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS43.Visible = true;
-            this.GS43.VisibleIndex = 5;
+            this.GS43.VisibleIndex = 6;
             this.GS43.Width = 64;
             // 
             // GS44
@@ -2261,7 +2267,7 @@
             this.GS44.Name = "GS44";
             this.GS44.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS44.Visible = true;
-            this.GS44.VisibleIndex = 6;
+            this.GS44.VisibleIndex = 7;
             this.GS44.Width = 68;
             // 
             // GS45
@@ -2281,7 +2287,7 @@
             this.GS45.Name = "GS45";
             this.GS45.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS45.Visible = true;
-            this.GS45.VisibleIndex = 12;
+            this.GS45.VisibleIndex = 13;
             this.GS45.Width = 110;
             // 
             // GS72
@@ -2294,7 +2300,7 @@
             this.GS72.FieldName = "GS72";
             this.GS72.Name = "GS72";
             this.GS72.Visible = true;
-            this.GS72.VisibleIndex = 1;
+            this.GS72.VisibleIndex = 2;
             this.GS72.Width = 88;
             // 
             // tabPage3
@@ -3796,6 +3802,42 @@
             this.splitContainer4.SplitterDistance = 81;
             this.splitContainer4.TabIndex = 70;
             // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(5, 81);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(67, 14);
+            this.label78.TabIndex = 99;
+            this.label78.Text = "合同代号";
+            // 
+            // comboBox21
+            // 
+            this.comboBox21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox21.FormattingEnabled = true;
+            this.comboBox21.Items.AddRange(new object[] {
+            "",
+            "R_195",
+            "R_196"});
+            this.comboBox21.Location = new System.Drawing.Point(82, 77);
+            this.comboBox21.Name = "comboBox21";
+            this.comboBox21.Size = new System.Drawing.Size(100, 22);
+            this.comboBox21.TabIndex = 98;
+            // 
+            // GS74
+            // 
+            this.GS74.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS74.AppearanceCell.Options.UseFont = true;
+            this.GS74.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS74.AppearanceHeader.Options.UseFont = true;
+            this.GS74.Caption = "合同代号";
+            this.GS74.FieldName = "GS74";
+            this.GS74.Name = "GS74";
+            this.GS74.Visible = true;
+            this.GS74.VisibleIndex = 0;
+            this.GS74.Width = 84;
+            // 
             // R_Frmchanpingaishan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4123,5 +4165,8 @@
         private System . Windows . Forms . Label label77;
         private System . Windows . Forms . Label label76;
         private System . Windows . Forms . Label label75;
+        private System . Windows . Forms . Label label78;
+        private System . Windows . Forms . ComboBox comboBox21;
+        private DevExpress . XtraGrid . Columns . GridColumn GS74;
     }
 }

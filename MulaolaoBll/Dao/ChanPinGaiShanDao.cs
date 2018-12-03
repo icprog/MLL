@@ -1088,7 +1088,7 @@ namespace MulaolaoBll.Dao
         {
             Hashtable SQLString = new Hashtable ( );
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "INSERT INTO R_PQP (GS34,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72) VALUES (@GS34,@GS35,@GS36,@GS37,@GS38,@GS39,@GS40,@GS41,@GS42,@GS43,@GS44,@GS45,@GS72)" );
+            strSql . Append ( "INSERT INTO R_PQP (GS34,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74) VALUES (@GS34,@GS35,@GS36,@GS37,@GS38,@GS39,@GS40,@GS41,@GS42,@GS43,@GS44,@GS45,@GS72,@GS74)" );
             SqlParameter [ ] parameter = {
                 new SqlParameter( "@GS34" ,model.GS34 ) ,
                 new SqlParameter( "@GS35" ,model.GS35 ) ,
@@ -1102,7 +1102,8 @@ namespace MulaolaoBll.Dao
                 new SqlParameter( "@GS43" ,model.GS43 ) ,
                 new SqlParameter( "@GS44" ,model.GS44 ) ,
                 new SqlParameter( "@GS45" ,model.GS45 ),
-                new SqlParameter( "@GS72" ,model.GS72 )
+                new SqlParameter( "@GS72" ,model.GS72 ),
+                new SqlParameter( "@GS74" ,model.GS74 )
             };
             SQLString . Add ( strSql ,parameter );
 
@@ -1118,7 +1119,7 @@ namespace MulaolaoBll.Dao
         {
             Hashtable SQLString = new Hashtable ( );
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "UPDATE R_PQP SET GS35=@GS35,GS36=@GS36,GS37=@GS37,GS38=@GS38,GS39=@GS39,GS40=@GS40,GS41=@GS41,GS42=@GS42,GS43=@GS43,GS44=@GS44,GS45=@GS45,GS72=@GS72 WHERE idx=@idx" );
+            strSql . Append ( "UPDATE R_PQP SET GS35=@GS35,GS36=@GS36,GS37=@GS37,GS38=@GS38,GS39=@GS39,GS40=@GS40,GS41=@GS41,GS42=@GS42,GS43=@GS43,GS44=@GS44,GS45=@GS45,GS72=@GS72,GS74=@GS74 WHERE idx=@idx" );
             SqlParameter [ ] parameter = {
                 new SqlParameter( "@GS36" ,model.GS36 ) ,
                 new SqlParameter( "@GS37" ,model.GS37 ) ,
@@ -1132,7 +1133,8 @@ namespace MulaolaoBll.Dao
                 new SqlParameter( "@GS45" ,model.GS45 ) ,
                 new SqlParameter ( "@idx" ,model.idx ) ,
                 new SqlParameter ( "@GS35" ,model.GS35 ),
-                new SqlParameter ( "@GS72" ,model.GS72 )
+                new SqlParameter ( "@GS72" ,model.GS72 ),
+                new SqlParameter ( "@GS74" ,model.GS74 )
             };
             SQLString . Add ( strSql ,parameter );
 

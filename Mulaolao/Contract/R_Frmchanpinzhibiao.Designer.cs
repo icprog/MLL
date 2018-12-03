@@ -165,11 +165,11 @@
             this.tabPageOne = new System.Windows.Forms.TabPage();
             this.tabPageTwo = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.tabPageTre = new System.Windows.Forms.TabPage();
             this.label48 = new System.Windows.Forms.Label();
             this.tabPageFor = new System.Windows.Forms.TabPage();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -907,6 +907,8 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(735, 34);
             this.comboBox3.Name = "comboBox3";
@@ -1706,6 +1708,14 @@
             this.splitContainer2.SplitterDistance = 102;
             this.splitContainer2.TabIndex = 0;
             // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(430, 3);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(135, 26);
+            this.textBox14.TabIndex = 137;
+            // 
             // tabPageTre
             // 
             this.tabPageTre.AutoScroll = true;
@@ -1764,14 +1774,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(1351, 590);
             this.textBox3.TabIndex = 1;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(430, 3);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(135, 26);
-            this.textBox14.TabIndex = 137;
             // 
             // R_Frmchanpinzhibiao
             // 

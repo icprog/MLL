@@ -254,7 +254,7 @@ namespace Mulaolao.Raw_material_cost
                 ddl = SqlHelper.ExecuteDataTable( "SELECT idx,GS02,GS49,GS51,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02 ) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS70,GS71,GS02,GS07 " ,new SqlParameter( "@GS34" ,_model . GS34 ) );//ASC,REVERSE(GS07) ASC
                 gridControl1 .DataSource = ddl;
 
-                ddk = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72 FROM R_PQP WHERE GS35 IS NOT NULL AND GS35!='' AND GS34=@GS34 ORDER BY REVERSE(GS35) ASC" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
+                ddk = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74 FROM R_PQP WHERE GS35 IS NOT NULL AND GS35!='' AND GS34=@GS34 ORDER BY REVERSE(GS35) ASC" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
                 gridControl2.DataSource = ddk;
 
                 ddp = SqlHelper.ExecuteDataTable( "SELECT idx,GS52,GS49,GS61,GS53,GS54,GS56,GS57,GS58,GS59,GS60,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,D.U11 FROM R_PQP A, (SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D WHERE A.GS52 = D.U0 AND GS34 = @GS34 AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52 ASC,REVERSE(GS56) ASC" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
@@ -1704,6 +1704,7 @@ namespace Mulaolao.Raw_material_cost
             _model . GS44 = lookUpEdit6.Text;
             _model . GS45 = datatimepickeroverride1.Value;
             _model . GS72 = comboBox13 . Text;
+            _model . GS74 = comboBox21 . Text;
         }
         private void button16_Click ( object sender ,EventArgs e )
         {
@@ -1732,7 +1733,7 @@ namespace Mulaolao.Raw_material_cost
 
                         if ( sads == "1" )
                         {
-                            ddk = SqlHelper . ExecuteDataTable ( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter ( "@GS34" ,_model.GS34 ) );
+                            ddk = SqlHelper . ExecuteDataTable ( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter ( "@GS34" ,_model.GS34 ) );
                             gridControl2 . DataSource = ddk;
                         }
                         else if ( sads == "2" )
@@ -1751,6 +1752,7 @@ namespace Mulaolao.Raw_material_cost
                             row [ "GS44" ] = _model . GS44;
                             row [ "GS45" ] = _model . GS45;
                             row [ "GS72" ] = _model . GS72;
+                            row [ "GS74" ] = _model . GS74;
                             ddk . Rows . Add ( row );
                         }
                         workshopSection ( );
@@ -1785,21 +1787,22 @@ namespace Mulaolao.Raw_material_cost
             //}
             //else if ( sads == "2" )
             //{
-                row = ddk . Rows [ num ];
-                row . BeginEdit ( );
-                row [ "GS35" ] = _model . GS35;
-                row [ "GS36" ] = _model . GS36;
-                row [ "GS37" ] = _model . GS37;
-                row [ "GS38" ] = _model . GS38;
-                row [ "GS39" ] = _model . GS39;
-                row [ "GS40" ] = _model . GS40;
-                row [ "GS41" ] = _model . GS41;
-                row [ "GS42" ] = _model . GS42;
-                row [ "GS43" ] = _model . GS43;
-                row [ "GS44" ] = _model . GS44;
-                row [ "GS45" ] = _model . GS45;
-                row [ "GS72" ] = _model . GS72;
-                row . EndEdit ( );
+            row = ddk . Rows [ num ];
+            row . BeginEdit ( );
+            row [ "GS35" ] = _model . GS35;
+            row [ "GS36" ] = _model . GS36;
+            row [ "GS37" ] = _model . GS37;
+            row [ "GS38" ] = _model . GS38;
+            row [ "GS39" ] = _model . GS39;
+            row [ "GS40" ] = _model . GS40;
+            row [ "GS41" ] = _model . GS41;
+            row [ "GS42" ] = _model . GS42;
+            row [ "GS43" ] = _model . GS43;
+            row [ "GS44" ] = _model . GS44;
+            row [ "GS45" ] = _model . GS45;
+            row [ "GS72" ] = _model . GS72;
+            row [ "GS74" ] = _model . GS74;
+            row . EndEdit ( );
             //}
             workshopSection ( );
         }
@@ -1897,7 +1900,7 @@ namespace Mulaolao.Raw_material_cost
             //}
             //else if ( sads == "2" )
             //{
-                ddk = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter( "@GS34" ,_model.GS34 ) );
+                ddk = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter( "@GS34" ,_model.GS34 ) );
                 gridControl2.DataSource = ddk;
             //}
         }

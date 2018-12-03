@@ -27,7 +27,7 @@ namespace Mulaolao.Raw_material_cost
         MulaolaoLibrary.ChanPinZhiBiaoLibrary model = new MulaolaoLibrary.ChanPinZhiBiaoLibrary( );
         MulaolaoBll.Dao.ChanPinZhiBaoDao dao = new MulaolaoBll.Dao.ChanPinZhiBaoDao( );
         Report report = new Report( ); SpecialPowers sp = new SpecialPowers( );
-        DataTable dia, desx, dls, dl, de; DataSet RDataSet;
+        DataTable dia, desx, dl, de; DataSet RDataSet;
         string copy = "", strWhere = "1=1", sav = "", weihu = "", file = "", numQu = "", stateOfOdd = "";
         bool result = false;
         List<SplitContainer> spList = new List<SplitContainer>( );
@@ -859,16 +859,17 @@ namespace Mulaolao.Raw_material_cost
             model.CP01 = textBox1.Text;
            
             table( );
+            getWorkProce ( );
         }
         void table ()
         {
             desx = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 CP06,GS08 CP07,GS09 CP08,GS10 CP13 FROM R_PQP A,R_REVIEWS B,R_MLLCXMC C WHERE A.GS34=B.RES06 AND B.RES01=C.CX01 AND RES05='执行' AND CX02='产品每套成本改善控制表(R_509)' AND GS07!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,model . CP01 ) );
 
-            dl = SqlHelper.ExecuteDataTable( "SELECT CP06,CP07,CP08,CP13,CP10,CP11,CP12,CP09 FROM R_PQQ WHERE CP01=@CP01" ,new SqlParameter( "@CP01" ,model.CP01 ) );
+            dl = SqlHelper . ExecuteDataTable ( "SELECT CP06,CP07,CP08,CP13,CP10,CP11,CP12,CP09 FROM R_PQQ WHERE CP01=@CP01" ,new SqlParameter ( "@CP01" ,model . CP01 ) );
             if ( desx != null )
-                dl.Merge( desx );
+                dl . Merge ( desx );
             //内价不含税
-            comboBox1.DataSource = dl.DefaultView.ToTable( true ,"CP10" );
+            comboBox1 .DataSource = dl.DefaultView.ToTable( true ,"CP10" );
             comboBox1.DisplayMember = "CP10";
             //外价含税
             comboBox2.DataSource = dl.DefaultView.ToTable( true ,"CP11" );
@@ -888,6 +889,13 @@ namespace Mulaolao.Raw_material_cost
             comboBox15.DisplayMember = "CP08";
             comboBox14.DataSource = dl.DefaultView.ToTable( true ,"CP13" );
             comboBox14.DisplayMember = "CP13";
+        }
+        void getWorkProce ( )
+        {
+            //获取合同编号是195的工序名称
+            DataTable tableWorkProce = dao . getTableWorkProce ( model . CP01 );
+            comboBox3 . DataSource = tableWorkProce;
+            comboBox3 . DisplayMember = "GS35";
         }
         private void comboBox7_SelectedValueChanged ( object sender ,EventArgs e )
         {

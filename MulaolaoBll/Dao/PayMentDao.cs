@@ -141,7 +141,7 @@ namespace MulaolaoBll.Dao
             parameter [ 0 ] . Value = dt;
             parameter [ 1 ] . Value = dt . Year;
             parameter [ 2 ] . Value = dt . Month;
-
+            
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) ,parameter );
         }
 
@@ -610,7 +610,7 @@ namespace MulaolaoBll.Dao
                     yz031 = yz031 + "," + "'" + str + "'";
             }
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT AO022 FROM R_PQAO WHERE AO001=@AO001 AND AO021 IN (" + yz031 + ")" );
+            strSql . Append ( "SELECT AO022,AO009 FROM R_PQAO WHERE AO001=@AO001 AND AO021 IN (" + yz031 + ")" );
             SqlParameter [ ] parameter = {
                 new SqlParameter("@AO001",SqlDbType.NVarChar)//,
                 //new SqlParameter("@AP003",SqlDbType.NVarChar),
@@ -627,7 +627,7 @@ namespace MulaolaoBll.Dao
                     if ( string . IsNullOrEmpty ( da . Rows [ i ] [ "AO009" ] . ToString ( ) ) )
                         UpdateStates ( "" ,da . Rows [ i ] [ "AO022" ] . ToString ( ) ,"" ,"" ,"" ,"" ,"" ,imPlement ,DateTime . Now ,SQLString );
                     else
-                        UpdateStates ( "" ,da . Rows [ i ] [ "AO022" ] . ToString ( ) ,"" ,"" ,"" ,"" ,"" ,imPlement ,Convert . ToDateTime ( da . Rows [ i ] [ "AP009" ] . ToString ( ) ) ,SQLString );
+                        UpdateStates ( "" ,da . Rows [ i ] [ "AO022" ] . ToString ( ) ,"" ,"" ,"" ,"" ,"" ,imPlement ,Convert . ToDateTime ( da . Rows [ i ] [ "AO009" ] . ToString ( ) ) ,SQLString );
                 }
                 //StringBuilder strSq = new StringBuilder( );
                 //strSq.AppendFormat( "UPDATE R_PQYZ SET YZ003='{0}' WHERE YZ001='{1}' AND YZ003='{2}'" ,imPlement ,oddNum ,exaMine );
@@ -657,7 +657,7 @@ namespace MulaolaoBll.Dao
                     yz031 = yz031 + "," + "'" + str + "'";
             }
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT AR022 FROM R_PQAR WHERE AR001=@AR001 AND AR021 IN (" + yz031 + ")" );
+            strSql . Append ( "SELECT AR022,AR009 FROM R_PQAR WHERE AR001=@AR001 AND AR021 IN (" + yz031 + ")" );
             SqlParameter [ ] parameter = {
                 new SqlParameter("@AR001",SqlDbType.NVarChar)//,
                 //new SqlParameter("@AP003",SqlDbType.NVarChar),
