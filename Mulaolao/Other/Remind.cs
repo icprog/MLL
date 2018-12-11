@@ -241,107 +241,10 @@ namespace Mulaolao . Other
         string dataTab ( )
         {
             string strWhere = "";
-            //DataRow remand;
-            //DataTable song;
-
-            #region
-            /*
-         song = SqlHelper.ExecuteDataTable( "SELECT * FROM ( SELECT CX02,RES02,RES03,RES04,RES05,RES06,RES07,DBA002,RES08 FROM R_REVIEWS A,R_MLLCXMC B,TPADBA C WHERE A.RES01 = B.CX01 AND A.RES03 = C.DBA001 AND A.RES01 IN( SELECT RE02 FROM R_REVIEW ) ) A WHERE NOT EXISTS (SELECT 1 FROM( SELECT CX02, RES02, RES03, RES04, RES05, RES06, RES07, DBA002 FROM R_REVIEWS A, R_MLLCXMC B, TPADBA C WHERE A.RES01 = B.CX01 AND A.RES03 = C.DBA001 AND A.RES01 IN( SELECT RE02 FROM R_REVIEW ) ) B WHERE A.CX02 = B.CX02 AND A.RES02 = B.RES02 AND A.RES06 = B.RES06 AND B.RES05 = '执行' AND RES08 IS NOT NULL ) AND A.CX02 IN ( SELECT CX02 FROM R_REVIEW A, TPADBA B, R_MLLCXMC C WHERE A.RE01 = B.DBA001 AND A.RE02 = C.CX01 AND DBA002 = @DBA002) AND RES06 NOT IN (SELECT DISTINCT RES06 FROM R_REVIEWS WHERE RES01='R_317' AND RES06 NOT IN (SELECT GZ29 FROM R_PQW WHERE idx IN (SELECT FZ002 FROM R_PQFZ WHERE FZ001 IN (SELECT idx FROM R_PQEZ WHERE EZ001 IN (SELECT RES06 FROM R_REVIEWS WHERE RES01='R_323' AND RES05='送审')  UNION SELECT idx FROM R_PQEZ WHERE EZ001 NOT IN (SELECT RES06 FROM R_REVIEWS WHERE RES01='R_323'))))) GROUP BY RES06,RES02,CX02,RES03,RES04,RES05,RES07,DBA002,RES08" ,new SqlParameter( "@DBA002" ,Logins.username ) );
-         if ( song.Rows.Count > 0 )
-         {
-             DataTable songClone = song.Clone( );
-
-             remands = song.Clone( );
-             for ( int i = 0 ; i < song.Rows.Count ; i++ )
-             {
-                 string groupCX02 = song.Rows[i]["CX02"].ToString( );
-                 string groupRES02 = song.Rows[i]["RES02"].ToString( );
-                 string groupRES06 = song.Rows[i]["RES06"].ToString( );
-
-                 songClone.Clear( );
-                 DataRow[] rows = song.Select( "CX02='" + groupCX02 + "' AND RES02='" + groupRES02 + "' AND RES06='" + groupRES06 + "'" );
-                 foreach ( DataRow row in rows )
-                 {
-                     songClone.ImportRow( row );
-                 }
-                 //songClone.DefaultView.Sort = "RES04";
-                 List<string> benren = new List<string>( );
-                 for ( int x = 0 ; x < songClone.Rows.Count ; x++ )
-                 {
-                     benren.Add( songClone.Rows[x]["RES03"].ToString( ) );
-                 }
-                 for ( int j = 0 ; j < songClone.Rows.Count ; j++ )
-                 {
-                     if ( !benren.Contains( Logins.number ) )
-                     {
-                         if ( songClone.Rows[songClone.Rows.Count - 1]["RES05"].ToString( ) == "送审" )
-                         {
-                             remand = songClone.Rows[songClone.Rows.Count - 1];
-                             remands.ImportRow( remand );
-                         }
-                     }
-                     else if ( songClone.Rows[j]["RES03"].ToString( ) == Logins.number )
-                     {
-                         if ( j + 1 < songClone.Rows.Count && j - 1 >= 0 )
-                         {
-                             if ( songClone.Rows[j]["RES05"].ToString( ) == "送审" )
-                             {
-                                 if ( songClone.Rows[j + 1]["RES05"].ToString( ) == "驳回" )
-                                 {
-                                     remand = songClone.Rows[j + 1];
-                                     remands.ImportRow( remand );
-                                 }
-                             }
-                             else if ( songClone.Rows[j]["RES05"].ToString( ) == "驳回" )
-                             {
-                                 if ( songClone.Rows[j - 1]["RES05"].ToString( ) == "送审" )
-                                 {
-                                     remand = songClone.Rows[j - 1];
-                                     remands.ImportRow( remand );
-                                 }
-                             }
-                         }
-                         else if ( j + 1 < songClone.Rows.Count && j - 1 < 0 )
-                         {
-                             if ( songClone.Rows[j]["RES05"].ToString( ) == "送审" )
-                             {
-                                 if ( songClone.Rows[j + 1]["RES05"].ToString( ) == "驳回" )
-                                 {
-                                     remand = songClone.Rows[j + 1];
-                                     remands.ImportRow( remand );
-                                 }
-                             }
-                         }
-                         else if ( j == songClone.Rows.Count - 1 && j - 1 >= 0 )
-                         {
-                             if ( songClone.Rows[j]["RES05"].ToString( ) == "驳回" )
-                             {
-                                 if ( songClone.Rows[j - 1]["RES05"].ToString( ) == "送审" )
-                                 {
-                                     remand = songClone.Rows[j - 1];
-                                     remands.ImportRow( remand );
-                                 }
-                             }
-                         }
-                     }
-                 }
-             }
-             if ( remands != null && remands.Rows.Count > 0 )
-             {
-                 //rd.StartPosition = FormStartPosition.Manual;
-
-                 DataView dv = new DataView( remands );
-                 remands = dv.ToTable( true );
-                 //rd.textBox1.Text = Logins.username;
-             }
-         }
-          */
-            #endregion
-
-            //remands = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT A.RES01,B.CX02,C.DBA002,A.RES04,A.RES05,A.RES06,A.RES07 FROM R_REVIEWS A INNER JOIN R_MLLCXMC B ON A.RES01=B.CX01 INNER JOIN TPADBA C ON A.RES03=C.DBA001 INNER JOIN R_REVIEW D ON A.RES01=D.RE02 WHERE RES04 IN (SELECT MAX(RES04) FROM R_REVIEWS WHERE RES03!='" + Logins . number + "' GROUP BY RES01,RES06) AND RES06 NOT IN (SELECT RES06 FROM R_REVIEWS WHERE RES05='执行' AND RES08 IS NOT NULL) AND RES06 NOT IN (SELECT DISTINCT GZ29 FROM R_PQW WHERE GZ39='执行' AND GZ29 IS NOT NULL) AND RE01='" + Logins . number + "' ORDER BY RES01,CX02,DBA002,RES04,RES05,RES06,RES07" );
 
             if ( Logins . number . Equals ( "MLL-0001" ) )
-                remands = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT A.RES01,B.CX02,C.DBA002,A.RES04,A.RES05,A.RES06,A.RES07 FROM R_REVIEWS A INNER JOIN R_MLLCXMC B ON A.RES01=B.CX01 INNER JOIN TPADBA C ON A.RES03=C.DBA001 INNER JOIN R_REVIEW D ON A.RES01=D.RE02 INNER JOIN (SELECT MAX(RES04) RES04 FROM R_REVIEWS WHERE RES03!='" + Logins . number + "' GROUP BY RES01,RES06) E ON A.RES04=E.RES04 WHERE (SELECT COUNT(1) FROM R_REVIEWS B WHERE A.RES06=B.RES06 AND RES05='执行' )=0  AND (SELECT COUNT(1) FROM R_PQW B WHERE A.RES06=B.GZ29 AND GZ39='执行' AND GZ29 IS NOT NULL)=0 AND RE01='" + Logins . number + "' ORDER BY RES01,CX02,DBA002,A.RES04,RES05,RES06,RES07" );
+                //remands = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT A.RES01,B.CX02,C.DBA002,A.RES04,A.RES05,A.RES06,A.RES07 FROM R_REVIEWS A INNER JOIN R_MLLCXMC B ON A.RES01=B.CX01 INNER JOIN TPADBA C ON A.RES03=C.DBA001 INNER JOIN R_REVIEW D ON A.RES01=D.RE02 INNER JOIN (SELECT MAX(RES04) RES04 FROM R_REVIEWS WHERE RES03!='" + Logins . number + "' GROUP BY RES01,RES06) E ON A.RES04=E.RES04 WHERE (SELECT COUNT(1) FROM R_REVIEWS B WHERE A.RES06=B.RES06 AND RES05='执行' )=0  AND (SELECT COUNT(1) FROM R_PQW B WHERE A.RES06=B.GZ29 AND GZ39='执行' AND GZ29 IS NOT NULL)=0 AND RE01='" + Logins . number + "' ORDER BY RES01,CX02,DBA002,A.RES04,RES05,RES06,RES07" );
+                remands = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT A.RES01,B.CX02,C.DBA002,A.RES04,A.RES05,A.RES06,A.RES07 FROM R_REVIEWS A INNER JOIN R_MLLCXMC B ON A.RES01=B.CX01 INNER JOIN TPADBA C ON A.RES03=C.DBA001 INNER JOIN R_REVIEW D ON A.RES01=D.RE02 INNER JOIN (SELECT MAX(RES04) RES04 FROM R_REVIEWS  GROUP BY RES01,RES06) E ON A.RES04=E.RES04 WHERE (SELECT COUNT(1) FROM R_REVIEWS B WHERE A.RES06=B.RES06 AND RES05='执行' )=0  AND (SELECT COUNT(1) FROM R_PQW B WHERE A.RES06=B.GZ29 AND GZ39='执行' AND GZ29 IS NOT NULL)=0 AND RE01='" + Logins . number + "' ORDER BY RES01,CX02,DBA002,A.RES04,RES05,RES06,RES07" );
             else
                 remands = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT A.RES01,B.CX02,C.DBA002,A.RES04,A.RES05,A.RES06,A.RES07 FROM R_REVIEWS A INNER JOIN R_MLLCXMC B ON A.RES01=B.CX01 INNER JOIN TPADBA C ON A.RES03=C.DBA001 INNER JOIN R_REVIEW D ON A.RES01=D.RE02 INNER JOIN (SELECT MAX(RES04) RES04 FROM R_REVIEWS WHERE RES03!='" + Logins . number + "' GROUP BY RES01,RES06) E ON A.RES04=E.RES04 WHERE (SELECT COUNT(1) FROM R_REVIEWS B WHERE A.RES06=B.RES06 AND RES05='执行' AND RES08 IS NOT NULL )=0  AND (SELECT COUNT(1) FROM R_PQW B WHERE A.RES06=B.GZ29 AND GZ39='执行' AND GZ29 IS NOT NULL)=0 AND RE01='" + Logins . number + "' ORDER BY RES01,CX02,DBA002,A.RES04,RES05,RES06,RES07" );
 

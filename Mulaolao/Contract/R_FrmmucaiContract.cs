@@ -467,7 +467,10 @@ namespace Mulaolao.Contract
             {
                 fc.yesOrNoThrForOneOf( /*comboBox32.Text*/"" ,partInfo.Text ,/*comboBox3.Text + "*" +*/ comboBox4.Text ,textBox27 ,textBox33 ,textBox71.Text );
 
-                textBox28.Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbes( comboBox5 ,comboBox7 ,comboBox8 ,textBox71 ,comboBox1 ,textBox27 ) ) ,4 ).ToString( );
+                string str = textBox27 . Text;
+                if (!string.IsNullOrEmpty( str ) && Convert . ToDecimal ( str ) < Convert . ToDecimal ( 0.01 ) )
+                    str = 0 . ToString ( );
+                textBox28 .Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbes( comboBox5 ,comboBox7 ,comboBox8 ,textBox71 ,comboBox1 ,str ) ) ,4 ).ToString( );
 
                 textBox1.Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbes( comboBox5 ,comboBox7 ,comboBox8 ,textBox71 ,comboBox1 ) ) ,4 ).ToString( );
             }
@@ -483,7 +486,6 @@ namespace Mulaolao.Contract
                 textBox28.Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbes( comboBox5 ,comboBox7 ,comboBox8 ,textBox71 ,comboBox1 ) ) ,4 ).ToString( );
                 /*Thr * For * Fiv * One * Nin * Convert.ToDecimal( 0.000001 )*/
             }
-
         }
         void get ( )
         {
@@ -500,8 +502,10 @@ namespace Mulaolao.Contract
                 str = "0";
             else
                 str = del.Rows[0]["AC10"].ToString( );
-
-            textBox28 .Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbes( comboBox5 ,comboBox7 ,comboBox8 ,textBox71 ,comboBox1 ,textBox27 ) ) ,4 ).ToString( );
+            textBox27 . Text = str;
+            if ( Convert . ToDecimal ( str ) < Convert . ToDecimal ( 0.01 ) )
+                str = 0 . ToString ( );
+            textBox28 .Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTbes( comboBox5 ,comboBox7 ,comboBox8 ,textBox71 ,comboBox1 ,str ) ) ,4 ).ToString( );
         }
         //使用外购数量
         private void textBox28_KeyPress ( object sender ,KeyPressEventArgs e )

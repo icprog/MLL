@@ -772,6 +772,36 @@ namespace Mulaolao. Class
             return ( Thr * For * Fiv * One * Nin * Convert.ToDecimal( 0.000001 ) - Egi ).ToString( );
         }
 
+        public static string MultiTwoTbes ( ComboBox boxOne ,ComboBox boxTwo ,ComboBox boxTre ,TextBox boxFor ,ComboBox boxFiv,string boxSix )
+        {
+            if ( !string.IsNullOrEmpty( boxOne.Text ) )
+                Thr = Convert.ToDecimal( boxOne.Text );
+            else
+                Thr = 0;
+            if ( !string.IsNullOrEmpty( boxTwo.Text ) )
+                For = Convert.ToDecimal( boxTwo.Text );
+            else
+                For = 0;
+            if ( !string.IsNullOrEmpty( boxTre.Text ) )
+                Fiv = Convert.ToDecimal( boxTre.Text );
+            else
+                Fiv = 0;
+            if ( !string.IsNullOrEmpty( boxFor.Text ) )
+                One = Convert.ToInt64( boxFor.Text );
+            else
+                One = 0;
+            if ( !string.IsNullOrEmpty( boxFiv.Text ) )
+                Nin = Convert.ToInt32( boxFiv.Text );
+            else
+                Nin = 0;
+            if ( !string.IsNullOrEmpty( boxSix ) )
+                Egi = Convert.ToDecimal( boxSix );
+            else
+                Egi = 0;
+
+            return ( Thr * For * Fiv * One * Nin * Convert.ToDecimal( 0.000001 ) - Egi ).ToString( );
+        }
+
         /// <summary>
         /// 339  板算漆量
         /// </summary>

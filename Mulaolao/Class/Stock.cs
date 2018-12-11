@@ -2278,6 +2278,7 @@ namespace Mulaolao.Class
         /// <returns></returns>
         public bool check341And509 ( MulaolaoLibrary.MuCaiContractLibrary model )
         {
+            bool resultP = false;
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "select case when a='/' or a='\' then '0' else a end a from ( select right(a,LEN(a)-charindex('*',a)) a from ( SELECT right(GS08,len(GS08)-charindex('*',GS08)) a FROM R_PQP WHERE  GS70='R_341' AND GS01='{0}' AND GS02='{1}' AND GS07='{2}' ) a) a" ,model . PQV01 ,model . PQV86 ,model . PQV10 );
 
@@ -2286,14 +2287,18 @@ namespace Mulaolao.Class
                 return false;
             else
             {
-                string result = table . Rows [ 0 ] [ "a" ] . ToString ( );
-                if ( string . IsNullOrEmpty ( result ) )
-                    return false;
-                else if ( ( Convert . ToDecimal ( result ) - model . PQV73 ) != 0 )
-                    return false;
-                else
-                    return true;
+                foreach ( DataRow row in table . Rows )
+                {
+                    string result = row [ "a" ] . ToString ( );
+                    if ( ( Convert . ToDecimal ( result ) - model . PQV73 ) == 0 )
+                    {
+                        resultP= true;
+                        break;
+                    }
+                }
             }
+
+            return resultP;
         }
 
         /// <summary>
@@ -2303,6 +2308,7 @@ namespace Mulaolao.Class
         /// <returns></returns>
         public bool check342And509 ( MulaolaoLibrary . CheMuJianContractLibrary model )
         {
+            bool resultS = false;
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT GS08 FROM R_PQP WHERE  GS70='R_342' AND GS01='{0}' AND GS02='{1}' AND GS07='{2}' " ,model . AF002 ,model . AF084 ,model . AF015 );
 
@@ -2311,29 +2317,37 @@ namespace Mulaolao.Class
                 return false;
             else
             {
-                string result = table . Rows [ 0 ] [ "GS08" ] . ToString ( );
-                string code = string . Empty;
-                if ( string . IsNullOrEmpty ( result ) )
-                    return false;
-                else if ( result . Contains ( "Φ" ) )
+                foreach ( DataRow row in table . Rows )
                 {
-                    code = "Φ" + ( model . AF022 * 10 ) . ToString ( "0.####" ) +"*"+ ( model . AF020 * 10 ) . ToString ( "0.####" );
-                    if ( result . Equals ( code ) )
-                        return true;
+                    string result = row [ "GS08" ] . ToString ( );
+                    string code = string . Empty;
+                    if ( result . Contains ( "Φ" ) )
+                    {
+                        code = "Φ" + ( model . AF022 * 10 ) . ToString ( "0.####" ) + "*" + ( model . AF020 * 10 ) . ToString ( "0.####" );
+                        if ( result . Equals ( code ) )
+                        {
+                            resultS = true;
+                            break;
+                        }
+                    }
+                    else if ( !result . Contains ( "Φ" ) )
+                    {
+                        code = ( model . AF020 * 10 ) . ToString ( "0.####" ) + "*" + ( model . AF021 * 10 ) . ToString ( "0.####" ) + "*" + ( model . AF022 * 10 ) . ToString ( "0.####" );
+                        if ( result . Equals ( code ) )
+                        {
+                            resultS = true;
+                            break;
+                        }
+                    }
                     else
-                        return false;
+                    {
+                        resultS= true;
+                        break;
+                    }
                 }
-                else if ( !result . Contains ( "Φ" ) )
-                {
-                    code = ( model . AF020 * 10 ) . ToString ( "0.####" ) + "*" + ( model . AF021 * 10 ) . ToString ( "0.####" ) + "*" + ( model . AF022 * 10 ) . ToString ( "0.####" );
-                    if ( result . Equals ( code ) )
-                        return true;
-                    else
-                        return false;
-                }
-                else
-                    return true;
             }
+
+            return resultS;
         }
 
         /// <summary>
@@ -2343,6 +2357,9 @@ namespace Mulaolao.Class
         /// <returns></returns>
         public bool check343And509 ( MulaolaoLibrary . WuJinContractLibrary model )
         {
+            bool result = false;
+            string resultP;
+
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT GS08 FROM R_PQP WHERE GS70='R_343' AND GS01='{0}' AND GS07='{1}' " ,model . PQU01 ,model . PQU10 );
 
@@ -2351,14 +2368,17 @@ namespace Mulaolao.Class
                 return false;
             else
             {
-                string result = table . Rows [ 0 ] [ "GS08" ] . ToString ( );
-                if ( string . IsNullOrEmpty ( result ) )
-                    return false;
-                else if ( result . Equals ( model . PQU12 ) )
-                    return true;
-                else
-                    return false;
+                foreach ( DataRow row in table . Rows )
+                {
+                    resultP = row [ "GS08" ] . ToString ( );
+                    if ( resultP . Equals ( model . PQU12 ) )
+                    {
+                        result = true;
+                        break;
+                    }
+                }
             }
+            return result;
         }
 
         /// <summary>
@@ -2368,6 +2388,8 @@ namespace Mulaolao.Class
         /// <returns></returns>
         public bool check347And509 ( MulaolaoLibrary . SuLiaoBuQiContractLibrary model )
         {
+            bool result = false;
+            string resultP;
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT GS08 FROM R_PQP WHERE GS70='R_347' AND GS01='{0}' AND GS07='{1}' " ,model . PJ01 ,model . PJ09 );
 
@@ -2376,14 +2398,18 @@ namespace Mulaolao.Class
                 return false;
             else
             {
-                string result = table . Rows [ 0 ] [ "GS08" ] . ToString ( );
-                if ( string . IsNullOrEmpty ( result ) )
-                    return false;
-                else if ( result . Equals ( model . PJ89 ) )
-                    return true;
-                else
-                    return false;
+                foreach ( DataRow row in table . Rows )
+                {
+                    resultP = row [ "GS08" ] . ToString ( );
+                    if ( resultP . Equals ( model . PJ89 ) )
+                    {
+                        result= true;
+                        break;
+                    }
+                }
             }
+
+            return result;
         }
 
         /// <summary>
@@ -2393,6 +2419,8 @@ namespace Mulaolao.Class
         /// <returns></returns>
         public bool check349And509 ( MulaolaoLibrary . WaiXianContractLibrary model )
         {
+            bool result = false;
+            string resultW;
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT GS57 FROM R_PQP WHERE GS01='{0}' AND GS56='{1}' " ,model . WX01 ,model . WX10 );
 
@@ -2401,14 +2429,18 @@ namespace Mulaolao.Class
                 return false;
             else
             {
-                string result = table . Rows [ 0 ] [ "GS57" ] . ToString ( );
-                if ( string . IsNullOrEmpty ( result ) )
-                    return false;
-                else if ( result . Equals ( model . WX11 ) )
-                    return true;
-                else
-                    return false;
+                foreach ( DataRow row in table . Rows )
+                {
+                    resultW = row [ "GS57" ] . ToString ( );
+                    if ( resultW . Equals ( model . WX11 ) )
+                    {
+                        result = true;
+                        break;
+                    }
+                }
             }
+
+            return result;
         }
 
     }

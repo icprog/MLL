@@ -409,7 +409,7 @@ namespace MulaolaoBll . Dao
                 strSql . AppendFormat ( "UPDATE R_PQAF SET AF089='1' WHERE AF002='{0}'" ,num );
                 SQLString . Add ( strSql . ToString ( ) );
                 strSql = new StringBuilder ( );
-                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS07='{1}' AND GS08='{2}' " ,num ,row [ "GS02" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
+                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS02='{1}' AND GS08='{2}' " ,num ,row [ "GS02" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
                 SQLString . Add ( strSql . ToString ( ) );
             }
             if ( tab . Equals ( "R_343" ) )
@@ -417,7 +417,7 @@ namespace MulaolaoBll . Dao
                 strSql . AppendFormat ( "UPDATE R_PQU SET PQU115='1' WHERE PQU01='{0}'" ,num );
                 SQLString . Add ( strSql . ToString ( ) );
                 strSql = new StringBuilder ( );
-                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS07='{1}' AND GS08='{2}' " ,num ,row [ "GS02" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
+                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS02='{1}' AND GS08='{2}' " ,num ,row [ "GS02" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
                 SQLString . Add ( strSql . ToString ( ) );
             }
             if ( tab . Equals ( "R_347" ) )
@@ -425,7 +425,7 @@ namespace MulaolaoBll . Dao
                 strSql . AppendFormat ( "UPDATE R_PQS SET PJ109='1' WHERE PJ01='{0}'" ,num );
                 SQLString . Add ( strSql . ToString ( ) );
                 strSql = new StringBuilder ( );
-                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS07='{1}' AND GS08='{2}' " ,num ,row [ "GS02" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
+                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS02='{1}' AND GS08='{2}' " ,num ,row [ "GS02" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
                 SQLString . Add ( strSql . ToString ( ) );
             }
             if ( tab . Equals ( "R_349" ) )
@@ -433,7 +433,7 @@ namespace MulaolaoBll . Dao
                 strSql . AppendFormat ( "UPDATE R_PQT SET WX96='1' WHERE WX01='{0}'" ,num );
                 SQLString . Add ( strSql . ToString ( ) );
                 strSql = new StringBuilder ( );
-                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS56='{1}'" ,num ,row [ "GS02" ] . ToString ( ) );
+                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS56='{1}' AND GS57='{2}'" ,num ,row [ "GS71" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
                 SQLString . Add ( strSql . ToString ( ) );
             }
             //strSql . AppendFormat ( "UPDATE " );
