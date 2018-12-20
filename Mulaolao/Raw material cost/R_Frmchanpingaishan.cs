@@ -88,7 +88,41 @@ namespace Mulaolao.Raw_material_cost
             lookUpEdit9.Properties.DataSource = tpd.Copy( );
             lookUpEdit9.Properties.DisplayMember = "DBA002";
 
-            comboBox32 . Items . AddRange ( new string [ ] { "双瓦外箱" ,"小箱式" ,"牙膏式" ,"插口式" ,"折叠式" ,"天盖" ,"底盖" ,"单瓦楞纸卡" ,"双瓦楞纸卡","常规计算" } );
+            comboBox11 . Items . Add ( DicStr . plyWood );
+            comboBox11 . Items . Add ( DicStr . densityBoard );
+            comboBox11 . Items . Add ( DicStr . endProductOut );
+            comboBox11 . Items . Add ( DicStr . wood );
+            comboBox11 . Items . Add ( DicStr . vehicleParts );
+            comboBox11 . Items . Add ( DicStr . lronParts );
+            comboBox11 . Items . Add ( DicStr . plasticParts );
+            comboBox11 . Items . Add ( DicStr . otherMaterials );
+            comboBox11 . Items . Add ( DicStr . packAccess );
+            comboBox11 . Items . Add ( DicStr . outBox );
+            comboBox11 . Items . Add ( DicStr . tundish );
+            comboBox11 . Items . Add ( DicStr . innerBox );
+            comboBox11 . Items . Add ( DicStr . giftBox );
+            comboBox11 . Items . Add ( DicStr . inject );
+            comboBox11 . Items . Add ( DicStr . oilRoller );
+            comboBox11 . Items . Add ( DicStr . production );
+            comboBox11 . Items . Add ( DicStr . other );
+
+            comboBox13 . Items . Add ( DicStr . qdgz );
+            comboBox13 . Items . Add ( DicStr . hdgz );
+            comboBox13 . Items . Add ( DicStr . jygz );
+            comboBox13 . Items . Add ( DicStr . bzgz );
+            comboBox13 . Items . Add ( DicStr . clgz );
+            comboBox13 . Items . Add ( DicStr . gq );
+            comboBox13 . Items . Add ( DicStr . pq );
+
+            txtGS52 . Items . Add ( DicStr . zx );
+            txtGS56 . Items . Add ( DicStr . zydl );
+
+            txtGS77 . Items . Add ( DicStr . zyf );
+            txtGS77 . Items . Add ( DicStr . tgf );
+            txtGS77 . Items . Add ( DicStr . dlf );
+            txtGS77 . Items . Add ( DicStr . jcf );
+            txtGS77 . Items . Add ( DicStr . qtfy );
+
         }
 
         #region 打印  导出
@@ -254,10 +288,10 @@ namespace Mulaolao.Raw_material_cost
                 ddl = SqlHelper.ExecuteDataTable( "SELECT idx,GS02,GS49,GS51,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02 ) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS70,GS71,GS02,GS07 " ,new SqlParameter( "@GS34" ,_model . GS34 ) );//ASC,REVERSE(GS07) ASC
                 gridControl1 .DataSource = ddl;
 
-                ddk = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74 FROM R_PQP WHERE GS35 IS NOT NULL AND GS35!='' AND GS34=@GS34 ORDER BY REVERSE(GS35) ASC" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
+                ddk = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74,GS75,GS76 FROM R_PQP WHERE GS35 IS NOT NULL AND GS35!='' AND GS34=@GS34 ORDER BY REVERSE(GS35) ASC" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
                 gridControl2.DataSource = ddk;
 
-                ddp = SqlHelper.ExecuteDataTable( "SELECT idx,GS52,GS49,GS61,GS53,GS54,GS56,GS57,GS58,GS59,GS60,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,D.U11 FROM R_PQP A, (SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D WHERE A.GS52 = D.U0 AND GS34 = @GS34 AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52 ASC,REVERSE(GS56) ASC" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
+                ddp = SqlHelper.ExecuteDataTable( "SELECT idx,GS52,GS49,GS61,GS53,GS54,GS56,GS57,GS58,GS59,GS60,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,GS77,(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,D.U11 FROM R_PQP A, (SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D WHERE A.GS52 = D.U0 AND GS34 = @GS34 AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52 ASC,REVERSE(GS56) ASC" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
                 gridControl3.DataSource = ddp;
 
             }
@@ -357,8 +391,8 @@ namespace Mulaolao.Raw_material_cost
             DataTable dlo = SqlHelper.ExecuteDataTable( "SELECT GS35,GS36,GS37,GS38,GS39,GS72 FROM R_PQP WHERE GS48=@GS48" ,new SqlParameter( "@GS48" ,_model . GS48 ) );
             //工段
             //DataTable workshop = dlo.DefaultView.ToTable( true ,"GS35" );
-            comboBox12.DataSource = dlo.DefaultView.ToTable( true ,"GS35" );
-            comboBox12.DisplayMember = "GS35";
+            //comboBox12.DataSource = dlo.DefaultView.ToTable( true ,"GS35" );
+            //comboBox12.DisplayMember = "GS35";
             //原单价
             //DataTable unitCost = dlo.DefaultView.ToTable( true ,"GS36" );
             comboBox24 .DataSource = dlo.DefaultView.ToTable( true ,"GS36" );
@@ -377,8 +411,8 @@ namespace Mulaolao.Raw_material_cost
             comboBox17.DisplayMember = "GS39";
             //046工序
             //DataTable commission = dlo.DefaultView.ToTable( true ,"GS39" );
-            comboBox13 . DataSource = dlo . DefaultView . ToTable ( true ,"GS72" );
-            comboBox13 . DisplayMember = "GS72";
+            //comboBox13 . DataSource = dlo . DefaultView . ToTable ( true ,"GS72" );
+            //comboBox13 . DisplayMember = "GS72";
         }
         void materialScience ( )
         {
@@ -390,8 +424,8 @@ namespace Mulaolao.Raw_material_cost
             //材料
             //DataTable cz = bg.DefaultView.ToTable( true ,"GS02" );
             //DataTable cz = SqlHelper.ExecuteDataTable( "SELECT DISTINCT GS02 FROM R_PQP" );
-            comboBox3.DataSource = bg . DefaultView . ToTable ( true ,"GS02" );
-            comboBox3 . DisplayMember = "GS02";
+            //comboBox3.DataSource = bg . DefaultView . ToTable ( true ,"GS02" );
+            //comboBox3 . DisplayMember = "GS02";
             //comboBox3 . Properties . DisplayMember = "GS02";
             //comboBox3 . Properties . ValueMember = "GS02";
             //原单价
@@ -417,8 +451,8 @@ namespace Mulaolao.Raw_material_cost
             //规格
             //DataTable gg = bg.DefaultView.ToTable( true ,"GS08" );
             //DataTable gg = SqlHelper.ExecuteDataTable( "SELECT DISTINCT GS08 FROM R_PQP" );
-            comboBox7 . DataSource = bg . DefaultView . ToTable ( true ,"GS08" );
-            comboBox7 . DisplayMember = "GS08";
+            //comboBox7 . DataSource = bg . DefaultView . ToTable ( true ,"GS08" );
+            //comboBox7 . DisplayMember = "GS08";
             //单位
             //DataTable dw = bg.DefaultView.ToTable( true ,"GS09" );
             comboBox8 . DataSource = bg . DefaultView . ToTable ( true ,"GS09" );
@@ -444,8 +478,8 @@ namespace Mulaolao.Raw_material_cost
                 access.Merge( add );
             //辅料 
             //DataTable acc = access.DefaultView.ToTable( true ,"GS52" );
-            comboBox14.DataSource = access.DefaultView.ToTable( true ,"GS52" );
-            comboBox14.DisplayMember = "GS52";
+            //txtGS52.DataSource = access.DefaultView.ToTable( true ,"GS52" );
+            //txtGS52.DisplayMember = "GS52";
             //零件名称 
             //DataTable partName = access.DefaultView.ToTable( true ,"GS56" );
             //comboBox32.DataSource = access.DefaultView.ToTable( true ,"GS56" );
@@ -586,10 +620,10 @@ namespace Mulaolao.Raw_material_cost
         }
         private void comboBox2_LostFocus ( object sender ,EventArgs e )
         {
-            if ( comboBox2.Text != "" && !DateDayRegise.sevenFour( comboBox2 ) )
+            if ( comboBox2.Text != "" && !DateDayRegise. elevenSixNumber ( comboBox2 ) )
             {
                 this.comboBox2.Text = "";
-                MessageBox.Show( "只允许输入整数部分最三位,小数部分最多四位,如999.9999,请重新输入" );
+                MessageBox.Show( "只允许输入整数部分最五位,小数部分最多六位,如99999.999999,请重新输入" );
             }
         }
         //采购零件单价
@@ -788,7 +822,7 @@ namespace Mulaolao.Raw_material_cost
             }
         }
         //工段
-        string gs035 = "";
+        string gs035 = "",gs075="",gs076="";
         private void gridView2_RowClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowClickEventArgs e )
         {
             DataRow row = gridView2 . GetFocusedDataRow ( );
@@ -809,7 +843,11 @@ namespace Mulaolao.Raw_material_cost
                     datatimepickeroverride1 . Value = Convert . ToDateTime ( row [ "GS45" ] . ToString ( ) );
                 else
                     datatimepickeroverride1 . Value = DateTime . Now;
+                txtGS75 . Text = row [ "GS75" ] . ToString ( );
+                txtGS76 . Text = row [ "GS76" ] . ToString ( );
                 gs035 = comboBox12 . Text;
+                gs075 = txtGS75 . Text;
+                gs076 = txtGS76 . Text;
                 _model . idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] . ToString ( ) );
             }
         }
@@ -821,10 +859,11 @@ namespace Mulaolao.Raw_material_cost
             DataRow row = gridView3 . GetFocusedDataRow ( );
             if ( row != null )
             {
-                comboBox14 . Text = row [ "GS52" ] . ToString ( );
+                txtGS52 . Text = row [ "GS52" ] . ToString ( );
                 comboBox34 . Text = row [ "GS53" ] . ToString ( );
                 comboBox33 . Text = row [ "GS54" ] . ToString ( );
-                comboBox32 . Text = row [ "GS56" ] . ToString ( );
+                txtGS56 . Text = row [ "GS56" ] . ToString ( );
+                txtGS77 . Text = row [ "GS77" ] . ToString ( );
                 comboBox15 . Text = row [ "GS57" ] . ToString ( );
                 comboBox30 . Text = row [ "GS58" ] . ToString ( );
                 comboBox29 . Text = row [ "GS59" ] . ToString ( );
@@ -843,8 +882,8 @@ namespace Mulaolao.Raw_material_cost
                 textBox18 . Text = row [ "DGA003" ] . ToString ( );
                 textBox17 . Text = row [ "DGA011" ] . ToString ( );
                _model. GS68 = gridView3 . GetFocusedRowCellValue ( "GS68" ) . ToString ( );
-                gs052 = comboBox14 . Text;
-                gs056 = comboBox32 . Text;
+                gs052 = txtGS52 . Text;
+                gs056 = txtGS56 . Text;
                 gs068 = _model . GS68;
                 gs057 = comboBox15 . Text;
                 _model . idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] . ToString ( ) );
@@ -942,59 +981,277 @@ namespace Mulaolao.Raw_material_cost
         }
         private void comboBox11_SelectedValueChanged ( object sender ,EventArgs e )
         {
+            comboBox3 . Items . Clear ( );
+            comboBox5 . Items . Clear ( );
             switch ( comboBox11 . Text )
             {
-                case "成品委外":
-                comboBox5 . Text = "R_199";
-                break;
-                //case "热转印":
-                //comboBox5 . Text = "R_196";
-                //break;
-                //case "装运.代理":
-                //comboBox5 . Text = "R_243";
-                //break;
                 case "胶合板":
-                comboBox5 . Text = "R_338";
+                comboBox5 . Items . Add ( DicStr . r338 );
+                comboBox5 . Text = DicStr . r338;
+                comboBox3 . Items . Add ( DicStr . dmb );
+                comboBox3 . Items . Add ( DicStr . ymb );
+                comboBox3 . Items . Add ( DicStr . hmb );
+                comboBox3 . Items . Add ( DicStr . zmb );
+                comboBox3 . Text = DicStr . dmb;
                 break;
                 case "密度板":
-                comboBox5 . Text = "R_338";
+                comboBox5 . Items . Add ( DicStr . r338 );
+                comboBox5 . Text = DicStr . r338;
+                comboBox3 . Items . Add ( DicStr . densityBoard );
+                comboBox3 . Text = DicStr . densityBoard;
+                break;
+                case "成品委外":
+                comboBox5 . Items . Add ( DicStr . r199 );
+                comboBox5 . Text = DicStr . r199;
+                comboBox3 . Items . Add ( DicStr . endProductOut );
+                comboBox3 . Text = DicStr . endProductOut;
                 break;
                 case "木材":
-                comboBox5 . Text = "R_341";
+                comboBox5 . Items . Add ( DicStr . r341 );
+                comboBox5 . Text = DicStr . r341;
+                comboBox3 . Items . Add ( DicStr . jm );
+                comboBox3 . Items . Add ( DicStr . hm );
+                comboBox3 . Items . Add ( DicStr . ym );
+                comboBox3 . Items . Add ( DicStr . xjm );
+                comboBox3 . Items . Add ( DicStr . huam );
+                comboBox3 . Items . Add ( DicStr . dm );
+                comboBox3 . Items . Add ( DicStr . bds );
+                comboBox3 . Items . Add ( DicStr . xxls );
+                comboBox3 . Items . Add ( DicStr . zam );
+                comboBox3 . Items . Add ( DicStr . pjb );
+                comboBox3 . Text = DicStr . jm;
                 break;
                 case "车木件":
-                comboBox5 . Text = "R_342";
-                break;
-                case "白坯委外":
-                comboBox5 . Text = "R_342";
+                comboBox5 . Items . Add ( DicStr . r342 );
+                comboBox5 . Text = DicStr . r342;
+                comboBox3 . Items . Add ( DicStr . zq );
+                comboBox3 . Items . Add ( DicStr . jm );
+                comboBox3 . Items . Add ( DicStr . hm );
+                comboBox3 . Items . Add ( DicStr . ym );
+                comboBox3 . Items . Add ( DicStr . xjm );
+                comboBox3 . Items . Add ( DicStr . sm );
+                comboBox3 . Items . Add ( DicStr . zam );
+                comboBox3 . Text = DicStr . zq;
                 break;
                 case "铁件":
-                comboBox5 . Text = "R_343";
+                comboBox5 . Items . Add ( DicStr . r343 );
+                comboBox5 . Text = DicStr . r343;
+                comboBox3 . Items . Add ( DicStr . lronParts );
+                comboBox3 . Text = DicStr . lronParts;
                 break;
                 case "塑料件":
-                comboBox5 . Text = "R_347";
+                comboBox5 . Items . Add ( DicStr . r347 );
+                comboBox5 . Text = DicStr . r347;
+                comboBox3 . Items . Add ( DicStr . plasticParts );
+                comboBox3 . Text = DicStr . plasticParts;
                 break;
                 case "其它材料":
-                comboBox5 . Text = "R_347";
+                comboBox5 . Items . Add ( DicStr . r347 );
+                comboBox5 . Text = DicStr . r347;
+                comboBox3 . Items . Add ( DicStr . otherMaterials );
+                comboBox3 . Text = DicStr . otherMaterials;
                 break;
-                //case "喷漆工资":
-                //comboBox5 . Text = "R_519.495";
-                //break;
-                //case "油漆款":
-                //comboBox5 . Text = "R_519.339";
-                //break;
-                //case "滚漆款":
-                //comboBox5 . Text = "R_519.344";
-                //break;
-                case "包装材料":
-                comboBox5 . Text = "R_349.347";
+                case "包装辅料":
+                comboBox5 . Items . Add ( DicStr . r347 );
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r347;
+                comboBox3 . Items . Add ( DicStr . packAccess );
+                comboBox3 . Text = DicStr . packAccess;
+                break;
+                case "外箱":
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r349;
+                comboBox3 . Items . Add ( DicStr . swwx );
+                comboBox3 . Items . Add ( DicStr . xxs );
+                comboBox3 . Items . Add ( DicStr . ygs );
+                comboBox3 . Items . Add ( DicStr . cks );
+                comboBox3 . Items . Add ( DicStr . zds );
+                comboBox3 . Items . Add ( DicStr . tg );
+                comboBox3 . Items . Add ( DicStr . dg );
+                comboBox3 . Items . Add ( DicStr . cgjs );
+                comboBox3 . Items . Add ( DicStr . dwlzk );
+                comboBox3 . Items . Add ( DicStr . swlzk );
+                comboBox3 . Text = DicStr . swwx;
+                break;
+                case "中包":
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r349;
+                comboBox3 . Items . Add ( DicStr . swwx );
+                comboBox3 . Items . Add ( DicStr . xxs );
+                comboBox3 . Items . Add ( DicStr . ygs );
+                comboBox3 . Items . Add ( DicStr . cks );
+                comboBox3 . Items . Add ( DicStr . zds );
+                comboBox3 . Items . Add ( DicStr . tg );
+                comboBox3 . Items . Add ( DicStr . dg );
+                comboBox3 . Items . Add ( DicStr . cgjs );
+                comboBox3 . Items . Add ( DicStr . dwlzk );
+                comboBox3 . Items . Add ( DicStr . swlzk );
+                comboBox3 . Text = DicStr . swwx;
+                break;
+                case "内盒":
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r349;
+                comboBox3 . Items . Add ( DicStr . swwx );
+                comboBox3 . Items . Add ( DicStr . xxs );
+                comboBox3 . Items . Add ( DicStr . ygs );
+                comboBox3 . Items . Add ( DicStr . cks );
+                comboBox3 . Items . Add ( DicStr . zds );
+                comboBox3 . Items . Add ( DicStr . tg );
+                comboBox3 . Items . Add ( DicStr . dg );
+                comboBox3 . Items . Add ( DicStr . cgjs );
+                comboBox3 . Items . Add ( DicStr . dwlzk );
+                comboBox3 . Items . Add ( DicStr . swlzk );
+                comboBox3 . Text = DicStr . swwx;
+                break;
+                case "彩盒":
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r349;
+                comboBox3 . Items . Add ( DicStr . swwx );
+                comboBox3 . Items . Add ( DicStr . xxs );
+                comboBox3 . Items . Add ( DicStr . ygs );
+                comboBox3 . Items . Add ( DicStr . cks );
+                comboBox3 . Items . Add ( DicStr . zds );
+                comboBox3 . Items . Add ( DicStr . tg );
+                comboBox3 . Items . Add ( DicStr . dg );
+                comboBox3 . Items . Add ( DicStr . cgjs );
+                comboBox3 . Items . Add ( DicStr . dwlzk );
+                comboBox3 . Items . Add ( DicStr . swlzk );
+                comboBox3 . Text = DicStr . swwx;
+                break;
+                case "喷油漆":
+                comboBox5 . Items . Add ( DicStr . r339 );
+                comboBox5 . Text = DicStr . r339;
+                comboBox3 . Items . Add ( DicStr . sxq );
+                comboBox3 . Items . Add ( DicStr . xjq );
+                comboBox3 . Text = DicStr . sxq;
+                break;
+                case "滚油漆":
+                comboBox5 . Items . Add ( DicStr . r339 );
+                comboBox5 . Text = DicStr . r339;
+                comboBox3 . Items . Add ( DicStr . sxq );
+                comboBox3 . Items . Add ( DicStr . xjq );
+                comboBox3 . Text = DicStr . sxq;
                 break;
                 case "生产":
-                comboBox5 . Text = "生产";
+                comboBox5 . Items . Add ( DicStr . production );
+                comboBox5 . Text = DicStr . production;
+                comboBox3 . Items . Add ( DicStr . production );
+                comboBox3 . Text = DicStr . production;
                 break;
                 case "/":
-                comboBox5 . Text = "/";
+                comboBox5 . Items . Add ( DicStr . other );
+                comboBox5 . Text = DicStr . other;
+                comboBox3 . Items . Add ( DicStr . other );
+                comboBox3 . Text = DicStr . other;
                 break;
+            }
+        }
+        private void comboBox5_TextChanged ( object sender ,EventArgs e )
+        {
+            if ( comboBox5 . Text . Equals ( DicStr . r349 ) )
+            {
+                comboBox3 . Items . Clear ( );
+                comboBox3 . Items . Add ( DicStr . swwx );
+                comboBox3 . Items . Add ( DicStr . xxs );
+                comboBox3 . Items . Add ( DicStr . ygs );
+                comboBox3 . Items . Add ( DicStr . cks );
+                comboBox3 . Items . Add ( DicStr . zds );
+                comboBox3 . Items . Add ( DicStr . tg );
+                comboBox3 . Items . Add ( DicStr . dg );
+                comboBox3 . Items . Add ( DicStr . cgjs );
+                comboBox3 . Items . Add ( DicStr . dwlzk );
+                comboBox3 . Items . Add ( DicStr . swlzk );
+                comboBox3 . Text = DicStr . swwx;
+            }
+            if ( comboBox5 . Text . Equals ( DicStr . r347 ) )
+            {
+                comboBox3 . Items . Clear ( );
+                comboBox3 . Items . Add ( DicStr . packAccess );
+                comboBox3 . Text = DicStr . packAccess;
+            }
+        }
+        private void comboBox13_SelectedValueChanged ( object sender ,EventArgs e )
+        {
+            comboBox21 . Items . Clear ( );
+            comboBox12 . Items . Clear ( );
+            switch ( comboBox13 . Text )
+            {
+                case "前道工资":
+                comboBox21 . Items . Add ( DicStr . r317 );
+                comboBox12 . Items . Add ( DicStr . qdgz );
+                comboBox21 . Text = DicStr . r317;
+                comboBox12 . Text = DicStr . qdgz;
+                break;
+                case "后道工资":
+                comboBox21 . Items . Add ( DicStr . r317 );
+                comboBox12 . Items . Add ( DicStr . hdgz );
+                comboBox21 . Text = DicStr . r317;
+                comboBox12 . Text = DicStr . hdgz;
+                break;
+                case "检验工资":
+                comboBox21 . Items . Add ( DicStr . r317 );
+                comboBox12 . Items . Add ( DicStr . jygz );
+                comboBox21 . Text = DicStr . r317;
+                comboBox12 . Text = DicStr . jygz;
+                break;
+                case "包装工资":
+                comboBox21 . Items . Add ( DicStr . r317 );
+                comboBox12 . Items . Add ( DicStr . bzgz );
+                comboBox21 . Text = DicStr . r317;
+                comboBox12 . Text = DicStr . bzgz;
+                break;
+                case "承揽工资":
+                comboBox12 . Items . Add ( DicStr . rj );
+                comboBox12 . Items . Add ( DicStr . dk );
+                comboBox12 . Items . Add ( DicStr . csp );
+                comboBox12 . Items . Add ( DicStr . cy );
+                comboBox12 . Items . Add ( DicStr . sgjq );
+                comboBox12 . Text = DicStr . rj;
+                comboBox21 . Items . Add ( DicStr . r195 );
+                comboBox21 . Items . Add ( DicStr . r196 );
+                comboBox21 . Items . Add ( DicStr . r505 );
+                comboBox21 . Text = DicStr . r195;
+                break;
+                case "滚漆":
+                comboBox21 . Items . Add ( DicStr . r344 );
+                comboBox12 . Items . Add ( DicStr . gz );
+                comboBox21 . Text = DicStr . r344;
+                comboBox12 . Text = DicStr . gz;
+                break;
+                case "喷漆":
+                comboBox21 . Items . Add ( DicStr . r495 );
+                comboBox12 . Items . Add ( DicStr . pq );
+                comboBox21 . Text = DicStr . r495;
+                comboBox12 . Text = DicStr . pq;
+                break;
+            }
+        }
+        private void comboBox21_TextChanged ( object sender ,EventArgs e )
+        {
+            if ( comboBox21 . Text . Equals ( DicStr . r195 ) )
+            {
+                comboBox12 . Items . Clear ( );
+                comboBox12 . Items . Add ( DicStr . rj );
+                comboBox12 . Items . Add ( DicStr . dk );
+                comboBox12 . Items . Add ( DicStr . csp );
+                comboBox12 . Items . Add ( DicStr . cy );
+                comboBox12 . Items . Add ( DicStr . sgjq );
+                comboBox12 . Text = DicStr . rj;
+            }else if ( comboBox21 . Text . Equals ( DicStr . r196 ) )
+            {
+                comboBox12 . Items . Clear ( );
+                comboBox12 . Items . Add ( DicStr . sy );
+                comboBox12 . Items . Add ( DicStr . zty );
+                comboBox12 . Items . Add ( DicStr . yy );
+                comboBox12 . Items . Add ( DicStr . rzy );
+                comboBox12 . Items . Add ( DicStr . ty );
+                comboBox12 . Text = DicStr . sy;
+            }
+            else if ( comboBox21 . Text . Equals ( DicStr . r505 ) )
+            {
+                comboBox12 . Items . Clear ( );
+                comboBox12 . Items . Add ( DicStr . jl );
+                comboBox12 . Text = DicStr . jl;
             }
         }
         #endregion
@@ -1365,11 +1622,7 @@ namespace Mulaolao.Raw_material_cost
         #endregion
 
         #region 表格
-        //string GS2 = "", GS7 = "", GS8 = "", GS9 = "", GS014 = "", GS015 = "", GS016 = "", GS017 = "", GS018 = "", , GS035 = "", GS038 = "", GS040 = "", GS041 = "", GS042 = "", GS043 = "", GS044 = "", GS052 = "", GS056 = "", GS057 = "", GS058 = "", GS062 = "", GS063 = "", GS064 = "", GS065 = "", GS066 = "", GS068 = "", ,GS070="",GS071="";
         string DGA3 = "", DGA11 = "",D3 = "", D11 = "";
-        //decimal GS4 = 0M, GS5 = 0M, GS6 = 0M, GS011 = 0M, GS036 = 0M, GS037 = 0M, GS051 = 0M, GS053 = 0M, GS054 = 0M, GS055 = 0M, GS060 = 0M, GS061 = 0M, GS010 = 0M;
-        //int  GS013 = 0, GS039 = 0, GS059 = 0, GS069 = 0;
-        //DateTime GS019 = MulaolaoBll . Drity . GetDt ( ), GS045 = MulaolaoBll . Drity . GetDt ( ), GS067 = MulaolaoBll . Drity . GetDt ( );
 
         #region  材料
         //新建
@@ -1428,7 +1681,7 @@ namespace Mulaolao.Raw_material_cost
             }
             if ( string . IsNullOrEmpty ( comboBox3 . Text ) )
             {
-                MessageBox . Show ( "请填写材料" );
+                MessageBox . Show ( "请选择部件" );
                 return;
             }
             if ( string . IsNullOrEmpty ( comboBox6 . Text ) )
@@ -1438,11 +1691,9 @@ namespace Mulaolao.Raw_material_cost
             }
             build ( );
 
-            //DataTable dsr = SqlHelper . ExecuteDataTable ( "SELECT * FROM R_PQP WHERE GS34=@GS34 AND GS02=@GS02 AND GS07=@GS07 AND GS20=@GS20" ,new SqlParameter ( "@GS34" ,GS34 ) ,new SqlParameter ( "@GS02" ,GS2 ) ,new SqlParameter ( "@GS07" ,GS7 ) ,new SqlParameter ( "@GS20" ,GS020 ) );
             result = bll . Exists ( _model );
             if ( result==false )
             {
-                //int count = SqlHelper . ExecuteNonQuery ( "INSERT INTO R_PQP (GS34,GS02,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,GS49,GS51,GS70,GS71) VALUES (@GS34,@GS02,@GS04,@GS05,@GS07,@GS08,@GS09,@GS10,@GS11,@GS13,@GS14,@GS15,@GS16,@GS17,@GS18,@GS19,@GS20,@GS49,@GS51,@GS70,@GS71)" ,new SqlParameter ( "@GS34" ,GS34 ) ,new SqlParameter ( "@GS02" ,GS2 ) ,new SqlParameter ( "@GS04" ,GS4 ) ,new SqlParameter ( "@GS05" ,GS5 ) ,new SqlParameter ( "@GS07" ,GS7 ) ,new SqlParameter ( "@GS08" ,GS8 ) ,new SqlParameter ( "@GS09" ,GS9 ) ,new SqlParameter ( "@GS10" ,GS010 ) ,new SqlParameter ( "@GS11" ,GS011 ) ,new SqlParameter ( "@GS13" ,GS013 ) ,new SqlParameter ( "@GS14" ,GS014 ) ,new SqlParameter ( "@GS15" ,GS015 ) ,new SqlParameter ( "@GS16" ,GS016 ) ,new SqlParameter ( "@GS17" ,GS017 ) ,new SqlParameter ( "@GS18" ,GS018 ) ,new SqlParameter ( "@GS19" ,GS019 ) ,new SqlParameter ( "@GS20" ,GS020 ) ,new SqlParameter ( "@GS49" ,GS049 ) ,new SqlParameter ( "@GS51" ,GS051 ) ,new SqlParameter ( "@GS70" ,GS070 ) ,new SqlParameter ( "@GS71" ,GS071 ) );      if ( bll . ExistsNum ( _model ) )
                 if ( bll . ExistsNum ( _model ) )
                 {
                     MessageBox . Show ( "流水号:" + _model . GS01 + "已经存在，不允许保存" );
@@ -1498,60 +1749,31 @@ namespace Mulaolao.Raw_material_cost
         {
             int num = gridView1 . FocusedRowHandle;
             DataRow row;
-            //if ( sads == "1" )
-            //{
-            //    row = dde . Rows [ num ];
-            //    row . BeginEdit ( );
-            //    row [ "GS02" ] = _model . GS02;
-            //    row [ "GS49" ] = _model . GS49;
-            //    row [ "GS04" ] = _model . GS04;
-            //    row [ "GS05" ] = _model . GS05;
-            //    row [ "GS07" ] = _model . GS07;
-            //    row [ "GS08" ] = _model . GS08;
-            //    row [ "GS09" ] = _model . GS09;
-            //    row [ "GS10" ] = _model . GS10;
-            //    row [ "GS11" ] = _model . GS11;
-            //    row [ "GS13" ] = _model . GS13;
-            //    row [ "GS14" ] = _model . GS14;
-            //    row [ "GS15" ] = _model . GS15;
-            //    row [ "GS16" ] = _model . GS16;
-            //    row [ "GS17" ] = _model . GS17;
-            //    row [ "GS18" ] = _model . GS18;
-            //    row [ "GS19" ] = _model . GS19;
-            //    row [ "GS51" ] = _model . GS51;
-            //    row [ "GS70" ] = _model . GS70;
-            //    row [ "GS71" ] = _model . GS71;
-            //    row [ "DGA003" ] = DGA3;
-            //    row [ "DGA011" ] = DGA11;
-            //    row . EndEdit ( );
-            //}
-            //else if ( sads == "2" )
-            //{
-                row = ddl . Rows [ num ];
-                row . BeginEdit ( );
-                row [ "GS02" ] = _model . GS02;
-                row [ "GS49" ] = _model . GS49;
-                row [ "GS04" ] = _model . GS04;
-                row [ "GS05" ] = _model . GS05;
-                row [ "GS07" ] = _model . GS07;
-                row [ "GS08" ] = _model . GS08;
-                row [ "GS09" ] = _model . GS09;
-                row [ "GS10" ] = _model . GS10;
-                row [ "GS11" ] = _model . GS11;
-                row [ "GS13" ] = _model . GS13;
-                row [ "GS14" ] = _model . GS14;
-                row [ "GS15" ] = _model . GS15;
-                row [ "GS16" ] = _model . GS16;
-                row [ "GS17" ] = _model . GS17;
-                row [ "GS18" ] = _model . GS18;
-                row [ "GS19" ] = _model . GS19;
-                row [ "GS51" ] = _model . GS51;
-                row [ "GS70" ] = _model . GS70;
-                row [ "GS71" ] = _model . GS71;
-                row [ "DGA003" ] = DGA3;
-                row [ "DGA011" ] = DGA11;
-                row . EndEdit ( );
-            //}
+
+            row = ddl . Rows [ num ];
+            row . BeginEdit ( );
+            row [ "GS02" ] = _model . GS02;
+            row [ "GS49" ] = _model . GS49;
+            row [ "GS04" ] = _model . GS04;
+            row [ "GS05" ] = _model . GS05;
+            row [ "GS07" ] = _model . GS07;
+            row [ "GS08" ] = _model . GS08;
+            row [ "GS09" ] = _model . GS09;
+            row [ "GS10" ] = _model . GS10;
+            row [ "GS11" ] = _model . GS11;
+            row [ "GS13" ] = _model . GS13;
+            row [ "GS14" ] = _model . GS14;
+            row [ "GS15" ] = _model . GS15;
+            row [ "GS16" ] = _model . GS16;
+            row [ "GS17" ] = _model . GS17;
+            row [ "GS18" ] = _model . GS18;
+            row [ "GS19" ] = _model . GS19;
+            row [ "GS51" ] = _model . GS51;
+            row [ "GS70" ] = _model . GS70;
+            row [ "GS71" ] = _model . GS71;
+            row [ "DGA003" ] = DGA3;
+            row [ "DGA011" ] = DGA11;
+            row . EndEdit ( );
 
             materialScience ( );
         }
@@ -1581,12 +1803,6 @@ namespace Mulaolao.Raw_material_cost
 
             if ( _model . GS02 == GS002 && _model . GS07 == GS007 && _model . GS20 == GS200  && _model.GS08==GS008)
             {
-                //GS34=@GS34 AND  AND  AND 
-                //,new SqlParameter( "@GS34" ,GS34 ) 
-                //
-                //
-                //
-                //int count = SqlHelper . ExecuteNonQuery ( "UPDATE R_PQP SET GS02=@GS2,GS04=@GS04,GS05=@GS05,GS07=@GS7,GS08=@GS08,GS09=@GS09,GS10=@GS10,GS11=@GS11,GS13=@GS13,GS14=@GS14,GS15=@GS15,GS16=@GS16,GS17=@GS17,GS18=@GS18,GS19=@GS19,GS20=@GS20,GS51=@GS51,GS70=@GS70,GS71=@GS71 WHERE idx=@idx" ,new SqlParameter ( "@GS02" ,GS2 ) ,new SqlParameter ( "@GS04" ,GS4 ) ,new SqlParameter ( "@GS05" ,GS5 ) ,new SqlParameter ( "@GS07" ,GS7 ) ,new SqlParameter ( "@GS08" ,GS8 ) ,new SqlParameter ( "@GS09" ,GS9 ) ,new SqlParameter ( "@GS10" ,GS010 ) ,new SqlParameter ( "@GS11" ,GS011 ) ,new SqlParameter ( "@GS13" ,GS013 ) ,new SqlParameter ( "@GS14" ,GS014 ) ,new SqlParameter ( "@GS15" ,GS015 ) ,new SqlParameter ( "@GS16" ,GS016 ) ,new SqlParameter ( "@GS17" ,GS017 ) ,new SqlParameter ( "@GS18" ,GS018 ) ,new SqlParameter ( "@GS19" ,GS019 ) ,new SqlParameter ( "@GS51" ,GS051 ) ,new SqlParameter ( "@idx" ,idxOne ) ,new SqlParameter ( "@GS2" ,GS002 ) ,new SqlParameter ( "@GS7" ,GS007 ) ,new SqlParameter ( "@GS20" ,GS020 ) ,new SqlParameter ( "@GS70" ,GS070 ) ,new SqlParameter ( "@GS71" ,GS071 ) );
                 result = bll . EditOne ( _model );
                 if ( result==false )
                     MessageBox . Show ( "编辑数据失败" );
@@ -1598,17 +1814,11 @@ namespace Mulaolao.Raw_material_cost
             }
             else
             {
-                //DataTable de = SqlHelper . ExecuteDataTable ( "SELECT * FROM R_PQP WHERE GS34=@GS34 AND GS02=@GS02 AND GS07=@GS07 AND GS20=@GS20" ,new SqlParameter ( "GS34" ,_model . GS34 ) ,new SqlParameter ( "@GS02" ,_model . GS02 ) ,new SqlParameter ( "@GS07" ,_model . GS07 ) ,new SqlParameter ( "@GS20" ,_model . GS20 ) );
                 result = bll . Exists ( _model );
                 if ( result )
                     MessageBox . Show ( "单号：" + _model . GS34 + "\n\r材料：" + _model . GS02 + "\n\r零件名称：" + _model . GS07 + "\n\r规格:" + _model . GS08 + "\n\r供应商：" + DGA3 + "\n\r的数据已经存在,请核实后再录入" );
                 else
                 {
-                    //GS34=@GS34 AND GS02=@GS2 AND GS07=@GS7 AND GS20=@GS020
-                    //,new SqlParameter( "@GS34" ,GS34 )
-                    //,new SqlParameter( "@GS2" ,GS002 ) ,new SqlParameter( "@GS7" ,GS007 )
-                    //,new SqlParameter( "@GS020" ,GS200 )
-                    //int count = SqlHelper . ExecuteNonQuery ( "UPDATE R_PQP SET GS02=@GS02,GS04=@GS04,GS05=@GS05,GS07=@GS07,GS08=@GS08,GS09=@GS09,GS10=@GS10,GS11=@GS11,GS13=@GS13,GS14=@GS14,GS15=@GS15,GS16=@GS16,GS17=@GS17,GS18=@GS18,GS19=@GS19,GS20=@GS20,GS51=@GS51,GS70=@GS70,GS71=@GS71 WHERE idx=@idx" ,new SqlParameter ( "@GS02" ,GS2 ) ,new SqlParameter ( "@GS04" ,GS4 ) ,new SqlParameter ( "@GS05" ,GS5 ) ,new SqlParameter ( "@GS07" ,GS7 ) ,new SqlParameter ( "@GS08" ,GS8 ) ,new SqlParameter ( "@GS09" ,GS9 ) ,new SqlParameter ( "@GS10" ,GS010 ) ,new SqlParameter ( "@GS11" ,GS011 ) ,new SqlParameter ( "@GS13" ,GS013 ) ,new SqlParameter ( "@GS14" ,GS014 ) ,new SqlParameter ( "@GS15" ,GS015 ) ,new SqlParameter ( "@GS16" ,GS016 ) ,new SqlParameter ( "@GS17" ,GS017 ) ,new SqlParameter ( "@GS18" ,GS018 ) ,new SqlParameter ( "@GS19" ,GS019 ) ,new SqlParameter ( "@GS20" ,GS020 ) ,new SqlParameter ( "@GS51" ,GS051 ) ,new SqlParameter ( "@idx" ,idxOne ) ,new SqlParameter ( "@GS70" ,GS070 ) ,new SqlParameter ( "@GS71" ,GS071 ) );
                     result = bll . EditOne ( _model );
                     if ( result == false )
                         MessageBox . Show ( "编辑数据失败" );
@@ -1635,26 +1845,18 @@ namespace Mulaolao.Raw_material_cost
                 else
                 {
                     build ( );
-                    //DataTable de = SqlHelper . ExecuteDataTable ( "SELECT * FROM R_PQP WHERE GS34=@GS34 AND GS02=@GS02 AND GS07=@GS07 AND GS20=@GS20" ,new SqlParameter ( "GS34" ,GS34 ) ,new SqlParameter ( "@GS02" ,GS2 ) ,new SqlParameter ( "@GS07" ,GS7 ) ,new SqlParameter ( "@GS20" ,GS020 ) );
                     result = bll . Exists ( _model );
                     if ( result==false )
                         MessageBox . Show ( "不存在\n\r单号：" + _model.GS34 + "\n\r材料：" + _model . GS02 + "\n\r零件名称：" + _model . GS07 + "\n\r供应商：" + DGA3 + "\n\r的数据,请核实后再录入" );
                     else
                     {
-                        //GS34=@GS34 AND GS02=@GS02 AND GS07=@GS07 AND GS20=@GS20
-                        //,new SqlParameter( "@GS02" ,GS002 ) ,new SqlParameter( "@GS07" ,GS007 ) ,new SqlParameter( "@GS20" ,GS020 )
-                        //int count = SqlHelper . ExecuteNonQuery ( "DELETE FROM R_PQP WHERE idx=@idx" ,new SqlParameter ( "idx" ,idxOne ) );
                         result = bll . DeleteOne ( _model );
-                        if ( result==false )
+                        if ( result == false )
                             MessageBox . Show ( "删除数据失败" );
                         else
                         {
                             MessageBox . Show ( "成功删除数据" );
-
-                            //if ( sads == "1" )
-                            //    dde . Rows . RemoveAt ( num );
-                            //else if ( sads == "2" )
-                                ddl . Rows . RemoveAt ( num );
+                            ddl . Rows . RemoveAt ( num );
 
                             materialScience ( );
                         }
@@ -1663,18 +1865,10 @@ namespace Mulaolao.Raw_material_cost
             }
         }
         //刷新
-        private void button11_Click( object sender, EventArgs e )
+        private void button11_Click ( object sender ,EventArgs e )
         {
-            //if (sads == "1")
-            //{
-            //    dde = SqlHelper.ExecuteDataTable( "SELECT idx,GS02,GS49,GS51,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02 ) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS02,GS07,GS71,GS70" ,new SqlParameter( "@GS34" ,_model.GS34 ) );
-            //    gridControl1.DataSource = dde;
-            //}
-            //else if (sads == "2")
-            //{
-                ddl = SqlHelper.ExecuteDataTable( "SELECT idx,GS02,GS51,GS49,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS70,GS71,GS02,GS07" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
-                gridControl1.DataSource = ddl;
-            //}
+            ddl = SqlHelper . ExecuteDataTable ( "SELECT idx,GS02,GS51,GS49,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS70,GS71,GS02,GS07" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
+            gridControl1 . DataSource = ddl;
         }
         #endregion
 
@@ -1705,88 +1899,86 @@ namespace Mulaolao.Raw_material_cost
             _model . GS45 = datatimepickeroverride1.Value;
             _model . GS72 = comboBox13 . Text;
             _model . GS74 = comboBox21 . Text;
+            _model . GS75 = txtGS75 . Text;
+            _model . GS76 = txtGS76 . Text;
         }
         private void button16_Click ( object sender ,EventArgs e )
         {
-            if ( comboBox12 . Text == "" )
-                MessageBox . Show ( "请选择或填写工段" );
-            else
+            if ( string . IsNullOrEmpty ( comboBox21 . Text ) )
             {
-                builds ( );
-
-                //DataTable dl = SqlHelper . ExecuteDataTable ( "SELECT * FROM R_PQP WHERE GS34=@GS34 AND GS35=@GS35" ,new SqlParameter ( "@GS34" ,_model . GS34 ) ,new SqlParameter ( "@GS35" ,_model . GS35 ) );
-                result = bll . ExistsOne ( _model );
-                if ( result == false )
-                {
-                    //int count = SqlHelper.ExecuteNonQuery( "INSERT INTO R_PQP (GS34,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45) VALUES (@GS34,@GS35,@GS36,@GS37,@GS38,@GS39,@GS40,@GS41,@GS42,@GS43,@GS44,@GS45)" ,new SqlParameter( "@GS34" ,GS34 ) ,new SqlParameter( "@GS35" ,GS035 ) ,new SqlParameter( "@GS36" ,GS036 ) ,new SqlParameter( "@GS37" ,GS037 ) ,new SqlParameter( "@GS38" ,GS038 ) ,new SqlParameter( "@GS39" ,GS039 ) ,new SqlParameter( "@GS40" ,GS040 ) ,new SqlParameter( "@GS41" ,GS041 ) ,new SqlParameter( "@GS42" ,GS042 ) ,new SqlParameter( "@GS43" ,GS043 ) ,new SqlParameter( "@GS44" ,GS044 ) ,new SqlParameter( "@GS45" ,GS045 ) );
-                    if ( bll . ExistsNum ( _model ) )
-                    {
-                        MessageBox . Show ( "流水号:" + _model . GS01 + "已经存在，不允许保存" );
-                        return;
-                    }
-                    result = bll . BuildTwo ( _model );
-                    if ( result == false )
-                        MessageBox . Show ( "数据录入失败" );
-                    else
-                    {
-                        MessageBox . Show ( "成功录入数据" );
-
-                        if ( sads == "1" )
-                        {
-                            ddk = SqlHelper . ExecuteDataTable ( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter ( "@GS34" ,_model.GS34 ) );
-                            gridControl2 . DataSource = ddk;
-                        }
-                        else if ( sads == "2" )
-                        {
-                            DataRow row;
-                            row = ddk . NewRow ( );
-                            row [ "GS35" ] = _model . GS35;
-                            row [ "GS36" ] = _model . GS36;
-                            row [ "GS37" ] = _model . GS37;
-                            row [ "GS38" ] = _model . GS38;
-                            row [ "GS39" ] = _model . GS39;
-                            row [ "GS40" ] = _model . GS40;
-                            row [ "GS41" ] = _model . GS41;
-                            row [ "GS42" ] = _model . GS42;
-                            row [ "GS43" ] = _model . GS43;
-                            row [ "GS44" ] = _model . GS44;
-                            row [ "GS45" ] = _model . GS45;
-                            row [ "GS72" ] = _model . GS72;
-                            row [ "GS74" ] = _model . GS74;
-                            ddk . Rows . Add ( row );
-                        }
-                        workshopSection ( );
-                    }
-                }
-                else
-                    MessageBox . Show ( "单号:" + _model . GS34 + "\n\r工段:" + _model . GS35 + "\n\r的记录已经存在,请核实后再录入" );
+                MessageBox . Show ( "请选择合同代号" );
+                return;
             }
+            if ( string . IsNullOrEmpty ( comboBox13 . Text ) )
+            {
+                MessageBox . Show ( "请选择类别" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( comboBox12 . Text ) )
+            {
+                MessageBox . Show ( "请选择工段" );
+                return;
+            }
+            //if ( string . IsNullOrEmpty ( txtGS75 . Text ) )
+            //{
+            //    MessageBox . Show ( "请填写零件名称" );
+            //    return;
+            //}
+            builds ( );
+
+            result = bll . ExistsOne ( _model );
+            if ( result == false )
+            {
+                if ( bll . ExistsNum ( _model ) )
+                {
+                    MessageBox . Show ( "流水号:" + _model . GS01 + "已经存在，不允许保存" );
+                    return;
+                }
+                result = bll . BuildTwo ( _model );
+                if ( result == false )
+                    MessageBox . Show ( "数据录入失败" );
+                else
+                {
+                    MessageBox . Show ( "成功录入数据" );
+
+                    if ( sads == "1" )
+                    {
+                        ddk = SqlHelper . ExecuteDataTable ( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74,GS75,GS76 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
+                        gridControl2 . DataSource = ddk;
+                    }
+                    else if ( sads == "2" )
+                    {
+                        DataRow row;
+                        row = ddk . NewRow ( );
+                        row [ "GS35" ] = _model . GS35;
+                        row [ "GS36" ] = _model . GS36;
+                        row [ "GS37" ] = _model . GS37;
+                        row [ "GS38" ] = _model . GS38;
+                        row [ "GS39" ] = _model . GS39;
+                        row [ "GS40" ] = _model . GS40;
+                        row [ "GS41" ] = _model . GS41;
+                        row [ "GS42" ] = _model . GS42;
+                        row [ "GS43" ] = _model . GS43;
+                        row [ "GS44" ] = _model . GS44;
+                        row [ "GS45" ] = _model . GS45;
+                        row [ "GS72" ] = _model . GS72;
+                        row [ "GS74" ] = _model . GS74;
+                        row [ "GS75" ] = _model . GS75;
+                        row [ "GS76" ] = _model . GS76;
+                        ddk . Rows . Add ( row );
+                    }
+                    workshopSection ( );
+                }
+            }
+            else
+                MessageBox . Show ( "单号:" + _model . GS34 + "\n\r工段:" + _model . GS35 + "\n\r零件名称:" + _model . GS75 + "\n\t规格:" + _model . GS76 + "\n\r的记录已经存在,请核实后再录入" );
         }
         //编辑
         private void upd ( )
         {
             DataRow row;
             int num = gridView2 . FocusedRowHandle;
-            //if ( sads == "1" )
-            //{
-            //    row = dda . Rows [ num ];
-            //    row . BeginEdit ( );
-            //    row [ "GS35" ] = _model . GS35;
-            //    row [ "GS36" ] = _model . GS36;
-            //    row [ "GS37" ] = _model . GS37;
-            //    row [ "GS38" ] = _model . GS38;
-            //    row [ "GS39" ] = _model . GS39;
-            //    row [ "GS40" ] = _model . GS40;
-            //    row [ "GS41" ] = _model . GS41;
-            //    row [ "GS42" ] = _model . GS42;
-            //    row [ "GS43" ] = _model . GS43;
-            //    row [ "GS44" ] = _model . GS44;
-            //    row [ "GS45" ] = _model . GS45;
-            //    row [ "GS72" ] = _model . GS72;
-            //    row . EndEdit ( );
-            //}
-            //else if ( sads == "2" )
-            //{
+
             row = ddk . Rows [ num ];
             row . BeginEdit ( );
             row [ "GS35" ] = _model . GS35;
@@ -1802,23 +1994,52 @@ namespace Mulaolao.Raw_material_cost
             row [ "GS45" ] = _model . GS45;
             row [ "GS72" ] = _model . GS72;
             row [ "GS74" ] = _model . GS74;
+            row [ "GS75" ] = _model . GS75;
+            row [ "GS76" ] = _model . GS76;
             row . EndEdit ( );
-            //}
             workshopSection ( );
         }
         private void button15_Click ( object sender ,EventArgs e )
         {
-            if ( comboBox12 . Text == "" )
-                MessageBox . Show ( "请选择或填写工段" );
+            if ( string . IsNullOrEmpty ( comboBox21 . Text ) )
+            {
+                MessageBox . Show ( "请选择合同代号" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( comboBox13 . Text ) )
+            {
+                MessageBox . Show ( "请选择类别" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( comboBox12 . Text ) )
+            {
+                MessageBox . Show ( "请选择工段" );
+                return;
+            }
+            //if ( string . IsNullOrEmpty ( txtGS75 . Text ) )
+            //{
+            //    MessageBox . Show ( "请填写零件名称" );
+            //    return;
+            //}
+            builds ( );
+
+            if ( gs035 .Equals( _model . GS35) && gs075 . Equals ( _model . GS75 ) && gs076 . Equals ( _model . GS76 )  )
+            {
+                result = bll . EditTwo ( _model );
+                if ( result == false )
+                    MessageBox . Show ( "编辑数据失败" );
+                else
+                {
+                    MessageBox . Show ( "编辑数据成功" );
+
+                    upd ( );
+                }
+            }
             else
             {
-                builds ( );
-
-                if ( gs035 == _model . GS35 )
+                result = bll . ExistsOne ( _model );
+                if ( result == false )
                 {
-                    //GS34=@GS34 AND 
-                    //,new SqlParameter( "@GS34" ,GS34 ) 
-                    //int count = SqlHelper.ExecuteNonQuery( "UPDATE R_PQP SET GS35=@GS35,GS36=@GS36,GS37=@GS37,GS38=@GS38,GS39=@GS39,GS40=@GS40,GS41=@GS41,GS42=@GS42,GS43=@GS43,GS44=@GS44,GS45=@GS45 WHERE idx=@idx" ,new SqlParameter( "@GS36" ,GS036 ) ,new SqlParameter( "@GS37" ,GS037 ) ,new SqlParameter( "@GS38" ,GS038 ) ,new SqlParameter( "@GS39" ,GS039 ) ,new SqlParameter( "@GS40" ,GS040 ) ,new SqlParameter( "@GS41" ,GS041 ) ,new SqlParameter( "@GS42" ,GS042 ) ,new SqlParameter( "@GS43" ,GS043 ) ,new SqlParameter( "@GS44" ,GS044 ) ,new SqlParameter( "@GS45" ,GS045 ) ,new SqlParameter ( "@idx" ,idxTwo ) ,new SqlParameter ( "@GS35" ,GS035 ) );
                     result = bll . EditTwo ( _model );
                     if ( result == false )
                         MessageBox . Show ( "编辑数据失败" );
@@ -1830,87 +2051,49 @@ namespace Mulaolao.Raw_material_cost
                     }
                 }
                 else
-                {
-                    //DataTable dr = SqlHelper.ExecuteDataTable( "SELECT * FROM R_PQP WHERE GS34=@GS34 AND GS35=@GS35" ,new SqlParameter( "@GS34" ,GS34 ) ,new SqlParameter( "@GS35" ,GS035 ) );
-                    result = bll . ExistsOne ( _model );
-                    if ( result == false )
-                    {
-                        //GS34=@GS34 AND GS35=@GS035
-                        //,new SqlParameter( "@GS34" ,GS34 )   ,new SqlParameter( "@GS035" ,gs035 )
-                        //int count = SqlHelper . ExecuteNonQuery ( "UPDATE R_PQP SET GS35=@GS35,GS36=@GS36,GS37=@GS37,GS38=@GS38,GS39=@GS39,GS40=@GS40,GS41=@GS41,GS42=@GS42,GS43=@GS43,GS44=@GS44,GS45=@GS45 WHERE idx=@idx" ,new SqlParameter ( "@GS35" ,GS035 ) ,new SqlParameter ( "@GS36" ,GS036 ) ,new SqlParameter ( "@GS37" ,GS037 ) ,new SqlParameter ( "@GS38" ,GS038 ) ,new SqlParameter ( "@GS39" ,GS039 ) ,new SqlParameter ( "@GS40" ,GS040 ) ,new SqlParameter ( "@GS41" ,GS041 ) ,new SqlParameter ( "@GS42" ,GS042 ) ,new SqlParameter ( "@GS43" ,GS043 ) ,new SqlParameter ( "@GS44" ,GS044 ) ,new SqlParameter ( "@GS45" ,GS045 ) ,new SqlParameter ( "@idx" ,idxTwo ) );
-                        result = bll . EditTwo ( _model );
-                        if ( result == false )
-                            MessageBox . Show ( "编辑数据失败" );
-                        else
-                        {
-                            MessageBox . Show ( "编辑数据成功" );
-
-                            upd ( );
-                        }
-                    }
-                    else
-                        MessageBox . Show ( "已经存在\n\r单号:" + _model . GS34 + "\n\r工段:" + _model . GS35 + "\n\r的记录,请核实后再编辑" );
-                }
+                    MessageBox . Show ( "单号:" + _model . GS34 + "\n\r工段:" + _model . GS35 + "\n\r零件名称:" + _model . GS75 + "\n\t规格:" + _model . GS76 + "\n\r的记录已经存在,请核实后再编辑" );
             }
         }
         //删除
         private void button14_Click ( object sender ,EventArgs e )
         {
-            if ( MessageBox . Show ( "确定删除此记录?" ,"删除" ,MessageBoxButtons . OKCancel ) ==DialogResult . Cancel )
+            if ( MessageBox . Show ( "确定删除此记录?" ,"删除" ,MessageBoxButtons . OKCancel ) == DialogResult . Cancel )
                 return;
 
             builds ( );
-            if ( comboBox12.Text == "" )
-                MessageBox.Show( "请选择或填写工段" );
+
+            if ( string . IsNullOrEmpty ( comboBox12 . Text ) )
+            {
+                MessageBox . Show ( "请选择需要删除的内容" );
+                return;
+            }
+
+            result = bll . DeleteOne ( _model );
+            if ( result == false )
+                MessageBox . Show ( "删除数据失败" );
             else
             {
-                //DataTable dy = SqlHelper . ExecuteDataTable ( "SELECT * FROM R_PQP WHERE GS34=@GS34 AND GS35=@GS35" ,new SqlParameter ( "@GS34" ,_model . GS34 ) ,new SqlParameter ( "@GS35" ,_model . GS35 ) );
-                result = bll . ExistsOne ( _model );
-                if ( result==false )
-                    MessageBox.Show( "不存在\n\r单号:" + _model.GS34 + "\n\r工段:" +_model. GS35 + "\n\r的记录,请核实后再删除" );
-                else
-                {
-                    //GS34=@GS34 AND GS35=@GS35
-                    //,new SqlParameter( "@GS35" ,GS035 )
-                    //int count = SqlHelper.ExecuteNonQuery( "DELETE FROM R_PQP WHERE idx=@idx" ,new SqlParameter( "@idx" ,idxTwo )  );
-                    result = bll . DeleteOne ( _model );
-                    if ( result==false )
-                        MessageBox.Show( "删除数据失败" );
-                    else
-                    {
-                        MessageBox.Show( "成功删除数据" );
+                MessageBox . Show ( "成功删除数据" );
 
-                        int num = gridView2.FocusedRowHandle;
-                        //if ( sads == "1" )
-                        //    dda.Rows.RemoveAt( num );
-                        //else if ( sads == "2" )
-                            ddk.Rows.RemoveAt( num );
-                        workshopSection( );
-                    }
-                }
+                int num = gridView2 . FocusedRowHandle;
+
+                ddk . Rows . RemoveAt ( num );
+                workshopSection ( );
             }
         }
         //刷新
         private void button12_Click ( object sender ,EventArgs e )
         {
-            //if ( sads == "1" )
-            //{
-            //    dda = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter( "@GS34" ,_model.GS34 ) );
-            //    gridControl2.DataSource = dda;
-            //}
-            //else if ( sads == "2" )
-            //{
-                ddk = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter( "@GS34" ,_model.GS34 ) );
-                gridControl2.DataSource = ddk;
-            //}
+            ddk = SqlHelper . ExecuteDataTable ( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74,GS75,GS76 FROM R_PQP WHERE GS36 IS NOT NULL AND GS34=@GS34 AND GS35!='' AND GS35 IS NOT NULL" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
+            gridControl2 . DataSource = ddk;
         }
         #endregion
 
-        #region 辅料
+        #region 杂项
         //DataTable dx;
         void build_one ( )
         {
-            _model . GS52 = comboBox14 . Text;
+            _model . GS52 = txtGS52 . Text;
             if ( string . IsNullOrEmpty ( comboBox34 . Text ) )
                 _model . GS53 = 0M;
             else
@@ -1919,7 +2102,7 @@ namespace Mulaolao.Raw_material_cost
                 _model . GS54 = 0M;
             else
                 _model . GS54 = Convert . ToDecimal ( comboBox33 . Text );
-            _model . GS56 = comboBox32 . Text;
+            _model . GS56 = txtGS56 . Text;
             _model . GS57 = comboBox15 . Text;
             _model . GS58 = comboBox30 . Text;
             if ( string . IsNullOrEmpty ( comboBox29 . Text ) )
@@ -1944,87 +2127,93 @@ namespace Mulaolao.Raw_material_cost
             _model . GS65 = lookUpEdit8 . Text;
             _model . GS66 = lookUpEdit9 . Text;
             _model . GS67 = datatimepickeroverride7 . Value;
+            _model . GS77 = txtGS77 . Text;
             D3 = textBox18 . Text;
             D11 = textBox17 . Text;
         }
         //新建
         private void button21_Click ( object sender ,EventArgs e )
         {
-            if ( comboBox14 . Text == "" )
-                MessageBox . Show ( "请填写材料" );
-            else
+            if ( string . IsNullOrEmpty ( txtGS52 . Text ) )
             {
-                if ( comboBox32 . Text == "" )
-                    MessageBox . Show ( "请填写零件名称" );
+                MessageBox . Show ( "请选择合同代号" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( txtGS56 . Text ) )
+            {
+                MessageBox . Show ( "请选择工段名称" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( txtGS77 . Text ) )
+            {
+                MessageBox . Show ( "请选择工序名称" );
+                return;
+            }
+
+            build_one ( );
+
+            result = bll . ExistsTwo ( _model );
+            if ( result == false )
+            {
+                if ( bll . ExistsNum ( _model ) )
+                {
+                    MessageBox . Show ( "流水号:" + _model . GS01 + "已经存在，不允许保存" );
+                    return;
+                }
+                result = bll . BuildTre ( _model );
+                if ( result == false )
+                    MessageBox . Show ( "录入数据失败" );
                 else
                 {
-                    build_one ( );
+                    MessageBox . Show ( "录入数据成功" );
 
-                    //DataTable dsr = SqlHelper.ExecuteDataTable( "SELECT * FROM R_PQP WHERE GS34=@GS34 AND GS52=@GS52 AND GS56=@GS56 AND GS57=@GS57 AND GS68=@GS68" ,new SqlParameter( "@GS34" ,GS34 ) ,new SqlParameter( "@GS52" ,GS052 ) ,new SqlParameter( "@GS56" ,GS056 ) ,new SqlParameter( "@GS68" ,GS068 ) ,new SqlParameter ( "@GS57" ,GS057 ) );
-                    result = bll . ExistsTwo ( _model );
-                    if ( result == false )
+                    if ( sads == "1" )
                     {
-                        //int count = SqlHelper.ExecuteNonQuery( "INSERT INTO R_PQP (GS34,GS52,GS49,GS53,GS54,GS55,GS56,GS57,GS58,GS59,GS60,GS61,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68) VALUES (@GS34,@GS52,@GS49,@GS53,@GS54,@GS55,@GS56,@GS57,@GS58,@GS59,@GS60,@GS61,@GS69,@GS62,@GS63,@GS64,@GS65,@GS66,@GS67,@GS68)" ,new SqlParameter( "@GS34" ,GS34 ) ,new SqlParameter( "@GS52" ,GS052 ) ,new SqlParameter( "@GS53" ,GS053 ) ,new SqlParameter( "@GS54" ,GS054 ) ,new SqlParameter( "@GS55" ,GS055 ) ,new SqlParameter( "@GS56" ,GS056 ) ,new SqlParameter( "@GS57" ,GS057 ) ,new SqlParameter( "@GS58" ,GS058 ) ,new SqlParameter( "@GS59" ,GS059 ) ,new SqlParameter( "@GS60" ,GS060 ) ,new SqlParameter( "@GS61" ,GS061 ) ,new SqlParameter( "@GS69" ,GS069 ) ,new SqlParameter( "@GS62" ,GS062 ) ,new SqlParameter( "@GS63" ,GS063 ) ,new SqlParameter( "@GS64" ,GS064 ) ,new SqlParameter( "@GS65" ,GS065 ) ,new SqlParameter( "@GS66" ,GS066 ) ,new SqlParameter( "@GS67" ,GS067 ) ,new SqlParameter( "@GS68" ,GS068 ) ,new SqlParameter( "@GS49" ,GS049 ) );
-                        if ( bll . ExistsNum ( _model ) )
-                        {
-                            MessageBox . Show ( "流水号:" + _model . GS01 + "已经存在，不允许保存" );
-                            return;
-                        }
-                        result = bll . BuildTre ( _model );
-                        if ( result == false )
-                            MessageBox . Show ( "录入数据失败" );
-                        else
-                        {
-                            MessageBox . Show ( "录入数据成功" );
-
-                            if ( sads == "1" )
-                            {
-                                ddp = SqlHelper . ExecuteDataTable ( "SELECT idx,GS52,GS49,GS61,GS53,GS54,GS56,GS57,GS58,GS59,GS60,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,D.U11 FROM R_PQP A, (SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D WHERE A.GS52 = D.U0 AND GS34 = @GS34 AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
-                                gridControl3 . DataSource = ddp;
-                            }
-                            else if ( sads == "2" )
-                            {
-                                DataRow row = ddp . NewRow ( );
-                                row [ "GS49" ] =_model. GS49;
-                                row [ "GS52" ] = _model . GS52;
-                                row [ "GS53" ] = _model . GS53;
-                                row [ "GS54" ] = _model . GS54;
-                                row [ "GS56" ] = _model . GS56;
-                                row [ "GS57" ] = _model . GS57;
-                                row [ "GS58" ] = _model . GS58;
-                                row [ "GS59" ] = _model . GS59;
-                                row [ "GS60" ] = _model . GS60;
-                                row [ "GS61" ] = _model . GS61;
-                                row [ "GS62" ] = _model . GS62;
-                                row [ "GS63" ] = _model . GS63;
-                                row [ "GS64" ] = _model . GS64;
-                                row [ "GS65" ] = _model . GS65;
-                                row [ "GS66" ] = _model . GS66;
-                                row [ "GS67" ] = _model . GS67;
-                                row [ "GS68" ] = _model . GS68;
-                                row [ "GS69" ] = _model . GS69;
-                                row [ "DGA003" ] = D3;
-                                row [ "DGA011" ] = D11;
-                                ddp . Rows . Add ( row );
-                            }
-                            accessories ( );
-                        }
+                        ddp = SqlHelper . ExecuteDataTable ( "SELECT idx,GS52,GS49,GS61,GS53,GS54,GS56,GS57,GS58,GS59,GS60,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,GS77,(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,D.U11 FROM R_PQP A, (SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D WHERE A.GS52 = D.U0 AND GS34 = @GS34 AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
+                        gridControl3 . DataSource = ddp;
                     }
-                    else
-                        MessageBox . Show ( "单号：" + _model . GS34 + "\n\r辅料：" + _model . GS52 + "\n\r零件名称：" + _model . GS56 + "\n\r规格：" + _model . GS57 + "\n\r供应商：" + D3 + "\n\r的数据已经存在 ,请核实后再录入" );
+                    else if ( sads == "2" )
+                    {
+                        DataRow row = ddp . NewRow ( );
+                        row [ "GS49" ] = _model . GS49;
+                        row [ "GS52" ] = _model . GS52;
+                        row [ "GS53" ] = _model . GS53;
+                        row [ "GS54" ] = _model . GS54;
+                        row [ "GS56" ] = _model . GS56;
+                        row [ "GS57" ] = _model . GS57;
+                        row [ "GS58" ] = _model . GS58;
+                        row [ "GS59" ] = _model . GS59;
+                        row [ "GS60" ] = _model . GS60;
+                        row [ "GS61" ] = _model . GS61;
+                        row [ "GS62" ] = _model . GS62;
+                        row [ "GS63" ] = _model . GS63;
+                        row [ "GS64" ] = _model . GS64;
+                        row [ "GS65" ] = _model . GS65;
+                        row [ "GS66" ] = _model . GS66;
+                        row [ "GS67" ] = _model . GS67;
+                        row [ "GS68" ] = _model . GS68;
+                        row [ "GS69" ] = _model . GS69;
+                        row [ "GS77" ] = _model . GS77;
+                        row [ "DGA003" ] = D3;
+                        row [ "DGA011" ] = D11;
+                        ddp . Rows . Add ( row );
+                    }
+                    accessories ( );
                 }
             }
+            else
+                MessageBox . Show ( "单号：" + _model . GS34 + "\n\r合同代号：" + _model . GS52 + "\n\r工段名称：" + _model . GS56 + "\n\r规格：" + _model . GS57 + "\n\r供应商：" + D3 + "\n\r的数据已经存在 ,请核实后再录入" );
         }
         //删除
         private void button19_Click ( object sender ,EventArgs e )
         {
             if ( MessageBox . Show ( "确定删除此记录?" ,"删除" ,MessageBoxButtons . OKCancel ) ==DialogResult . Cancel )
                 return;
-            if ( comboBox14.Text == "" )
+            if ( txtGS52.Text == "" )
                 MessageBox.Show( "请填写材料" );
             else
             {
-                if ( comboBox32.Text == "" )
+                if ( txtGS56.Text == "" )
                     MessageBox.Show( "请填写零件名称" );
                 else
                 {
@@ -2059,116 +2248,83 @@ namespace Mulaolao.Raw_material_cost
         }
         void up_one ( )
         {
-            int num = gridView3.FocusedRowHandle;
+            int num = gridView3 . FocusedRowHandle;
             DataRow row;
-            //if ( sads == "1" )
-            //{
-            //    row = dx.Rows[num];
-            //    row.BeginEdit( );
-            //    row["GS49"] = _model . GS49;
-            //    row["GS52"] = _model . GS52;
-            //    row["GS53"] = _model . GS53;
-            //    row["GS54"] = _model . GS54;
-            //    row["GS56"] = _model . GS56;
-            //    row["GS57"] = _model . GS57;
-            //    row["GS58"] = _model . GS58;
-            //    row["GS59"] = _model . GS59;
-            //    row["GS60"] = _model . GS60;
-            //    row["GS61"] = _model . GS61;
-            //    row["GS62"] = _model . GS62;
-            //    row["GS63"] = _model . GS63;
-            //    row["GS64"] = _model . GS64;
-            //    row["GS65"] = _model . GS65;
-            //    row["GS66"] = _model . GS66;
-            //    row["GS67"] = _model . GS67;
-            //    row["GS68"] = _model . GS68;
-            //    row["GS69"] = _model . GS69;
-            //    row["DGA003"] = D3;
-            //    row["DGA011"] = D11;
-            //    row.EndEdit( );
-            //}
-            //else if ( sads == "2" )
-            //{
-                row = ddp.Rows[num];
-                row.BeginEdit( );
-                row["GS49"] = _model . GS49;
-                row["GS52"] = _model . GS52;
-                row["GS53"] = _model . GS53;
-                row["GS54"] = _model . GS54;
-                row["GS56"] = _model . GS56;
-                row["GS57"] = _model . GS57;
-                row["GS58"] = _model . GS58;
-                row["GS59"] = _model . GS59;
-                row["GS60"] = _model . GS60;
-                row["GS61"] = _model . GS61;
-                row["GS62"] = _model . GS62;
-                row["GS63"] = _model . GS63;
-                row["GS64"] = _model . GS64;
-                row["GS65"] = _model . GS65;
-                row["GS66"] = _model . GS66;
-                row["GS67"] = _model . GS67;
-                row["GS68"] = _model . GS68;
-                row["GS69"] = _model . GS69;
-                row["DGA003"] = D3;
-                row["DGA011"] = D11;
-                row.EndEdit( );
-            //}
-            accessories( );
+
+            row = ddp . Rows [ num ];
+            row . BeginEdit ( );
+            row [ "GS49" ] = _model . GS49;
+            row [ "GS52" ] = _model . GS52;
+            row [ "GS53" ] = _model . GS53;
+            row [ "GS54" ] = _model . GS54;
+            row [ "GS56" ] = _model . GS56;
+            row [ "GS57" ] = _model . GS57;
+            row [ "GS58" ] = _model . GS58;
+            row [ "GS59" ] = _model . GS59;
+            row [ "GS60" ] = _model . GS60;
+            row [ "GS61" ] = _model . GS61;
+            row [ "GS62" ] = _model . GS62;
+            row [ "GS63" ] = _model . GS63;
+            row [ "GS64" ] = _model . GS64;
+            row [ "GS65" ] = _model . GS65;
+            row [ "GS66" ] = _model . GS66;
+            row [ "GS67" ] = _model . GS67;
+            row [ "GS68" ] = _model . GS68;
+            row [ "GS69" ] = _model . GS69;
+            row [ "GS77" ] = _model . GS77;
+            row [ "DGA003" ] = D3;
+            row [ "DGA011" ] = D11;
+            row . EndEdit ( );
+
+            accessories ( );
         }
         //编辑
         private void button20_Click ( object sender ,EventArgs e )
         {
-            if ( comboBox14 . Text == "" )
-                MessageBox . Show ( "请填写材料" );
-            else
+            if ( string . IsNullOrEmpty ( txtGS52 . Text ) )
             {
-                if ( comboBox32 . Text == "" )
-                    MessageBox . Show ( "请填写零件名称" );
+                MessageBox . Show ( "请选择合同代号" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( txtGS56 . Text ) )
+            {
+                MessageBox . Show ( "请选择工段名称" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( txtGS77 . Text ) )
+            {
+                MessageBox . Show ( "请选择工序名称" );
+                return;
+            }
+            build_one ( );
+
+            if ( gs052 == _model . GS52 && gs056 == _model . GS56 && gs068 == _model . GS68 && gs057 == _model . GS57 )
+            {
+                result = bll . EditTre ( _model );
+                if ( result == false )
+                    MessageBox . Show ( "编辑数据失败" );
                 else
                 {
-                    build_one ( );
+                    MessageBox . Show ( "成功编辑数据" );
 
-                    if ( gs052 == _model . GS52 && gs056 == _model . GS56 && gs068 == _model . GS68 && gs057 == _model . GS57 )
-                    {
-                        //GS34=@GS34 AND   
-                        //,new SqlParameter( "@GS34" ,GS34 )
-                        //   
-                        //int count = SqlHelper . ExecuteNonQuery ( "UPDATE R_PQP SET GS52=@GS52,GS53=@GS53,GS54=@GS54,GS55=@GS55,GS56=@GS56,GS57=@GS57,GS58=@GS58,GS59=@GS59,GS60=@GS60,GS61=@GS61,GS68=@GS68,GS69=@GS69,GS62=@GS62,GS63=@GS63,GS64=@GS64,GS65=@GS65,GS66=@GS66,GS67=@GS67 WHERE idx=@idx" ,new SqlParameter ( "@GS53" ,GS053 ) ,new SqlParameter ( "@GS54" ,GS054 ) ,new SqlParameter ( "@GS55" ,GS055 ) ,new SqlParameter ( "@GS58" ,GS058 ) ,new SqlParameter ( "@GS59" ,GS059 ) ,new SqlParameter ( "@GS60" ,GS060 ) ,new SqlParameter ( "@GS61" ,GS061 ) ,new SqlParameter ( "@GS69" ,GS069 ) ,new SqlParameter ( "@GS62" ,GS062 ) ,new SqlParameter ( "@GS63" ,GS063 ) ,new SqlParameter ( "@GS64" ,GS064 ) ,new SqlParameter ( "@GS65" ,GS065 ) ,new SqlParameter ( "@GS66" ,GS066 ) ,new SqlParameter ( "@GS67" ,GS067 ) ,new SqlParameter ( "@idx" ,idxTre ) ,new SqlParameter ( "@GS52" ,GS052 ) ,new SqlParameter ( "@GS56" ,GS056 ) ,new SqlParameter ( "@GS68" ,GS068 ) ,new SqlParameter ( "@GS57" ,GS057 ) );
-                        result = bll . EditTre ( _model );
-                        if ( result == false )
-                            MessageBox . Show ( "编辑数据失败" );
-                        else
-                        {
-                            MessageBox . Show ( "成功编辑数据" );
-
-                            up_one ( );
-                        }
-                    }
+                    up_one ( );
+                }
+            }
+            else
+            {
+                result = bll . ExistsTwo ( _model );
+                if ( result )
+                    MessageBox . Show ( "单号：" + _model . GS34 + "\n\r辅料：" + _model . GS52 + "\n\r零件名称：" + _model . GS56 + "辅料规格：" + _model . GS57 + "\n\r供应商：" + D3 + "\n\r的数据已经存在,请核实后再录入" );
+                else
+                {
+                    result = bll . EditTre ( _model );
+                    if ( result == false )
+                        MessageBox . Show ( "编辑数据失败" );
                     else
                     {
-                        //DataTable dsr = SqlHelper.ExecuteDataTable( "SELECT * FROM R_PQP WHERE GS34=@GS34 AND GS52=@GS52 AND GS56=@GS56 AND GS57=@GS57 AND GS68=@GS68" ,new SqlParameter( "@GS34" ,GS34 ) ,new SqlParameter( "@GS52" ,GS052 ) ,new SqlParameter( "@GS56" ,GS056 ) ,new SqlParameter( "@GS68" ,GS068 ) ,new SqlParameter ( "@GS57" ,GS057 ) );
-                        result = bll . ExistsTwo ( _model );
-                        if ( result )
-                            MessageBox . Show ( "单号：" + _model . GS34 + "\n\r辅料：" + _model . GS52 + "\n\r零件名称：" + _model . GS56 + "辅料规格：" + _model . GS57 + "\n\r供应商：" + D3 + "\n\r的数据已经存在,请核实后再录入" );
-                        else
-                        {
-                            //GS34=@GS34 AND GS52=@GS52 AND GS56=@GS56 AND GS68=@GS068 AND GS57=@GS57
-                            //,new SqlParameter ( "@GS34" ,GS34 )
-                            // ,new SqlParameter ( "@GS52" ,gs052 )
-                            //,new SqlParameter ( "@GS56" ,gs056 )
-                            //,new SqlParameter ( "@GS068" ,gs068 )
-                            //,new SqlParameter ( "@GS57" ,GS057 ) 
-                            //int count = SqlHelper . ExecuteNonQuery ( "UPDATE R_PQP SET GS53=@GS53,GS54=@GS54,GS55=@GS55,GS58=@GS58,GS59=@GS59,GS60=@GS60,GS61=@GS61,GS69=@GS69,GS62=@GS62,GS63=@GS63,GS64=@GS64,GS65=@GS65,GS66=@GS66,GS67=@GS67,GS68=@GS68,GS52=@GS052,GS56=@GS056,GS57=@GS057 WHERE idx=@idx" ,new SqlParameter ( "@GS53" ,GS053 ) ,new SqlParameter ( "@GS54" ,GS054 ) ,new SqlParameter ( "@GS55" ,GS055 ) ,new SqlParameter ( "@GS58" ,GS058 ) ,new SqlParameter ( "@GS59" ,GS059 ) ,new SqlParameter ( "@GS60" ,GS060 ) ,new SqlParameter ( "@GS61" ,GS061 ) ,new SqlParameter ( "@GS69" ,GS069 ) ,new SqlParameter ( "@GS62" ,GS062 ) ,new SqlParameter ( "@GS63" ,GS063 ) ,new SqlParameter ( "@GS64" ,GS064 ) ,new SqlParameter ( "@GS65" ,GS065 ) ,new SqlParameter ( "@GS66" ,GS066 ) ,new SqlParameter ( "@GS67" ,GS067 ) ,new SqlParameter ( "@GS68" ,GS068 ) ,new SqlParameter ( "@GS052" ,GS052 ) ,new SqlParameter ( "@GS056" ,GS056 ) ,new SqlParameter ( "@GS057" ,gs057 ) ,new SqlParameter ( "@idx" ,idxTre ) );
-                            result = bll . EditTre ( _model );
-                            if ( result == false )
-                                MessageBox . Show ( "编辑数据失败" );
-                            else
-                            {
-                                MessageBox . Show ( "成功编辑数据" );
+                        MessageBox . Show ( "成功编辑数据" );
 
-                                up_one ( );
-                            }
-                        }
+                        up_one ( );
                     }
                 }
             }
@@ -2176,16 +2332,8 @@ namespace Mulaolao.Raw_material_cost
         //刷新
         private void button17_Click ( object sender ,EventArgs e )
         {
-            //if ( sads == "1" )
-            //{
-            //    dx = SqlHelper.ExecuteDataTable( "SELECT idx,GS52,GS49,GS61,GS53,GS54,GS56,GS57,GS58,GS59,GS60,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,D.U11 FROM R_PQP A, (SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D WHERE A.GS52 = D.U0 AND GS34 = @GS34 AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52" ,new SqlParameter( "@GS34" ,_model.GS34 ) );
-            //    gridControl3.DataSource = dx;
-            //}
-            //else if ( sads == "2" )
-            //{
-                ddp = SqlHelper.ExecuteDataTable( "SELECT idx,GS52,GS49,GS61,GS53,GS54,GS56,GS57,GS58,GS59,GS60,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,D.U11 FROM R_PQP A, (SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D WHERE A.GS52 = D.U0 AND GS34 = @GS34 AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52" ,new SqlParameter( "@GS34" ,_model.GS34 ) );
-                gridControl3.DataSource = ddp;
-            //}
+            ddp = SqlHelper . ExecuteDataTable ( "SELECT idx,GS52,GS49,GS61,GS53,GS54,GS56,GS57,GS58,GS59,GS60,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,GS77,(SELECT DGA003 FROM TPADGA WHERE GS68 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS68 = DGA001 ) DGA011,D.U11 FROM R_PQP A, (SELECT GS52 U0 ,SUM( GS59 * GS60 ) U11 FROM R_PQP GROUP BY GS52 ) D WHERE A.GS52 = D.U0 AND GS34 = @GS34 AND GS52!='' AND GS52 IS NOT NULL ORDER BY GS52" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
+            gridControl3 . DataSource = ddp;
         }
         #endregion
 

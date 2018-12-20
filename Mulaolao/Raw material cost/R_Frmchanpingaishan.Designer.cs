@@ -123,12 +123,18 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.BatchAdd = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.label80 = new System.Windows.Forms.Label();
+            this.txtGS76 = new System.Windows.Forms.ComboBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.txtGS75 = new System.Windows.Forms.ComboBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.comboBox21 = new System.Windows.Forms.ComboBox();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.label67 = new System.Windows.Forms.Label();
@@ -172,10 +178,15 @@
             this.GS44 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GS45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GS72 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS74 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS75 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS76 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.label81 = new System.Windows.Forms.Label();
+            this.txtGS77 = new System.Windows.Forms.ComboBox();
             this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.txtGS52 = new System.Windows.Forms.ComboBox();
             this.datatimepickeroverride7 = new Mulaolao.Class.Datatimepickeroverride();
             this.lookUpEdit9 = new DevExpress.XtraEditors.LookUpEdit();
             this.comboBox34 = new System.Windows.Forms.ComboBox();
@@ -197,7 +208,7 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.comboBox32 = new System.Windows.Forms.ComboBox();
+            this.txtGS56 = new System.Windows.Forms.ComboBox();
             this.label60 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -246,6 +257,7 @@
             this.DG3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DG11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GS68 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS77 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -287,9 +299,6 @@
             this.label68 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.label78 = new System.Windows.Forms.Label();
-            this.comboBox21 = new System.Windows.Forms.ComboBox();
-            this.GS74 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).BeginInit();
@@ -548,7 +557,7 @@
             this.GS02.AppearanceHeader.Options.UseFont = true;
             this.GS02.AppearanceHeader.Options.UseTextOptions = true;
             this.GS02.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.GS02.Caption = "部件或材料";
+            this.GS02.Caption = "部件";
             this.GS02.FieldName = "GS02";
             this.GS02.Name = "GS02";
             this.GS02.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
@@ -1143,19 +1152,6 @@
             this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "木材",
-            "胶合板",
-            "密度板",
-            "车木件",
-            "铁件",
-            "塑料件",
-            "其它材料",
-            "包装材料",
-            "成品委外",
-            "白坯委外",
-            "生产",
-            "/"});
             this.comboBox11.Location = new System.Drawing.Point(91, 40);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(108, 22);
@@ -1176,21 +1172,11 @@
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "R_199",
-            "R_338",
-            "R_341",
-            "R_342",
-            "R_343",
-            "R_347",
-            "R_349.347",
-            "R_199",
-            "生产",
-            "/"});
             this.comboBox5.Location = new System.Drawing.Point(91, 8);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(108, 22);
             this.comboBox5.TabIndex = 89;
+            this.comboBox5.TextChanged += new System.EventHandler(this.comboBox5_TextChanged);
             // 
             // button13
             // 
@@ -1481,7 +1467,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(205, 43);
+            this.label22.Location = new System.Drawing.Point(214, 43);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(67, 14);
             this.label22.TabIndex = 52;
@@ -1530,11 +1516,11 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 76);
+            this.label18.Location = new System.Drawing.Point(44, 78);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 14);
+            this.label18.Size = new System.Drawing.Size(37, 14);
             this.label18.TabIndex = 45;
-            this.label18.Text = "部件或材料";
+            this.label18.Text = "部件";
             // 
             // button3
             // 
@@ -1604,9 +1590,9 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox3);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox7);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox6);
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox3);
             this.splitContainer1.Panel1.Controls.Add(this.BatchAdd);
             this.splitContainer1.Panel1.Controls.Add(this.label66);
             this.splitContainer1.Panel1.Controls.Add(this.label65);
@@ -1659,6 +1645,16 @@
             this.splitContainer1.SplitterDistance = 141;
             this.splitContainer1.TabIndex = 2;
             // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(91, 71);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(108, 22);
+            this.comboBox3.TabIndex = 100;
+            // 
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
@@ -1674,14 +1670,6 @@
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(149, 22);
             this.comboBox6.TabIndex = 98;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(91, 75);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(108, 22);
-            this.comboBox3.TabIndex = 97;
             // 
             // BatchAdd
             // 
@@ -1701,7 +1689,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1232, 308);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "工段";
+            this.tabPage2.Text = "工资";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // splitContainer2
@@ -1714,6 +1702,10 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.label80);
+            this.splitContainer2.Panel1.Controls.Add(this.txtGS76);
+            this.splitContainer2.Panel1.Controls.Add(this.label79);
+            this.splitContainer2.Panel1.Controls.Add(this.txtGS75);
             this.splitContainer2.Panel1.Controls.Add(this.label78);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox21);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox13);
@@ -1752,18 +1744,81 @@
             this.splitContainer2.SplitterDistance = 148;
             this.splitContainer2.TabIndex = 4;
             // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(219, 50);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(37, 14);
+            this.label80.TabIndex = 102;
+            this.label80.Text = "规格";
+            // 
+            // txtGS76
+            // 
+            this.txtGS76.FormattingEnabled = true;
+            this.txtGS76.Location = new System.Drawing.Point(262, 47);
+            this.txtGS76.Name = "txtGS76";
+            this.txtGS76.Size = new System.Drawing.Size(100, 22);
+            this.txtGS76.TabIndex = 103;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(189, 19);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(67, 14);
+            this.label79.TabIndex = 100;
+            this.label79.Text = "零件名称";
+            // 
+            // txtGS75
+            // 
+            this.txtGS75.FormattingEnabled = true;
+            this.txtGS75.Location = new System.Drawing.Point(262, 16);
+            this.txtGS75.Name = "txtGS75";
+            this.txtGS75.Size = new System.Drawing.Size(100, 22);
+            this.txtGS75.TabIndex = 101;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(9, 21);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(67, 14);
+            this.label78.TabIndex = 99;
+            this.label78.Text = "合同代号";
+            // 
+            // comboBox21
+            // 
+            this.comboBox21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox21.FormattingEnabled = true;
+            this.comboBox21.Items.AddRange(new object[] {
+            "",
+            "R_195",
+            "R_196"});
+            this.comboBox21.Location = new System.Drawing.Point(82, 17);
+            this.comboBox21.Name = "comboBox21";
+            this.comboBox21.Size = new System.Drawing.Size(100, 22);
+            this.comboBox21.TabIndex = 98;
+            this.comboBox21.TextChanged += new System.EventHandler(this.comboBox21_TextChanged);
+            // 
             // comboBox13
             // 
+            this.comboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox13.FormattingEnabled = true;
             this.comboBox13.Location = new System.Drawing.Point(82, 47);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(100, 22);
             this.comboBox13.TabIndex = 97;
+            this.comboBox13.SelectedValueChanged += new System.EventHandler(this.comboBox13_SelectedValueChanged);
             // 
             // comboBox12
             // 
+            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(82, 16);
+            this.comboBox12.Location = new System.Drawing.Point(82, 78);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(100, 22);
             this.comboBox12.TabIndex = 96;
@@ -1771,15 +1826,15 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(15, 52);
+            this.label67.Location = new System.Drawing.Point(39, 50);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(61, 14);
+            this.label67.Size = new System.Drawing.Size(37, 14);
             this.label67.TabIndex = 90;
-            this.label67.Text = "046工序";
+            this.label67.Text = "类别";
             // 
             // lookUpEdit6
             // 
-            this.lookUpEdit6.Location = new System.Drawing.Point(843, 75);
+            this.lookUpEdit6.Location = new System.Drawing.Point(843, 80);
             this.lookUpEdit6.Name = "lookUpEdit6";
             this.lookUpEdit6.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lookUpEdit6.Properties.Appearance.Options.UseFont = true;
@@ -1794,7 +1849,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(39, 20);
+            this.label50.Location = new System.Drawing.Point(39, 81);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(37, 14);
             this.label50.TabIndex = 45;
@@ -1888,7 +1943,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(197, 20);
+            this.label49.Location = new System.Drawing.Point(204, 81);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(52, 14);
             this.label49.TabIndex = 46;
@@ -1897,7 +1952,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(778, 80);
+            this.label37.Location = new System.Drawing.Point(778, 85);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(52, 14);
             this.label37.TabIndex = 72;
@@ -1906,7 +1961,7 @@
             // comboBox24
             // 
             this.comboBox24.FormattingEnabled = true;
-            this.comboBox24.Location = new System.Drawing.Point(262, 17);
+            this.comboBox24.Location = new System.Drawing.Point(262, 78);
             this.comboBox24.Name = "comboBox24";
             this.comboBox24.Size = new System.Drawing.Size(100, 22);
             this.comboBox24.TabIndex = 47;
@@ -1926,7 +1981,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(368, 20);
+            this.label48.Location = new System.Drawing.Point(381, 20);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(97, 14);
             this.label48.TabIndex = 48;
@@ -1954,9 +2009,9 @@
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(262, 49);
+            this.textBox19.Location = new System.Drawing.Point(484, 49);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(322, 23);
+            this.textBox19.Size = new System.Drawing.Size(100, 23);
             this.textBox19.TabIndex = 67;
             // 
             // label45
@@ -1971,7 +2026,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(189, 55);
+            this.label40.Location = new System.Drawing.Point(411, 55);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(67, 14);
             this.label40.TabIndex = 66;
@@ -1987,9 +2042,9 @@
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(262, 77);
+            this.textBox20.Location = new System.Drawing.Point(484, 82);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(476, 23);
+            this.textBox20.Size = new System.Drawing.Size(254, 23);
             this.textBox20.TabIndex = 65;
             // 
             // label42
@@ -2004,7 +2059,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(189, 80);
+            this.label41.Location = new System.Drawing.Point(411, 86);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(67, 14);
             this.label41.TabIndex = 64;
@@ -2047,7 +2102,9 @@
             this.GS44,
             this.GS45,
             this.GS72,
-            this.GS74});
+            this.GS74,
+            this.GS75,
+            this.GS76});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -2073,8 +2130,8 @@
             this.GS35.Name = "GS35";
             this.GS35.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS35.Visible = true;
-            this.GS35.VisibleIndex = 1;
-            this.GS35.Width = 140;
+            this.GS35.VisibleIndex = 2;
+            this.GS35.Width = 103;
             // 
             // GS36
             // 
@@ -2095,7 +2152,7 @@
             this.GS36.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS04", "{0}")});
             this.GS36.Visible = true;
-            this.GS36.VisibleIndex = 3;
+            this.GS36.VisibleIndex = 5;
             this.GS36.Width = 96;
             // 
             // GS37
@@ -2117,7 +2174,7 @@
             this.GS37.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS05", "{0}")});
             this.GS37.Visible = true;
-            this.GS37.VisibleIndex = 8;
+            this.GS37.VisibleIndex = 10;
             this.GS37.Width = 111;
             // 
             // U10
@@ -2141,7 +2198,7 @@
             this.U10.UnboundExpression = "[GS36] - [GS37]";
             this.U10.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U10.Visible = true;
-            this.U10.VisibleIndex = 9;
+            this.U10.VisibleIndex = 11;
             this.U10.Width = 111;
             // 
             // GS38
@@ -2159,7 +2216,7 @@
             this.GS38.Name = "GS38";
             this.GS38.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS38.Visible = true;
-            this.GS38.VisibleIndex = 4;
+            this.GS38.VisibleIndex = 6;
             this.GS38.Width = 53;
             // 
             // GS39
@@ -2177,7 +2234,7 @@
             this.GS39.Name = "GS39";
             this.GS39.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.GS39.Visible = true;
-            this.GS39.VisibleIndex = 10;
+            this.GS39.VisibleIndex = 12;
             this.GS39.Width = 62;
             // 
             // GS40
@@ -2195,7 +2252,7 @@
             this.GS40.Name = "GS40";
             this.GS40.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS40.Visible = true;
-            this.GS40.VisibleIndex = 11;
+            this.GS40.VisibleIndex = 13;
             this.GS40.Width = 80;
             // 
             // GS41
@@ -2213,7 +2270,7 @@
             this.GS41.Name = "GS41";
             this.GS41.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS41.Visible = true;
-            this.GS41.VisibleIndex = 12;
+            this.GS41.VisibleIndex = 14;
             this.GS41.Width = 87;
             // 
             // GS42
@@ -2231,7 +2288,7 @@
             this.GS42.Name = "GS42";
             this.GS42.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS42.Visible = true;
-            this.GS42.VisibleIndex = 5;
+            this.GS42.VisibleIndex = 7;
             this.GS42.Width = 96;
             // 
             // GS43
@@ -2249,7 +2306,7 @@
             this.GS43.Name = "GS43";
             this.GS43.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS43.Visible = true;
-            this.GS43.VisibleIndex = 6;
+            this.GS43.VisibleIndex = 8;
             this.GS43.Width = 64;
             // 
             // GS44
@@ -2267,7 +2324,7 @@
             this.GS44.Name = "GS44";
             this.GS44.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS44.Visible = true;
-            this.GS44.VisibleIndex = 7;
+            this.GS44.VisibleIndex = 9;
             this.GS44.Width = 68;
             // 
             // GS45
@@ -2287,7 +2344,7 @@
             this.GS45.Name = "GS45";
             this.GS45.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS45.Visible = true;
-            this.GS45.VisibleIndex = 13;
+            this.GS45.VisibleIndex = 15;
             this.GS45.Width = 110;
             // 
             // GS72
@@ -2296,12 +2353,50 @@
             this.GS72.AppearanceCell.Options.UseFont = true;
             this.GS72.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
             this.GS72.AppearanceHeader.Options.UseFont = true;
-            this.GS72.Caption = "046工序";
+            this.GS72.Caption = "类别";
             this.GS72.FieldName = "GS72";
             this.GS72.Name = "GS72";
             this.GS72.Visible = true;
-            this.GS72.VisibleIndex = 2;
+            this.GS72.VisibleIndex = 1;
             this.GS72.Width = 88;
+            // 
+            // GS74
+            // 
+            this.GS74.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS74.AppearanceCell.Options.UseFont = true;
+            this.GS74.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS74.AppearanceHeader.Options.UseFont = true;
+            this.GS74.Caption = "合同代号";
+            this.GS74.FieldName = "GS74";
+            this.GS74.Name = "GS74";
+            this.GS74.Visible = true;
+            this.GS74.VisibleIndex = 0;
+            this.GS74.Width = 84;
+            // 
+            // GS75
+            // 
+            this.GS75.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS75.AppearanceCell.Options.UseFont = true;
+            this.GS75.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS75.AppearanceHeader.Options.UseFont = true;
+            this.GS75.Caption = "零件名称";
+            this.GS75.FieldName = "GS75";
+            this.GS75.Name = "GS75";
+            this.GS75.Visible = true;
+            this.GS75.VisibleIndex = 3;
+            this.GS75.Width = 87;
+            // 
+            // GS76
+            // 
+            this.GS76.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS76.AppearanceCell.Options.UseFont = true;
+            this.GS76.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS76.AppearanceHeader.Options.UseFont = true;
+            this.GS76.Caption = "规格";
+            this.GS76.FieldName = "GS76";
+            this.GS76.Name = "GS76";
+            this.GS76.Visible = true;
+            this.GS76.VisibleIndex = 4;
             // 
             // tabPage3
             // 
@@ -2310,7 +2405,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1232, 308);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "辅料";
+            this.tabPage3.Text = "杂项";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // splitContainer3
@@ -2324,8 +2419,10 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.AutoScroll = true;
+            this.splitContainer3.Panel1.Controls.Add(this.label81);
+            this.splitContainer3.Panel1.Controls.Add(this.txtGS77);
             this.splitContainer3.Panel1.Controls.Add(this.comboBox15);
-            this.splitContainer3.Panel1.Controls.Add(this.comboBox14);
+            this.splitContainer3.Panel1.Controls.Add(this.txtGS52);
             this.splitContainer3.Panel1.Controls.Add(this.datatimepickeroverride7);
             this.splitContainer3.Panel1.Controls.Add(this.lookUpEdit9);
             this.splitContainer3.Panel1.Controls.Add(this.comboBox34);
@@ -2347,7 +2444,7 @@
             this.splitContainer3.Panel1.Controls.Add(this.label44);
             this.splitContainer3.Panel1.Controls.Add(this.label61);
             this.splitContainer3.Panel1.Controls.Add(this.label46);
-            this.splitContainer3.Panel1.Controls.Add(this.comboBox32);
+            this.splitContainer3.Panel1.Controls.Add(this.txtGS56);
             this.splitContainer3.Panel1.Controls.Add(this.label60);
             this.splitContainer3.Panel1.Controls.Add(this.label47);
             this.splitContainer3.Panel1.Controls.Add(this.label51);
@@ -2370,36 +2467,57 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.gridControl3);
             this.splitContainer3.Size = new System.Drawing.Size(1232, 308);
-            this.splitContainer3.SplitterDistance = 138;
+            this.splitContainer3.SplitterDistance = 142;
             this.splitContainer3.TabIndex = 4;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(10, 72);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(67, 14);
+            this.label81.TabIndex = 101;
+            this.label81.Text = "工序名称";
+            // 
+            // txtGS77
+            // 
+            this.txtGS77.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtGS77.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtGS77.FormattingEnabled = true;
+            this.txtGS77.Location = new System.Drawing.Point(83, 69);
+            this.txtGS77.Name = "txtGS77";
+            this.txtGS77.Size = new System.Drawing.Size(100, 22);
+            this.txtGS77.TabIndex = 102;
             // 
             // comboBox15
             // 
             this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(277, 33);
+            this.comboBox15.Location = new System.Drawing.Point(277, 37);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(100, 22);
             this.comboBox15.TabIndex = 100;
             // 
-            // comboBox14
+            // txtGS52
             // 
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(106, 5);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(100, 22);
-            this.comboBox14.TabIndex = 99;
+            this.txtGS52.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtGS52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtGS52.FormattingEnabled = true;
+            this.txtGS52.Location = new System.Drawing.Point(83, 8);
+            this.txtGS52.Name = "txtGS52";
+            this.txtGS52.Size = new System.Drawing.Size(100, 22);
+            this.txtGS52.TabIndex = 99;
             // 
             // datatimepickeroverride7
             // 
             this.datatimepickeroverride7.Enabled = false;
-            this.datatimepickeroverride7.Location = new System.Drawing.Point(991, 100);
+            this.datatimepickeroverride7.Location = new System.Drawing.Point(991, 104);
             this.datatimepickeroverride7.Name = "datatimepickeroverride7";
             this.datatimepickeroverride7.Size = new System.Drawing.Size(150, 23);
             this.datatimepickeroverride7.TabIndex = 75;
             // 
             // lookUpEdit9
             // 
-            this.lookUpEdit9.Location = new System.Drawing.Point(1080, 62);
+            this.lookUpEdit9.Location = new System.Drawing.Point(1080, 66);
             this.lookUpEdit9.Name = "lookUpEdit9";
             this.lookUpEdit9.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lookUpEdit9.Properties.Appearance.Options.UseFont = true;
@@ -2414,7 +2532,7 @@
             // comboBox34
             // 
             this.comboBox34.FormattingEnabled = true;
-            this.comboBox34.Location = new System.Drawing.Point(277, 3);
+            this.comboBox34.Location = new System.Drawing.Point(277, 7);
             this.comboBox34.Name = "comboBox34";
             this.comboBox34.Size = new System.Drawing.Size(100, 22);
             this.comboBox34.TabIndex = 47;
@@ -2424,7 +2542,7 @@
             // 
             // lookUpEdit8
             // 
-            this.lookUpEdit8.Location = new System.Drawing.Point(1080, 32);
+            this.lookUpEdit8.Location = new System.Drawing.Point(1080, 36);
             this.lookUpEdit8.Name = "lookUpEdit8";
             this.lookUpEdit8.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lookUpEdit8.Properties.Appearance.Options.UseFont = true;
@@ -2438,7 +2556,7 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(19, 98);
+            this.button21.Location = new System.Drawing.Point(19, 102);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(69, 29);
             this.button21.TabIndex = 39;
@@ -2448,7 +2566,7 @@
             // 
             // lookUpEdit7
             // 
-            this.lookUpEdit7.Location = new System.Drawing.Point(1080, 3);
+            this.lookUpEdit7.Location = new System.Drawing.Point(1080, 7);
             this.lookUpEdit7.Name = "lookUpEdit7";
             this.lookUpEdit7.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lookUpEdit7.Properties.Appearance.Options.UseFont = true;
@@ -2462,7 +2580,7 @@
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(169, 98);
+            this.button20.Location = new System.Drawing.Point(169, 102);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(69, 29);
             this.button20.TabIndex = 40;
@@ -2473,7 +2591,7 @@
             // comboBox19
             // 
             this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Location = new System.Drawing.Point(721, 33);
+            this.comboBox19.Location = new System.Drawing.Point(721, 37);
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(100, 22);
             this.comboBox19.TabIndex = 84;
@@ -2483,7 +2601,7 @@
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(94, 98);
+            this.button19.Location = new System.Drawing.Point(94, 102);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(69, 29);
             this.button19.TabIndex = 41;
@@ -2494,7 +2612,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(635, 36);
+            this.label43.Location = new System.Drawing.Point(635, 40);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(67, 14);
             this.label43.TabIndex = 83;
@@ -2502,7 +2620,7 @@
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(251, 98);
+            this.button17.Location = new System.Drawing.Point(251, 102);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(69, 29);
             this.button17.TabIndex = 82;
@@ -2513,16 +2631,16 @@
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(56, 6);
+            this.label64.Location = new System.Drawing.Point(10, 10);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(37, 14);
+            this.label64.Size = new System.Drawing.Size(67, 14);
             this.label64.TabIndex = 45;
-            this.label64.Text = "品名";
+            this.label64.Text = "合同代号";
             // 
             // button18
             // 
             this.button18.BackColor = System.Drawing.Color.Green;
-            this.button18.Location = new System.Drawing.Point(871, 99);
+            this.button18.Location = new System.Drawing.Point(871, 103);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(29, 26);
             this.button18.TabIndex = 81;
@@ -2532,7 +2650,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(212, 6);
+            this.label63.Location = new System.Drawing.Point(212, 10);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(52, 14);
             this.label63.TabIndex = 46;
@@ -2540,7 +2658,7 @@
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(499, 102);
+            this.textBox17.Location = new System.Drawing.Point(499, 106);
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
             this.textBox17.Size = new System.Drawing.Size(150, 23);
@@ -2549,7 +2667,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(383, 6);
+            this.label62.Location = new System.Drawing.Point(383, 10);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(97, 14);
             this.label62.TabIndex = 48;
@@ -2557,7 +2675,7 @@
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(749, 102);
+            this.textBox18.Location = new System.Drawing.Point(749, 106);
             this.textBox18.Name = "textBox18";
             this.textBox18.ReadOnly = true;
             this.textBox18.Size = new System.Drawing.Size(116, 23);
@@ -2566,7 +2684,7 @@
             // comboBox33
             // 
             this.comboBox33.FormattingEnabled = true;
-            this.comboBox33.Location = new System.Drawing.Point(499, 3);
+            this.comboBox33.Location = new System.Drawing.Point(499, 7);
             this.comboBox33.Name = "comboBox33";
             this.comboBox33.Size = new System.Drawing.Size(100, 22);
             this.comboBox33.TabIndex = 49;
@@ -2577,7 +2695,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(417, 102);
+            this.label44.Location = new System.Drawing.Point(417, 106);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(67, 14);
             this.label44.TabIndex = 78;
@@ -2586,35 +2704,35 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(2, 37);
+            this.label61.Location = new System.Drawing.Point(10, 41);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(97, 14);
+            this.label61.Size = new System.Drawing.Size(67, 14);
             this.label61.TabIndex = 52;
-            this.label61.Text = "计算公式名称";
+            this.label61.Text = "工段名称";
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(655, 105);
+            this.label46.Location = new System.Drawing.Point(655, 109);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(82, 14);
             this.label46.TabIndex = 76;
             this.label46.Text = "供应商名称";
             // 
-            // comboBox32
+            // txtGS56
             // 
-            this.comboBox32.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox32.FormattingEnabled = true;
-            this.comboBox32.Location = new System.Drawing.Point(106, 34);
-            this.comboBox32.Name = "comboBox32";
-            this.comboBox32.Size = new System.Drawing.Size(100, 22);
-            this.comboBox32.TabIndex = 53;
+            this.txtGS56.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtGS56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtGS56.FormattingEnabled = true;
+            this.txtGS56.Location = new System.Drawing.Point(83, 38);
+            this.txtGS56.Name = "txtGS56";
+            this.txtGS56.Size = new System.Drawing.Size(100, 22);
+            this.txtGS56.TabIndex = 53;
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(229, 37);
+            this.label60.Location = new System.Drawing.Point(229, 41);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(37, 14);
             this.label60.TabIndex = 54;
@@ -2623,7 +2741,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(909, 105);
+            this.label47.Location = new System.Drawing.Point(909, 109);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(67, 14);
             this.label47.TabIndex = 74;
@@ -2632,7 +2750,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(1015, 67);
+            this.label51.Location = new System.Drawing.Point(1015, 71);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(52, 14);
             this.label51.TabIndex = 72;
@@ -2641,7 +2759,7 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(827, 37);
+            this.label59.Location = new System.Drawing.Point(827, 41);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(37, 14);
             this.label59.TabIndex = 56;
@@ -2650,7 +2768,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(1015, 37);
+            this.label52.Location = new System.Drawing.Point(1015, 41);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(52, 14);
             this.label52.TabIndex = 70;
@@ -2659,7 +2777,7 @@
             // comboBox30
             // 
             this.comboBox30.FormattingEnabled = true;
-            this.comboBox30.Location = new System.Drawing.Point(875, 34);
+            this.comboBox30.Location = new System.Drawing.Point(875, 38);
             this.comboBox30.Name = "comboBox30";
             this.comboBox30.Size = new System.Drawing.Size(100, 22);
             this.comboBox30.TabIndex = 57;
@@ -2667,7 +2785,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(981, 7);
+            this.label53.Location = new System.Drawing.Point(981, 11);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(82, 14);
             this.label53.TabIndex = 68;
@@ -2676,7 +2794,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(383, 37);
+            this.label58.Location = new System.Drawing.Point(383, 41);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(97, 14);
             this.label58.TabIndex = 58;
@@ -2684,7 +2802,7 @@
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(499, 64);
+            this.textBox21.Location = new System.Drawing.Point(499, 68);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(322, 23);
             this.textBox21.TabIndex = 67;
@@ -2692,7 +2810,7 @@
             // comboBox29
             // 
             this.comboBox29.FormattingEnabled = true;
-            this.comboBox29.Location = new System.Drawing.Point(499, 34);
+            this.comboBox29.Location = new System.Drawing.Point(499, 38);
             this.comboBox29.Name = "comboBox29";
             this.comboBox29.Size = new System.Drawing.Size(100, 22);
             this.comboBox29.TabIndex = 59;
@@ -2703,7 +2821,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(417, 67);
+            this.label54.Location = new System.Drawing.Point(417, 71);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(67, 14);
             this.label54.TabIndex = 66;
@@ -2712,7 +2830,7 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(620, 6);
+            this.label57.Location = new System.Drawing.Point(620, 10);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(82, 14);
             this.label57.TabIndex = 60;
@@ -2720,15 +2838,15 @@
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(106, 64);
+            this.textBox22.Location = new System.Drawing.Point(277, 68);
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(271, 23);
+            this.textBox22.Size = new System.Drawing.Size(100, 23);
             this.textBox22.TabIndex = 65;
             // 
             // comboBox28
             // 
             this.comboBox28.FormattingEnabled = true;
-            this.comboBox28.Location = new System.Drawing.Point(721, 3);
+            this.comboBox28.Location = new System.Drawing.Point(721, 7);
             this.comboBox28.Name = "comboBox28";
             this.comboBox28.Size = new System.Drawing.Size(100, 22);
             this.comboBox28.TabIndex = 61;
@@ -2739,7 +2857,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(26, 67);
+            this.label55.Location = new System.Drawing.Point(204, 74);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(67, 14);
             this.label55.TabIndex = 64;
@@ -2748,7 +2866,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(827, 7);
+            this.label56.Location = new System.Drawing.Point(827, 11);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(37, 14);
             this.label56.TabIndex = 62;
@@ -2757,7 +2875,7 @@
             // comboBox27
             // 
             this.comboBox27.FormattingEnabled = true;
-            this.comboBox27.Location = new System.Drawing.Point(875, 4);
+            this.comboBox27.Location = new System.Drawing.Point(875, 8);
             this.comboBox27.Name = "comboBox27";
             this.comboBox27.Size = new System.Drawing.Size(100, 22);
             this.comboBox27.TabIndex = 63;
@@ -2769,7 +2887,7 @@
             this.gridControl3.Location = new System.Drawing.Point(0, 0);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(1232, 166);
+            this.gridControl3.Size = new System.Drawing.Size(1232, 162);
             this.gridControl3.TabIndex = 1;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -2806,7 +2924,8 @@
             this.GS67,
             this.DG3,
             this.DG11,
-            this.GS68});
+            this.GS68,
+            this.GS77});
             this.gridView3.GridControl = this.gridControl3;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsBehavior.Editable = false;
@@ -2827,13 +2946,13 @@
             this.GS52.AppearanceHeader.Options.UseFont = true;
             this.GS52.AppearanceHeader.Options.UseTextOptions = true;
             this.GS52.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.GS52.Caption = "品名";
+            this.GS52.Caption = "合同代号";
             this.GS52.FieldName = "GS52";
             this.GS52.Name = "GS52";
             this.GS52.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS52.Visible = true;
             this.GS52.VisibleIndex = 0;
-            this.GS52.Width = 124;
+            this.GS52.Width = 77;
             // 
             // GS00049
             // 
@@ -2851,7 +2970,7 @@
             this.GS00049.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS00049.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.GS00049.Visible = true;
-            this.GS00049.VisibleIndex = 8;
+            this.GS00049.VisibleIndex = 9;
             this.GS00049.Width = 76;
             // 
             // GS53
@@ -2873,7 +2992,7 @@
             this.GS53.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS04", "{0}")});
             this.GS53.Visible = true;
-            this.GS53.VisibleIndex = 6;
+            this.GS53.VisibleIndex = 7;
             this.GS53.Width = 113;
             // 
             // GS54
@@ -2895,7 +3014,7 @@
             this.GS54.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS05", "{0}")});
             this.GS54.Visible = true;
-            this.GS54.VisibleIndex = 15;
+            this.GS54.VisibleIndex = 16;
             this.GS54.Width = 109;
             // 
             // U9
@@ -2920,7 +3039,7 @@
             this.U9.UnboundExpression = "[GS53] - [U11]";
             this.U9.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U9.Visible = true;
-            this.U9.VisibleIndex = 17;
+            this.U9.VisibleIndex = 18;
             this.U9.Width = 116;
             // 
             // U11
@@ -2941,7 +3060,7 @@
             this.U11.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS06", "{0}")});
             this.U11.Visible = true;
-            this.U11.VisibleIndex = 18;
+            this.U11.VisibleIndex = 19;
             this.U11.Width = 119;
             // 
             // U12
@@ -2966,7 +3085,7 @@
             this.U12.UnboundExpression = "[GS53] - [GS54]";
             this.U12.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U12.Visible = true;
-            this.U12.VisibleIndex = 19;
+            this.U12.VisibleIndex = 20;
             this.U12.Width = 118;
             // 
             // U13
@@ -2989,7 +3108,7 @@
             this.U13.UnboundExpression = "[GS54]  * [U15]";
             this.U13.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.U13.Visible = true;
-            this.U13.VisibleIndex = 20;
+            this.U13.VisibleIndex = 21;
             this.U13.Width = 109;
             // 
             // U14
@@ -3010,7 +3129,7 @@
             this.U14.UnboundExpression = "[GS49]  * [U9]";
             this.U14.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U14.Visible = true;
-            this.U14.VisibleIndex = 21;
+            this.U14.VisibleIndex = 22;
             this.U14.Width = 127;
             // 
             // U15
@@ -3031,7 +3150,7 @@
             this.U15.UnboundExpression = "[GS49] * [GS59]";
             this.U15.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.U15.Visible = true;
-            this.U15.VisibleIndex = 9;
+            this.U15.VisibleIndex = 10;
             this.U15.Width = 96;
             // 
             // GS56
@@ -3044,13 +3163,12 @@
             this.GS56.AppearanceHeader.Options.UseFont = true;
             this.GS56.AppearanceHeader.Options.UseTextOptions = true;
             this.GS56.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.GS56.Caption = "计算公式名称";
+            this.GS56.Caption = "工段名称";
             this.GS56.FieldName = "GS56";
             this.GS56.Name = "GS56";
-            this.GS56.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS56.Visible = true;
             this.GS56.VisibleIndex = 1;
-            this.GS56.Width = 156;
+            this.GS56.Width = 94;
             // 
             // GS57
             // 
@@ -3067,8 +3185,8 @@
             this.GS57.Name = "GS57";
             this.GS57.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS57.Visible = true;
-            this.GS57.VisibleIndex = 2;
-            this.GS57.Width = 145;
+            this.GS57.VisibleIndex = 3;
+            this.GS57.Width = 88;
             // 
             // GS58
             // 
@@ -3085,7 +3203,7 @@
             this.GS58.Name = "GS58";
             this.GS58.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS58.Visible = true;
-            this.GS58.VisibleIndex = 4;
+            this.GS58.VisibleIndex = 5;
             this.GS58.Width = 47;
             // 
             // GS59
@@ -3104,8 +3222,8 @@
             this.GS59.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS59.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.GS59.Visible = true;
-            this.GS59.VisibleIndex = 3;
-            this.GS59.Width = 54;
+            this.GS59.VisibleIndex = 4;
+            this.GS59.Width = 118;
             // 
             // GS60
             // 
@@ -3124,7 +3242,7 @@
             this.GS60.Name = "GS60";
             this.GS60.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS60.Visible = true;
-            this.GS60.VisibleIndex = 7;
+            this.GS60.VisibleIndex = 8;
             this.GS60.Width = 113;
             // 
             // U16
@@ -3148,7 +3266,7 @@
             this.U16.UnboundExpression = "[GS59] * [GS60]";
             this.U16.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U16.Visible = true;
-            this.U16.VisibleIndex = 22;
+            this.U16.VisibleIndex = 23;
             this.U16.Width = 114;
             // 
             // U18
@@ -3164,7 +3282,7 @@
             this.U18.UnboundExpression = "[GS60] * [GS59]";
             this.U18.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U18.Visible = true;
-            this.U18.VisibleIndex = 16;
+            this.U18.VisibleIndex = 17;
             // 
             // GS61
             // 
@@ -3181,7 +3299,7 @@
             this.GS61.Name = "GS61";
             this.GS61.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS61.Visible = true;
-            this.GS61.VisibleIndex = 5;
+            this.GS61.VisibleIndex = 6;
             this.GS61.Width = 93;
             // 
             // GS69
@@ -3199,7 +3317,7 @@
             this.GS69.Name = "GS69";
             this.GS69.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.GS69.Visible = true;
-            this.GS69.VisibleIndex = 23;
+            this.GS69.VisibleIndex = 24;
             this.GS69.Width = 77;
             // 
             // U17
@@ -3223,7 +3341,7 @@
             this.U17.UnboundExpression = "[U14] * [GS69]";
             this.U17.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U17.Visible = true;
-            this.U17.VisibleIndex = 24;
+            this.U17.VisibleIndex = 25;
             this.U17.Width = 80;
             // 
             // GS62
@@ -3241,7 +3359,7 @@
             this.GS62.Name = "GS62";
             this.GS62.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS62.Visible = true;
-            this.GS62.VisibleIndex = 25;
+            this.GS62.VisibleIndex = 26;
             this.GS62.Width = 91;
             // 
             // GS63
@@ -3259,7 +3377,7 @@
             this.GS63.Name = "GS63";
             this.GS63.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS63.Visible = true;
-            this.GS63.VisibleIndex = 26;
+            this.GS63.VisibleIndex = 27;
             this.GS63.Width = 92;
             // 
             // GS64
@@ -3277,7 +3395,7 @@
             this.GS64.Name = "GS64";
             this.GS64.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS64.Visible = true;
-            this.GS64.VisibleIndex = 10;
+            this.GS64.VisibleIndex = 11;
             this.GS64.Width = 97;
             // 
             // GS65
@@ -3295,7 +3413,7 @@
             this.GS65.Name = "GS65";
             this.GS65.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS65.Visible = true;
-            this.GS65.VisibleIndex = 11;
+            this.GS65.VisibleIndex = 12;
             this.GS65.Width = 62;
             // 
             // GS66
@@ -3313,7 +3431,7 @@
             this.GS66.Name = "GS66";
             this.GS66.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS66.Visible = true;
-            this.GS66.VisibleIndex = 12;
+            this.GS66.VisibleIndex = 13;
             this.GS66.Width = 61;
             // 
             // GS67
@@ -3333,7 +3451,7 @@
             this.GS67.Name = "GS67";
             this.GS67.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS67.Visible = true;
-            this.GS67.VisibleIndex = 27;
+            this.GS67.VisibleIndex = 28;
             this.GS67.Width = 107;
             // 
             // DG3
@@ -3350,7 +3468,7 @@
             this.DG3.FieldName = "DGA003";
             this.DG3.Name = "DG3";
             this.DG3.Visible = true;
-            this.DG3.VisibleIndex = 13;
+            this.DG3.VisibleIndex = 14;
             this.DG3.Width = 94;
             // 
             // DG11
@@ -3367,7 +3485,7 @@
             this.DG11.FieldName = "DGA011";
             this.DG11.Name = "DG11";
             this.DG11.Visible = true;
-            this.DG11.VisibleIndex = 14;
+            this.DG11.VisibleIndex = 15;
             this.DG11.Width = 95;
             // 
             // GS68
@@ -3379,6 +3497,19 @@
             this.GS68.Caption = "供应商编号";
             this.GS68.FieldName = "GS68";
             this.GS68.Name = "GS68";
+            // 
+            // GS77
+            // 
+            this.GS77.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS77.AppearanceCell.Options.UseFont = true;
+            this.GS77.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.GS77.AppearanceHeader.Options.UseFont = true;
+            this.GS77.Caption = "工序名称";
+            this.GS77.FieldName = "GS77";
+            this.GS77.Name = "GS77";
+            this.GS77.Visible = true;
+            this.GS77.VisibleIndex = 2;
+            this.GS77.Width = 96;
             // 
             // tabPage4
             // 
@@ -3802,42 +3933,6 @@
             this.splitContainer4.SplitterDistance = 81;
             this.splitContainer4.TabIndex = 70;
             // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(5, 81);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(67, 14);
-            this.label78.TabIndex = 99;
-            this.label78.Text = "合同代号";
-            // 
-            // comboBox21
-            // 
-            this.comboBox21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Items.AddRange(new object[] {
-            "",
-            "R_195",
-            "R_196"});
-            this.comboBox21.Location = new System.Drawing.Point(82, 77);
-            this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(100, 22);
-            this.comboBox21.TabIndex = 98;
-            // 
-            // GS74
-            // 
-            this.GS74.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.GS74.AppearanceCell.Options.UseFont = true;
-            this.GS74.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.GS74.AppearanceHeader.Options.UseFont = true;
-            this.GS74.Caption = "合同代号";
-            this.GS74.FieldName = "GS74";
-            this.GS74.Name = "GS74";
-            this.GS74.Visible = true;
-            this.GS74.VisibleIndex = 0;
-            this.GS74.Width = 84;
-            // 
             // R_Frmchanpingaishan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4084,7 +4179,7 @@
         private System.Windows.Forms.ComboBox comboBox30;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.ComboBox comboBox32;
+        private System.Windows.Forms.ComboBox txtGS56;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.ComboBox comboBox33;
         private System.Windows.Forms.Label label62;
@@ -4147,12 +4242,11 @@
         private System . Windows . Forms . Button BatchAdd;
         private System . Windows . Forms . Label label67;
         private DevExpress . XtraGrid . Columns . GridColumn GS72;
-        private System . Windows . Forms . ComboBox comboBox3;
         private System . Windows . Forms . ComboBox comboBox6;
         private System . Windows . Forms . ComboBox comboBox7;
         private System . Windows . Forms . ComboBox comboBox12;
         private System . Windows . Forms . ComboBox comboBox13;
-        private System . Windows . Forms . ComboBox comboBox14;
+        private System . Windows . Forms . ComboBox txtGS52;
         private System . Windows . Forms . ComboBox comboBox15;
         private System . Windows . Forms . TabPage tabPage5;
         private System . Windows . Forms . Label label68;
@@ -4168,5 +4262,15 @@
         private System . Windows . Forms . Label label78;
         private System . Windows . Forms . ComboBox comboBox21;
         private DevExpress . XtraGrid . Columns . GridColumn GS74;
+        private System . Windows . Forms . ComboBox comboBox3;
+        private System . Windows . Forms . Label label79;
+        private System . Windows . Forms . ComboBox txtGS75;
+        private DevExpress . XtraGrid . Columns . GridColumn GS75;
+        private System . Windows . Forms . Label label80;
+        private System . Windows . Forms . ComboBox txtGS76;
+        private DevExpress . XtraGrid . Columns . GridColumn GS76;
+        private System . Windows . Forms . Label label81;
+        private System . Windows . Forms . ComboBox txtGS77;
+        private DevExpress . XtraGrid . Columns . GridColumn GS77;
     }
 }

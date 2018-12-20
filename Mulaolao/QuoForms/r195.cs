@@ -16,8 +16,8 @@ namespace Mulaolao . QuoForms
 
             _bll = new MulaolaoBll . Bll . QuoBll ( );
 
-            GridViewMoHuSelect . SetFilter ( view );
-            GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { view } );
+            GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { view ,View1 } );
+            GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { view ,View1 } );
             getInfo ( );
             this . model = model;
             setValue ( );

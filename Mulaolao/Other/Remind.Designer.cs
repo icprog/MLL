@@ -28,22 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject37 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.MenuItemRefresh = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAutoMatic = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +72,7 @@
             this.PQF03 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.PQF031 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip();
             this.MenuItemRe = new System.Windows.Forms.ToolStripMenuItem();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -91,7 +90,7 @@
             this.CP = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.btnDate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.idx = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
@@ -324,7 +323,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1251, 231);
+            this.gridControl1.Size = new System.Drawing.Size(1251, 232);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -557,7 +556,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.gridControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1251, 138);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1251, 137);
             this.splitContainerControl2.SplitterPosition = 730;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -568,7 +567,7 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.bandedGridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(730, 138);
+            this.gridControl2.Size = new System.Drawing.Size(730, 137);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView2});
@@ -695,7 +694,7 @@
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDate});
-            this.gridControl3.Size = new System.Drawing.Size(516, 138);
+            this.gridControl3.Size = new System.Drawing.Size(516, 137);
             this.gridControl3.TabIndex = 1;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
@@ -885,16 +884,16 @@
             // btnDate
             // 
             this.btnDate.AutoHeight = false;
-            serializableAppearanceObject1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serializableAppearanceObject1.Options.UseFont = true;
-            serializableAppearanceObject2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serializableAppearanceObject2.Options.UseFont = true;
-            serializableAppearanceObject3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serializableAppearanceObject3.Options.UseFont = true;
-            serializableAppearanceObject4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            serializableAppearanceObject4.Options.UseFont = true;
+            serializableAppearanceObject27.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serializableAppearanceObject27.Options.UseFont = true;
+            serializableAppearanceObject28.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serializableAppearanceObject28.Options.UseFont = true;
+            serializableAppearanceObject29.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serializableAppearanceObject29.Options.UseFont = true;
+            serializableAppearanceObject30.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            serializableAppearanceObject30.Options.UseFont = true;
             this.btnDate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "实际到货日期", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "实际到货日期", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, "", new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject27, serializableAppearanceObject28, serializableAppearanceObject29, serializableAppearanceObject30, "", null, null, true)});
             this.btnDate.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btnDate.Name = "btnDate";
             this.btnDate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -992,7 +991,7 @@
             this.R338.Controls.Add(this.gridControl4);
             this.R338.Name = "R338";
             this.R338.Size = new System.Drawing.Size(1245, 350);
-            this.R338.Text = "R338";
+            this.R338.Text = "R338胶合板密度板";
             // 
             // gridControl4
             // 
@@ -1159,7 +1158,7 @@
             // 
             this.btn338.AutoHeight = false;
             this.btn338.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, "", null, null, true)});
             this.btn338.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn338.Name = "btn338";
             this.btn338.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1169,8 +1168,8 @@
             // 
             this.R195.Controls.Add(this.gridControl5);
             this.R195.Name = "R195";
-            this.R195.Size = new System.Drawing.Size(1249, 353);
-            this.R195.Text = "R195";
+            this.R195.Size = new System.Drawing.Size(1245, 350);
+            this.R195.Text = "R195委外合同";
             // 
             // gridControl5
             // 
@@ -1180,7 +1179,7 @@
             this.gridControl5.Name = "gridControl5";
             this.gridControl5.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn195});
-            this.gridControl5.Size = new System.Drawing.Size(1249, 353);
+            this.gridControl5.Size = new System.Drawing.Size(1245, 350);
             this.gridControl5.TabIndex = 1;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -1337,7 +1336,7 @@
             // 
             this.btn195.AutoHeight = false;
             this.btn195.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject31, "", null, null, true)});
             this.btn195.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn195.Name = "btn195";
             this.btn195.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1347,8 +1346,8 @@
             // 
             this.R196.Controls.Add(this.gridControl6);
             this.R196.Name = "R196";
-            this.R196.Size = new System.Drawing.Size(1249, 353);
-            this.R196.Text = "R196";
+            this.R196.Size = new System.Drawing.Size(1245, 350);
+            this.R196.Text = "R196承揽合同";
             // 
             // gridControl6
             // 
@@ -1358,7 +1357,7 @@
             this.gridControl6.Name = "gridControl6";
             this.gridControl6.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn196});
-            this.gridControl6.Size = new System.Drawing.Size(1249, 353);
+            this.gridControl6.Size = new System.Drawing.Size(1245, 350);
             this.gridControl6.TabIndex = 1;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -1515,7 +1514,7 @@
             // 
             this.btn196.AutoHeight = false;
             this.btn196.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject34, "", null, null, true)});
             this.btn196.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn196.Name = "btn196";
             this.btn196.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1525,8 +1524,8 @@
             // 
             this.R339.Controls.Add(this.gridControl7);
             this.R339.Name = "R339";
-            this.R339.Size = new System.Drawing.Size(1249, 353);
-            this.R339.Text = "R339";
+            this.R339.Size = new System.Drawing.Size(1245, 350);
+            this.R339.Text = "R339油漆";
             // 
             // gridControl7
             // 
@@ -1536,7 +1535,7 @@
             this.gridControl7.Name = "gridControl7";
             this.gridControl7.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn339});
-            this.gridControl7.Size = new System.Drawing.Size(1249, 353);
+            this.gridControl7.Size = new System.Drawing.Size(1245, 350);
             this.gridControl7.TabIndex = 1;
             this.gridControl7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -1693,7 +1692,7 @@
             // 
             this.btn339.AutoHeight = false;
             this.btn339.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject35, "", null, null, true)});
             this.btn339.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn339.Name = "btn339";
             this.btn339.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1703,8 +1702,8 @@
             // 
             this.R341.Controls.Add(this.gridControl8);
             this.R341.Name = "R341";
-            this.R341.Size = new System.Drawing.Size(1249, 353);
-            this.R341.Text = "R341";
+            this.R341.Size = new System.Drawing.Size(1245, 350);
+            this.R341.Text = "R341木材";
             // 
             // gridControl8
             // 
@@ -1714,7 +1713,7 @@
             this.gridControl8.Name = "gridControl8";
             this.gridControl8.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn341});
-            this.gridControl8.Size = new System.Drawing.Size(1249, 353);
+            this.gridControl8.Size = new System.Drawing.Size(1245, 350);
             this.gridControl8.TabIndex = 1;
             this.gridControl8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -1871,7 +1870,7 @@
             // 
             this.btn341.AutoHeight = false;
             this.btn341.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject36, "", null, null, true)});
             this.btn341.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn341.Name = "btn341";
             this.btn341.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1881,8 +1880,8 @@
             // 
             this.R342.Controls.Add(this.gridControl9);
             this.R342.Name = "R342";
-            this.R342.Size = new System.Drawing.Size(1249, 353);
-            this.R342.Text = "R342";
+            this.R342.Size = new System.Drawing.Size(1245, 350);
+            this.R342.Text = "R342车木件";
             // 
             // gridControl9
             // 
@@ -1892,7 +1891,7 @@
             this.gridControl9.Name = "gridControl9";
             this.gridControl9.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn342});
-            this.gridControl9.Size = new System.Drawing.Size(1249, 353);
+            this.gridControl9.Size = new System.Drawing.Size(1245, 350);
             this.gridControl9.TabIndex = 1;
             this.gridControl9.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -2049,7 +2048,7 @@
             // 
             this.btn342.AutoHeight = false;
             this.btn342.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, "", null, null, true)});
             this.btn342.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn342.Name = "btn342";
             this.btn342.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2059,8 +2058,8 @@
             // 
             this.R343.Controls.Add(this.gridControl10);
             this.R343.Name = "R343";
-            this.R343.Size = new System.Drawing.Size(1249, 353);
-            this.R343.Text = "R343";
+            this.R343.Size = new System.Drawing.Size(1245, 350);
+            this.R343.Text = "R343铁件";
             // 
             // gridControl10
             // 
@@ -2070,7 +2069,7 @@
             this.gridControl10.Name = "gridControl10";
             this.gridControl10.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn343});
-            this.gridControl10.Size = new System.Drawing.Size(1249, 353);
+            this.gridControl10.Size = new System.Drawing.Size(1245, 350);
             this.gridControl10.TabIndex = 1;
             this.gridControl10.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView8});
@@ -2227,7 +2226,7 @@
             // 
             this.btn343.AutoHeight = false;
             this.btn343.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject38, "", null, null, true)});
             this.btn343.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn343.Name = "btn343";
             this.btn343.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2237,8 +2236,8 @@
             // 
             this.R347.Controls.Add(this.gridControl11);
             this.R347.Name = "R347";
-            this.R347.Size = new System.Drawing.Size(1249, 353);
-            this.R347.Text = "R347";
+            this.R347.Size = new System.Drawing.Size(1245, 350);
+            this.R347.Text = "R347塑料布";
             // 
             // gridControl11
             // 
@@ -2248,7 +2247,7 @@
             this.gridControl11.Name = "gridControl11";
             this.gridControl11.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn347});
-            this.gridControl11.Size = new System.Drawing.Size(1249, 353);
+            this.gridControl11.Size = new System.Drawing.Size(1245, 350);
             this.gridControl11.TabIndex = 1;
             this.gridControl11.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView9});
@@ -2405,7 +2404,7 @@
             // 
             this.btn347.AutoHeight = false;
             this.btn347.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject32, "", null, null, true)});
             this.btn347.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn347.Name = "btn347";
             this.btn347.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2416,7 +2415,7 @@
             this.R349.Controls.Add(this.gridControl12);
             this.R349.Name = "R349";
             this.R349.Size = new System.Drawing.Size(1245, 350);
-            this.R349.Text = "R349";
+            this.R349.Text = "R349包装材料";
             // 
             // gridControl12
             // 
@@ -2583,7 +2582,7 @@
             // 
             this.btn349.AutoHeight = false;
             this.btn349.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "已开", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject39, "", null, null, true)});
             this.btn349.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btn349.Name = "btn349";
             this.btn349.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2611,7 +2610,7 @@
             this.xtraTabPage3.Controls.Add(this.labelControl2);
             this.xtraTabPage3.Controls.Add(this.labelControl1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1249, 353);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1245, 350);
             this.xtraTabPage3.Text = "数据来源";
             // 
             // labelControl18
@@ -2650,9 +2649,9 @@
             this.labelControl17.Appearance.Options.UseFont = true;
             this.labelControl17.Location = new System.Drawing.Point(513, 253);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(153, 20);
+            this.labelControl17.Size = new System.Drawing.Size(122, 20);
             this.labelControl17.TabIndex = 15;
-            this.labelControl17.Text = "196：流水号、加工.工序";
+            this.labelControl17.Text = "196：流水号、工段";
             // 
             // labelControl14
             // 
@@ -2670,9 +2669,9 @@
             this.labelControl15.Appearance.Options.UseFont = true;
             this.labelControl15.Location = new System.Drawing.Point(513, 185);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(178, 20);
+            this.labelControl15.Size = new System.Drawing.Size(122, 20);
             this.labelControl15.TabIndex = 13;
-            this.labelControl15.Text = "195：流水号、加工工序名称";
+            this.labelControl15.Text = "195：流水号、工段";
             // 
             // labelControl12
             // 

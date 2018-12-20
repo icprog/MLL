@@ -262,6 +262,7 @@
     <Compile Include="Dao\ZuZhangBomDao.cs" />
     <Compile Include="Dao\ZuZhangGongZiKaoHdDao.cs" />
     <Compile Include="Dao\ZuZhangGongZiKaoHeDao.cs" />
+    <Compile Include="DicStr.cs" />
     <Compile Include="Drity.cs" />
     <Compile Include="generateOddNum.cs" />
     <Compile Include="Graph.cs" />

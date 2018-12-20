@@ -1011,5 +1011,37 @@ namespace MulaolaoLibrary
             }
         }
 
+        private string _cp63;
+        /// <summary>
+        /// 是否结账
+        /// </summary>
+        public string CP63
+        {
+            get
+            {
+                return _cp63;
+            }
+            set
+            {
+                _cp63 = value;
+            }
+        }
+
+        private string _cp64;
+        /// <summary>
+        /// 工段
+        /// </summary>
+        public string CP64
+        {
+            get
+            {
+                return _cp64;
+            }
+            set
+            {
+                _cp64 = value;
+            }
+        }
+
     }
 }

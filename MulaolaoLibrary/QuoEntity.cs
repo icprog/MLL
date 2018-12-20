@@ -162,7 +162,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 业务员
         /// </summary>
         public string QUO010
         {

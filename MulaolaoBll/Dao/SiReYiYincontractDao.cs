@@ -207,9 +207,9 @@ namespace MulaolaoBll.Dao
             ArrayList SQLString = new ArrayList( );
             StringBuilder strSql = new StringBuilder( );
             strSql.Append( "INSERT INTO R_PQAH (" );
-            strSql.Append( "AH01,AH97,AH10,AH11,AH12,AH13,AH14,AH15,AH16,AH17,AH18,AH19,AH21,AH22,AH23,AH101,AH114)" );
+            strSql.Append( "AH01,AH97,AH10,AH11,AH12,AH13,AH14,AH15,AH16,AH17,AH18,AH19,AH21,AH22,AH23,AH101,AH114,AH119)" );
             strSql.Append( " VALUES (" );
-            strSql.AppendFormat( "'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}')" , model.AH01 ,model.AH97 ,model.AH10 ,model.AH11 ,model.AH12 ,model.AH13 ,model.AH14 ,model.AH15 ,model.AH16 ,model.AH17 ,model.AH18 ,model.AH19 ,model.AH21 ,model.AH22 ,model.AH23 ,model.AH101 , model . AH114 );
+            strSql.AppendFormat( "'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}')" , model.AH01 ,model.AH97 ,model.AH10 ,model.AH11 ,model.AH12 ,model.AH13 ,model.AH14 ,model.AH15 ,model.AH16 ,model.AH17 ,model.AH18 ,model.AH19 ,model.AH21 ,model.AH22 ,model.AH23 ,model.AH101 , model . AH114 ,model . AH119 );
             SQLString.Add( strSql.ToString( ) );
             SQLString.Add( Drity.DrityOfComparation( tableNum ,tableName ,logins ,dtOne ,model.AH97 ,strSql.ToString( ).Replace( "'" ,"''" ) ,stateOf ,stateOfOdd ) );
 
@@ -241,6 +241,7 @@ namespace MulaolaoBll.Dao
             strSql . AppendFormat ( "AH23='{0}'," , model . AH23 );
             strSql . AppendFormat ( "AH101='{0}'," , model . AH101 );
             strSql . AppendFormat ( "AH114='{0}'," ,model . AH114 );
+            strSql . AppendFormat ( "AH119='{0}'," ,model . AH119 );
             strSql . AppendFormat ( "AH01='{0}' " ,model . AH01 );
             strSql . AppendFormat ( " WHERE AH97='{1}' AND idx='{0}'" , model . idx , model . AH97 );
             SQLString . Add ( strSql . ToString ( ) );
@@ -292,7 +293,7 @@ namespace MulaolaoBll.Dao
         public DataTable GetDataTableTable (string strWhere )
         {
             StringBuilder strSql = new StringBuilder( );
-            strSql.Append( "SELECT idx,AH10,AH11,AH12,AH13,AH14,AH15,AH16,AH17,AH18,AH19,AH20,AH21,AH22,AH23,AH101 FROM R_PQAH" );
+            strSql.Append( "SELECT idx,AH10,AH11,AH12,AH13,AH14,AH15,AH16,AH17,AH18,AH19,AH20,AH21,AH22,AH23,AH101,AH119 FROM R_PQAH" );
             strSql.Append( " WHERE " + strWhere );
 
             return SqlHelper.ExecuteDataTable( strSql.ToString( ) );
@@ -1062,7 +1063,7 @@ namespace MulaolaoBll.Dao
         public MulaolaoLibrary.SiReYiYinContractLibrary GetMode ( int idx )
         {
             StringBuilder strSql = new StringBuilder( );
-            strSql.Append( "SELECT idx,AH10,AH11,AH12,AH13,AH14,AH15,AH16,AH17,AH18,AH19,AH21,AH22,AH23,AH101,AH97,AH114 FROM R_PQAH" );
+            strSql.Append( "SELECT idx,AH10,AH11,AH12,AH13,AH14,AH15,AH16,AH17,AH18,AH19,AH21,AH22,AH23,AH101,AH97,AH114,AH119 FROM R_PQAH" );
             strSql.Append( " WHERE idx=@idx" );
             SqlParameter[] parameter = {
                 new SqlParameter("@idx",SqlDbType.Int)
@@ -1157,6 +1158,10 @@ namespace MulaolaoBll.Dao
                     model . AH114 = row [ "AH114" ] . ToString ( );
                 else
                     model . AH114 = "";
+                if ( row [ "AH119" ] != null && row [ "AH119" ] . ToString ( ) != "" )
+                    model . AH119 = row [ "AH119" ] . ToString ( );
+                else
+                    model . AH119 = "";
             }
 
             return model;
@@ -1515,7 +1520,7 @@ namespace MulaolaoBll.Dao
         public DataTable getTableWorkProce ( string num )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT GS35 FROM R_PQP WHERE GS74='R_196' AND GS01='{0}'" ,num );
+            strSql . AppendFormat ( "SELECT GS35 FROM R_PQP WHERE GS74='{1}' AND GS01='{0}'" ,num ,DicStr . r196 );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }

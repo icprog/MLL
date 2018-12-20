@@ -267,6 +267,8 @@
             this.tabPageOne = new System.Windows.Forms.TabPage();
             this.tabPageTwo = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.txtAH119 = new System.Windows.Forms.ComboBox();
+            this.label89 = new System.Windows.Forms.Label();
             this.txtPart = new DevExpress.XtraEditors.GridLookUpEdit();
             this.View1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -279,6 +281,7 @@
             this.label76 = new System.Windows.Forms.Label();
             this.tabPageFor = new System.Windows.Forms.TabPage();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.AH119 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
@@ -330,7 +333,8 @@
             this.AH17,
             this.AH22,
             this.AH23,
-            this.idx});
+            this.idx,
+            this.AH119});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -398,12 +402,12 @@
             // 
             // AH18
             // 
-            this.AH18.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AH18.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
             this.AH18.AppearanceCell.Options.UseFont = true;
             this.AH18.AppearanceCell.Options.UseTextOptions = true;
             this.AH18.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.AH18.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.AH18.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AH18.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
             this.AH18.AppearanceHeader.Options.UseFont = true;
             this.AH18.AppearanceHeader.Options.UseTextOptions = true;
             this.AH18.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -412,7 +416,7 @@
             this.AH18.FieldName = "AH18";
             this.AH18.Name = "AH18";
             this.AH18.Visible = true;
-            this.AH18.VisibleIndex = 4;
+            this.AH18.VisibleIndex = 5;
             // 
             // AH101
             // 
@@ -449,7 +453,7 @@
             this.AH21.FieldName = "AH21";
             this.AH21.Name = "AH21";
             this.AH21.Visible = true;
-            this.AH21.VisibleIndex = 5;
+            this.AH21.VisibleIndex = 6;
             this.AH21.Width = 50;
             // 
             // AH13
@@ -470,7 +474,7 @@
             this.AH13.FieldName = "AH13";
             this.AH13.Name = "AH13";
             this.AH13.Visible = true;
-            this.AH13.VisibleIndex = 6;
+            this.AH13.VisibleIndex = 7;
             this.AH13.Width = 120;
             // 
             // AH14
@@ -491,7 +495,7 @@
             this.AH14.FieldName = "AH14";
             this.AH14.Name = "AH14";
             this.AH14.Visible = true;
-            this.AH14.VisibleIndex = 7;
+            this.AH14.VisibleIndex = 8;
             this.AH14.Width = 87;
             // 
             // U0
@@ -517,7 +521,7 @@
             this.U0.UnboundExpression = "([AH16] * [AH101] * [AH13] * [AH14] - [AH17]) / [AH101]";
             this.U0.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U0.Visible = true;
-            this.U0.VisibleIndex = 8;
+            this.U0.VisibleIndex = 9;
             this.U0.Width = 88;
             // 
             // AH19
@@ -534,7 +538,7 @@
             this.AH19.FieldName = "AH19";
             this.AH19.Name = "AH19";
             this.AH19.Visible = true;
-            this.AH19.VisibleIndex = 9;
+            this.AH19.VisibleIndex = 10;
             this.AH19.Width = 100;
             // 
             // AH15
@@ -553,7 +557,7 @@
             this.AH15.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AH15", "{0:N4}")});
             this.AH15.Visible = true;
-            this.AH15.VisibleIndex = 10;
+            this.AH15.VisibleIndex = 11;
             this.AH15.Width = 84;
             // 
             // AH16
@@ -572,7 +576,7 @@
             this.AH16.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AH16", "{0:N4}")});
             this.AH16.Visible = true;
-            this.AH16.VisibleIndex = 11;
+            this.AH16.VisibleIndex = 12;
             this.AH16.Width = 95;
             // 
             // U1
@@ -596,7 +600,7 @@
             this.U1.UnboundExpression = "[AH101] * [AH13] * [AH14]";
             this.U1.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.U1.Visible = true;
-            this.U1.VisibleIndex = 12;
+            this.U1.VisibleIndex = 13;
             this.U1.Width = 83;
             // 
             // U2
@@ -620,7 +624,7 @@
             this.U2.UnboundExpression = "[AH16] * [AH101] * [AH13] * [AH14] - [AH17]";
             this.U2.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U2.Visible = true;
-            this.U2.VisibleIndex = 13;
+            this.U2.VisibleIndex = 14;
             this.U2.Width = 132;
             // 
             // AH17
@@ -639,7 +643,7 @@
             this.AH17.FieldName = "AH17";
             this.AH17.Name = "AH17";
             this.AH17.Visible = true;
-            this.AH17.VisibleIndex = 14;
+            this.AH17.VisibleIndex = 15;
             this.AH17.Width = 128;
             // 
             // AH22
@@ -658,7 +662,7 @@
             this.AH22.FieldName = "AH22";
             this.AH22.Name = "AH22";
             this.AH22.Visible = true;
-            this.AH22.VisibleIndex = 15;
+            this.AH22.VisibleIndex = 16;
             this.AH22.Width = 88;
             // 
             // AH23
@@ -677,7 +681,7 @@
             this.AH23.FieldName = "AH23";
             this.AH23.Name = "AH23";
             this.AH23.Visible = true;
-            this.AH23.VisibleIndex = 16;
+            this.AH23.VisibleIndex = 17;
             this.AH23.Width = 89;
             // 
             // idx
@@ -725,8 +729,7 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(163, 96);
             this.comboBox4.Name = "comboBox4";
@@ -2800,6 +2803,8 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.txtAH119);
+            this.splitContainer2.Panel1.Controls.Add(this.label89);
             this.splitContainer2.Panel1.Controls.Add(this.txtPart);
             this.splitContainer2.Panel1.Controls.Add(this.textBox14);
             this.splitContainer2.Panel1.Controls.Add(this.textBox2);
@@ -2838,6 +2843,25 @@
             this.splitContainer2.Size = new System.Drawing.Size(1356, 592);
             this.splitContainer2.SplitterDistance = 128;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // txtAH119
+            // 
+            this.txtAH119.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtAH119.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtAH119.FormattingEnabled = true;
+            this.txtAH119.Location = new System.Drawing.Point(492, 96);
+            this.txtAH119.Name = "txtAH119";
+            this.txtAH119.Size = new System.Drawing.Size(150, 24);
+            this.txtAH119.TabIndex = 141;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(444, 99);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(42, 16);
+            this.label89.TabIndex = 140;
+            this.label89.Text = "工段";
             // 
             // txtPart
             // 
@@ -3047,6 +3071,18 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(1362, 598);
             this.textBox4.TabIndex = 48;
+            // 
+            // AH119
+            // 
+            this.AH119.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.AH119.AppearanceCell.Options.UseFont = true;
+            this.AH119.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.AH119.AppearanceHeader.Options.UseFont = true;
+            this.AH119.Caption = "工段";
+            this.AH119.FieldName = "AH119";
+            this.AH119.Name = "AH119";
+            this.AH119.Visible = true;
+            this.AH119.VisibleIndex = 4;
             // 
             // R_FrmSiReYiYinContract
             // 
@@ -3359,5 +3395,8 @@
         private DevExpress . XtraGrid . Views . Grid . GridView View1;
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn1;
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn2;
+        private System . Windows . Forms . ComboBox txtAH119;
+        private System . Windows . Forms . Label label89;
+        private DevExpress . XtraGrid . Columns . GridColumn AH119;
     }
 }

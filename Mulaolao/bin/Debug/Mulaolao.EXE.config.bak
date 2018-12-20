@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+    </startup>
+  <connectionStrings>
+
+ <add name="connstr"  connectionString="Data Source=192.168.0.222;Initial Catalog=MLL;User Id=sa;Password=86961522;Connect Timeout=120"></add>
+
+  </connectionStrings>
+
+  <!--UserName And PassWord-->
+  <appSettings>
+    <add key="UserName" value="廖灵飞" />
+    <add key="PassWord" value="" />
+    <add key="Sign" value="" />
+  </appSettings>
+
+  <system.web>
+    <httpRuntime maxRequestLength="102400" executionTimeout="720" />
+  </system.web>
+
+</configuration>
+
+
+<!---->

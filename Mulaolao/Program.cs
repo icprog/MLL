@@ -30,14 +30,14 @@ namespace Mulaolao
                 System . Diagnostics . Process . Start ( Application . StartupPath + @"\AutoUpdate.exe" );
             else
             {
-                if ( Encrypt . GetDataTable ( ) . Equals ( "204" ,StringComparison . CurrentCultureIgnoreCase ) || Encrypt . GetDataTable ( ) . Equals ( "BE2" ,StringComparison . CurrentCultureIgnoreCase ) )
-                {
+                //if ( Encrypt . GetDataTable ( ) . Equals ( "204" ,StringComparison . CurrentCultureIgnoreCase ) || Encrypt . GetDataTable ( ) . Equals ( "BE2" ,StringComparison . CurrentCultureIgnoreCase ) )
+                //{
                     Login lg = new Login ( );
                     lg . StartPosition = FormStartPosition . CenterScreen;
                     lg . ShowDialog ( );
                     if ( lg . DialogResult == DialogResult . OK )
                         Application . Run ( new Form1 ( ) );
-                }
+                //}
             }
         }
 

@@ -270,9 +270,9 @@ namespace MulaolaoBll.Bll
             ArrayList SQLString = new ArrayList( );
             StringBuilder strSql = new StringBuilder( );
             strSql.Append( "INSERT INTO R_PQQ (" );
-            strSql.Append( "CP03,CP06,CP07,CP08,CP54,CP09,CP10,CP11,CP12,CP13,CP14,CP59,CP01)" );
+            strSql.Append( "CP03,CP06,CP07,CP08,CP54,CP09,CP10,CP11,CP12,CP13,CP14,CP59,CP01,CP64)" );
             strSql.Append( " VALUES (" );
-            strSql . AppendFormat ( "'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')" ,model . CP03 ,model . CP06 ,model . CP07 ,model . CP08 ,model . CP54 ,model . CP09 ,model . CP10 ,model . CP11 ,model . CP12 ,model . CP13 ,model . CP14 ,model . CP59 ,model . CP01 );
+            strSql . AppendFormat ( "'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')" ,model . CP03 ,model . CP06 ,model . CP07 ,model . CP08 ,model . CP54 ,model . CP09 ,model . CP10 ,model . CP11 ,model . CP12 ,model . CP13 ,model . CP14 ,model . CP59 ,model . CP01 ,model . CP64 );
             SQLString.Add( strSql.ToString( ) );
             SQLString.Add( Drity.DrityOfComparation( tableNum ,tableName ,logins ,dtOne ,model.CP03 ,strSql.ToString( ).Replace( "'" ,"''" ) ,stateOf ,stateOfOdd ) );
             return SqlHelper.ExecuteSqlTran( SQLString );
@@ -299,7 +299,8 @@ namespace MulaolaoBll.Bll
             strSql . AppendFormat ( "CP14='{0}'," ,model . CP14 );
             strSql . AppendFormat ( "CP54='{0}'," ,model . CP54 );
             strSql . AppendFormat ( "CP59='{0}'," ,model . CP59 );
-            strSql . AppendFormat ( "CP01='{0}' " ,model . CP01 );
+            strSql . AppendFormat ( "CP01='{0}'," ,model . CP01 );
+            strSql . AppendFormat ( "CP64='{0}' " ,model . CP64 );
             strSql . AppendFormat ( " WHERE CP03='{1}' AND idx='{0}'" ,model . IDX ,model . CP03 );
             SQLString . Add ( strSql . ToString ( ) );
             SQLString . Add ( Drity . DrityOfComparation ( tableNum ,tableName ,logins ,dtOne ,model . CP03 ,strSql . ToString ( ) . Replace ( "'" ,"''" ) ,stateOf ,stateOfOdd ) );
@@ -374,7 +375,7 @@ namespace MulaolaoBll.Bll
         public System.Data.DataTable GetDataTable ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder( );
-            strSql.Append( "SELECT idx,CP06,CP07,CP08,CP54,CP09,CP10,CP11,CP12,CP13,CP14,U3,U4 FROM R_PQQ" );
+            strSql.Append( "SELECT idx,CP06,CP07,CP08,CP54,CP09,CP10,CP11,CP12,CP13,CP14,U3,U4,CP64 FROM R_PQQ" );
             strSql.Append( " WHERE " + strWhere );
             strSql.Append( " ORDER BY idx DESC" );
 
@@ -467,6 +468,10 @@ namespace MulaolaoBll.Bll
                     model . CP59 = row [ "CP59" ] . ToString ( );
                 else
                     model . CP59 = "";
+                if ( row [ "CP64" ] != null && row [ "CP64" ] . ToString ( ) != "" )
+                    model . CP64 = row [ "CP64" ] . ToString ( );
+                else
+                    model . CP64 = "";
             }
             return model;
         }
@@ -1100,8 +1105,8 @@ namespace MulaolaoBll.Bll
         public DataTable getTableWorkProce ( string num )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT GS35 FROM R_PQP WHERE GS74='R_195' AND GS01='{0}'" ,num );
-
+            strSql . AppendFormat ( "SELECT GS35 FROM R_PQP WHERE GS74='{1}' AND GS01='{0}'" ,num ,DicStr . r195 );
+            
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
 

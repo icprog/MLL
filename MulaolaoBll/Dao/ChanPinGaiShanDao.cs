@@ -1074,7 +1074,7 @@ namespace MulaolaoBll.Dao
         public bool ExistsOne ( MulaolaoLibrary . ChanPinGaiShanEntity model )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT count(1) FROM R_PQP WHERE GS34='{0}' AND GS35='{1}'" ,model . GS34 ,model . GS35 );
+            strSql . AppendFormat ( "SELECT count(1) FROM R_PQP WHERE GS34='{0}' AND GS35='{1}' AND GS75='{2}' AND GS76='{3}' " ,model . GS34 ,model . GS35 ,model . GS75 ,model . GS76 );
 
             return SqlHelper . Exists ( strSql . ToString ( ) );
         }
@@ -1088,7 +1088,7 @@ namespace MulaolaoBll.Dao
         {
             Hashtable SQLString = new Hashtable ( );
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "INSERT INTO R_PQP (GS34,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74) VALUES (@GS34,@GS35,@GS36,@GS37,@GS38,@GS39,@GS40,@GS41,@GS42,@GS43,@GS44,@GS45,@GS72,@GS74)" );
+            strSql . Append ( "INSERT INTO R_PQP (GS34,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74,GS75,GS76) VALUES (@GS34,@GS35,@GS36,@GS37,@GS38,@GS39,@GS40,@GS41,@GS42,@GS43,@GS44,@GS45,@GS72,@GS74,@GS75,@GS76)" );
             SqlParameter [ ] parameter = {
                 new SqlParameter( "@GS34" ,model.GS34 ) ,
                 new SqlParameter( "@GS35" ,model.GS35 ) ,
@@ -1103,7 +1103,9 @@ namespace MulaolaoBll.Dao
                 new SqlParameter( "@GS44" ,model.GS44 ) ,
                 new SqlParameter( "@GS45" ,model.GS45 ),
                 new SqlParameter( "@GS72" ,model.GS72 ),
-                new SqlParameter( "@GS74" ,model.GS74 )
+                new SqlParameter( "@GS74" ,model.GS74 ),
+                new SqlParameter( "@GS75" ,model.GS75 ),
+                new SqlParameter( "@GS76" ,model.GS76 )
             };
             SQLString . Add ( strSql ,parameter );
 
@@ -1119,7 +1121,7 @@ namespace MulaolaoBll.Dao
         {
             Hashtable SQLString = new Hashtable ( );
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "UPDATE R_PQP SET GS35=@GS35,GS36=@GS36,GS37=@GS37,GS38=@GS38,GS39=@GS39,GS40=@GS40,GS41=@GS41,GS42=@GS42,GS43=@GS43,GS44=@GS44,GS45=@GS45,GS72=@GS72,GS74=@GS74 WHERE idx=@idx" );
+            strSql . Append ( "UPDATE R_PQP SET GS35=@GS35,GS36=@GS36,GS37=@GS37,GS38=@GS38,GS39=@GS39,GS40=@GS40,GS41=@GS41,GS42=@GS42,GS43=@GS43,GS44=@GS44,GS45=@GS45,GS72=@GS72,GS74=@GS74,GS75=@GS75,GS76=@GS76 WHERE idx=@idx" );
             SqlParameter [ ] parameter = {
                 new SqlParameter( "@GS36" ,model.GS36 ) ,
                 new SqlParameter( "@GS37" ,model.GS37 ) ,
@@ -1134,7 +1136,9 @@ namespace MulaolaoBll.Dao
                 new SqlParameter ( "@idx" ,model.idx ) ,
                 new SqlParameter ( "@GS35" ,model.GS35 ),
                 new SqlParameter ( "@GS72" ,model.GS72 ),
-                new SqlParameter ( "@GS74" ,model.GS74 )
+                new SqlParameter ( "@GS74" ,model.GS74 ),
+                new SqlParameter ( "@GS75" ,model.GS75 ),
+                new SqlParameter ( "@GS76" ,model.GS76 )
             };
             SQLString . Add ( strSql ,parameter );
 
@@ -1163,7 +1167,7 @@ namespace MulaolaoBll.Dao
         {
             Hashtable SQLString = new Hashtable ( );
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "INSERT INTO R_PQP (GS34,GS52,GS49,GS53,GS54,GS55,GS56,GS57,GS58,GS59,GS60,GS61,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68) VALUES (@GS34,@GS52,@GS49,@GS53,@GS54,@GS55,@GS56,@GS57,@GS58,@GS59,@GS60,@GS61,@GS69,@GS62,@GS63,@GS64,@GS65,@GS66,@GS67,@GS68)" );
+            strSql . Append ( "INSERT INTO R_PQP (GS34,GS52,GS49,GS53,GS54,GS55,GS56,GS57,GS58,GS59,GS60,GS61,GS69,GS62,GS63,GS64,GS65,GS66,GS67,GS68,GS77) VALUES (@GS34,@GS52,@GS49,@GS53,@GS54,@GS55,@GS56,@GS57,@GS58,@GS59,@GS60,@GS61,@GS69,@GS62,@GS63,@GS64,@GS65,@GS66,@GS67,@GS68,@GS77)" );
             SqlParameter [ ] parameter = {
                 new SqlParameter( "@GS34" ,model.GS34 ) ,
                 new SqlParameter( "@GS52" ,model.GS52 ) ,
@@ -1184,7 +1188,8 @@ namespace MulaolaoBll.Dao
                 new SqlParameter( "@GS66" ,model.GS66 ) ,
                 new SqlParameter( "@GS67" ,model.GS67 ) ,
                 new SqlParameter( "@GS68" ,model.GS68 ) ,
-                new SqlParameter( "@GS49" ,model.GS49 )
+                new SqlParameter( "@GS49" ,model.GS49 ),
+                new SqlParameter( "@GS77" ,model.GS77 )
             };
             SQLString . Add ( strSql ,parameter );
 
@@ -1200,7 +1205,7 @@ namespace MulaolaoBll.Dao
         {
             Hashtable SQLString = new Hashtable ( );
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "UPDATE R_PQP SET GS52=@GS52,GS53=@GS53,GS54=@GS54,GS55=@GS55,GS56=@GS56,GS57=@GS57,GS58=@GS58,GS59=@GS59,GS60=@GS60,GS61=@GS61,GS68=@GS68,GS69=@GS69,GS62=@GS62,GS63=@GS63,GS64=@GS64,GS65=@GS65,GS66=@GS66,GS67=@GS67 WHERE idx=@idx" );
+            strSql . Append ( "UPDATE R_PQP SET GS52=@GS52,GS53=@GS53,GS54=@GS54,GS55=@GS55,GS56=@GS56,GS57=@GS57,GS58=@GS58,GS59=@GS59,GS60=@GS60,GS61=@GS61,GS68=@GS68,GS69=@GS69,GS62=@GS62,GS63=@GS63,GS64=@GS64,GS65=@GS65,GS66=@GS66,GS67=@GS67,GS77=@GS77 WHERE idx=@idx" );
             SqlParameter [ ] parameter = {
                 new SqlParameter ( "@GS53" ,model.GS53 ) ,
                 new SqlParameter ( "@GS54" ,model.GS54 ) ,
@@ -1220,7 +1225,8 @@ namespace MulaolaoBll.Dao
                 new SqlParameter ( "@GS52" ,model.GS52 ) ,
                 new SqlParameter ( "@GS56" ,model.GS56 ) ,
                 new SqlParameter ( "@GS68" ,model.GS68 ) ,
-                new SqlParameter ( "@GS57" ,model.GS57 )
+                new SqlParameter ( "@GS57" ,model.GS57 ),
+                new SqlParameter ( "@GS77" ,model.GS77 )
             };
             SQLString . Add ( strSql ,parameter );
 

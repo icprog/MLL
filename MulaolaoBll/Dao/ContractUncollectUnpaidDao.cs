@@ -189,6 +189,51 @@ namespace MulaolaoBll.Dao
                 }
             }
 
+            if ( SQLString != null && SqlHelper . ExecuteSqlTran ( SQLString ) )
+            {
+                //var query= from p in da . AsEnumerable ( )
+                //           group p by new
+                //           {
+                //               p1 = p . Field<int> ( "AE14" )
+                //           } into m
+                //           select new
+                //           {
+                //               ae14 = m . Key . p1 ,
+                //           };
+
+                //if ( query != null )
+                //{
+                //    foreach ( var x in query )
+                //    {
+                //        _model . RZ003 = x . ae14;
+                //        _model . RZ015 = Convert . ToInt32 ( da . Select ( "SUM(AE28)" ,"AE14=" + x . ae14 + "" ) );
+                //        _model . RZ020 = _model . RZ010 - Convert . ToInt32 ( da . Select ( "SUM(AE8)" ,"AE14=" + x . ae14 + "" ) );
+                //        _model . RZ021 = Convert . ToInt32 ( da . Select ( "SUM(U12)" ,"AE14=" + x . ae14 + "" ) );
+                //        _model . RZ022 = Convert . ToInt32 ( da . Select ( "SUM(U13)" ,"AE14=" + x . ae14 + "" ) );
+                //        if ( Exists ( _model . RZ001 ,_model . RZ003 ) )
+                //            SQLString . Add ( UpdateOneOther ( _model ) );
+                //    }
+                //}
+                da = GetDataTableOneOther ( _model . RZ001 );
+                if ( da != null && da . Rows . Count > 0 )
+                {
+                    for ( int i = 0 ; i < da . Rows . Count ; i++ )
+                    {
+                        _model . RZ003 = string . IsNullOrEmpty ( da . Rows [ i ] [ "AE14" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "AE14" ] . ToString ( ) );
+                        _model . RZ010 = string . IsNullOrEmpty ( da . Rows [ i ] [ "AE19" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "AE19" ] . ToString ( ) );
+                        _model . RZ015 = string . IsNullOrEmpty ( da . Rows [ i ] [ "AE28" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "AE28" ] . ToString ( ) );
+                        _model . RZ020 = _model . RZ010 - ( string . IsNullOrEmpty ( da . Rows [ i ] [ "AE8" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "AE8" ] . ToString ( ) ) );
+                        _model . RZ021 = ( string . IsNullOrEmpty ( da . Rows [ i ] [ "U12" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "U12" ] . ToString ( ) ) );
+                        _model . RZ022 = ( string . IsNullOrEmpty ( da . Rows [ i ] [ "U13" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( da . Rows [ i ] [ "U13" ] . ToString ( ) ) );
+                        if ( Exists ( _model . RZ001 ,_model . RZ003 ) )
+                            SQLString . Add ( UpdateOneOther ( _model ) );
+                    }
+                }
+
+            }
+            else
+                return false;
+
             if (SQLString!=null && SqlHelper.ExecuteSqlTran( SQLString ) )
             {
                 result = true;
@@ -321,7 +366,7 @@ namespace MulaolaoBll.Dao
         public DataTable GetDataTableOne (int year )
         {
             StringBuilder strSql = new StringBuilder( );
-            strSql.Append( "SELECT A.AE1,A.AE14,AE06,AE19,AE37,AE3,AE26,AE2,AE28+AE30+AE29+AE27+AE42 AE8,AE28+AE30+AE2911 AE28,ISNULL(AE37,0)*ISNULL(AE12,0)-AE28-AE30-AE2911+AE41 U12,AE002-AE28-AE30-AE29+AE40 U13 FROM (" );
+            strSql.Append( "SELECT A.AE1,A.AE14,AE06,AE19,B.AE37,AE3,AE26,AE2,AE28+AE30+AE29+AE27+AE42 AE8,AE28+AE30+AE2911 AE28,CONVERT(DECIMAL(18,0),ISNULL(B.AE37,0)*ISNULL(AE12,0)-AE28-AE30-AE2911+AE41) U12,AE002-AE28-AE30-AE29+AE40 U13 FROM (" );
             strSql.Append( "SELECT SUM(AE06) AE06,CONVERT(DECIMAL(18,0),SUM(AE19)) AE19,MONTH(AE14) AE14,YEAR(AE14) AE1 FROM R_PQAE " );
             strSql.Append( "  WHERE idx IN (SELECT MIN(idx) FROM R_PQAE GROUP BY AE02) AND YEAR(AE14)=@AE14" );
             strSql.Append( " GROUP BY MONTH(AE14),YEAR(AE14)) A" );
@@ -336,9 +381,9 @@ namespace MulaolaoBll.Dao
             strSql.Append( " GROUP BY MONTH(AE14),YEAR(AE14)) C" );
             strSql.Append( " ON A.AE14=C.AE14 AND A.AE1=C.AE1" );
             strSql.Append( " LEFT JOIN (" );
-            strSql.Append( " SELECT CONVERT(DECIMAL(18,0),SUM(ISNULL(AE29*AE11,0))) AE2911,CONVERT(DECIMAL(18,0),SUM(CASE WHEN AE39!=0 THEN AE26*AE10*AE39 ELSE AE12*AE26 END)) AE002,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE37,0)*ISNULL(AE12,0))) AE37*AE12,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE41,0))) AE41,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE40,0))) AE40,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE28,0))) AE28,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE30,0))) AE30,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE29,0))) AE29,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE27,0))) AE27,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE42,0))) AE42,MONTH(AE14) AE14,YEAR(AE14) AE1 FROM R_PQAE" );
+            strSql.Append( " SELECT CONVERT(DECIMAL(18,0),SUM(ISNULL(AE29*AE11,0))) AE2911,CONVERT(DECIMAL(18,0),SUM(CASE WHEN AE39!=0 THEN AE26*AE10*AE39 ELSE AE12*AE26 END)) AE002,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE37,0)*ISNULL(AE12,0))) AE37,AE12,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE41,0))) AE41,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE40,0))) AE40,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE28,0))) AE28,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE30,0))) AE30,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE29,0))) AE29,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE27,0))) AE27,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE42,0))) AE42,MONTH(AE14) AE14,YEAR(AE14) AE1 FROM R_PQAE" );
             strSql.Append( " WHERE YEAR(AE14)=@AE14" );
-            strSql.Append( " GROUP BY MONTH(AE14),YEAR(AE14)) D" );
+            strSql.Append( " GROUP BY MONTH(AE14),YEAR(AE14),AE12) D" );
             strSql.Append( " ON A.AE14=D.AE14 AND A.AE1=D.AE1" );
             SqlParameter[] parameter = {
                 new SqlParameter("@AE14",SqlDbType.Int)
@@ -386,6 +431,57 @@ namespace MulaolaoBll.Dao
             strSql . Append ( "RZ001,RZ003,RZ009,RZ010,RZ011,RZ012,RZ013,RZ014,RZ015,RZ020,RZ021,RZ022)" );
             strSql . Append ( " VALUES (" );
             strSql . AppendFormat ( "{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11})" ,_model . RZ001 ,_model . RZ003 ,_model . RZ009 ,_model . RZ010 ,_model . RZ011 ,_model . RZ012 ,_model . RZ013 ,_model . RZ014 ,_model . RZ015 ,_model . RZ020 ,_model . RZ021 ,_model . RZ022 );
+
+            return strSql . ToString ( );
+        }
+
+
+        public DataTable GetDataTableOneOther ( int year )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . Append ( "SELECT AE1,AE14,AE19,SUM(AE8) AE8,SUM(AE28) AE28,SUM(U12) U12,SUM(U13) U13 FROM (" );
+            strSql . Append ( "SELECT A.AE1,A.AE14,AE06,AE19,B.AE37,AE3,AE26,AE2,AE28+AE30+AE29+AE27+AE42 AE8,AE28+AE30+AE2911 AE28,CONVERT(DECIMAL(18,0),ISNULL(B.AE37,0)*ISNULL(AE12,0)-AE28-AE30-AE2911+AE41) U12,AE002-AE28-AE30-AE29+AE40 U13 FROM (" );
+            strSql . Append ( "SELECT SUM(AE06) AE06,CONVERT(DECIMAL(18,0),SUM(AE19)) AE19,MONTH(AE14) AE14,YEAR(AE14) AE1 FROM R_PQAE " );
+            strSql . Append ( "  WHERE idx IN (SELECT MIN(idx) FROM R_PQAE GROUP BY AE02) AND YEAR(AE14)=@AE14" );
+            strSql . Append ( " GROUP BY MONTH(AE14),YEAR(AE14)) A" );
+            strSql . Append ( " LEFT JOIN" );
+            strSql . Append ( " (SELECT SUM(AE37) AE37,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE37,0)*ISNULL(AE12,0))) AE3,MONTH(AE14) AE14,YEAR(AE14) AE1 FROM R_PQAE" );
+            strSql . Append ( " WHERE YEAR(AE14)=@AE14" );
+            strSql . Append ( " GROUP BY MONTH(AE14),YEAR(AE14)) B" );
+            strSql . Append ( " ON A.AE14=B.AE14 AND A.AE1=B.AE1" );
+            strSql . Append ( " LEFT JOIN (" );
+            strSql . Append ( " SELECT SUM(AE26) AE26,CONVERT(DECIMAL(18,0),SUM(CASE WHEN AE39!=0 THEN AE26*AE10*AE39 ELSE AE12*AE26 END)) AE2,MONTH(AE14) AE14,YEAR(AE14) AE1 FROM R_PQAE" );
+            strSql . Append ( " WHERE YEAR(AE14)=@AE14" );
+            strSql . Append ( " GROUP BY MONTH(AE14),YEAR(AE14)) C" );
+            strSql . Append ( " ON A.AE14=C.AE14 AND A.AE1=C.AE1" );
+            strSql . Append ( " LEFT JOIN (" );
+            strSql . Append ( " SELECT CONVERT(DECIMAL(18,0),SUM(ISNULL(AE29*AE11,0))) AE2911,CONVERT(DECIMAL(18,0),SUM(CASE WHEN AE39!=0 THEN AE26*AE10*AE39 ELSE AE12*AE26 END)) AE002,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE37,0)*ISNULL(AE12,0))) AE37,AE12,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE41,0))) AE41,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE40,0))) AE40,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE28,0))) AE28,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE30,0))) AE30,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE29,0))) AE29,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE27,0))) AE27,CONVERT(DECIMAL(18,0),SUM(ISNULL(AE42,0))) AE42,MONTH(AE14) AE14,YEAR(AE14) AE1 FROM R_PQAE" );
+            strSql . Append ( " WHERE YEAR(AE14)=@AE14" );
+            strSql . Append ( " GROUP BY MONTH(AE14),YEAR(AE14),AE12) D" );
+            strSql . Append ( " ON A.AE14=D.AE14 AND A.AE1=D.AE1" );
+            strSql . Append ( ") A GROUP BY AE1,AE14,AE19" );
+            SqlParameter [ ] parameter = {
+                new SqlParameter("@AE14",SqlDbType.Int)
+            };
+            parameter [ 0 ] . Value = year;
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) ,parameter );
+        }
+        /// <summary>
+        /// 
+        /// 获取收款等
+        /// </summary>
+        /// <param name="_model"></param>
+        /// <returns></returns>
+        public string UpdateOneOther ( MulaolaoLibrary . ContractUncollectUnpaid _model )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . Append ( "UPDATE R_PQRZ SET " );
+            strSql . AppendFormat ( "RZ015={0}," ,_model . RZ015 );
+            strSql . AppendFormat ( "RZ020={0}," ,_model . RZ020 );
+            strSql . AppendFormat ( "RZ021={0}," ,_model . RZ021 );
+            strSql . AppendFormat ( "RZ022={0}" ,_model . RZ022 );
+            strSql . AppendFormat ( " WHERE RZ001={0} AND RZ003={1}" ,_model . RZ001 ,_model . RZ003 );
 
             return strSql . ToString ( );
         }

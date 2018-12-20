@@ -546,5 +546,16 @@ namespace MulaolaoBll.Bll
             return dao . getSurNum ( num ,name ,spe );
         }
 
+        /// <summary>
+        /// 根据全名和联系人姓名，查找供应商编号
+        /// </summary>
+        /// <param name="fullName"></param>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public string getTpadga ( string fullName ,string userName )
+        {
+            return dao . getTpadga ( fullName ,userName );
+        }
+
     }
 }

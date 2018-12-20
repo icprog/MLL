@@ -1252,7 +1252,10 @@ namespace Mulaolao.Procedure
             }
             variab( );
             if ( model . JM03 != numFor )
-                model . JM02 = numFor;
+                model . JM03 = numFor;
+            if ( readNameFordga ( ) == false )
+                return;
+
             DataTable drt = bll.GetDataTableMainTain( model.JM01 );
             if ( weihu == "1" )
             {
@@ -1444,6 +1447,22 @@ namespace Mulaolao.Procedure
                 }
             }
             return result;
+        }
+        bool readNameFordga ( )
+        {
+            string dgaNum = bll . getTpadga ( textBox19 . Text ,textBox9 . Text );
+            if ( dgaNum == null || dgaNum == string . Empty )
+            {
+                MessageBox . Show ( "请重新选择供应商" );
+                return false;
+            }
+            if ( dgaNum . Equals ( numFor ) )
+                return true;
+            else
+            {
+                MessageBox . Show ( "请重新选择供应商" );
+                return false;
+            }
         }
         //Cancel
         protected override void cancel ( )

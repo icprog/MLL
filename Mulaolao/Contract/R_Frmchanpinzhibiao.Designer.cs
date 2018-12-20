@@ -170,6 +170,9 @@
             this.label48 = new System.Windows.Forms.Label();
             this.tabPageFor = new System.Windows.Forms.TabPage();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txtCP64 = new System.Windows.Forms.ComboBox();
+            this.CP64 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -442,7 +445,8 @@
             this.CP12,
             this.U4,
             this.CP14,
-            this.idx});
+            this.idx,
+            this.CP64});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -480,6 +484,7 @@
             this.CP07.AppearanceHeader.Options.UseTextOptions = true;
             this.CP07.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CP07.AppearanceHeader.TextOptions.Trimming = DevExpress.Utils.Trimming.Word;
+            this.CP07.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.CP07.Caption = "物品规格或编码";
             this.CP07.FieldName = "CP07";
             this.CP07.Name = "CP07";
@@ -497,11 +502,12 @@
             this.CP09.AppearanceHeader.Options.UseFont = true;
             this.CP09.AppearanceHeader.Options.UseTextOptions = true;
             this.CP09.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CP09.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.CP09.Caption = "加工工序名称";
             this.CP09.FieldName = "CP09";
             this.CP09.Name = "CP09";
             this.CP09.Visible = true;
-            this.CP09.VisibleIndex = 2;
+            this.CP09.VisibleIndex = 3;
             this.CP09.Width = 109;
             // 
             // CP54
@@ -514,11 +520,12 @@
             this.CP54.AppearanceHeader.Options.UseFont = true;
             this.CP54.AppearanceHeader.Options.UseTextOptions = true;
             this.CP54.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CP54.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.CP54.Caption = "产品总套数";
             this.CP54.FieldName = "CP54";
             this.CP54.Name = "CP54";
             this.CP54.Visible = true;
-            this.CP54.VisibleIndex = 3;
+            this.CP54.VisibleIndex = 4;
             this.CP54.Width = 111;
             // 
             // CP13
@@ -536,7 +543,7 @@
             this.CP13.FieldName = "CP13";
             this.CP13.Name = "CP13";
             this.CP13.Visible = true;
-            this.CP13.VisibleIndex = 4;
+            this.CP13.VisibleIndex = 5;
             this.CP13.Width = 93;
             // 
             // U0
@@ -557,7 +564,7 @@
             this.U0.UnboundExpression = "[CP54] * [CP13]";
             this.U0.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.U0.Visible = true;
-            this.U0.VisibleIndex = 5;
+            this.U0.VisibleIndex = 6;
             this.U0.Width = 100;
             // 
             // CP08
@@ -570,11 +577,12 @@
             this.CP08.AppearanceHeader.Options.UseFont = true;
             this.CP08.AppearanceHeader.Options.UseTextOptions = true;
             this.CP08.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CP08.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.CP08.Caption = "计价单位";
             this.CP08.FieldName = "CP08";
             this.CP08.Name = "CP08";
             this.CP08.Visible = true;
-            this.CP08.VisibleIndex = 6;
+            this.CP08.VisibleIndex = 7;
             this.CP08.Width = 86;
             // 
             // CP10
@@ -594,7 +602,7 @@
             this.CP10.FieldName = "CP10";
             this.CP10.Name = "CP10";
             this.CP10.Visible = true;
-            this.CP10.VisibleIndex = 7;
+            this.CP10.VisibleIndex = 8;
             this.CP10.Width = 70;
             // 
             // CP11
@@ -607,13 +615,14 @@
             this.CP11.AppearanceHeader.Options.UseFont = true;
             this.CP11.AppearanceHeader.Options.UseTextOptions = true;
             this.CP11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CP11.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.CP11.Caption = "外价含税";
             this.CP11.DisplayFormat.FormatString = "N4";
             this.CP11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.CP11.FieldName = "CP11";
             this.CP11.Name = "CP11";
             this.CP11.Visible = true;
-            this.CP11.VisibleIndex = 8;
+            this.CP11.VisibleIndex = 9;
             this.CP11.Width = 77;
             // 
             // U3
@@ -635,7 +644,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U3", "{0:0.##}")});
             this.U3.ToolTip = "[每套部件/个/斤数] * [内价不含税]([外价含税])";
             this.U3.Visible = true;
-            this.U3.VisibleIndex = 9;
+            this.U3.VisibleIndex = 10;
             this.U3.Width = 88;
             // 
             // CP12
@@ -654,7 +663,7 @@
             this.CP12.FieldName = "CP12";
             this.CP12.Name = "CP12";
             this.CP12.Visible = true;
-            this.CP12.VisibleIndex = 10;
+            this.CP12.VisibleIndex = 11;
             this.CP12.Width = 72;
             // 
             // U4
@@ -678,7 +687,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U4", "{0:N2}")});
             this.U4.ToolTip = "[加工部件总、分量] * [内价不含税]([外价含税]) - [预付款]";
             this.U4.Visible = true;
-            this.U4.VisibleIndex = 11;
+            this.U4.VisibleIndex = 12;
             // 
             // CP14
             // 
@@ -696,7 +705,7 @@
             this.CP14.FieldName = "CP14";
             this.CP14.Name = "CP14";
             this.CP14.Visible = true;
-            this.CP14.VisibleIndex = 12;
+            this.CP14.VisibleIndex = 13;
             this.CP14.Width = 91;
             // 
             // idx
@@ -907,8 +916,7 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(735, 34);
             this.comboBox3.Name = "comboBox3";
@@ -1677,6 +1685,8 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.txtCP64);
+            this.splitContainer2.Panel1.Controls.Add(this.label49);
             this.splitContainer2.Panel1.Controls.Add(this.textBox14);
             this.splitContainer2.Panel1.Controls.Add(this.button6);
             this.splitContainer2.Panel1.Controls.Add(this.lookUpEdit3);
@@ -1774,6 +1784,37 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(1351, 590);
             this.textBox3.TabIndex = 1;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(383, 69);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(42, 16);
+            this.label49.TabIndex = 138;
+            this.label49.Text = "工段";
+            // 
+            // txtCP64
+            // 
+            this.txtCP64.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtCP64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtCP64.FormattingEnabled = true;
+            this.txtCP64.Location = new System.Drawing.Point(431, 66);
+            this.txtCP64.Name = "txtCP64";
+            this.txtCP64.Size = new System.Drawing.Size(136, 24);
+            this.txtCP64.TabIndex = 139;
+            // 
+            // CP64
+            // 
+            this.CP64.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.CP64.AppearanceCell.Options.UseFont = true;
+            this.CP64.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.CP64.AppearanceHeader.Options.UseFont = true;
+            this.CP64.Caption = "工段";
+            this.CP64.FieldName = "CP64";
+            this.CP64.Name = "CP64";
+            this.CP64.Visible = true;
+            this.CP64.VisibleIndex = 2;
             // 
             // R_Frmchanpinzhibiao
             // 
@@ -1958,5 +1999,8 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.TextBox textBox3;
         private System . Windows . Forms . TextBox textBox14;
+        private System . Windows . Forms . Label label49;
+        private System . Windows . Forms . ComboBox txtCP64;
+        private DevExpress . XtraGrid . Columns . GridColumn CP64;
     }
 }

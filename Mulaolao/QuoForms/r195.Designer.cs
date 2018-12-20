@@ -36,14 +36,8 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.txtCP06 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.view = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CP06 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CP07 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CP09 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CP13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CP11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtCP09 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.View1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.GS35 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -55,6 +49,12 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.CP06 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP07 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP09 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS35 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCP07.Properties)).BeginInit();
@@ -182,46 +182,6 @@
             this.view.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.view.OptionsView.ShowGroupPanel = false;
             // 
-            // CP06
-            // 
-            this.CP06.Caption = "零件名称";
-            this.CP06.FieldName = "CP06";
-            this.CP06.Name = "CP06";
-            this.CP06.Visible = true;
-            this.CP06.VisibleIndex = 0;
-            // 
-            // CP07
-            // 
-            this.CP07.Caption = "规格";
-            this.CP07.FieldName = "CP07";
-            this.CP07.Name = "CP07";
-            this.CP07.Visible = true;
-            this.CP07.VisibleIndex = 1;
-            // 
-            // CP09
-            // 
-            this.CP09.Caption = "工序名称";
-            this.CP09.FieldName = "CP09";
-            this.CP09.Name = "CP09";
-            this.CP09.Visible = true;
-            this.CP09.VisibleIndex = 2;
-            // 
-            // CP13
-            // 
-            this.CP13.Caption = "每套零件数量";
-            this.CP13.FieldName = "CP13";
-            this.CP13.Name = "CP13";
-            this.CP13.Visible = true;
-            this.CP13.VisibleIndex = 3;
-            // 
-            // CP11
-            // 
-            this.CP11.Caption = "单价";
-            this.CP11.FieldName = "CP11";
-            this.CP11.Name = "CP11";
-            this.CP11.Visible = true;
-            this.CP11.VisibleIndex = 4;
-            // 
             // txtCP09
             // 
             this.txtCP09.Location = new System.Drawing.Point(79, 38);
@@ -249,14 +209,6 @@
             this.View1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.View1.OptionsView.ShowGroupPanel = false;
             // 
-            // GS35
-            // 
-            this.GS35.Caption = "工序";
-            this.GS35.FieldName = "GS35";
-            this.GS35.Name = "GS35";
-            this.GS35.Visible = true;
-            this.GS35.VisibleIndex = 0;
-            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.AppearanceGroup.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,7 +229,7 @@
             this.emptySpaceItem2,
             this.emptySpaceItem3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Size = new System.Drawing.Size(661, 103);
             this.layoutControlGroup2.TextVisible = false;
             // 
@@ -375,6 +327,54 @@
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(16, 31);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // CP06
+            // 
+            this.CP06.Caption = "零件名称";
+            this.CP06.FieldName = "CP06";
+            this.CP06.Name = "CP06";
+            this.CP06.Visible = true;
+            this.CP06.VisibleIndex = 0;
+            // 
+            // CP07
+            // 
+            this.CP07.Caption = "规格";
+            this.CP07.FieldName = "CP07";
+            this.CP07.Name = "CP07";
+            this.CP07.Visible = true;
+            this.CP07.VisibleIndex = 1;
+            // 
+            // CP09
+            // 
+            this.CP09.Caption = "工序名称";
+            this.CP09.FieldName = "CP09";
+            this.CP09.Name = "CP09";
+            this.CP09.Visible = true;
+            this.CP09.VisibleIndex = 2;
+            // 
+            // CP13
+            // 
+            this.CP13.Caption = "每套零件数量";
+            this.CP13.FieldName = "CP13";
+            this.CP13.Name = "CP13";
+            this.CP13.Visible = true;
+            this.CP13.VisibleIndex = 3;
+            // 
+            // CP11
+            // 
+            this.CP11.Caption = "单价";
+            this.CP11.FieldName = "CP11";
+            this.CP11.Name = "CP11";
+            this.CP11.Visible = true;
+            this.CP11.VisibleIndex = 4;
+            // 
+            // GS35
+            // 
+            this.GS35.Caption = "工序";
+            this.GS35.FieldName = "GS35";
+            this.GS35.Name = "GS35";
+            this.GS35.Visible = true;
+            this.GS35.VisibleIndex = 0;
             // 
             // r195
             // 

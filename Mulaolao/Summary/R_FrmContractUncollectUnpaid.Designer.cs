@@ -29,6 +29,7 @@
         private void InitializeComponent ( )
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnExport = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -91,7 +92,6 @@
             this.gridBand7 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.U12 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.idx = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -140,6 +140,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(1252, 489);
             this.splitContainer1.SplitterDistance = 76;
             this.splitContainer1.TabIndex = 4;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(1172, 12);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(52, 25);
+            this.btnExport.TabIndex = 36;
+            this.btnExport.Text = "导出";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // label8
             // 
@@ -643,7 +653,6 @@
             this.RZ021.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "RZ021", "{0:N0}")});
             this.RZ021.ToolTip = "[发货应收款] - [合计已收款]";
-            this.RZ021.UnboundExpression = "[RZ012] - [RZ015]";
             this.RZ021.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.RZ021.Visible = true;
             this.RZ021.Width = 107;
@@ -1092,16 +1101,6 @@
             this.idx.Caption = "编号";
             this.idx.FieldName = "idx";
             this.idx.Name = "idx";
-            // 
-            // btnExport
-            // 
-            this.btnExport.Location = new System.Drawing.Point(1172, 12);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(52, 25);
-            this.btnExport.TabIndex = 36;
-            this.btnExport.Text = "导出";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // R_FrmContractUncollectUnpaid
             // 

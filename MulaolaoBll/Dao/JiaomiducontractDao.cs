@@ -1954,6 +1954,24 @@ namespace MulaolaoBll.Dao
             else
                 return 0;
         }
+        
+        /// <summary>
+        /// 根据全名和联系人姓名，查找供应商编号
+        /// </summary>
+        /// <param name="fullName"></param>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public string getTpadga ( string fullName,string userName )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DGA001 FROM TPADGA WHERE DGA003='{0}' AND DGA009='{1}'" ,fullName ,userName );
+
+            DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+            if ( table == null || table . Rows . Count < 1 )
+                return string . Empty;
+            else
+                return table . Rows [ 0 ] [ "DGA001" ] . ToString ( );
+        }
 
     }
 }

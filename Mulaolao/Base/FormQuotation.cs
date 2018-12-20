@@ -15,6 +15,7 @@ namespace Mulaolao . Base
         MulaolaoBll.Bll.QuoBll _bll=null;
 
         MulaolaoLibrary .ChanPinZhiBiaoLibrary r195Model=null;
+        MulaolaoLibrary.SiReYiYinContractLibrary r196model = null;
 
         DataTable tableView;
         DataRow selectRow;int selectIdx;
@@ -318,9 +319,19 @@ namespace Mulaolao . Base
         }
         bool getValue ( )
         {
-            if ( string . IsNullOrEmpty ( txtQUO007 . Text ) )
+            if ( string . IsNullOrEmpty ( txtQUO002 . Text ) )
             {
-                XtraMessageBox . Show ( "数量不可为空" );
+                XtraMessageBox . Show ( "客户名称不可为空" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtQUO004 . Text ) )
+            {
+                XtraMessageBox . Show ( "产品名称不可为空" );
+                return false;
+            }
+            if ( string . IsNullOrEmpty ( txtQUO010 . Text ) )
+            {
+                XtraMessageBox . Show ( "业务员不可为空" );
                 return false;
             }
             int num = 0;
@@ -342,6 +353,7 @@ namespace Mulaolao . Base
             _quo . QUO004 = txtQUO004 . Text;
             _quo . QUO005 = txtQUO005 . Text;
             _quo . QUO006 = txtQUO006 . Text;
+            _quo . QUO010 = txtQUO010 . Text;
 
             return true;
         }
@@ -355,6 +367,7 @@ namespace Mulaolao . Base
             txtQUO007 . Text = _quo . QUO007 . ToString ( );
             txtQUO008 . Text = _quo . QUO008 . ToString ( );
             pic . Image = ReadOrWriteImageOfPicutre . ReadPicture ( _quo . QUO009 );
+            txtQUO010 . Text = _quo . QUO010;
         }
         #endregion
 
@@ -369,6 +382,34 @@ namespace Mulaolao . Base
             }
             if ( txtQUP003 . Text . Equals ( "R_195" ) )
             {
+                r195Model = new MulaolaoLibrary . ChanPinZhiBiaoLibrary ( );
+                r195 form = new r195 ( r195Model );
+                if ( form . ShowDialog ( ) == DialogResult . OK )
+                {
+                    r195Model = form . getModel;
+                    if ( r195Model == null )
+                        return;
+                    row = tableView . NewRow ( );
+                    row [ "QUR001" ] = _quo . QUO001;
+                    row [ "QUR002" ] = txtQUP002 . Text;
+                    row [ "QUR003" ] = txtQUP003 . Text;
+                    row [ "QUR004" ] = r195Model . CP06;
+                    row [ "QUR005" ] = r195Model . CP09;
+                    row [ "QUR006" ] = r195Model . CP13;
+                    row [ "QUR007" ] = string . Empty;
+                    row [ "QUR008" ] = string . Empty;
+                    row [ "QUR009" ] = string . Empty;
+                    row [ "QUR010" ] = 0;
+                    row [ "QUR011" ] = 0;
+                    row [ "QUR012" ] = 0;
+                    row [ "QUR013" ] = r195Model . CP11;
+                    row [ "QUR014" ] = 0;
+                    row [ "QUR015" ] = r195Model . CP07;
+                    tableView . Rows . Add ( row );
+                    gridControl1 . RefreshDataSource ( );
+                }
+            }
+            else if ( txtQUP003 . Text . Equals ( "R_196" ) ) {
                 r195Model = new MulaolaoLibrary . ChanPinZhiBiaoLibrary ( );
                 r195 form = new r195 ( r195Model );
                 if ( form . ShowDialog ( ) == DialogResult . OK )

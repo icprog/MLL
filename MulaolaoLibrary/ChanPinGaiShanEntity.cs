@@ -833,7 +833,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 辅料
+        /// 合同代号
         /// </summary>
         public string GS52
         {
@@ -889,7 +889,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 零件名称
+        /// 工段名称
         /// </summary>
         public string GS56
         {
@@ -1113,7 +1113,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 046零件
+        /// 类别
         /// </summary>
         public string GS72
         {
@@ -1155,7 +1155,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 零件名称
         /// </summary>
         public string GS75
         {
@@ -1169,7 +1169,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 规格
         /// </summary>
         public string GS76
         {
@@ -1183,7 +1183,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 工序名称
         /// </summary>
         public string GS77
         {

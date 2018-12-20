@@ -962,8 +962,8 @@ namespace Mulaolao . Contract
         {
             //获取合同编号是195的工序名称
             DataTable tableWorkProce = bll . getTableWorkProce ( model . AH01 );
-            comboBox4 . DataSource = tableWorkProce;
-            comboBox4 . DisplayMember = "GS35";
+            txtAH119 . DataSource = tableWorkProce;
+            txtAH119 . DisplayMember = "GS35";
         }
         //物料名称
         private void comboBox21_SelectedIndexChanged ( object sender ,EventArgs e )
@@ -1197,6 +1197,7 @@ namespace Mulaolao . Contract
             comboBox4.Text = model.AH18;
             comboBox12.Text = model.AH19;
             comboBox6.Text = model.AH21;
+            txtAH119 . Text = model . AH119;
             if ( model.AH22>DateTime.MinValue && model.AH22<DateTime.MaxValue )
                 dateTimePicker3.Value = model.AH22;
             if ( model.AH23 > DateTime.MinValue && model.AH23 < DateTime.MaxValue )
@@ -1319,6 +1320,7 @@ namespace Mulaolao . Contract
             model . AH101 = string . IsNullOrEmpty ( textBox53 . Text ) == true ? 0 : Convert . ToInt64 ( textBox53 . Text );
             if ( textBox7 . Tag != null )
                 model . AH114 = textBox7 . Tag . ToString ( );
+            model . AH119 = txtAH119 . Text;
         }
         //Build
         private void button1_Click ( object sender , EventArgs e )
@@ -1346,6 +1348,11 @@ namespace Mulaolao . Contract
             if ( string . IsNullOrEmpty ( textBox16 . Text ) )
             {
                 MessageBox . Show ( "合同批号不可为空" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( txtAH119 . Text ) )
+            {
+                MessageBox . Show ( "请选择工段" );
                 return;
             }
             variable ( );
@@ -1437,7 +1444,12 @@ namespace Mulaolao . Contract
                 MessageBox . Show ( "请选择供应商" );
                 return;
             }
-           
+            if ( string . IsNullOrEmpty ( txtAH119 . Text ) )
+            {
+                MessageBox . Show ( "请选择工段" );
+                return;
+            }
+
             if ( label3 . Visible == true )
                 stateOfOdd = "维护编辑";
             else

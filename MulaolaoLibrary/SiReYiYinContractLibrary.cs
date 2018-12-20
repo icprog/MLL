@@ -118,6 +118,8 @@ namespace MulaolaoLibrary
         private decimal _ah16;
         private DateTime? _ah116;
         private bool _ah117;
+        private string _ah118;
+        private string _ah119;
 
         public int idx
         {
@@ -1713,6 +1715,36 @@ namespace MulaolaoLibrary
             set
             {
                 _ah117 = value;
+            }
+        }
+
+        /// <summary>
+        /// 是否结账
+        /// </summary>
+        public string AH118
+        {
+            get
+            {
+                return _ah118;
+            }
+            set
+            {
+                _ah118 = value;
+            }
+        }
+
+        /// <summary>
+        /// 工段
+        /// </summary>
+        public string AH119
+        {
+            get
+            {
+                return _ah119;
+            }
+            set
+            {
+                _ah119 = value;
             }
         }
 

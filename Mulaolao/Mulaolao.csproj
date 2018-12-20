@@ -196,6 +196,12 @@
     <Compile Include="Other\FormJiaoMiDu.Designer.cs">
       <DependentUpon>FormJiaoMiDu.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuoForms\r196.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r196.Designer.cs">
+      <DependentUpon>r196.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReadOrWriteImageOfPicutre.cs" />
     <Compile Include="Class\AppUpdate.cs" />
     <Compile Include="Class\CheckOutCalcu.cs" />
@@ -1419,6 +1425,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Other\gongxugongzi.resx">
       <DependentUpon>gongxugongzi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r196.resx">
+      <DependentUpon>r196.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Raw material cost\R_FrmBatchNumManagement.resx">
       <DependentUpon>R_FrmBatchNumManagement.cs</DependentUpon>

@@ -19,6 +19,18 @@ namespace MulaolaoBll . Dao
         {
             StringBuilder strSql = new StringBuilder ( );
             strSql . AppendFormat ( "SELECT DISTINCT CP06,CP07,CP09,CONVERT(FLOAT,CP13) CP13,CONVERT(FLOAT,CP11) CP11 FROM R_PQQ WHERE CP06!='/' AND CP03 LIKE 'R_195-{0}%' ORDER BY CP06" ,Drity . GetDt ( ) . Year );
+            
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取196数据列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor196Info ( )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT AH10,AH11,AH18,CONVERT(FLOAT,AH13) AH13,CONVERT(FLOAT,AH16) AH16 FROM R_PQAH WHERE AH11!='/' AND AH97 LIKE 'R_196-{0}%' ORDER BY AH10" ,Drity . GetDt ( ) . Year );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -109,7 +121,7 @@ namespace MulaolaoBll . Dao
             }
             else
                 EditHeader ( SQLString ,strSql ,_quo );
-
+            
             MulaolaoLibrary . QupEntity _qup = new MulaolaoLibrary . QupEntity ( );
             _qup . QUR001 = _quo . QUO001;
             for ( int i = 0 ; i < table . Rows . Count ; i++ )
@@ -149,9 +161,9 @@ namespace MulaolaoBll . Dao
         {
             strSql = new StringBuilder ( );
             strSql . Append ( "insert into R_QUO(" );
-            strSql . Append ( "QUO001,QUO002,QUO003,QUO004,QUO005,QUO006,QUO007,QUO008,QUO009)" );
+            strSql . Append ( "QUO001,QUO002,QUO003,QUO004,QUO005,QUO006,QUO007,QUO008,QUO009,QUO010)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@QUO001,@QUO002,@QUO003,@QUO004,@QUO005,@QUO006,@QUO007,@QUO008,@QUO009)" );
+            strSql . Append ( "@QUO001,@QUO002,@QUO003,@QUO004,@QUO005,@QUO006,@QUO007,@QUO008,@QUO009,@QUO010)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@QUO001", SqlDbType.NVarChar,20),
                     new SqlParameter("@QUO002", SqlDbType.NVarChar,50),
@@ -162,6 +174,7 @@ namespace MulaolaoBll . Dao
                     new SqlParameter("@QUO007", SqlDbType.Int,4),
                     new SqlParameter("@QUO008", SqlDbType.Date,3),
                     new SqlParameter("@QUO009", SqlDbType.Image),
+                    new SqlParameter("@QUO010", SqlDbType.NVarChar,50)
             };
             parameters [ 0 ] . Value = model . QUO001;
             parameters [ 1 ] . Value = model . QUO002;
@@ -172,6 +185,7 @@ namespace MulaolaoBll . Dao
             parameters [ 6 ] . Value = model . QUO007;
             parameters [ 7 ] . Value = model . QUO008;
             parameters [ 8 ] . Value = model . QUO009;
+            parameters [ 9 ] . Value = model . QUO010;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -186,7 +200,8 @@ namespace MulaolaoBll . Dao
             strSql . Append ( "QUO006=@QUO006," );
             strSql . Append ( "QUO007=@QUO007," );
             strSql . Append ( "QUO008=@QUO008," );
-            strSql . Append ( "QUO009=@QUO009 " );
+            strSql . Append ( "QUO009=@QUO009，" );
+            strSql . Append ( "QUO010=@QUO010 " );
             strSql . Append ( " where QUO001=@QUO001" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@QUO001", SqlDbType.NVarChar,20),
@@ -197,7 +212,8 @@ namespace MulaolaoBll . Dao
                     new SqlParameter("@QUO006", SqlDbType.NVarChar,50),
                     new SqlParameter("@QUO007", SqlDbType.Int,4),
                     new SqlParameter("@QUO008", SqlDbType.Date,3),
-                    new SqlParameter("@QUO009", SqlDbType.Image)
+                    new SqlParameter("@QUO009", SqlDbType.Image),
+                    new SqlParameter("@QUO010", SqlDbType.NVarChar,50),
             };
             parameters [ 0 ] . Value = model . QUO001;
             parameters [ 1 ] . Value = model . QUO002;
@@ -208,6 +224,7 @@ namespace MulaolaoBll . Dao
             parameters [ 6 ] . Value = model . QUO007;
             parameters [ 7 ] . Value = model . QUO008;
             parameters [ 8 ] . Value = model . QUO009;
+            parameters [ 9 ] . Value = model . QUO010;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -370,7 +387,7 @@ namespace MulaolaoBll . Dao
         public MulaolaoLibrary . QuoEntity getModel ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT QUO001,QUO002,QUO003,QUO004,QUO005,QUO006,QUO007,QUO008,QUO009 FROM R_QUO WHERE {0}" ,strWhere );
+            strSql . AppendFormat ( "SELECT QUO001,QUO002,QUO003,QUO004,QUO005,QUO006,QUO007,QUO008,QUO009,QUO010 FROM R_QUO WHERE {0}" ,strWhere );
 
             DataTable table = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
             if ( table == null || table . Rows . Count < 1 )
@@ -418,6 +435,10 @@ namespace MulaolaoBll . Dao
                 if ( row [ "QUO009" ] != null && row [ "QUO009" ] . ToString ( ) != "" )
                 {
                     model . QUO009 = ( byte [ ] ) row [ "QUO009" ];
+                }
+                if ( row [ "QUO010" ] != null && row [ "QUO010" ] . ToString ( ) != "" )
+                {
+                    model . QUO010 = row [ "QUO010" ] . ToString ( );
                 }
             }
             return model;

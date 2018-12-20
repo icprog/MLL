@@ -1701,3 +1701,4 @@ D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.Other.FormGonXuGonXi.res
 D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.Other.FormJiaoMiDu.resources
 D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.Contract.FormInvenAdSheet.resources
 D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.Other.FormInvenAdQuery.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r196.resources

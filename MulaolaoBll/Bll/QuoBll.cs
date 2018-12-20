@@ -25,6 +25,15 @@ namespace MulaolaoBll . Bll
         }
 
         /// <summary>
+        /// 获取196数据列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor196Info ( )
+        {
+            return dal . getTableFor196Info ( );
+        }
+
+        /// <summary>
         /// 获取509工段
         /// </summary>
         /// <returns></returns>

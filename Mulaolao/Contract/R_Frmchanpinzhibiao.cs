@@ -894,8 +894,8 @@ namespace Mulaolao.Raw_material_cost
         {
             //获取合同编号是195的工序名称
             DataTable tableWorkProce = dao . getTableWorkProce ( model . CP01 );
-            comboBox3 . DataSource = tableWorkProce;
-            comboBox3 . DisplayMember = "GS35";
+            txtCP64. DataSource = tableWorkProce;
+            txtCP64 . DisplayMember = "GS35";
         }
         private void comboBox7_SelectedValueChanged ( object sender ,EventArgs e )
         {
@@ -947,6 +947,7 @@ namespace Mulaolao.Raw_material_cost
                 dateTimePicker1 . Value = model . CP14;
             //textBox13.Text = model.CP54.ToString( );
             lookUpEdit3 . Text = model . CP06;
+            txtCP64 . Text = model . CP64;
             wp = lookUpEdit3 . Text;
             ge = textBox14 . Text;
             gx = comboBox3 . Text;
@@ -1125,32 +1126,7 @@ namespace Mulaolao.Raw_material_cost
             model.CP54 = string.IsNullOrEmpty( textBox13.Text ) == true ? 0 : Convert.ToInt64( textBox13.Text );
             if ( textBox4 . Tag != null )
                 model . CP59 = textBox4 . Tag . ToString ( );
-            //CP006 = lookUpEdit3.Text;
-            //CP007 = textBox14.Text;
-            //CP009 = comboBox3.Text;
-            //CP8 = comboBox15.Text;
-            //if ( comboBox1.Text == "" )
-            //    CP010 = 0M;
-            //else
-            //    CP010 = Convert.ToDecimal(comboBox1.Text);
-            //if ( comboBox2.Text == "" )
-            //    CP011 = 0M;
-            //else
-            //    CP011 = Convert.ToDecimal(comboBox2.Text);
-            //if ( comboBox6.Text == "" )
-            //    CP012 = 0;
-            //else
-            //    CP012 = Convert.ToInt64(comboBox6.Text);
-            //CP014 = dateTimePicker1.Value;
-            //if ( comboBox14.Text == "" )
-            //    CP013 = 0;
-            //else
-            //    CP013 = Convert.ToDecimal(comboBox14.Text);
-            //CP056 = checkBox17.Checked == true ? "T" : "F";
-            //if ( string.IsNullOrEmpty( textBox13.Text ) )
-            //    CP054 = 0;
-            //else
-            //    CP054 = Convert.ToInt64( textBox13.Text );
+            model . CP64 = txtCP64 . Text;
         }
         private void button1_Click ( object sender , EventArgs e )
         {
@@ -1172,6 +1148,11 @@ namespace Mulaolao.Raw_material_cost
             if ( string . IsNullOrEmpty ( textBox2 . Text ) )
             {
                 MessageBox . Show ( "合同批号不可为空" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( txtCP64 . Text ) )
+            {
+                MessageBox . Show ( "请选择工段" );
                 return;
             }
             variable ( );
@@ -1292,6 +1273,11 @@ namespace Mulaolao.Raw_material_cost
             if ( string . IsNullOrEmpty ( textBox2 . Text ) )
             {
                 MessageBox . Show ( "合同批号不可为空" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( txtCP64 . Text ) )
+            {
+                MessageBox . Show ( "请选择工段" );
                 return;
             }
             variable ( );

@@ -93,6 +93,8 @@
             this.QUR014 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.QUR015 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.idx = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtQUO010 = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.TabPageOne.SuspendLayout();
@@ -141,6 +143,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQUO010.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -176,6 +180,7 @@
             this.layoutControl1.Controls.Add(this.txtQUO008);
             this.layoutControl1.Controls.Add(this.btnPre);
             this.layoutControl1.Controls.Add(this.btnRemove);
+            this.layoutControl1.Controls.Add(this.txtQUO010);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -319,7 +324,8 @@
             this.layoutControlItem14,
             this.emptySpaceItem1,
             this.emptySpaceItem2,
-            this.emptySpaceItem3});
+            this.emptySpaceItem3,
+            this.layoutControlItem17});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1235, 399);
@@ -412,7 +418,7 @@
             this.layoutControlItem7.Control = this.txtQUO008;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 78);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(604, 301);
+            this.layoutControlItem7.Size = new System.Drawing.Size(604, 26);
             this.layoutControlItem7.Text = "报价日期";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(64, 16);
             // 
@@ -896,6 +902,29 @@
             this.idx.Name = "idx";
             this.idx.Width = 83;
             // 
+            // txtQUO010
+            // 
+            this.txtQUO010.Location = new System.Drawing.Point(79, 116);
+            this.txtQUO010.Name = "txtQUO010";
+            this.txtQUO010.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F);
+            this.txtQUO010.Properties.Appearance.Options.UseFont = true;
+            this.txtQUO010.Size = new System.Drawing.Size(533, 22);
+            this.txtQUO010.StyleController = this.layoutControl1;
+            this.txtQUO010.TabIndex = 14;
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.AppearanceItemCaption.Font = new System.Drawing.Font("宋体", 12F);
+            this.layoutControlItem17.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem17.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem17.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.layoutControlItem17.Control = this.txtQUO010;
+            this.layoutControlItem17.Location = new System.Drawing.Point(0, 104);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(604, 275);
+            this.layoutControlItem17.Text = "业务员";
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(64, 16);
+            // 
             // FormQuotation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -953,6 +982,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQUO010.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1025,5 +1056,7 @@
         private DevExpress . XtraGrid . Columns . GridColumn QUR014;
         private DevExpress . XtraGrid . Columns . GridColumn QUR015;
         private DevExpress . XtraGrid . Columns . GridColumn idx;
+        private DevExpress . XtraEditors . TextEdit txtQUO010;
+        private DevExpress . XtraLayout . LayoutControlItem layoutControlItem17;
     }
 }
