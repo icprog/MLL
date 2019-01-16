@@ -61,10 +61,12 @@
             this.U0 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.RZ013 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.RZ010 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.RZ023 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.RZ012 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.RZ014 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.RZ015 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.RZ020 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.RZ024 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.RZ021 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.RZ022 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U4 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -400,7 +402,9 @@
             this.RZ007,
             this.RZ008,
             this.U12,
-            this.idx});
+            this.idx,
+            this.RZ023,
+            this.RZ024});
             this.bandedGridView1.GridControl = this.gridControl1;
             this.bandedGridView1.Name = "bandedGridView1";
             this.bandedGridView1.OptionsBehavior.Editable = false;
@@ -427,10 +431,12 @@
             this.gridBand1.Columns.Add(this.U0);
             this.gridBand1.Columns.Add(this.RZ013);
             this.gridBand1.Columns.Add(this.RZ010);
+            this.gridBand1.Columns.Add(this.RZ023);
             this.gridBand1.Columns.Add(this.RZ012);
             this.gridBand1.Columns.Add(this.RZ014);
             this.gridBand1.Columns.Add(this.RZ015);
             this.gridBand1.Columns.Add(this.RZ020);
+            this.gridBand1.Columns.Add(this.RZ024);
             this.gridBand1.Columns.Add(this.RZ021);
             this.gridBand1.Columns.Add(this.RZ022);
             this.gridBand1.Columns.Add(this.U4);
@@ -440,7 +446,7 @@
             this.gridBand1.Columns.Add(this.U7);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 1625;
+            this.gridBand1.Width = 1843;
             // 
             // RZ001
             // 
@@ -567,6 +573,23 @@
             this.RZ010.Visible = true;
             this.RZ010.Width = 118;
             // 
+            // RZ023
+            // 
+            this.RZ023.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.RZ023.AppearanceCell.Options.UseFont = true;
+            this.RZ023.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.RZ023.AppearanceHeader.Options.UseFont = true;
+            this.RZ023.AppearanceHeader.Options.UseTextOptions = true;
+            this.RZ023.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.RZ023.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.RZ023.Caption = "合同美金";
+            this.RZ023.FieldName = "RZ023";
+            this.RZ023.Name = "RZ023";
+            this.RZ023.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "RZ023", "{0:0.##}")});
+            this.RZ023.Visible = true;
+            this.RZ023.Width = 79;
+            // 
             // RZ012
             // 
             this.RZ012.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
@@ -637,6 +660,23 @@
             this.RZ020.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.RZ020.Visible = true;
             this.RZ020.Width = 95;
+            // 
+            // RZ024
+            // 
+            this.RZ024.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.RZ024.AppearanceCell.Options.UseFont = true;
+            this.RZ024.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.RZ024.AppearanceHeader.Options.UseFont = true;
+            this.RZ024.AppearanceHeader.Options.UseTextOptions = true;
+            this.RZ024.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.RZ024.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.RZ024.Caption = "合同美金未收款";
+            this.RZ024.FieldName = "RZ024";
+            this.RZ024.Name = "RZ024";
+            this.RZ024.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "RZ024", "{0:0.##}")});
+            this.RZ024.Visible = true;
+            this.RZ024.Width = 132;
             // 
             // RZ021
             // 
@@ -730,6 +770,7 @@
             this.RZ002.FieldName = "RZ002";
             this.RZ002.Name = "RZ002";
             this.RZ002.Visible = true;
+            this.RZ002.Width = 82;
             // 
             // U6
             // 
@@ -787,7 +828,7 @@
             this.gridBand3.Columns.Add(this.U10);
             this.gridBand3.Name = "gridBand3";
             this.gridBand3.VisibleIndex = 1;
-            this.gridBand3.Width = 448;
+            this.gridBand3.Width = 466;
             // 
             // U8
             // 
@@ -809,7 +850,7 @@
             this.U8.UnboundExpression = "[U6] + [U7]";
             this.U8.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U8.Visible = true;
-            this.U8.Width = 186;
+            this.U8.Width = 192;
             // 
             // RZ004
             // 
@@ -843,6 +884,7 @@
             this.RZ005.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "RZ005", "{0:N0}")});
             this.RZ005.Visible = true;
+            this.RZ005.Width = 87;
             // 
             // U10
             // 
@@ -966,7 +1008,7 @@
             this.gridBand4.Columns.Add(this.U11);
             this.gridBand4.Name = "gridBand4";
             this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 150;
+            this.gridBand4.Width = 160;
             // 
             // RZ006
             // 
@@ -981,6 +1023,7 @@
             this.RZ006.FieldName = "RZ006";
             this.RZ006.Name = "RZ006";
             this.RZ006.Visible = true;
+            this.RZ006.Width = 80;
             // 
             // U11
             // 
@@ -1002,6 +1045,7 @@
             this.U11.UnboundExpression = "([RZ010] - [RZ014]) * [RZ006]";
             this.U11.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U11.Visible = true;
+            this.U11.Width = 80;
             // 
             // gridBand5
             // 
@@ -1173,13 +1217,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
@@ -1188,5 +1225,14 @@
         private System.Windows.Forms.Label label8;
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn idx;
         private System . Windows . Forms . Button btnExport;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand1;
+        private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn RZ023;
+        private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn RZ024;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand3;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand2;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand5;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand6;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand7;
     }
 }

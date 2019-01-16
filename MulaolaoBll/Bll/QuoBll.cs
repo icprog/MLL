@@ -19,18 +19,95 @@ namespace MulaolaoBll . Bll
         /// 获取195数据列表
         /// </summary>
         /// <returns></returns>
-        public DataTable getTableFor195Info ( )
+        public DataTable getTableFor195Info (DateTime dt )
         {
-            return dal . getTableFor195Info ( );
+            return dal . getTableFor195Info (dt );
         }
 
         /// <summary>
         /// 获取196数据列表
         /// </summary>
         /// <returns></returns>
-        public DataTable getTableFor196Info ( )
+        public DataTable getTableFor196Info ( DateTime dt )
         {
-            return dal . getTableFor196Info ( );
+            return dal . getTableFor196Info (dt );
+        }
+
+        /// <summary>
+        /// 获取338数据列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor338Info ( DateTime dt )
+        {
+            return dal . getTableFor338Info ( dt );
+        }
+
+        /// <summary>
+        /// 获取339数据列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor339Info ( DateTime dt )
+        {
+            return dal . getTableFor339Info ( dt );
+        }
+
+        /// <summary>
+        /// 获取347数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor347Info ( DateTime dt )
+        {
+            return dal . getTableFor347Info ( dt );
+        }
+
+        /// <summary>
+        /// 获取341数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor341Info ( DateTime dt )
+        {
+            return dal . getTableFor341Info ( dt );
+        }
+
+        /// <summary>
+        /// 获取342数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor342Info ( DateTime dt )
+        {
+            return dal . getTableFor342Info ( dt );
+        }
+
+        /// <summary>
+        /// 获取343数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor343Info ( DateTime dt )
+        {
+            return dal . getTableFor343Info ( dt );
+        }
+
+        /// <summary>
+        /// 获取349数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor349Info ( DateTime dt )
+        {
+            return dal . getTableFor349Info ( dt );
+        }
+
+        /// <summary>
+        /// 获取344数据列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor344Info ( DateTime dt )
+        {
+            return dal . getTableFor344Info ( dt );
         }
 
         /// <summary>
@@ -123,6 +200,15 @@ namespace MulaolaoBll . Bll
         public MulaolaoLibrary . QuoEntity getModel ( string strWhere )
         {
             return dal . getModel ( strWhere );
+        }
+
+        /// <summary>
+        /// 获取业务人员
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor ( )
+        {
+            return dal . getTableFor ( );
         }
 
         }

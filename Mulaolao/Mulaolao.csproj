@@ -153,6 +153,7 @@
     <Compile Include="Chart\ChartControl2.Designer.cs">
       <DependentUpon>ChartControl2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Calcu344Spe.cs" />
     <Compile Include="ComboboxEditQuery.cs" />
     <Compile Include="Contract\FormInvenAdSheet.cs">
       <SubType>Form</SubType>
@@ -201,6 +202,54 @@
     </Compile>
     <Compile Include="QuoForms\r196.Designer.cs">
       <DependentUpon>r196.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuoForms\r338.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r338.Designer.cs">
+      <DependentUpon>r338.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuoForms\r339.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r339.Designer.cs">
+      <DependentUpon>r339.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuoForms\r341.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r341.Designer.cs">
+      <DependentUpon>r341.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuoForms\r342.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r342.Designer.cs">
+      <DependentUpon>r342.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuoForms\r343.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r343.Designer.cs">
+      <DependentUpon>r343.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuoForms\r344.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r344.Designer.cs">
+      <DependentUpon>r344.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuoForms\r347.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r347.Designer.cs">
+      <DependentUpon>r347.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuoForms\r349.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoForms\r349.Designer.cs">
+      <DependentUpon>r349.cs</DependentUpon>
     </Compile>
     <Compile Include="ReadOrWriteImageOfPicutre.cs" />
     <Compile Include="Class\AppUpdate.cs" />
@@ -1428,6 +1477,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuoForms\r196.resx">
       <DependentUpon>r196.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r338.resx">
+      <DependentUpon>r338.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r339.resx">
+      <DependentUpon>r339.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r341.resx">
+      <DependentUpon>r341.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r342.resx">
+      <DependentUpon>r342.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r343.resx">
+      <DependentUpon>r343.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r344.resx">
+      <DependentUpon>r344.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r347.resx">
+      <DependentUpon>r347.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoForms\r349.resx">
+      <DependentUpon>r349.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Raw material cost\R_FrmBatchNumManagement.resx">
       <DependentUpon>R_FrmBatchNumManagement.cs</DependentUpon>

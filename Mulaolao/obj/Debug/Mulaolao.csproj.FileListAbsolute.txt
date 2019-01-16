@@ -1702,3 +1702,11 @@ D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.Other.FormJiaoMiDu.resou
 D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.Contract.FormInvenAdSheet.resources
 D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.Other.FormInvenAdQuery.resources
 D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r196.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r338.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r341.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r342.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r343.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r347.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r349.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r339.resources
+D:\ProjectData\MLL\Mulaolao\Mulaolao\obj\Debug\Mulaolao.QuoForms.r344.resources

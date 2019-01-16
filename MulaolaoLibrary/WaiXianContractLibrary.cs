@@ -1571,7 +1571,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 零件
         /// </summary>
         public string WX98
         {

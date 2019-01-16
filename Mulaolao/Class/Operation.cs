@@ -238,6 +238,7 @@ namespace Mulaolao. Class
                 return 0. ToString ( );
             }         
         }
+        
         /// <summary>
         /// 两个数据的除法运算
         /// </summary>
@@ -259,6 +260,26 @@ namespace Mulaolao. Class
             }
             else
                 return 0.ToString( );
+        }
+        public static decimal DivisionTre ( string one ,string two,string tre )
+        {
+            if ( string . IsNullOrEmpty ( one ) )
+                Thr = 0;
+            else
+                Thr = Convert . ToDecimal ( one );
+
+            if ( string . IsNullOrEmpty ( two ) )
+                For = 0;
+            else
+                For = Convert . ToDecimal ( two );
+
+
+            if ( string . IsNullOrEmpty ( tre ) )
+                Fiv = 0;
+            else
+                Fiv = Convert . ToDecimal ( tre );
+
+            return For == 0 ? -Fiv : Thr / For - Fiv;
         }
         /// <summary>
         /// 两个数据的除法运算

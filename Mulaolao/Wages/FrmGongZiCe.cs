@@ -212,6 +212,37 @@ namespace Mulaolao.Wages
             lookUpEdit3.Text = model.EZ003;
             lookUpEdit4.Text = model.EZ014;
         }
+        private void gridView1_RowStyle ( object sender ,DevExpress . XtraGrid . Views . Grid . RowStyleEventArgs e )
+        {
+            if ( e . RowHandle < 0 )
+                return;
+            DataRow row1 = gridView1 . GetDataRow ( e . RowHandle );
+            if ( row1 == null )
+                return;
+            //[EZ007] + [EZ008] - [EZ009] - [EZ010]
+            model . EZ007 = string . IsNullOrEmpty ( row1 [ "EZ007" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row1 [ "EZ007" ] );
+            model . EZ008 = string . IsNullOrEmpty ( row1 [ "EZ008" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row1 [ "EZ008" ] );
+            model . EZ009 = string . IsNullOrEmpty ( row1 [ "EZ009" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row1 [ "EZ009" ] );
+            model . EZ010 = string . IsNullOrEmpty ( row1 [ "EZ010" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( row1 [ "EZ010" ] );
+            model . IDX = string . IsNullOrEmpty ( row1 [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row1 [ "idx" ] );
+            if ( model . IDX < 1 )
+                return;
+            decimal d1 = model . EZ007 + model . EZ008 - model . EZ009 - model . EZ010;
+            if ( tableTwo . Select ( "idx='" + model . IDX + "'" ) . Length < 1 )
+                e . Appearance . BackColor = System . Drawing . Color . Red;
+            else
+            {
+                object obj = tableTwo . Compute ( "sum(W2)" ,"idx='" + model . IDX + "'" );
+                if ( obj == null )
+                    e . Appearance . BackColor = System . Drawing . Color . Red;
+                else
+                {
+                    decimal d2 = Convert . ToDecimal ( obj );
+                    if ( d1 != d2 )
+                        e . Appearance . BackColor = System . Drawing . Color . Red;
+                }
+            }
+        }
         #endregion
 
         #region Main

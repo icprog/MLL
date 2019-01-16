@@ -33,7 +33,9 @@ namespace Mulaolao . Contract
         DataTable sto;
         DataTable find;
         bool result=false;
-        
+
+        DataRow rows;
+
         Hashtable SQLString = new Hashtable ( );
         
         private void R_FrmInventoryProcurement_Load ( object sender , EventArgs e )
@@ -252,25 +254,25 @@ namespace Mulaolao . Contract
         //表
         private void gridView2_RowClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowClickEventArgs e )
         {
-            DataRow row = gridView2 . GetFocusedDataRow ( );
-            if ( row == null )
+            rows = gridView2 . GetFocusedDataRow ( );
+            if ( rows == null )
                 return;
-            AC18 = row [ "AC18" ] . ToString ( );
-            comboBox3 . Text = row [ "AC04" ] . ToString ( );
-            comboBox8 . Text = row [ "AC05" ] . ToString ( );
-            comboBox9 . Text = row [ "AC01" ] . ToString ( );
-            comboBox10 . Text = row [ "AC02" ] . ToString ( );
-            textBox8 . Text = row [ "AC10" ] . ToString ( );
-            comboBox5 . Text = row [ "AC06" ] . ToString ( );
-            textBox9 . Text = row [ "AC03" ] . ToString ( );
-            textBox3 . Text = row [ "AC07" ] . ToString ( );
-            textBox2 . Text = row [ "AC09" ] . ToString ( );
-            textBox6 . Text = row [ "AC15" ] . ToString ( );
+            AC18 = rows [ "AC18" ] . ToString ( );
+            comboBox3 . Text = rows [ "AC04" ] . ToString ( );
+            comboBox8 . Text = rows [ "AC05" ] . ToString ( );
+            comboBox9 . Text = rows [ "AC01" ] . ToString ( );
+            comboBox10 . Text = rows [ "AC02" ] . ToString ( );
+            textBox8 . Text = rows [ "AC10" ] . ToString ( );
+            comboBox5 . Text = rows [ "AC06" ] . ToString ( );
+            textBox9 . Text = rows [ "AC03" ] . ToString ( );
+            textBox3 . Text = rows [ "AC07" ] . ToString ( );
+            textBox2 . Text = rows [ "AC09" ] . ToString ( );
+            textBox6 . Text = rows [ "AC15" ] . ToString ( );
             AD1 = AC18;
-            ac16 = row [ "AC16" ] . ToString ( );
-            AC021 = string . IsNullOrEmpty ( row [ "AC21" ] . ToString ( ) ) == true ? DateTime . Now : Convert . ToDateTime ( row [ "AC21" ] . ToString ( ) );
-            lookUpEdit1 . Text = row [ "AC19" ] . ToString ( );
-            textBox13 . Text = row [ "AC20" ] . ToString ( );
+            ac16 = rows [ "AC16" ] . ToString ( );
+            AC021 = string . IsNullOrEmpty ( rows [ "AC21" ] . ToString ( ) ) == true ? DateTime . Now : Convert . ToDateTime ( rows [ "AC21" ] . ToString ( ) );
+            lookUpEdit1 . Text = rows [ "AC19" ] . ToString ( );
+            textBox13 . Text = rows [ "AC20" ] . ToString ( );
 
             gridView1 . FocusedRowHandle = 0;
 
@@ -702,41 +704,10 @@ namespace Mulaolao . Contract
                     MessageBox . Show ( "货号不可为空" );
                     return;
                 }
-                //if ( sign == "1" )
-                //{
-                //    AC18 = oddNumbers . purchaseContract ( "SELECT MAX(AC18) AC18 FROM R_PQAC WHERE AC18 LIKE 'P%'" ,"AC18" ,"P-" );
-                //    build ( );
 
-                //    strSql = new StringBuilder ( );
-                //    SQLString . Clear ( );
-                //    strSql . AppendFormat ( "INSERT INTO R_PQAC (AC18,AC02) VALUES ('{0}','{1}')" ,AC18 ,AC02 );
-                //    SQLString . Add ( strSql ,null );
-                //    SQLString . Add ( Drity . DrityOfComparation ( "R_464" ,this . Text ,Logins . username ,DateTime . Now ,AC18 ,strSql . ToString ( ) . Replace ( "'" ,"''" ) ,"新增" ,"新增入库" ) ,null );
-                //    result = SqlHelper . ExecuteSqlTran ( SQLString );
-
-                //    if ( result == false )
-                //        MessageBox . Show ( "入库失败" );
-                //    else
-                //    {
-                //        MessageBox . Show ( "已入库" );
-
-                //        DataRow row = sto . NewRow ( );
-                //        row [ "AC18" ] = AC18;
-                //        row [ "AC01" ] = AC01;
-                //        row [ "AC02" ] = AC02;
-                //        row [ "AC04" ] = AC04;
-                //        row [ "AC05" ] = AC05;
-                //        row [ "AC06" ] = AC06;
-                //        row [ "AC11" ] = AC011;
-                //        row [ "AC12" ] = AC012;
-                //        row [ "AC21" ] = AC021;
-                //        sto . Rows . Add ( row );
-                //    }
-                //}
-                //else 
                 if ( sign . Equals ( "2" ) )
                 {
-                    if ( AC18 == "" )
+                    if (rows==null || AC18 == "" )
                     {
                         MessageBox . Show ( "请选择编辑的内容" );
                         return;
@@ -755,111 +726,17 @@ namespace Mulaolao . Contract
                     {
                         MessageBox . Show ( "成功编辑数据" );
 
-                        int num = gridView2 . FocusedRowHandle;
-                        DataRow row = sto . Rows [ num ];
-                        row . BeginEdit ( );
-                        row [ "AC02" ] = AC02;
-                        row . EndEdit ( );
+                        //int num = gridView2 . FocusedRowHandle;
+                        //DataRow row = sto . Rows [ num ];
+                        rows . BeginEdit ( );
+                        rows [ "AC02" ] = AC02;
+                        rows . EndEdit ( );
+                        gridControl1 . Refresh ( );
                     }
                 }
             }
             #endregion
 
-            /*
-
-            #region  出库
-            else if ( tabControl1 . SelectedTab == tabPage2 )
-            {
-                if ( string . IsNullOrEmpty ( comboBox3 . Text ) )
-                {
-                    MessageBox . Show ( "物料名称不可为空" );
-                    return;
-                }
-                if ( string . IsNullOrEmpty ( comboBox2 . Text ) )
-                {
-                    MessageBox . Show ( "货号不可为空" );
-                    return;
-                }
-                if ( sign . Equals ( "1" ) )
-                {
-                    
-                    builds ( );
-                    strSql = new StringBuilder ( );
-                    SQLString . Clear ( );
-                    strSql . AppendFormat ( "INSERT INTO R_PQAD (AD01,AD02,AD03,AD04,AD05,AD06,AD07,AD08,AD09,AD11,AD12,AD13,AD14,AD15,AD16) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')" ,AD1 ,AD2 ,AD3 ,AD4 ,AD5 ,AD6 ,AD7 ,AD8 ,AD9 ,AD011 ,AD012 ,AD013 ,AD014 ,AD015 ,AD016 );
-                    SQLString . Add ( strSql ,null );
-                    SQLString . Add ( Drity . DrityOfComparation ( "R_464" ,this . Text ,Logins . username ,DateTime . Now ,AC18 ,strSql . ToString ( ) . Replace ( "'" ,"''" ) ,"新增" ,"新增出库" ) ,null );
-                    result = SqlHelper . ExecuteSqlTran ( SQLString );
-                    if ( result == false )
-                        MessageBox . Show ( "出库失败" );
-                    else
-                    {
-                        MessageBox . Show ( "成功出库" );
-
-                        DataRow row = find . NewRow ( );
-                        row [ "AD01" ] = AD1;
-                        row [ "AD02" ] = AD2;
-                        row [ "AD03" ] = AD3;
-                        row [ "AD04" ] = AD4;
-                        row [ "AD05" ] = AD5;
-                        row [ "AD06" ] = AD6;
-                        row [ "AD07" ] = AD7;
-                        row [ "AD08" ] = AD8;
-                        row [ "AD09" ] = AD9;
-                        row [ "AD11" ] = AD011;
-                        row [ "AD12" ] = AD012;
-                        row [ "AD13" ] = AD013;
-                        row [ "AD14" ] = AD014;
-                        find . Rows . Add ( row );
-
-                        assignMent ( );
-                    }
-                }
-                else if ( sign . Equals ( "2" ) )
-                {
-                    if ( id < 0 )
-                    {
-                        MessageBox . Show ( "请选择需要编辑的内容" );
-                        return;
-                    }
-                    builds ( );
-                    strSql = new StringBuilder ( );
-                    SQLString . Clear ( );
-                    strSql . AppendFormat ( "UPDATE R_PQAD SET AD02='{0}',AD03='{1}',AD04='{2}',AD06='{3}',AD07='{4}',AD08='{5}',AD13='{6}',AD14='{7}' WHERE idx='{8}'" ,AD2 ,AD3 ,AD4 ,AD6 ,AD7 ,AD8 ,AD013 ,AD014 ,id );
-                    SQLString . Add ( strSql ,null );
-                    SQLString . Add ( Drity . DrityOfComparation ( "R_464" ,this . Text ,Logins . username ,DateTime . Now ,AC18 ,strSql . ToString ( ) . Replace ( "'" ,"''" ) ,"编辑" ,"编辑出库" ) ,null );
-                    result = SqlHelper . ExecuteSqlTran ( SQLString );
-
-                    if ( result == false )
-                        MessageBox . Show ( "编辑数据失败" );
-                    else
-                    {
-                        MessageBox . Show ( "成功编辑数据" );
-                        int num = gridView1 . FocusedRowHandle;
-                        DataRow row = find . Rows [ num ];
-                        row . BeginEdit ( );
-                        row [ "AD01" ] = AD1;
-                        row [ "AD02" ] = AD2;
-                        row [ "AD03" ] = AD3;
-                        row [ "AD04" ] = AD4;
-                        row [ "AD05" ] = AD5;
-                        row [ "AD06" ] = AD6;
-                        row [ "AD07" ] = AD7;
-                        row [ "AD08" ] = AD8;
-                        row [ "AD09" ] = AD9;
-                        row [ "AD11" ] = AD011;
-                        row [ "AD12" ] = AD012;
-                        row [ "AD13" ] = AD013;
-                        row [ "AD14" ] = AD014;
-                        row . EndEdit ( );
-
-                        assignMent ( );
-                    }
-                }
-            }
-            #endregion
-
-            */
             toolSelect . Enabled = toolAdd . Enabled = toolUpdate . Enabled = toolDelete . Enabled = true;
             toolPrint . Enabled = toolExport . Enabled = toolMaintain . Enabled = toolSave . Enabled = toolCancel . Enabled = false;
         }

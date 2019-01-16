@@ -64,8 +64,8 @@ namespace MulaolaoBll.Dao
         {
             StringBuilder strSql = new StringBuilder( );
             strSql.AppendFormat( "INSERT INTO R_PQAE (" );
-            strSql.Append( "AE01,AE02,AE03,AE04,AE05,AE06,AE07,AE08,AE09,AE10,AE11,AE12,AE13,AE14,AE15,AE16,AE17,AE18,AE19,AE20,AE26,AE27,AE28,AE29,AE30,AE31,AE33,AE34,AE35,AE36,AE37,AE38,AE39,AE40,AE41,AE42)" );
-            strSql .Append( "VALUES (@AE01,@AE02,@AE03,@AE04,@AE05,@AE06,@AE07,@AE08,@AE09,@AE10,@AE11,@AE12,@AE13,@AE14,@AE15,@AE16,@AE17,@AE18,@AE19,@AE20,@AE26,@AE27,@AE28,@AE29,@AE30,@AE31,@AE33,@AE34,@AE35,@AE36,@AE37,@AE38,@AE39,@AE40,@AE41,@AE42);" );
+            strSql.Append( "AE01,AE02,AE03,AE04,AE05,AE06,AE07,AE08,AE09,AE10,AE11,AE12,AE13,AE14,AE15,AE16,AE17,AE18,AE19,AE20,AE26,AE27,AE28,AE29,AE30,AE31,AE33,AE34,AE35,AE36,AE37,AE38,AE39,AE40,AE41,AE42,AE43)" );
+            strSql .Append( "VALUES (@AE01,@AE02,@AE03,@AE04,@AE05,@AE06,@AE07,@AE08,@AE09,@AE10,@AE11,@AE12,@AE13,@AE14,@AE15,@AE16,@AE17,@AE18,@AE19,@AE20,@AE26,@AE27,@AE28,@AE29,@AE30,@AE31,@AE33,@AE34,@AE35,@AE36,@AE37,@AE38,@AE39,@AE40,@AE41,@AE42,@AE43);" );
             strSql .Append( "SELECT SCOPE_IDENTITY();" );
             SqlParameter[] parameter = {
                 new SqlParameter("@AE01",SqlDbType.NVarChar),
@@ -103,7 +103,8 @@ namespace MulaolaoBll.Dao
                 new SqlParameter("@AE39",SqlDbType.Decimal,11),
                 new SqlParameter("@AE40",SqlDbType.Decimal,11),
                 new SqlParameter("@AE41",SqlDbType.Decimal,11),
-                new SqlParameter("@AE42",SqlDbType.Decimal,11)
+                new SqlParameter("@AE42",SqlDbType.Decimal,11),
+                new SqlParameter("@AE43",SqlDbType.Decimal,11)
             };
             parameter[0].Value = model.AE01;
             parameter[1].Value = model.AE02;
@@ -141,6 +142,7 @@ namespace MulaolaoBll.Dao
             parameter[33].Value = model.AE40;
             parameter[34].Value = model.AE41;
             parameter [ 35 ] . Value = model . AE42;
+            parameter [ 36 ] . Value = model . AE43;
 
             int idx = SqlHelper.ExecuteSqlReturnId( strSql.ToString( ) ,parameter );
             if ( idx > 0 )
@@ -289,7 +291,8 @@ namespace MulaolaoBll.Dao
             strSql.AppendFormat( "AE39='{0}'," ,model.AE39 );
             strSql.AppendFormat( "AE40='{0}'," ,model.AE40 );
             strSql.AppendFormat( "AE41='{0}'," ,model.AE41 );
-            strSql . AppendFormat ( "AE42='{0}'" ,model . AE42 );
+            strSql . AppendFormat ( "AE42='{0}'," ,model . AE42 );
+            strSql . AppendFormat ( "AE43='{0}'" ,model . AE43 );
             strSql .AppendFormat( " WHERE idx='{0}'" ,model.Idx );
 
             SQLString.Add( strSql.ToString( ) );
@@ -408,7 +411,7 @@ namespace MulaolaoBll.Dao
         {
             StringBuilder strSql = new StringBuilder( );
             strSql . Append ( "WITH CET AS(" );
-            strSql.Append( "SELECT idx,AE01,AE02,AE03,AE04,AE05,AE06,AE07,AE08,AE09,AE10,AE11,AE12,AE13,AE14,AE15,AE16,AE17,AE18,AE19,AE20,AE21,AE22,AE23,AE24,AE26,AE27,AE28,AE29,AE30,AE31,AE32,AE33,AE34,AE35,AE36,AE37,AE38,ISNULL(AE39,0) AE39,AE40,AE41,AE42,U0,U7,DATEDIFF( DAY ,AE15 ,AE14 )+3 U2,DATEDIFF( DAY ,AE21 ,AE17 ) U3,DATEDIFF( DAY ,AE21 ,AE23 )+15 U4,DATEDIFF( DAY,AE22 ,AE18) U5,U11 FROM R_PQAE" );
+            strSql.Append( "SELECT idx,AE01,AE02,AE03,AE04,AE05,AE06,AE07,AE08,AE09,AE10,AE11,AE12,AE13,AE14,AE15,AE16,AE17,AE18,AE19,AE20,AE21,AE22,AE23,AE24,AE26,AE27,AE28,AE29,AE30,AE31,AE32,AE33,AE34,AE35,AE36,AE37,AE38,ISNULL(AE39,0) AE39,AE40,AE41,AE42,AE43,U0,U7,DATEDIFF( DAY ,AE15 ,AE14 )+3 U2,DATEDIFF( DAY ,AE21 ,AE17 ) U3,DATEDIFF( DAY ,AE21 ,AE23 )+15 U4,DATEDIFF( DAY,AE22 ,AE18) U5,U11 FROM R_PQAE" );
             strSql . Append ( "),CFT AS(" );
             strSql . Append ( "SELECT AE02,MAX(idx) idx,SUM(ISNULL(AE12,0)*ISNULL(AE37,0))-SUM(ISNULL(AE28,0))-SUM(ISNULL(AE30,0))-SUM(ISNULL(AE29,0)*ISNULL(AE11,0))+SUM(ISNULL(AE41,0)) U12,SUM(CONVERT(DECIMAL(18,0),CASE WHEN AE39!=0 AND AE39 IS NOT NULL THEN ISNULL(AE26,0)*ISNULL(AE39,0)*ISNULL(AE10,0) ELSE ISNULL(AE12,0)*ISNULL(AE26,0) END))-SUM(ISNULL(AE28,0))-SUM(ISNULL(AE30,0))-SUM(ISNULL(AE29,0))+SUM(ISNULL(AE40,0)) U13,AE19-SUM(ISNULL(AE30,0))-SUM(ISNULL(AE27,0))-SUM(ISNULL(AE28,0))-SUM(ISNULL(AE29,0))-SUM(ISNULL(AE42,0)) U11 FROM R_PQAE " );
             strSql . Append ( " GROUP BY AE02,AE19)" );
@@ -440,7 +443,7 @@ namespace MulaolaoBll.Dao
         public MulaolaoLibrary.DailyCollectionRecordLibrary GetModel ( int idx )
         {
             StringBuilder strSql = new StringBuilder( );
-            strSql.Append( "SELECT idx,AE01,AE02,AE03,AE04,AE05,AE06,AE07,AE08,AE09,AE10,AE11,AE12,AE13,AE14,AE15,AE16,AE17,AE18,AE19,AE20,AE21,AE22,AE23,AE24,AE26,AE27,AE28,AE29,AE30,AE31,AE32,AE33,AE34,AE35,AE36,AE37,AE38,AE39,AE40,AE41,AE42 FROM R_PQAE" );
+            strSql.Append( "SELECT idx,AE01,AE02,AE03,AE04,AE05,AE06,AE07,AE08,AE09,AE10,AE11,AE12,AE13,AE14,AE15,AE16,AE17,AE18,AE19,AE20,AE21,AE22,AE23,AE24,AE26,AE27,AE28,AE29,AE30,AE31,AE32,AE33,AE34,AE35,AE36,AE37,AE38,AE39,AE40,AE41,AE42,AE43 FROM R_PQAE" );
             strSql.Append( " WHERE idx=@idx" );
             SqlParameter[] parameter = {
                 new SqlParameter("@idx",SqlDbType.Int)
@@ -549,6 +552,8 @@ namespace MulaolaoBll.Dao
                     model.AE41 = Convert.ToDecimal( row["AE41"].ToString( ) );
                 if ( row [ "AE42" ] != null && row [ "AE42" ] . ToString ( ) != "" )
                     model . AE42 = Convert . ToDecimal ( row [ "AE42" ] . ToString ( ) );
+                if ( row [ "AE43" ] != null && row [ "AE43" ] . ToString ( ) != "" )
+                    model . AE43 = Convert . ToDecimal ( row [ "AE43" ] . ToString ( ) );
             }
 
             return model;

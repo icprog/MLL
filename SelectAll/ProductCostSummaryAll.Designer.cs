@@ -41,6 +41,8 @@
             this.AM011 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RES05 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.idx = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PQF31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PQF13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -59,8 +61,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.PQF31 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PQF13 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -336,6 +336,44 @@
             this.idx.FieldName = "idx";
             this.idx.Name = "idx";
             // 
+            // PQF31
+            // 
+            this.PQF31.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.PQF31.AppearanceCell.Options.UseFont = true;
+            this.PQF31.AppearanceCell.Options.UseTextOptions = true;
+            this.PQF31.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PQF31.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.PQF31.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.PQF31.AppearanceHeader.Options.UseFont = true;
+            this.PQF31.AppearanceHeader.Options.UseTextOptions = true;
+            this.PQF31.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PQF31.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.PQF31.Caption = "合同交货日期";
+            this.PQF31.FieldName = "PQF31";
+            this.PQF31.Name = "PQF31";
+            this.PQF31.Visible = true;
+            this.PQF31.VisibleIndex = 8;
+            this.PQF31.Width = 125;
+            // 
+            // PQF13
+            // 
+            this.PQF13.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.PQF13.AppearanceCell.Options.UseFont = true;
+            this.PQF13.AppearanceCell.Options.UseTextOptions = true;
+            this.PQF13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PQF13.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.PQF13.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.PQF13.AppearanceHeader.Options.UseFont = true;
+            this.PQF13.AppearanceHeader.Options.UseTextOptions = true;
+            this.PQF13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PQF13.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.PQF13.Caption = "接单日期";
+            this.PQF13.FieldName = "PQF13";
+            this.PQF13.Name = "PQF13";
+            this.PQF13.Visible = true;
+            this.PQF13.VisibleIndex = 9;
+            this.PQF13.Width = 76;
+            // 
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
@@ -490,7 +528,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 16);
             this.label9.TabIndex = 46;
-            this.label9.Text = "合同交货日期";
+            this.label9.Text = "实际发货日期";
             // 
             // label5
             // 
@@ -519,44 +557,6 @@
             this.dateEdit2.Properties.Mask.EditMask = "yyyy";
             this.dateEdit2.Size = new System.Drawing.Size(100, 22);
             this.dateEdit2.TabIndex = 49;
-            // 
-            // PQF31
-            // 
-            this.PQF31.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.PQF31.AppearanceCell.Options.UseFont = true;
-            this.PQF31.AppearanceCell.Options.UseTextOptions = true;
-            this.PQF31.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PQF31.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.PQF31.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.PQF31.AppearanceHeader.Options.UseFont = true;
-            this.PQF31.AppearanceHeader.Options.UseTextOptions = true;
-            this.PQF31.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PQF31.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.PQF31.Caption = "合同交货日期";
-            this.PQF31.FieldName = "PQF31";
-            this.PQF31.Name = "PQF31";
-            this.PQF31.Visible = true;
-            this.PQF31.VisibleIndex = 8;
-            this.PQF31.Width = 125;
-            // 
-            // PQF13
-            // 
-            this.PQF13.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.PQF13.AppearanceCell.Options.UseFont = true;
-            this.PQF13.AppearanceCell.Options.UseTextOptions = true;
-            this.PQF13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PQF13.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.PQF13.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.PQF13.AppearanceHeader.Options.UseFont = true;
-            this.PQF13.AppearanceHeader.Options.UseTextOptions = true;
-            this.PQF13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PQF13.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.PQF13.Caption = "接单日期";
-            this.PQF13.FieldName = "PQF13";
-            this.PQF13.Name = "PQF13";
-            this.PQF13.Visible = true;
-            this.PQF13.VisibleIndex = 9;
-            this.PQF13.Width = 76;
             // 
             // ProductCostSummaryAll
             // 

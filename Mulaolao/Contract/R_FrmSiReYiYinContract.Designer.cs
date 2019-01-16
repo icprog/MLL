@@ -48,6 +48,7 @@
             this.AH22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AH23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.idx = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.AH119 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -281,7 +282,6 @@
             this.label76 = new System.Windows.Forms.Label();
             this.tabPageFor = new System.Windows.Forms.TabPage();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.AH119 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
@@ -690,13 +690,25 @@
             this.idx.FieldName = "idx";
             this.idx.Name = "idx";
             // 
+            // AH119
+            // 
+            this.AH119.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.AH119.AppearanceCell.Options.UseFont = true;
+            this.AH119.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.AH119.AppearanceHeader.Options.UseFont = true;
+            this.AH119.Caption = "工段";
+            this.AH119.FieldName = "AH119";
+            this.AH119.Name = "AH119";
+            this.AH119.Visible = true;
+            this.AH119.VisibleIndex = 4;
+            // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1356, 460);
+            this.gridControl1.Size = new System.Drawing.Size(1348, 460);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -2710,7 +2722,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1370, 717);
+            this.splitContainer1.Size = new System.Drawing.Size(1362, 717);
             this.splitContainer1.SplitterDistance = 85;
             this.splitContainer1.TabIndex = 133;
             // 
@@ -2724,7 +2736,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1370, 628);
+            this.tabControl1.Size = new System.Drawing.Size(1362, 628);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPageOne
@@ -2777,7 +2789,7 @@
             this.tabPageOne.Location = new System.Drawing.Point(4, 26);
             this.tabPageOne.Name = "tabPageOne";
             this.tabPageOne.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageOne.Size = new System.Drawing.Size(1362, 598);
+            this.tabPageOne.Size = new System.Drawing.Size(1354, 598);
             this.tabPageOne.TabIndex = 0;
             this.tabPageOne.Text = "其它信息";
             this.tabPageOne.UseVisualStyleBackColor = true;
@@ -2788,7 +2800,7 @@
             this.tabPageTwo.Location = new System.Drawing.Point(4, 26);
             this.tabPageTwo.Name = "tabPageTwo";
             this.tabPageTwo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTwo.Size = new System.Drawing.Size(1362, 598);
+            this.tabPageTwo.Size = new System.Drawing.Size(1354, 598);
             this.tabPageTwo.TabIndex = 1;
             this.tabPageTwo.Text = "基本信息";
             this.tabPageTwo.UseVisualStyleBackColor = true;
@@ -2840,7 +2852,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.gridControl1);
-            this.splitContainer2.Size = new System.Drawing.Size(1356, 592);
+            this.splitContainer2.Size = new System.Drawing.Size(1348, 592);
             this.splitContainer2.SplitterDistance = 128;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -3072,24 +3084,12 @@
             this.textBox4.Size = new System.Drawing.Size(1362, 598);
             this.textBox4.TabIndex = 48;
             // 
-            // AH119
-            // 
-            this.AH119.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.AH119.AppearanceCell.Options.UseFont = true;
-            this.AH119.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.AH119.AppearanceHeader.Options.UseFont = true;
-            this.AH119.Caption = "工段";
-            this.AH119.FieldName = "AH119";
-            this.AH119.Name = "AH119";
-            this.AH119.Visible = true;
-            this.AH119.VisibleIndex = 4;
-            // 
             // R_FrmSiReYiYinContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1370, 742);
+            this.ClientSize = new System.Drawing.Size(1362, 742);
             this.Controls.Add(this.splitContainer1);
             this.Name = "R_FrmSiReYiYinContract";
             this.Text = "丝.热.移印(化学品)承揽加工合同书 (R_196)";

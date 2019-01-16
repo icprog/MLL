@@ -58,9 +58,9 @@ namespace Mulaolao.Contract
 
             label78.Visible = label98.Visible = false;
 
-            comboBox1.Items.Clear( );
-            comboBox1.Items.AddRange( new string[] { "包装辅料" ,"塑料件" ,"其它材料" } );
-
+            //textBox38.Items.Clear( );
+            //textBox38.Items.AddRange( new string[] { "包装辅料" ,"塑料件" ,"其它材料" } );
+            
             name = bll.GetDataTablePerson( );
             lookUpEdit1.Properties.DataSource = name;
             lookUpEdit1.Properties.DisplayMember = "DBA002";
@@ -150,18 +150,18 @@ namespace Mulaolao.Contract
             {
                 PJ01 = textBox17 . Text;
 
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PJ09,GS08 PJ89,GS09 PJ17,GS10 PJ11 FROM R_PQP WHERE GS07!='' AND GS70='R_347' AND GS01 =@GS01" ,new SqlParameter ( "@GS01" ,PJ01 ) );
+                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PJ09,GS08 PJ89,GS09 PJ17,GS10 PJ11,GS71 PJ105 FROM R_PQP WHERE GS07!='' AND GS70='R_347' AND GS01 =@GS01" ,new SqlParameter ( "@GS01" ,PJ01 ) );
                 // UNION SELECT DISTINCT GS52 PJ09,GS57 PJ89,GS58 PJ11,GS59 PJ17 FROM R_PQP WHERE GS52!='' AND GS48=@GS48
 
 
                 //wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS07 PJ09,GS08 PJ89,GS09 PJ17,GS10 PJ11 FROM R_PQP WHERE GS07!=''  AND GS01=@GS01 " ,new SqlParameter ( "@GS01" ,PJ01 ) );
                 //UNION SELECT DISTINCT GS52 PJ09,GS57 PJ89,GS58 PJ11,GS59 PJ17 FROM R_PQP WHERE GS52!='' AND GS01=@GS01
 
-                biao = SqlHelper . ExecuteDataTable ( "SELECT '' PJ09,PJ10,0.0 PJ11,PJ12,PJ13,PJ14,PJ15,PJ16,'' PJ17,PJ18,'' PJ89 FROM R_PQS WHERE PJ01=@PJ01" ,new SqlParameter ( "@PJ01" ,PJ01 ) );
+                biao = SqlHelper . ExecuteDataTable ( "SELECT '' PJ09,PJ10,0.0 PJ11,'' PJ105,PJ12,PJ13,PJ14,PJ15,PJ16,'' PJ17,PJ18,'' PJ89 FROM R_PQS WHERE PJ01=@PJ01" ,new SqlParameter ( "@PJ01" ,PJ01 ) );
             }
 
             if ( string.IsNullOrEmpty( textBox17.Text ) )
-                biao = SqlHelper.ExecuteDataTable( "SELECT PJ09,PJ10,PJ11,PJ12,PJ13,PJ14,PJ15,PJ16,PJ17,PJ18,PJ89 FROM R_PQS WHERE PJ95=@PJ95" ,new SqlParameter( "@PJ95" ,PJ95 ) );
+                biao = SqlHelper.ExecuteDataTable( "SELECT PJ09,PJ10,PJ11,PJ105,PJ12,PJ13,PJ14,PJ15,PJ16,PJ17,PJ18,PJ89 FROM R_PQS WHERE PJ95=@PJ95" ,new SqlParameter( "@PJ95" ,PJ95 ) );
             //else
             //{
             //    PJ01 = textBox17.Text;
@@ -174,7 +174,7 @@ namespace Mulaolao.Contract
             {
                 //物料名称
                 //DataTable wlmc= biao.DefaultView.ToTable( true ,"PJ09" );
-                partTable = biao . DefaultView . ToTable ( true ,"PJ09" ,"PJ89" ,"PJ11" );
+                partTable = biao . DefaultView . ToTable ( true ,"PJ09" ,"PJ89" ,"PJ11" ,"PJ105" );
                 gridLookUpEdit1 . Properties . DataSource = partTable;
                 gridLookUpEdit1 . Properties . DisplayMember = "PJ09";
                 gridLookUpEdit1 . Properties . ValueMember = "PJ09";
@@ -230,6 +230,7 @@ namespace Mulaolao.Contract
             }
             textBox37 . Text = row [ "PJ11" ] . ToString ( );
             textBox26 . Text = row [ "PJ89" ] . ToString ( );
+            textBox38 . Text = row [ "PJ105" ] . ToString ( );
             previousOfPrice ( );
         }
         //物料名称
@@ -333,7 +334,7 @@ namespace Mulaolao.Contract
             comboBox15 . Text = row [ "PJ16" ] . ToString ( );
             comboBox8 . Text = row [ "PJ17" ] . ToString ( );
             comboBox17 . Text = row [ "PJ18" ] . ToString ( );
-            comboBox1 . Text = row [ "PJ105" ] . ToString ( );
+            textBox38 . Text = row [ "PJ105" ] . ToString ( );
             if ( row [ "PJ19" ] . ToString ( ) == "" )
                 dateTimePicker4 . Value = MulaolaoBll . Drity . GetDt ( );
             else
@@ -2353,7 +2354,7 @@ namespace Mulaolao.Contract
             PJ020 = dateTimePicker5.Value;
             PJ089 = textBox26.Text;
             PJ009 = gridLookUpEdit1.Text;
-            PJ0105 = comboBox1.Text;
+            PJ0105 = textBox38.Text;
         }
         void build ( )
         {
@@ -2490,7 +2491,7 @@ namespace Mulaolao.Contract
                 MessageBox.Show( "货号不可为空" );
                 return;
             }
-            if ( string.IsNullOrEmpty( comboBox1.Text ) )
+            if ( string.IsNullOrEmpty( textBox38.Text ) )
             {
                 MessageBox.Show( "类别不可为空" );
                 return;
@@ -2807,7 +2808,7 @@ namespace Mulaolao.Contract
                 MessageBox.Show( "货号不可为空" );
                 return;
             }
-            if ( string.IsNullOrEmpty( comboBox1.Text ) )
+            if ( string.IsNullOrEmpty( textBox38.Text ) )
             {
                 MessageBox.Show( "类别不可为空" );
                 return;
@@ -2999,7 +3000,7 @@ namespace Mulaolao.Contract
             de = SqlHelper . ExecuteDataTable ( "SELECT idx,PJ09,PJ10,PJ89,PJ11,PJ12,PJ13,PJ14,PJ15,PJ16,PJ17,PJ18,PJ19,PJ20,PJ96,PJ97,PJ102,PJ103,PJ105 FROM R_PQS WHERE PJ92=@PJ92 AND PJ09!='' AND PJ09 IS NOT NULL ORDER BY idx DESC" ,new SqlParameter ( "@PJ92" ,model . PJ92 ) );
             gridControl1 . DataSource = de;
             gridView1 . BestFitColumns ( );
-            //every ( );
+            every ( );
             //}
         }
         //实际收货时间

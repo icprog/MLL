@@ -194,7 +194,10 @@ namespace MulaolaoBll
         /// R_505
         /// </summary>
         public static string r505="R_505";
-
+        /// <summary>
+        /// R_243
+        /// </summary>
+        public static string r243="R_243";
         /// <summary>
         /// 双瓦外箱
         /// </summary>
@@ -343,7 +346,7 @@ namespace MulaolaoBll
         /// <summary>
         /// 手工剪切、其他
         /// </summary>
-        public static string sgjq="手工剪切、其他";
+        public static string sgjq="其他";
         /// <summary>
         /// 工资
         /// </summary>

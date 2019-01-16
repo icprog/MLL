@@ -91,7 +91,7 @@ namespace MulaolaoLibrary
         private string _gs75;
         private string _gs76;
         private string _gs77;
-        private string _gs78;
+        private decimal? _gs78;
         private string _gs79;
         private string _gs80;
         private string _gs81;
@@ -203,7 +203,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 材质 工段
+        /// 部件
         /// </summary>
         public string GS02
         {
@@ -1197,9 +1197,9 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 每套重量
         /// </summary>
-        public string GS78
+        public decimal? GS78
         {
             set
             {
@@ -1378,7 +1378,7 @@ namespace MulaolaoLibrary
                 return _gs90;
             }
         }
-
+        
         #endregion
     }
 }

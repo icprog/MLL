@@ -273,10 +273,11 @@ namespace MulaolaoBll . Dao
             }
             else
                 table = tableOne;
-
+            
             //349
             strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT DISTINCT 'R_349' GS70,GS01,GS46,GS49,GS56 GS71,'' GS02,GS57 GS08,'' GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS56 IS NOT NULL AND GS73='F' AND GS56!='' AND (SELECT COUNT(1) as num FROM R_PQT B WHERE A.GS01=B.WX01 AND A.GS56=B.WX10 AND A.GS57=WX11)=0 and GS01 not in (SELECT WX01 FROM R_PQT WHERE WX96='1') ORDER BY GS01" );// AND GS70 LIKE '%R_349%'
+           /* strSql . Append ( "SELECT DISTINCT 'R_349' GS70,GS01,GS46,GS49,GS56 GS71,'' GS02,GS57 GS08,'' GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS56 IS NOT NULL AND GS73='F' AND GS56!='' AND (SELECT COUNT(1) as num FROM R_PQT B WHERE A.GS01=B.WX01 AND A.GS56=B.WX10 AND A.GS57=WX11)=0 and GS01 not in (SELECT WX01 FROM R_PQT WHERE WX96='1') ORDER BY GS01" )*/;// AND GS70 LIKE '%R_349%'
+            strSql . Append ( "SELECT DISTINCT GS70,GS01,GS46,GS49,GS02 GS71,'' GS02,GS08 GS08,'' GS07,PQF13,PQF31 FROM R_PQP A INNER JOIN R_PQF C ON A.GS01=C.PQF01 WHERE GS73='F' AND GS70='R_349' AND (SELECT COUNT(1) as num FROM R_PQT B WHERE A.GS01=B.WX01 AND A.GS02=B.WX10 AND A.GS08=WX11)=0 and GS01 not in (SELECT WX01 FROM R_PQT WHERE WX96='1') ORDER BY GS01" );
             tableOne = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
 
             if ( table != null )
@@ -433,7 +434,7 @@ namespace MulaolaoBll . Dao
                 strSql . AppendFormat ( "UPDATE R_PQT SET WX96='1' WHERE WX01='{0}'" ,num );
                 SQLString . Add ( strSql . ToString ( ) );
                 strSql = new StringBuilder ( );
-                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS56='{1}' AND GS57='{2}'" ,num ,row [ "GS71" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
+                strSql . AppendFormat ( "UPDATE R_PQP SET GS73='T' WHERE GS01='{0}' AND GS02='{1}' AND GS08='{2}'" ,num ,row [ "GS71" ] . ToString ( ) ,row [ "GS08" ] . ToString ( ) );
                 SQLString . Add ( strSql . ToString ( ) );
             }
             //strSql . AppendFormat ( "UPDATE " );

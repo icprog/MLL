@@ -58,6 +58,7 @@ namespace Mulaolao.Summary
         private void textBox5_TextChanged ( object sender ,EventArgs e )
         {
             textBox13.Text = Math.Round( Convert.ToDecimal( Operation.MultiTwoTb( textBox11 ,textBox5 ) ) ,2 ).ToString( );
+            textBox29 . Text = Convert . ToDecimal ( Operation . MultiTwoTb ( textBox9 ,textBox5 ) ) . ToString ( "0.######" );
         }
         private void textBox14_TextChanged ( object sender ,EventArgs e )
         {
@@ -252,6 +253,22 @@ namespace Mulaolao.Summary
                 MessageBox.Show( "只允许输入整数部分最多九位,小数部分最多两位,如999999999.99,请重新输入" );
             }
         }
+        private void textBox30_KeyPress ( object sender ,KeyPressEventArgs e )
+        {
+            DateDayRegise . fractionTb ( e ,textBox30 );
+        }
+        private void textBox30_TextChanged ( object sender ,EventArgs e )
+        {
+            DateDayRegise . textChangeTb ( textBox30 );
+        }
+        private void textBox30_LostFocus ( object sender ,EventArgs e )
+        {
+            if ( textBox30 . Text != "" && !DateDayRegise . elevenTwoNumber ( textBox30 ) )
+            {
+                this . textBox30 . Text = "";
+                MessageBox . Show ( "只允许输入整数部分最多九位,小数部分最多两位,如999999999.99,请重新输入" );
+            }
+        }
         private void textBox38_KeyPress ( object sender ,KeyPressEventArgs e )
         {
             DateDayRegise . fractionTb ( e ,textBox38 );
@@ -380,6 +397,7 @@ namespace Mulaolao.Summary
             textBox36.Text = model.AE40.ToString( );
             textBox37.Text = model.AE41.ToString( );
             textBox38 . Text = model . AE42 . ToString ( );
+            textBox30 . Text = model . AE43 . ToString ( "0.######" );
         }
         private void bandedGridView1_CustomColumnDisplayText ( object sender ,DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e )
         {
@@ -451,17 +469,6 @@ namespace Mulaolao.Summary
                 e.Handled = true;
             }
         }
-        private void textBox30_KeyPress ( object sender ,KeyPressEventArgs e )
-        {
-            if ( e.KeyChar == 8 )
-            {
-                textBox22.Text = "";
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
         private void textBox31_KeyPress ( object sender ,KeyPressEventArgs e )
         {
             if ( e.KeyChar == 8 )
@@ -506,6 +513,7 @@ namespace Mulaolao.Summary
         private void textBox9_TextChanged ( object sender ,EventArgs e )
         {
             textBox17.Text = Math.Round( Convert.ToDecimal( Operation.MultiForTbCbes( textBox34.Text ,textBox11.Text ,textBox35.Text ,textBox9.Text ) ) ,2 ).ToString( );
+            textBox29 . Text = Convert . ToDecimal ( Operation . MultiTwoTb ( textBox9 ,textBox5 ) ) . ToString ( "0.######" );
         }
         private void bandedGridView1_ColumnFilterChanged ( object sender ,EventArgs e )
         {
@@ -655,21 +663,18 @@ namespace Mulaolao.Summary
                         bandedGridView1 . SetRowCellValue ( i ,bandedGridView1 . Columns [ "U7" ] ,0 );
                     }
                 }
+
                 AE06 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,count . ToString ( ) );
                 U0 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,( count - Convert . ToInt64 ( AE37 . SummaryItem . SummaryValue ) ) . ToString ( ) );
                 U7 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,Math . Round ( countAe25Sum - Convert . ToDecimal ( U20 . SummaryItem . SummaryValue ) ,2 ) . ToString ( ) );
-                //U13.SummaryItem.SetSummary( DevExpress.Data.SummaryItemType.Custom ,Math.Round( Convert.ToDecimal( U20.SummaryItem.SummaryValue ) - Convert.ToDecimal( U10.SummaryItem.SummaryValue ) ,2 ).ToString( ) );
-                //U12.SummaryItem.SetSummary( DevExpress.Data.SummaryItemType.Custom ,Math.Round( Convert.ToDecimal( AE25.SummaryItem.SummaryValue ) - Convert.ToDecimal( U10.SummaryItem.SummaryValue ) ,2 ).ToString( ) );
-                //if ( bandedGridView1.RowCount > 0 )
-                //{
-                //    if ( string.IsNullOrEmpty( bandedGridView1.GetDataRow( 0 )["AE19"].ToString( ) ) )
-                //        U11.SummaryItem.SetSummary( DevExpress.Data.SummaryItemType.Custom ,Math.Round( -Convert.ToDecimal( U10.SummaryItem.SummaryValue ) ,2 ).ToString( ) );
-                //    else
-                //        U11.SummaryItem.SetSummary( DevExpress.Data.SummaryItemType.Custom ,Math.Round( Convert.ToDecimal( bandedGridView1.GetDataRow( 0 )["AE19"].ToString( ) ) - Convert.ToDecimal( U10.SummaryItem.SummaryValue ) ,2 ).ToString( ) );
-                //}
+
                 U6 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,Math . Round ( countAe06 ,2 ) . ToString ( ) );
                 AE19 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,countAe19 . ToString ( ) );
                 U11 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,Math . Round ( countAe19 - Convert . ToDecimal ( U10 . SummaryItem . SummaryValue ) ,2 ) . ToString ( ) );
+
+                decimal ae29Count = string . IsNullOrEmpty ( AE29 . SummaryItem . SummaryValue . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( AE29 . SummaryItem . SummaryValue );
+
+                U23 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,( countAe06 - ae29Count ) . ToString ( ) );
             }
         }
         #endregion
@@ -980,6 +985,9 @@ namespace Mulaolao.Summary
             model.AE40 = string.IsNullOrEmpty( textBox36.Text ) == true ? 0 : Convert.ToDecimal( textBox36.Text );
             model.AE41 = string.IsNullOrEmpty( textBox37.Text ) == true ? 0 : Convert.ToDecimal( textBox37.Text );
             model . AE42 = string . IsNullOrEmpty ( textBox38 . Text ) == true ? 0 : Convert . ToDecimal ( textBox38 . Text );
+            count = 0M;
+            decimal . TryParse ( string . IsNullOrEmpty ( textBox30 . Text ) ? "0" : textBox30 . Text ,out count );
+            model . AE43 = count;
         }
         //add
         private void button2_Click ( object sender ,EventArgs e )
@@ -1098,6 +1106,7 @@ namespace Mulaolao.Summary
                 //countAe40:开票差额
                 //countAe41:结算差额
                 //countAe42:合同结算差额
+                //countAe
                 decimal countAe25 = 0, countAe26 = 0, countAe28 = 0, countAe30 = 0, countAe29 = 0, countAe6 = 0, countAe27 = 0, countAe06 = 0M, countAe19 = 0M, countAe40 = 0, countAe41 = 0, countAe42 = 0, countAe019 = 0, countAe25S = 0;
 
                 DataRow row;
@@ -1213,15 +1222,6 @@ namespace Mulaolao.Summary
                             countAe6 += model . AE39 == 0 ? model . AE26 * model . AE12 : model . AE26 * model . AE10 * model . AE39;
                             countAe40 += model . AE40;
                             countAe41 += model . AE41;
-                            //else
-                            //    countAe40 = 0;
-
-                            //if ( !string . IsNullOrEmpty ( bandedGridView1 . GetDataRow ( i ) [ "AE22" ] . ToString ( ) ) )
-                            //    bandedGridView1 . SetRowCellValue ( i ,bandedGridView1 . Columns [ "U12" ] ,countAe25 - countAe28 - countAe30 - countAe29 + countAe41 );
-                            //if ( !string . IsNullOrEmpty ( bandedGridView1 . GetDataRow ( i ) [ "AE23" ] . ToString ( ) ) )
-                            //bandedGridView1 . SetRowCellValue ( i ,bandedGridView1 . Columns [ "U13" ] ,countAe6 - countAe28 - countAe30 - countAe29 + countAe40 );
-                            //bandedGridView1 . SetRowCellValue ( i ,bandedGridView1 . Columns [ "U11" ] ,countAe19 - countAe28 - countAe30 - countAe29 - countAe27 - countAe42 );
-
                             #endregion
                         }
                         else
@@ -1267,6 +1267,7 @@ namespace Mulaolao.Summary
                         bandedGridView1 . SetRowCellValue ( i ,bandedGridView1 . Columns [ "U7" ] ,0 );
                     }
                 }
+
                 AE06 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,count . ToString ( ) );
                 U0 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,( count - Convert . ToInt64 ( AE37 . SummaryItem . SummaryValue ) ) . ToString ( ) );
                 U7 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,Math . Round ( countAe25S - Convert . ToDecimal ( U20 . SummaryItem . SummaryValue ) ,2 ) . ToString ( ) );
@@ -1274,6 +1275,10 @@ namespace Mulaolao.Summary
                 U6 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,Math . Round ( countAe06 ,2 ) . ToString ( ) );
                 AE19 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,countAe019 . ToString ( ) );
                 U11 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,Math . Round ( countAe019 - Convert . ToDecimal ( AE28 . SummaryItem . SummaryValue ) - Convert . ToDecimal ( AE30 . SummaryItem . SummaryValue ) - Convert . ToDecimal ( AE29 . SummaryItem . SummaryValue ) - Convert . ToDecimal ( AE27 . SummaryItem . SummaryValue ) - Convert . ToDecimal ( AE42 . SummaryItem . SummaryValue ) ,2 ) . ToString ( ) );
+
+                decimal ae29Count = string . IsNullOrEmpty ( AE29 . SummaryItem . SummaryValue . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( AE29 . SummaryItem . SummaryValue );
+
+                U23 . SummaryItem . SetSummary ( DevExpress . Data . SummaryItemType . Custom ,( countAe06 - ae29Count ) . ToString ( ) );
             }
         }
         void calcSum ( )

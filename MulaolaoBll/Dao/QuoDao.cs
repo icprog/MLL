@@ -15,22 +15,123 @@ namespace MulaolaoBll . Dao
         /// 获取195数据列表
         /// </summary>
         /// <returns></returns>
-        public DataTable getTableFor195Info ( )
+        public DataTable getTableFor195Info ( DateTime dt )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT DISTINCT CP06,CP07,CP09,CONVERT(FLOAT,CP13) CP13,CONVERT(FLOAT,CP11) CP11 FROM R_PQQ WHERE CP06!='/' AND CP03 LIKE 'R_195-{0}%' ORDER BY CP06" ,Drity . GetDt ( ) . Year );
+            strSql . AppendFormat ( "SELECT DISTINCT CP06,CP07,CP09,CONVERT(FLOAT,CP13) CP13,CONVERT(FLOAT,CP10) CP10 FROM R_PQQ WHERE CP06!='/' AND (CP03 LIKE 'R_195-{0}%' OR CP03 LIKE 'R_195-{1}%' ) ORDER BY CP06" ,dt . Year ,dt . Year - 1 );
             
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
-
+        
         /// <summary>
         /// 获取196数据列表
         /// </summary>
         /// <returns></returns>
-        public DataTable getTableFor196Info ( )
+        public DataTable getTableFor196Info ( DateTime dt)
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "SELECT DISTINCT AH10,AH11,AH18,CONVERT(FLOAT,AH13) AH13,CONVERT(FLOAT,AH16) AH16 FROM R_PQAH WHERE AH11!='/' AND AH97 LIKE 'R_196-{0}%' ORDER BY AH10" ,Drity . GetDt ( ) . Year );
+            strSql . AppendFormat ( "SELECT DISTINCT AH10,AH11,AH18,CONVERT(FLOAT,AH13) AH13,CONVERT(FLOAT,AH16) AH16 FROM R_PQAH WHERE AH11!='/' AND (AH97 LIKE 'R_196-{0}%' OR AH97 LIKE 'R_196-{1}%') ORDER BY AH10" ,dt . Year ,dt . Year - 1 );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取338数据列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor338Info (DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT JM09,CONVERT(FLOAT,JM10) JM10,CONVERT(FLOAT,JM11) JM11,JM94,JM95,JM96,CONVERT(FLOAT,JM120) JM120 FROM R_PQO WHERE (JM01 LIKE 'R_338-{0}%' OR JM01 LIKE 'R_338-{1}%')" ,dt . Year ,dt . Year - 1 );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取339数据列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor339Info ( DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT YQ10,YQ112,YQ119 FROM R_PQI WHERE YQ99 LIKE 'R_339%' AND (YQ99 LIKE 'R_339-{0}%' OR YQ99 LIKE 'R_339-{1}%') ORDER BY YQ10" ,dt . Year ,dt . Year - 1 );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取341数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor341Info ( DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT PQV10,PQV12,CONVERT(FLOAT,PQV11) PQV11,CONVERT(FLOAT,PQV71) PQV71,CONVERT(FLOAT,PQV72) PQV72,CONVERT(FLOAT,PQV73) PQV73 FROM R_PQV WHERE (PQV76 LIKE 'R_341-{0}%' OR PQV76 LIKE 'R_341-{1}%')" ,dt . Year ,dt . Year - 1 );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+        
+        /// <summary>
+        /// 获取342数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor342Info ( DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT AF015,CONVERT(FLOAT,AF019) AF019,CONVERT(FLOAT,AF023) AF023,CONVERT(FLOAT,AF020) AF020,CONVERT(FLOAT,AF021) AF021,CONVERT(FLOAT,AF022) AF022,CONVERT(DECIMAL(18,0),AF023/AF020/AF021/AF022*1000000) AF087,CONVERT(DECIMAL(11,2),AF023*AF019) AF088 FROM R_PQAF WHERE (AF001 LIKE 'R_342-{0}%' OR AF001 LIKE 'R_342-{1}%')" ,dt . Year ,dt . Year - 1 );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取343数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor343Info ( DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT PQU10,PQU12,CONVERT(FLOAT,PQU13) PQU13,CONVERT(FLOAT,PQU16) PQU16 FROM R_PQU WHERE (PQU97 LIKE 'R_343-{0}%' OR PQU97 LIKE 'R_343-{1}%')" ,dt . Year ,dt . Year - 1 );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取347数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor347Info ( DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT PJ09,PJ89,CONVERT(FLOAT,PJ11) PJ11,CONVERT(FLOAT,PJ12) PJ12 FROM R_PQS WHERE (PJ92 LIKE 'R_347-{0}%' OR PJ92 LIKE 'R_347-{1}%')" ,dt . Year ,dt . Year - 1 );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取349数据列表
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public DataTable getTableFor349Info ( DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT CASE WHEN WX98 IS NULL THEN WX10 ELSE WX98 END WX10,WX11,CONVERT(FLOAT,WX14) WX14,CONVERT(FLOAT,WX13) WX13 FROM R_PQT WHERE (WX82 LIKE 'R_349-{0}%' OR WX82 LIKE 'R_349-{1}%')" ,dt . Year ,dt . Year - 1 );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
+        /// <summary>
+        /// 获取344数据列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor344Info ( DateTime dt )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . AppendFormat ( "SELECT DISTINCT MZ016,MZ018,MZ025 FROM R_PQMZ WHERE MZ001 LIKE 'R_344-{0}%' OR MZ001 LIKE 'R_344-{1}%' ORDER BY MZ016" ,dt . Year ,dt . Year - 1 );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
         }
@@ -82,7 +183,7 @@ namespace MulaolaoBll . Dao
         public DataTable getTableView ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . Append ( "SELECT idx,QUR001,QUR002,QUR003,QUR004,QUR005,CONVERT(FLOAT,QUR006) QUR006,QUR007,QUR008,QUR009,CONVERT(FLOAT,QUR010) QUR010,CONVERT(FLOAT,QUR011) QUR011,CONVERT(FLOAT,QUR012) QUR012,CONVERT(FLOAT,QUR013) QUR013,CONVERT(FLOAT,QUR014) QUR014,QUR015 FROM R_QUR " );
+            strSql . Append ( "SELECT idx,QUR001,QUR002,QUR003,QUR004,QUR005,CONVERT(FLOAT,QUR006) QUR006,QUR007,QUR008,QUR009,CONVERT(FLOAT,QUR010) QUR010,CONVERT(FLOAT,QUR011) QUR011,CONVERT(FLOAT,QUR012) QUR012,CONVERT(FLOAT,QUR013) QUR013,CONVERT(FLOAT,QUR014) QUR014,QUR015,QUR016 FROM R_QUR " );
             strSql . AppendFormat ( "WHERE {0}" ,strWhere );
 
             return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
@@ -139,7 +240,9 @@ namespace MulaolaoBll . Dao
                 _qup . QUR012 = string . IsNullOrEmpty ( table . Rows [ i ] [ "QUR012" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( table . Rows [ i ] [ "QUR012" ] . ToString ( ) );
                 _qup . QUR013 = string . IsNullOrEmpty ( table . Rows [ i ] [ "QUR013" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( table . Rows [ i ] [ "QUR013" ] . ToString ( ) );
                 _qup . QUR014 = string . IsNullOrEmpty ( table . Rows [ i ] [ "QUR014" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( table . Rows [ i ] [ "QUR014" ] . ToString ( ) );
+                _qup . QUR016 = string . IsNullOrEmpty ( table . Rows [ i ] [ "QUR016" ] . ToString ( ) ) == true ? 0 : Convert . ToDecimal ( table . Rows [ i ] [ "QUR016" ] . ToString ( ) );
                 _qup . idx = string . IsNullOrEmpty ( table . Rows [ i ] [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( table . Rows [ i ] [ "idx" ] . ToString ( ) );
+                _qup . QUR015 = table . Rows [ i ] [ "QUR015" ] . ToString ( );
                 if ( _qup . idx < 1 )
                     AddBody ( SQLString ,strSql ,_qup );
                 else
@@ -200,7 +303,7 @@ namespace MulaolaoBll . Dao
             strSql . Append ( "QUO006=@QUO006," );
             strSql . Append ( "QUO007=@QUO007," );
             strSql . Append ( "QUO008=@QUO008," );
-            strSql . Append ( "QUO009=@QUO009，" );
+            strSql . Append ( "QUO009=@QUO009," );
             strSql . Append ( "QUO010=@QUO010 " );
             strSql . Append ( " where QUO001=@QUO001" );
             SqlParameter [ ] parameters = {
@@ -232,9 +335,9 @@ namespace MulaolaoBll . Dao
         {
             strSql = new StringBuilder ( );
             strSql . Append ( "insert into R_QUR(" );
-            strSql . Append ( "QUR001,QUR002,QUR003,QUR004,QUR005,QUR006,QUR007,QUR008,QUR009,QUR010,QUR011,QUR012,QUR013,QUR014)" );
+            strSql . Append ( "QUR001,QUR002,QUR003,QUR004,QUR005,QUR006,QUR007,QUR008,QUR009,QUR010,QUR011,QUR012,QUR013,QUR014,QUR015,QUR016)" );
             strSql . Append ( " values (" );
-            strSql . Append ( "@QUR001,@QUR002,@QUR003,@QUR004,@QUR005,@QUR006,@QUR007,@QUR008,@QUR009,@QUR010,@QUR011,@QUR012,@QUR013,@QUR014)" );
+            strSql . Append ( "@QUR001,@QUR002,@QUR003,@QUR004,@QUR005,@QUR006,@QUR007,@QUR008,@QUR009,@QUR010,@QUR011,@QUR012,@QUR013,@QUR014,@QUR015,@QUR016)" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@QUR001", SqlDbType.NVarChar,20),
                     new SqlParameter("@QUR002", SqlDbType.NVarChar,50),
@@ -249,7 +352,9 @@ namespace MulaolaoBll . Dao
                     new SqlParameter("@QUR011", SqlDbType.Decimal,9),
                     new SqlParameter("@QUR012", SqlDbType.Decimal,9),
                     new SqlParameter("@QUR013", SqlDbType.Decimal,9),
-                    new SqlParameter("@QUR014", SqlDbType.Decimal,9)
+                    new SqlParameter("@QUR014", SqlDbType.Decimal,9),
+                    new SqlParameter("@QUR015", SqlDbType.NVarChar,50),
+                    new SqlParameter("@QUR016", SqlDbType.Decimal,9)
             };
             parameters [ 0 ] . Value = model . QUR001;
             parameters [ 1 ] . Value = model . QUR002;
@@ -265,6 +370,8 @@ namespace MulaolaoBll . Dao
             parameters [ 11 ] . Value = model . QUR012;
             parameters [ 12 ] . Value = model . QUR013;
             parameters [ 13 ] . Value = model . QUR014;
+            parameters [ 14 ] . Value = model . QUR015;
+            parameters [ 15 ] . Value = model . QUR016;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -285,7 +392,9 @@ namespace MulaolaoBll . Dao
             strSql . Append ( "QUR011=@QUR011," );
             strSql . Append ( "QUR012=@QUR012," );
             strSql . Append ( "QUR013=@QUR013," );
-            strSql . Append ( "QUR014=@QUR014 " );
+            strSql . Append ( "QUR014=@QUR014," );
+            strSql . Append ( "QUR015=@QUR015," );
+            strSql . Append ( "QUR016=@QUR016 " );
             strSql . Append ( " where idx=@idx" );
             SqlParameter [ ] parameters = {
                     new SqlParameter("@QUR001", SqlDbType.NVarChar,20),
@@ -302,7 +411,9 @@ namespace MulaolaoBll . Dao
                     new SqlParameter("@QUR012", SqlDbType.Decimal,9),
                     new SqlParameter("@QUR013", SqlDbType.Decimal,9),
                     new SqlParameter("@QUR014", SqlDbType.Decimal,9),
-                    new SqlParameter("@idx", SqlDbType.Int,4)
+                    new SqlParameter("@idx", SqlDbType.Int,4),
+                    new SqlParameter("@QUR015", SqlDbType.NVarChar,50),
+                    new SqlParameter("@QUR016", SqlDbType.Decimal,9)
             };
             parameters [ 0 ] . Value = model . QUR001;
             parameters [ 1 ] . Value = model . QUR002;
@@ -319,6 +430,8 @@ namespace MulaolaoBll . Dao
             parameters [ 12 ] . Value = model . QUR013;
             parameters [ 13 ] . Value = model . QUR014;
             parameters [ 14 ] . Value = model . idx;
+            parameters [ 15 ] . Value = model . QUR015;
+            parameters [ 16 ] . Value = model . QUR016;
             SQLString . Add ( strSql ,parameters );
         }
 
@@ -443,6 +556,19 @@ namespace MulaolaoBll . Dao
             }
             return model;
         }
+
+        /// <summary>
+        /// 获取业务人员
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getTableFor ( )
+        {
+            StringBuilder strSql = new StringBuilder ( );
+            strSql . Append ( "SELECT DBA002 FROM TPADBA WHERE DBA005 LIKE '0201%' AND DBA043='F'" );
+
+            return SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
+        }
+
 
     }
 }

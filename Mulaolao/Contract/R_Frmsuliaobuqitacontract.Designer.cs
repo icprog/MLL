@@ -78,7 +78,6 @@
             this.PJ103 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PJ105 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.button16 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -300,6 +299,8 @@
             this.textBox52 = new System.Windows.Forms.TextBox();
             this.radioButton19 = new System.Windows.Forms.RadioButton();
             this.radioButton20 = new System.Windows.Forms.RadioButton();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.textBox38 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -1012,16 +1013,6 @@
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(159, 26);
             this.textBox7.TabIndex = 113;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(844, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(103, 24);
-            this.comboBox1.TabIndex = 112;
             // 
             // label35
             // 
@@ -2927,12 +2918,12 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.textBox38);
             this.splitContainer2.Panel1.Controls.Add(this.textBox37);
             this.splitContainer2.Panel1.Controls.Add(this.textBox26);
             this.splitContainer2.Panel1.Controls.Add(this.gridLookUpEdit1);
             this.splitContainer2.Panel1.Controls.Add(this.textBox7);
             this.splitContainer2.Panel1.Controls.Add(this.label24);
-            this.splitContainer2.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.label35);
             this.splitContainer2.Panel1.Controls.Add(this.button2);
@@ -3010,7 +3001,8 @@
             this.view.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
-            this.gridColumn3});
+            this.gridColumn3,
+            this.gridColumn4});
             this.view.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.view.Name = "view";
             this.view.OptionsBehavior.Editable = false;
@@ -3031,7 +3023,7 @@
             this.gridColumn2.FieldName = "PJ89";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
             // 
             // gridColumn3
             // 
@@ -3039,7 +3031,7 @@
             this.gridColumn3.FieldName = "PJ11";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // tabPageTre
             // 
@@ -3293,6 +3285,22 @@
             this.radioButton20.TabIndex = 183;
             this.radioButton20.Text = "使用库存数量";
             this.radioButton20.UseVisualStyleBackColor = true;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "类别";
+            this.gridColumn4.FieldName = "PJ105";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 1;
+            // 
+            // textBox38
+            // 
+            this.textBox38.Location = new System.Drawing.Point(845, 71);
+            this.textBox38.Name = "textBox38";
+            this.textBox38.ReadOnly = true;
+            this.textBox38.Size = new System.Drawing.Size(105, 26);
+            this.textBox38.TabIndex = 117;
             // 
             // R_Frmsuliaobuqitacontract
             // 
@@ -3603,7 +3611,6 @@
         private System.Windows.Forms.Button button16;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label35;
         private DevExpress.XtraGrid.Columns.GridColumn PJ105;
         private System.Windows.Forms.TextBox textBox7;
@@ -3639,5 +3646,7 @@
         private DevExpress . XtraGrid . Columns . GridColumn gridColumn3;
         private System . Windows . Forms . TextBox textBox26;
         private System . Windows . Forms . TextBox textBox37;
+        private DevExpress . XtraGrid . Columns . GridColumn gridColumn4;
+        private System . Windows . Forms . TextBox textBox38;
     }
 }

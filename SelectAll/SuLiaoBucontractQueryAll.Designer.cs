@@ -58,6 +58,7 @@
             this.DBA002 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.U3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PJ04 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PJ110 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
@@ -80,7 +81,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.PJ110 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -657,8 +657,8 @@
             this.U3.Name = "U3";
             this.U3.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U3", "{0:N4}")});
-            this.U3.ToolTip = "[每套用量] * [现价]";
-            this.U3.UnboundExpression = "[PJ11] * [PJ12]";
+            this.U3.ToolTip = "[结算款] / [产品数量]";
+            this.U3.UnboundExpression = "[U2] / [PJ96]";
             this.U3.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U3.Visible = true;
             this.U3.VisibleIndex = 18;
@@ -671,6 +671,14 @@
             this.PJ04.Name = "PJ04";
             this.PJ04.Visible = true;
             this.PJ04.VisibleIndex = 19;
+            // 
+            // PJ110
+            // 
+            this.PJ110.Caption = "是否结账";
+            this.PJ110.FieldName = "PJ110";
+            this.PJ110.Name = "PJ110";
+            this.PJ110.Visible = true;
+            this.PJ110.VisibleIndex = 23;
             // 
             // button2
             // 
@@ -871,14 +879,6 @@
             this.button6.TabIndex = 4;
             this.button6.Text = "取消";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // PJ110
-            // 
-            this.PJ110.Caption = "是否结账";
-            this.PJ110.FieldName = "PJ110";
-            this.PJ110.Name = "PJ110";
-            this.PJ110.Visible = true;
-            this.PJ110.VisibleIndex = 23;
             // 
             // SuLiaoBucontractQueryAll
             // 

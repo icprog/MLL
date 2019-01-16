@@ -2036,5 +2036,53 @@ namespace MulaolaoLibrary
             }
         }
 
+        public DateTime? _mz128;
+        /// <summary>
+        /// 实际到货时间
+        /// </summary>
+        public DateTime? MZ128
+        {
+            get
+            {
+                return _mz128;
+            }
+            set
+            {
+                _mz128 = value;
+            }
+        }
+
+        public string _mz129;
+        /// <summary>
+        /// 是否结账
+        /// </summary>
+        public string MZ129
+        {
+            get
+            {
+                return _mz129;
+            }
+            set
+            {
+                _mz129 = value;
+            }
+        }
+
+        public string _mz130;
+        /// <summary>
+        /// 部件
+        /// </summary>
+        public string MZ130
+        {
+            get
+            {
+                return _mz130;
+            }
+            set
+            {
+                _mz130 = value;
+            }
+        }
+
     }
 }

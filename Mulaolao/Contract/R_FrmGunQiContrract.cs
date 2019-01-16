@@ -38,6 +38,7 @@ namespace Mulaolao.Contract
         private void R_FrmGunQiContrract_Load ( object sender ,EventArgs e )
         {
             Power( this );
+            GridViewMoHuSelect . SetFilter ( View1 );
             spList.Clear( );
             spList.AddRange( new SplitContainer[] { splitContainer1 ,splitContainer2 } );
             pageList.Clear( );
@@ -192,36 +193,38 @@ namespace Mulaolao.Contract
         }
         void assignMent ( )
         {
-            model = bll.GetModel( model.MZ125,model.MZ001 );
+            model = bll . GetModel ( model . MZ125 ,model . MZ001 );
             if ( model == null )
                 return;
-            lookUpEdit1.Text = model.MZ016;
-            textBox13.Text = model.MZ017;
-            comboBox3.Text = model.MZ018;         
-            textBox16.Text = model.MZ020.ToString( );
-            textBox17.Text = model.MZ021.ToString( );
-            textBox18.Text = model.MZ022.ToString( );
-            textBox21.Text = model.MZ032;
-            textBox19.Text = model.MZ023;
-            comboBox1.Text = model.MZ024.ToString( );
-            textBox23.Text = model.MZ025.ToString( );
-            textBox20.Text = model.MZ026.ToString( );
-            textBox32.Text = model.MZ027.ToString( );
-            textBox22.Text = model.MZ028.ToString( );
-            textBox34.Text = model.MZ106;
-            comboBox2.Text = model.MZ107;
-            textBox51.Text = model.MZ118.ToString( );
-            textBox50.Text = model.MZ119.ToString( );
-            textBox49.Text = model.MZ120.ToString( );
-            comboBox4.Text = model.MZ019;
-            comboBox7.Text = model.MZ124;
+            txtPart . EditValue = model . MZ130 == null ? string . Empty : model . MZ130 . Trim ( );
+            textBox56 . Text = model . MZ016;
+            textBox13 . Text = model . MZ017;
+            textBox57 . Text = model . MZ018;
+            textBox16 . Text = model . MZ020 . ToString ( );
+            textBox17 . Text = model . MZ021 . ToString ( );
+            textBox18 . Text = model . MZ022 . ToString ( );
+            textBox21 . Text = model . MZ032;
+            textBox19 . Text = model . MZ023;
+            comboBox1 . Text = model . MZ024 . ToString ( );
+            textBox23 . Text = model . MZ025 . ToString ( );
+            textBox20 . Text = model . MZ026 . ToString ( );
+            textBox32 . Text = model . MZ027 . ToString ( );
+            textBox22 . Text = model . MZ028 . ToString ( );
+            textBox34 . Text = model . MZ106;
+            comboBox2 . Text = model . MZ107;
+            textBox51 . Text = model . MZ118 . ToString ( );
+            textBox50 . Text = model . MZ119 . ToString ( );
+            textBox49 . Text = model . MZ120 . ToString ( );
+            comboBox4 . Text = model . MZ019;
+            comboBox7 . Text = model . MZ124;
+
             textBox55 . Text = model . MZ126 . ToString ( );
-            partName = lookUpEdit1.Text;
-            product = comboBox3.Text;
-            wages = comboBox4.Text;
-            colorName = textBox19.Text;
-            brand = textBox21.Text;
-            textBox8.Text= hw.SomeOfCaculation( textBox18.Text ,textBox10.Text ,textBox20.Text ,comboBox1.Text ,textBox23.Text );
+            partName = textBox56 . Text;
+            product = textBox57 . Text;
+            wages = comboBox4 . Text;
+            colorName = textBox19 . Text;
+            brand = textBox21 . Text;
+            textBox8 . Text = hw . SomeOfCaculation ( textBox18 . Text ,textBox10 . Text ,textBox20 . Text ,comboBox1 . Text ,textBox23 . Text );
         }
         private void comboBox2_TextChanged ( object sender ,EventArgs e )
         {
@@ -237,20 +240,24 @@ namespace Mulaolao.Contract
         private void textBox1_TextChanged ( object sender ,EventArgs e )
         {
             de = bll.GetDataTableOfPart( textBox1.Text );
-            lookUpEdit1.Properties.DataSource = de.DefaultView.ToTable( true ,"LZ015" );
-            lookUpEdit1.Properties.DisplayMember = "LZ015";
-            comboBox3.DataSource = de.DefaultView.ToTable( true ,"LZ017" );
-            comboBox3.DisplayMember = "LZ017";
-            dl= bll.GetDataTable( textBox1.Text );
+            txtPart . Properties . DataSource = de;
+            txtPart . Properties . DisplayMember = "GS02";
+            txtPart . Properties . ValueMember = "GS02";
+
+            dl = bll.GetDataTable( textBox1.Text );
             comboBox7.DataSource = dl.DefaultView.ToTable( true ,"MZ124" );
             comboBox7.DisplayMember = "MZ124";
             comboBox1.DataSource = dl.DefaultView.ToTable( true ,"MZ024" );
             comboBox1.DisplayMember = "MZ024";
         }
-        private void lookUpEdit1_EditValueChanged ( object sender ,EventArgs e )
+        private void txtPart_EditValueChanged ( object sender ,EventArgs e )
         {
-            if ( lookUpEdit1.EditValue != null )
-                comboBox3.Text = de.Select( "LZ015='" + lookUpEdit1.Text + "'" )[0]["LZ017"].ToString( );
+            DataRow row = View1 . GetFocusedDataRow ( );
+            if ( row == null )
+                return;
+            textBox56 . Text = row [ "GS07" ] . ToString ( );
+            textBox57 . Text = row [ "GS08" ] . ToString ( );
+            textBox18 . Text = row [ "GS78" ] . ToString ( );
         }
         private void R_FrmGunQiContrract_FormClosing ( object sender ,FormClosingEventArgs e )
         {
@@ -508,17 +515,26 @@ namespace Mulaolao.Contract
             result = bll.UpdateAll( model ,"R_344" ,"滚漆承揽加工成本合同书" ,Logins.username ,MulaolaoBll . Drity . GetDt ( ) ,"保存" ,stateOdOdd );
             if ( result == true )
             {
-                MessageBox.Show( "保存数据成功" );
+                MessageBox . Show ( "保存数据成功" );
                 if ( weihu == "1" )
                 {
                     try
                     {
-                        SqlHelper.ExecuteNonQuery( MulaolaoBll.Drity.DrityOfCopy( "R_PQMZC" ,"R_PQMZ" ,"MZ001" ,model.MZ001 ) );
-                        WriteOfReceivablesTo( );
+                        SqlHelper . ExecuteNonQuery ( MulaolaoBll . Drity . DrityOfCopy ( "R_PQMZC" ,"R_PQMZ" ,"MZ001" ,model . MZ001 ) );
+                        WriteOfReceivablesTo ( );
                     }
                     catch { }
                 }
-                saveState( );
+                saveState ( );
+
+                if ( "厂外" . Equals ( tableQuery . Rows [ 0 ] [ "MZ107" ] . ToString ( ) ) )
+                {
+                    if ( bll . DeleteLibrary ( model . MZ001 ) == false )
+                    {
+                        MessageBox . Show ( "库存回撤失败,请重新保存" );
+                    }
+                }
+
             }
             else
                 MessageBox.Show( "保存数据失败" );
@@ -1136,9 +1152,9 @@ namespace Mulaolao.Contract
             model . MZ002 = textBox1 . Text;
             model . MZ031 = textBox12 . Text;
             model . MZ006 = string . IsNullOrEmpty ( textBox10 . Text ) == true ? 0 : Convert . ToInt64 ( textBox10 . Text );
-            model . MZ016 = lookUpEdit1 . Text;
+            model . MZ016 = textBox56 . Text;
             model . MZ017 = textBox13 . Text;
-            model . MZ018 = comboBox3 . Text;
+            model . MZ018 = textBox57 . Text;
             model . MZ019 = comboBox4 . Text;
             model . MZ020 = string . IsNullOrEmpty ( textBox16 . Text ) == true ? 0 : Convert . ToDecimal ( textBox16 . Text );
             model . MZ021 = string . IsNullOrEmpty ( textBox17 . Text ) == true ? 0 : Convert . ToInt32 ( textBox17 . Text );
@@ -1150,7 +1166,7 @@ namespace Mulaolao.Contract
             model . MZ027 = string . IsNullOrEmpty ( textBox32 . Text ) == true ? 0 : Convert . ToDecimal ( textBox32 . Text );
             model . MZ028 = string . IsNullOrEmpty ( textBox22 . Text ) == true ? 0 : Convert . ToDecimal ( textBox22 . Text );
             model . MZ032 = textBox21 . Text;
-            model . MZ105 = calculVolume ( comboBox3 . Text );
+            model . MZ105 = Calcu344Spe . calculVolume ( textBox57 . Text );
             model . MZ106 = textBox34 . Text;
             model . MZ107 = comboBox2 . Text;
             model . MZ118 = string . IsNullOrEmpty ( textBox51 . Text ) == true ? 0 : Convert . ToInt32 ( textBox51 . Text );
@@ -1159,76 +1175,7 @@ namespace Mulaolao.Contract
             model . MZ122 = radioButton10 . Checked == true ? "库存" : "外购";
             model . MZ124 = comboBox7 . Text;
             model . MZ126 = string . IsNullOrEmpty ( textBox55 . Text ) == true ? 0 : Convert . ToDecimal ( textBox55 . Text );
-        }
-        decimal calculVolume ( string speci )
-        {
-            decimal resus = 0M;
-            if ( string.IsNullOrEmpty( speci ) )
-                resus = 0M;
-            else
-            {
-                string[] str = speci.Split( '*' );
-                if ( str.Length < 1 )
-                    resus = 0M;
-                else if ( str.Length == 1 )
-                {
-                    if ( isNumberic( str[0] ,out resus ) )
-                        resus = 0M;
-                    else
-                    {
-                        if ( str[0].Contains( "Φ" ) || str[0].Contains( "φ" ) )
-                            resus = Math.Round( Convert.ToDecimal( Convert.ToDouble( Math.PI ) * Math.Pow( Convert.ToDouble( str[0].Substring( 1 ,str[0].Length - 1 ) ) ,3 ) /** Convert.ToDouble( 0.0001 )*/ * 4 / 3 ) ,1 );
-                        else
-                            resus = 0M;
-                    }
-                }
-                else if ( str.Length == 2 )
-                {
-                    if ( isNumberic( str[0] ,out resus ) )
-                        resus = 0M;
-                    else
-                    {
-                        if ( ( str[0].Contains( "Φ" ) || str[0].Contains( "φ" ) ) && ( str[0].Substring( 0 ,1 ) == "Φ" || str[0].Substring( 0 ,1 ) == "φ" ) )
-                        {
-                            if ( isNumberic( str[1] ,out resus ) )
-                            {
-                                if ( isNumberic( str[0].Substring( 1 ,str[0].Length - 1 ) ,out resus ) )
-                                    resus = Math.Round( Convert.ToDecimal( Convert.ToDouble( Math.PI ) * Math.Pow( Convert.ToDouble( str[0].Substring( 1 ,str[0].Length - 1 ) ) / 2 ,2 ) * Convert.ToDouble( str[1] ) /** Convert.ToDouble( 0.0001 )*/ ) ,1 );
-                                else
-                                    resus = 0M;
-                            }
-                            else
-                                resus = 0M;
-                        }
-                        else
-                            resus = 0M;
-                    }
-                }
-                else if ( str.Length >= 3 )
-                {
-                    if ( isNumberic( str[0] ,out resus ) && isNumberic( str[1] ,out resus ) && isNumberic( str[2] ,out resus ) )
-                        resus = Math.Round( Convert.ToDecimal( str[0] ) * Convert.ToDecimal( str[1] ) * Convert.ToDecimal( str[2] ) /** Convert.ToDecimal( 0.0001 )*/ ,1 );
-                    else
-                        resus = 0M;
-                }
-            }
-            return resus;
-        }
-        protected bool isNumberic ( string message ,out decimal reus )
-        {
-            reus = -1M;
-            try
-            {
-                reus = Convert.ToDecimal( message );
-                if ( reus == 0M )
-                    return false;
-                else
-                    return true;
-            }
-            catch
-            {
-                return false;
-            }
+            model . MZ130 = txtPart . Text;
         }
         void addOfCom ( )
         {
@@ -1278,6 +1225,7 @@ namespace Mulaolao.Contract
             row [ "MZ124" ] = model . MZ124;
             row [ "MZ125" ] = model . MZ125;
             row [ "MZ126" ] = model . MZ126;
+            row [ "MZ130" ] = model . MZ130;
             //row["MZ108"] = model.MZ108;
         }
         void serialNum ( )
@@ -1308,7 +1256,12 @@ namespace Mulaolao.Contract
                 MessageBox . Show ( "开合同人不可为空" );
                 return;
             }
-            if ( string . IsNullOrEmpty ( lookUpEdit1 . Text ) )
+            if ( string . IsNullOrEmpty ( txtPart . Text ) )
+            {
+                MessageBox . Show ( "部件不可为空" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( textBox56 . Text ) )
             {
                 MessageBox . Show ( "零件名称不可为空" );
                 return;
@@ -1323,48 +1276,6 @@ namespace Mulaolao.Contract
                 MessageBox . Show ( "产品色号不可为空" );
                 return;
             }
-            //if ( comboBox2.Text == "厂内" )
-            //{
-            //    if ( radioButton10.Checked == false && radioButton11.Checked == false )
-            //    {
-            //        MessageBox.Show( "请选择使用库存或外购" );
-            //        return;
-            //    }
-            //    //if ( radioButton10.Checked )
-            //    //{
-            //    //    if ( string.IsNullOrEmpty( comboBox4.Text ) )
-            //    //    {
-            //    //        MessageBox.Show( "色号不可为空" );
-            //    //        return;
-            //    //    }
-            //    //}
-            //    if ( radioButton11.Checked )
-            //    {
-            //        MessageBox.Show( "厂内必须用库存" );
-            //        return;
-            //    }
-
-
-            //    //色号  色名   品牌
-            //    DataTable dl = bll.GetDataTableStock( comboBox4.Text ,textBox19.Text ,textBox21.Text );
-            //    if ( dl != null && dl.Rows.Count > 0 )
-            //    {
-            //        //radioButton10.Checked = true;
-            //        textBox53.Text = dl.Rows[0]["AC10"].ToString( );
-            //    }
-            //    //else
-            //    //    radioButton11.Checked = true;
-
-            //    if ( !string.IsNullOrEmpty( textBox53.Text ) && !string.IsNullOrEmpty( textBox52.Text ) )
-            //    {
-            //        if ( Convert.ToDecimal( textBox52.Text ) > Convert.ToDecimal( textBox53.Text ) )
-            //        {
-            //            MessageBox.Show( "外购数量大于库存数量" );
-            //            return;
-            //        }
-            //    }
-
-            //}
 
             variable ( );
             serialNum ( );
@@ -1425,7 +1336,12 @@ namespace Mulaolao.Contract
                 MessageBox . Show ( "开合同人不可为空" );
                 return;
             }
-            if ( string . IsNullOrEmpty ( lookUpEdit1 . Text ) )
+            if ( string . IsNullOrEmpty ( txtPart . Text ) )
+            {
+                MessageBox . Show ( "部件不可为空" );
+                return;
+            }
+            if ( string . IsNullOrEmpty ( textBox56 . Text ) )
             {
                 MessageBox . Show ( "零件名称不可为空" );
                 return;
@@ -1480,7 +1396,7 @@ namespace Mulaolao.Contract
             //}
 
             variable ( );
-            if ( partName == lookUpEdit1 . Text && product == comboBox3 . Text && wages == comboBox4 . Text && colorName == textBox19 . Text && brand == textBox21 . Text )
+            if ( partName == textBox56 . Text && product == textBox57 . Text && wages == comboBox4 . Text && colorName == textBox19 . Text && brand == textBox21 . Text )
                 edit ( );
             else
             {
@@ -1509,7 +1425,7 @@ namespace Mulaolao.Contract
                 else
                     stateOdOdd = "更改编辑";
             }
-
+            
             result = bll.Update( model ,"R_344" ,"滚漆承揽加工成本合同书" ,Logins.username ,MulaolaoBll . Drity . GetDt ( ) ,"编辑" ,stateOdOdd );
             if ( result == true )
             {
@@ -1645,7 +1561,7 @@ namespace Mulaolao.Contract
         //Clear
         private void button15_Click ( object sender ,EventArgs e )
         {
-               textBox13.Text = comboBox3.Text = comboBox4.Text = textBox16.Text = textBox17.Text = textBox18.Text = textBox19.Text = comboBox1.Text = textBox23.Text = textBox20.Text = textBox32.Text = textBox22.Text = textBox21.Text = comboBox3.Text = textBox34.Text = comboBox2.Text = textBox51.Text = textBox50.Text = textBox49.Text = "";
+               textBox13.Text = textBox57.Text = comboBox4.Text = textBox16.Text = textBox17.Text = textBox18.Text = textBox19.Text = comboBox1.Text = textBox23.Text = textBox20.Text = textBox32.Text = textBox22.Text = textBox21.Text = textBox57.Text = textBox34.Text = comboBox2.Text = textBox51.Text = textBox50.Text = textBox49.Text = "";
         }
         #endregion
 

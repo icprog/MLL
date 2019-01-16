@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnnualPayrollSummaryEntity.cs" />
+    <Compile Include="BaseEntity.cs" />
     <Compile Include="BatchNumManagementLibrary.cs" />
     <Compile Include="ChanPinGaiShanEntity.cs" />
     <Compile Include="ChanPinGongZiKaoQinLibrary.cs" />

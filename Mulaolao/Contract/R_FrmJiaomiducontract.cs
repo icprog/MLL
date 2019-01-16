@@ -1453,14 +1453,14 @@ namespace Mulaolao.Procedure
             string dgaNum = bll . getTpadga ( textBox19 . Text ,textBox9 . Text );
             if ( dgaNum == null || dgaNum == string . Empty )
             {
-                MessageBox . Show ( "请重新选择供应商" );
+                MessageBox . Show ( "供应商名称或编号有误,请重新选择供应商" );
                 return false;
             }
             if ( dgaNum . Equals ( numFor ) )
                 return true;
             else
             {
-                MessageBox . Show ( "请重新选择供应商" );
+                MessageBox . Show ( "供应商名称或编号有误,请重新选择供应商" );
                 return false;
             }
         }

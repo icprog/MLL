@@ -74,12 +74,12 @@ namespace Mulaolao.Contract
 
             anOther( );
 
-            comboBox10.Items.Clear( );
-            comboBox10.Items.Add( "包装辅料" );
-            comboBox10.Items.Add( "外箱" );
-            comboBox10.Items.Add( "中包" );
-            comboBox10.Items.Add( "内盒" );
-            comboBox10.Items.Add( "彩盒" );
+            //textBox37.Items.Clear( );
+            //textBox37.Items.Add( "包装辅料" );
+            //textBox37.Items.Add( "外箱" );
+            //textBox37.Items.Add( "中包" );
+            //textBox37.Items.Add( "内盒" );
+            //textBox37.Items.Add( "彩盒" );
 
             if ( Logins . number == "MLL-0001" )
                 checkBox13 . Visible = true;
@@ -101,7 +101,7 @@ namespace Mulaolao.Contract
             RDataSet = new DataSet( );
 
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "WITH CET AS (SELECT ROW_NUMBER() OVER(ORDER BY WX82) ROW,WX10,WX20,WX77,WX86,WX14,WX18,WX19,WX12,WX13,CASE WHEN WX86 = 0 THEN 0 WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 2 ), ((2*WX27 + 2*WX28 + WX29) * (1.5*WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN CONVERT( DECIMAL( 11, 2 ), ((WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )END U0,CASE  WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 ) WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13) WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 2 ), ((2*WX27 + 2*WX28 + WX29) * (1.5*WX30 + WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN CONVERT( DECIMAL( 11, 2 ), (WX23 + WX24) * (WX25 + WX26) * 0.0001 * WX13)END U1,WX15,CASE WHEN WX10='双瓦外箱' THEN ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 WHEN WX10='小箱式' THEN ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 WHEN WX10='牙膏式' THEN ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10='插口式' THEN ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10='天盖' THEN ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10='地盖' THEN ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10='折叠式' THEN ((2*WX27 + 2*WX28 + WX29) * (1.5*WX30 + WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN (WX23 + WX24) * (WX25 + WX26) * 0.0001 * WX13* WX15 END  U2,WX17,CONVERT( VARCHAR( 20 ), WX21, 102 ) WX21,CONVERT( VARCHAR( 20 ), WX22, 102 ) WX22,WX11, WX27, WX28, WX29,CASE WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + WX28 + WX29 ) WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + WX28 + WX29 )  WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + 2*WX28 + WX29 )  WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + 2*WX28 + WX29 )  WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + 2*WX28 + WX29 ) WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + 2*WX28 + WX29 )  WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 1 ), 2*WX27 + 2*WX28 + WX29 )  WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN 0 END U3,WX30, WX31, WX32, CASE WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 1 ), WX30 + WX31 + WX32 )  WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 1 ), WX30 + WX31 + WX32 ) WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 1 ), 2*WX30 + 2*WX31 + WX32 )  WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 1 ), 2*WX30 + 2*WX31 + WX32 ) WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 1 ), 1.5*WX30 + WX31 + WX32 ) WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 1 ), WX30 + 2*WX31 + WX32 ) WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 1 ), WX30 + 2*WX31 + WX32 )  WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN 0 END U4,CASE WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32)) * 0.0001 ) WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32)) * 0.0001 ) WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32)) * 0.0001 ) WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32)) * 0.0001 ) WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32)) * 0.0001 ) WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32)) * 0.0001 ) WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 4 ), ((2*WX27 + 2*WX28 + WX29) * (1.5*WX30 + WX31 + WX32)) * 0.0001 )  WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN 0 END U5,WX23, WX24, WX25, WX26,CONVERT( DECIMAL( 11, 4 ), ((WX23 + WX24) * (WX25 + WX26)) * 0.0001 ) U6 FROM R_PQT WHERE WX82 ='{0}') " ,WX82 );
+            strSql . AppendFormat ( "WITH CET AS (SELECT ROW_NUMBER() OVER(ORDER BY WX82) ROW,WX10,WX20,WX98,WX77,WX86,WX14,WX18,WX19,WX12,WX13,CASE WHEN WX86 = 0 THEN 0 WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 2 ), ((2*WX27 + 2*WX28 + WX29) * (1.5*WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN CONVERT( DECIMAL( 11, 2 ), ((WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 )END U0,CASE  WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 ) WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13) WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 2 ), ((2*WX27 + 2*WX28 + WX29) * (1.5*WX30 + WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13 )WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN CONVERT( DECIMAL( 11, 2 ), (WX23 + WX24) * (WX25 + WX26) * 0.0001 * WX13)END U1,WX15,CASE WHEN WX10='双瓦外箱' THEN ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 WHEN WX10='小箱式' THEN ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 WHEN WX10='牙膏式' THEN ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10='插口式' THEN ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10='天盖' THEN ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10='地盖' THEN ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10='折叠式' THEN ((2*WX27 + 2*WX28 + WX29) * (1.5*WX30 + WX31 + WX32) +(WX23 + WX24) * (WX25 + WX26)) * 0.0001*WX13* WX15 WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN (WX23 + WX24) * (WX25 + WX26) * 0.0001 * WX13* WX15 END  U2,WX17,CONVERT( VARCHAR( 20 ), WX21, 102 ) WX21,CONVERT( VARCHAR( 20 ), WX22, 102 ) WX22,WX11, WX27, WX28, WX29,CASE WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + WX28 + WX29 ) WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + WX28 + WX29 )  WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + 2*WX28 + WX29 )  WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + 2*WX28 + WX29 )  WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + 2*WX28 + WX29 ) WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 1 ), WX27 + 2*WX28 + WX29 )  WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 1 ), 2*WX27 + 2*WX28 + WX29 )  WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN 0 END U3,WX30, WX31, WX32, CASE WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 1 ), WX30 + WX31 + WX32 )  WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 1 ), WX30 + WX31 + WX32 ) WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 1 ), 2*WX30 + 2*WX31 + WX32 )  WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 1 ), 2*WX30 + 2*WX31 + WX32 ) WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 1 ), 1.5*WX30 + WX31 + WX32 ) WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 1 ), WX30 + 2*WX31 + WX32 ) WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 1 ), WX30 + 2*WX31 + WX32 )  WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN 0 END U4,CASE WHEN WX10='双瓦外箱' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32)) * 0.0001 ) WHEN WX10='小箱式' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32)) * 0.0001 ) WHEN WX10='牙膏式' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32)) * 0.0001 ) WHEN WX10='插口式' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + 2*WX28 + WX29) * (2*WX30 + 2*WX31 + WX32)) * 0.0001 ) WHEN WX10='天盖' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32)) * 0.0001 ) WHEN WX10='地盖' THEN CONVERT( DECIMAL( 11, 4 ), ((WX27 + 2*WX28 + WX29) * (WX30 + 2*WX31 + WX32)) * 0.0001 ) WHEN WX10='折叠式' THEN CONVERT( DECIMAL( 11, 4 ), ((2*WX27 + 2*WX28 + WX29) * (1.5*WX30 + WX31 + WX32)) * 0.0001 )  WHEN WX10 NOT IN ('双瓦外箱','小箱式','牙膏式','插口式','天盖','地盖','折叠式') THEN 0 END U5,WX23, WX24, WX25, WX26,CONVERT( DECIMAL( 11, 4 ), ((WX23 + WX24) * (WX25 + WX26)) * 0.0001 ) U6 FROM R_PQT WHERE WX82 ='{0}') " ,WX82 );
             strSql . AppendFormat ( " SELECT * FROM CET WHERE ROW BETWEEN {0} AND {1}" ,startIndex ,endIndex );
 
             DataTable print = SqlHelper . ExecuteDataTable ( strSql . ToString ( ) );
@@ -1439,54 +1439,21 @@ namespace Mulaolao.Contract
             if ( !string . IsNullOrEmpty ( textBox7 . Text ) )
             {
                 WX01 = textBox7 . Text;
-                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS56 WX10,GS57 WX11,GS58 WX19,GS59 WX14 FROM R_PQP WHERE GS56 IS NOT NULL AND GS56!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,WX01 ) );
+                //wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS56 WX10,GS57 WX11,GS58 WX19,GS59 WX14 FROM R_PQP WHERE GS56 IS NOT NULL AND GS56!='' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,WX01 ) );
 
-                biao = SqlHelper . ExecuteDataTable ( "SELECT '' WX10,'' WX11,WX12,WX13,0.0 WX14,WX15,WX16,WX17,WX18,'' WX19,WX20,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX01=@WX01" ,new SqlParameter ( "@WX01" ,WX01 ) );
+                wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS02 WX10,GS71 WX20,GS08 WX11,GS09 WX19,GS10 WX14,GS07 WX98 FROM R_PQP WHERE GS70='" + MulaolaoBll . DicStr . r349 + "' AND GS01=@GS01" ,new SqlParameter ( "@GS01" ,WX01 ) );
+
+                biao = SqlHelper . ExecuteDataTable ( "SELECT '' WX10,'' WX20,'' WX11,WX12,WX13,0.0 WX14,'' WX98,WX15,WX16,WX17,WX18,'' WX19,WX20,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX01=@WX01" ,new SqlParameter ( "@WX01" ,WX01 ) );
             }
-            //else
-            //{
-            //    WX01 = "";
-                //string [ ] str = textBox7 . Text . Split ( ',' );
-                //if ( str . Length < 1 )
-                //    WX01 = "";
-                //else
-                //{
-                //    foreach ( string s in str )
-                //    {
-                //        if ( WX01 == "" )
-                //            WX01 = "'" + s + "'";
-                //        else
-                //            WX01 = WX01 + "," + "'" + s + "'";
-                //    }
-                //}
-            //    wpmc = SqlHelper . ExecuteDataTable ( "SELECT DISTINCT GS56 WX10,GS57 WX11,GS58 WX19,GS59 WX14 FROM R_PQP WHERE GS56 IS NOT NULL AND GS56!='' AND GS01 IN (" + WX01 + ")" );
-            //}
 
             if ( string.IsNullOrEmpty( textBox7.Text ) )
-                biao = SqlHelper.ExecuteDataTable( "SELECT WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX85=@WX85" ,new SqlParameter( "@WX85" ,WX85 ) );
-            //else
-            //{
-            //    WX01 = "";
-                //string[] str = textBox7.Text.Split( ',' );
-                //if ( str.Length < 1 )
-                //    WX01 = "";
-                //else
-                //{
-                //    foreach ( string s in str )
-                //    {
-                //        if ( WX01 == "" )
-                //            WX01 = "'" + s + "'";
-                //        else
-                //            WX01 = WX01 + "," + "'" + s + "'";
-                //    }
-                //}
-            //    biao = SqlHelper.ExecuteDataTable( "SELECT WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX01 IN (" + WX01 + ")" );
-            //}
+                biao = SqlHelper.ExecuteDataTable( "SELECT WX10,WX20,WX11,WX12,WX13,WX14,WX98,WX15,WX16,WX17,WX18,WX19,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77 FROM R_PQT WHERE WX85=@WX85" ,new SqlParameter( "@WX85" ,WX85 ) );
+
             if ( wpmc != null )
                 biao.Merge( wpmc );
             //物料名称
             //DataTable elmc = biao.DefaultView.ToTable( true ,"WX10" );
-            partTable = biao . DefaultView . ToTable ( true ,"WX10" ,"WX11","WX14" );
+            partTable = biao . DefaultView . ToTable ( true ,"WX10" ,"WX11" ,"WX14" ,"WX20","WX98" );
             Edit1 . Properties . DataSource = partTable;
             Edit1 . Properties . DisplayMember = "WX10";
             Edit1 . Properties . ValueMember = "WX10";
@@ -1510,8 +1477,8 @@ namespace Mulaolao.Contract
             comboBox8.DisplayMember = "WX18";
             ////纸卡
             ////DataTable zk = biao.DefaultView.ToTable(true ,"WX20");
-            //comboBox10.DataSource = biao.DefaultView.ToTable( true ,"WX20" );
-            //comboBox10.DisplayMember = "WX20";
+            //textBox37.DataSource = biao.DefaultView.ToTable( true ,"WX20" );
+            //textBox37.DisplayMember = "WX20";
             //纸卡片长
             //DataTable zkc = biao.DefaultView.ToTable(true ,"WX23");
             comboBox20.DataSource = biao.DefaultView.ToTable( true ,"WX23" );
@@ -1563,6 +1530,7 @@ namespace Mulaolao.Contract
                 return;
             txtSpe . Text = row [ "WX11" ] . ToString ( );
             textBox36 . Text = row [ "WX14" ] . ToString ( );
+            txtWX98 . Text = row [ "WX98" ] . ToString ( );
             if ( !string . IsNullOrEmpty ( Edit1 . Text ) && biao . Select ( "WX10='" + Edit1 . Text + "'" ) . Length > 0 )
             {
                 //txtSpe . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX11" ] . ToString ( );
@@ -1572,7 +1540,7 @@ namespace Mulaolao.Contract
                 //textBox36 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX14" ] . ToString ( );
                 textBox25 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX15" ] . ToString ( );
                 comboBox8 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX18" ] . ToString ( );
-                comboBox10 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX20" ] . ToString ( );
+                textBox37 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX20" ] . ToString ( );
                 comboBox20 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX23" ] . ToString ( );
                 comboBox19 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX24" ] . ToString ( );
                 comboBox18 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX25" ] . ToString ( );
@@ -1584,6 +1552,7 @@ namespace Mulaolao.Contract
                 comboBox15 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX31" ] . ToString ( );
                 comboBox14 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX32" ] . ToString ( );
                 comboBox27 . Text = biao . Select ( "WX10='" + Edit1 . Text + "'" ) [ 0 ] [ "WX77" ] . ToString ( );
+               
             }
             previousOfPrice ( );
         }
@@ -2008,7 +1977,7 @@ namespace Mulaolao.Contract
             comboBox8 . Text = 0 . ToString ( );
             comboBox8 . Text = row["WX18" ] . ToString ( );
             comboBox22 . Text = row["WX19" ] . ToString ( );
-            comboBox10 . Text = row["WX20" ] . ToString ( );
+            textBox37 . Text = row["WX20" ] . ToString ( );
             if ( !string . IsNullOrEmpty ( row["WX21" ] . ToString ( ) ) )
                 dateTimePicker4 . Value = Convert . ToDateTime ( row["WX21" ] );
             if ( !string . IsNullOrEmpty ( row["WX22" ] . ToString ( ) ) )
@@ -2024,6 +1993,7 @@ namespace Mulaolao.Contract
             comboBox16 . Text = row["WX30" ] . ToString ( );
             comboBox15 . Text = row["WX31" ] . ToString ( );
             comboBox14 . Text = row["WX32" ] . ToString ( );
+            txtWX98 . Text = row [ "WX98" ] . ToString ( );
             WX03 = row["WX03" ] . ToString ( );
             if ( row["WX17" ] . ToString ( ).Equals( "库存") )
             {
@@ -2054,14 +2024,14 @@ namespace Mulaolao.Contract
             {
                 fc.yesOrNo( comboBox21.Text ,Edit1 . Text ,txtSpe.Text ,textBox29 ,textBox9 ,textBox8.Text );
 
-                //textBox30.Text = Math.Round( Convert.ToDecimal( Operation. MultiThrTbCb ( textBox8 ,comboBox8 ,textBox29.Text ) ) ,0 ).ToString( );
-                textBox30 . Text = Math . Round ( Convert . ToDecimal ( Operation . MultiThrTbCs ( textBox8 ,textBox36 ,textBox29 . Text ) ) ,0 ) . ToString ( );
+                textBox30 . Text = Math . Round ( Convert . ToDecimal ( Operation . DivisionTre ( textBox8 . Text ,comboBox8 . Text ,textBox29 . Text ) ) ,0 ) . ToString ( );
+                //textBox30 . Text = Math . Round ( Convert . ToDecimal ( Operation . MultiThrTbCs ( textBox8 ,textBox36 ,textBox29 . Text ) ) ,0 ) . ToString ( );
 
                 if ( string . IsNullOrEmpty ( textBox29 . Text ) || textBox29 . Text == "0" )
                     textBox2 . Text = "";
                 else
-                    //textBox2.Text = Math.Round( Convert.ToDecimal( Operation.DivisionTc( textBox8 ,comboBox8 ) ) ,0 ).ToString( );
-                    textBox2 . Text = Math . Round ( Convert . ToDecimal ( Operation . MultiTwoTbCbes ( textBox8 ,comboBox5 ) ) ,0 ) . ToString ( );
+                    textBox2.Text = Math.Round( Convert.ToDecimal( Operation.DivisionTc( textBox8 ,comboBox8 ) ) ,0 ).ToString( );
+                    //textBox2 . Text = Math . Round ( Convert . ToDecimal ( Operation . MultiTwoTbCbes ( textBox8 ,comboBox5 ) ) ,0 ) . ToString ( );
 
                 textBox25 . Text = Math . Round ( Convert . ToDecimal ( Operation . DivisionTc ( textBox8 ,comboBox8 ) ) ,0 ) . ToString ( );
             }
@@ -2079,7 +2049,8 @@ namespace Mulaolao.Contract
             else
             {
                 fc.yesOrNo( comboBox21.Text ,Edit1 . Text ,txtSpe.Text ,textBox29 ,textBox9 ,textBox8.Text );
-                textBox30.Text = Math.Round( Convert.ToDecimal( Operation. MultiThrTbCs ( textBox8 ,textBox36 ,textBox29.Text ) ) ,0 ).ToString( );
+                textBox30 . Text = Math . Round ( Convert . ToDecimal ( Operation . DivisionTre ( textBox8 . Text ,comboBox8 . Text ,textBox29 . Text ) ) ,0 ) . ToString ( );
+                //textBox30 .Text = Math.Round( Convert.ToDecimal( Operation. MultiThrTbCs ( textBox8 ,textBox36 ,textBox29.Text ) ) ,0 ).ToString( );
 
                 textBox25 . Text = Math . Round ( Convert . ToDecimal ( Operation . DivisionTc ( textBox8 ,comboBox8 ) ) ,0 ) . ToString ( );
             }
@@ -2100,7 +2071,8 @@ namespace Mulaolao.Contract
             else
                 str = del.Rows[0]["AC10"].ToString( );
 
-            textBox30.Text = Math.Round( Convert.ToDecimal( Operation. MultiThrTbCs ( textBox8 ,textBox36 ,str ) ) ,0 ).ToString( );
+            //textBox30.Text = Math.Round( Convert.ToDecimal( Operation. MultiThrTbCs ( textBox8 ,textBox36 ,str ) ) ,0 ).ToString( );
+            textBox30 . Text = Math . Round ( Convert . ToDecimal ( Operation . DivisionTre ( textBox8.Text ,comboBox8.Text ,str ) ) ,0 ) . ToString ( );
         }
         //产品名称
         private void comboBox7_SelectedValueChanged ( object sender ,EventArgs e )
@@ -2116,7 +2088,7 @@ namespace Mulaolao.Contract
         #region Table
         decimal WX012 = 0M, WX013 = 0M, WX023 = 0M, WX024 = 0M, WX025 = 0, WX026 = 0, WX027 = 0M, WX028 = 0M, WX029 = 0M, WX030 = 0M, WX031 = 0M, WX032 = 0M, WX018 = 0M, WX014 = 0M;
         long WX015 = 0, WX016 = 0, WX087 = 0, id = 0;
-        string WX019 = "", WX020 = "", WX077 = "", WX017 = "";
+        string WX019 = "", WX020 = "", WX077 = "", WX017 = "",WX098="";
         DateTime WX021 = MulaolaoBll . Drity . GetDt ( ), WX022 = MulaolaoBll . Drity . GetDt ( );
         //新建
         void adds ( )
@@ -2166,7 +2138,7 @@ namespace Mulaolao.Contract
             else
                 WX018 = Convert.ToDecimal( comboBox8.Text );
             WX019 = comboBox22.Text;
-            WX020 = comboBox10.Text;
+            WX020 = textBox37.Text;
             WX021 = dateTimePicker4.Value;
             WX022 = dateTimePicker5.Value;
             WX077 = comboBox28.Text;
@@ -2212,7 +2184,7 @@ namespace Mulaolao.Contract
                 WX032 = Convert.ToDecimal( comboBox14.Text );
             WX010 = Edit1.Text;
             WX011 = txtSpe.Text;
-
+            WX098 = txtWX98 . Text;
         }
         void build ( )
         {
@@ -2221,7 +2193,7 @@ namespace Mulaolao.Contract
             if ( dei.Rows.Count < 1 )
             {
                 StringBuilder strSql = new StringBuilder( );
-                strSql.AppendFormat( "INSERT INTO R_PQT (WX82,WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX21,WX22,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77,WX83,WX85,WX86,WX87,WX03) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}')" ,WX82 ,WX010 ,WX011 ,WX012 ,WX013 ,WX014 ,WX015 ,WX016 ,WX017 ,WX018 ,WX019 ,WX020 ,WX021 ,WX022 ,WX023 ,WX024 ,WX025 ,WX026 ,WX027 ,WX028 ,WX029 ,WX030 ,WX031 ,WX032 ,WX077 ,WX83 ,WX85 ,WX086 ,WX087 ,WX03 );
+                strSql.AppendFormat( "INSERT INTO R_PQT (WX82,WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX21,WX22,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77,WX83,WX85,WX86,WX87,WX03,WX98) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}','{30}')" ,WX82 ,WX010 ,WX011 ,WX012 ,WX013 ,WX014 ,WX015 ,WX016 ,WX017 ,WX018 ,WX019 ,WX020 ,WX021 ,WX022 ,WX023 ,WX024 ,WX025 ,WX026 ,WX027 ,WX028 ,WX029 ,WX030 ,WX031 ,WX032 ,WX077 ,WX83 ,WX85 ,WX086 ,WX087 ,WX03 ,WX098 );
                 int count = SqlHelper.ExecuteNonQuery( strSql.ToString( ) );
                 if ( count < 1 )
                     MessageBox.Show( "录入数据失败" );
@@ -2421,7 +2393,7 @@ namespace Mulaolao.Contract
                 MessageBox.Show( "物品名称不可为空" );
                 return;
             }
-            if ( string.IsNullOrEmpty( comboBox10.Text ) )
+            if ( string.IsNullOrEmpty( textBox37.Text ) )
             {
                 MessageBox.Show( "类别不可以为空" );
                 return;
@@ -2593,7 +2565,7 @@ namespace Mulaolao.Contract
         void edit ( )
         {
             StringBuilder strSql = new StringBuilder( );//,WX90='{29}'  WX090 , 
-            strSql . AppendFormat ( "UPDATE R_PQT SET WX12='{0}',WX13='{1}',WX14='{2}',WX15='{3}',WX16='{4}',WX17='{5}',WX18='{6}',WX19='{7}',WX20='{8}',WX21='{9}',WX22='{10}',WX23='{11}',WX24='{12}',WX25='{13}',WX26='{14}',WX27='{15}',WX28='{16}',WX29='{17}',WX30='{18}',WX31='{19}',WX32='{20}',WX77='{21}',WX86='{22}',WX83='{23}',WX85='{24}',WX87='{25}',WX10='{27}',WX11='{28}' WHERE WX82='{29}' AND idx='{26}'" , WX012 , WX013 , WX014 , WX015 , WX016 , WX017 , WX018 , WX019 , WX020 , WX021 , WX022 , WX023 , WX024 , WX025 , WX026 , WX027 , WX028 , WX029 , WX030 , WX031 , WX032 , WX077 , WX086 , WX83 , WX85 , WX087 , id , WX010 , WX011 , WX82 );
+            strSql . AppendFormat ( "UPDATE R_PQT SET WX12='{0}',WX13='{1}',WX14='{2}',WX15='{3}',WX16='{4}',WX17='{5}',WX18='{6}',WX19='{7}',WX20='{8}',WX21='{9}',WX22='{10}',WX23='{11}',WX24='{12}',WX25='{13}',WX26='{14}',WX27='{15}',WX28='{16}',WX29='{17}',WX30='{18}',WX31='{19}',WX32='{20}',WX77='{21}',WX86='{22}',WX83='{23}',WX85='{24}',WX87='{25}',WX10='{27}',WX11='{28}',WX98='{30}' WHERE WX82='{29}' AND idx='{26}'" , WX012 , WX013 , WX014 , WX015 , WX016 , WX017 , WX018 , WX019 , WX020 , WX021 , WX022 , WX023 , WX024 , WX025 , WX026 , WX027 , WX028 , WX029 , WX030 , WX031 , WX032 , WX077 , WX086 , WX83 , WX85 , WX087 , id , WX010 , WX011 , WX82 ,WX098 );
             int count = SqlHelper.ExecuteNonQuery( strSql.ToString( ) );
             if ( count < 1 )
                 MessageBox.Show( "数据编辑失败" );
@@ -2628,7 +2600,7 @@ namespace Mulaolao.Contract
             if ( dei.Rows.Count < 1 )
             {
                 StringBuilder strSql = new StringBuilder( );//,WX90='{29}'   WX090 ,
-                strSql . AppendFormat ( "UPDATE R_PQT SET WX12='{0}',WX13='{1}',WX14='{2}',WX15='{3}',WX16='{4}',WX17='{5}',WX18='{6}',WX19='{7}',WX20='{8}',WX21='{9}',WX22='{10}',WX23='{11}',WX24='{12}',WX25='{13}',WX26='{14}',WX27='{15}',WX28='{16}',WX29='{17}',WX30='{18}',WX31='{19}',WX32='{20}',WX77='{21}',WX86='{22}',WX83='{23}',WX85='{24}',WX87='{25}',WX10='{27}',WX11='{28}' WHERE WX82='{29}' AND idx='{26}'" , WX012 , WX013 , WX014 , WX015 , WX016 , WX017 , WX018 , WX019 , WX020 , WX021 , WX022 , WX023 , WX024 , WX025 , WX026 , WX027 , WX028 , WX029 , WX030 , WX031 , WX032 , WX077 , WX086 , WX83 , WX85 , WX087 , id , WX010 , WX011 , WX82 );
+                strSql . AppendFormat ( "UPDATE R_PQT SET WX12='{0}',WX13='{1}',WX14='{2}',WX15='{3}',WX16='{4}',WX17='{5}',WX18='{6}',WX19='{7}',WX20='{8}',WX21='{9}',WX22='{10}',WX23='{11}',WX24='{12}',WX25='{13}',WX26='{14}',WX27='{15}',WX28='{16}',WX29='{17}',WX30='{18}',WX31='{19}',WX32='{20}',WX77='{21}',WX86='{22}',WX83='{23}',WX85='{24}',WX87='{25}',WX10='{27}',WX11='{28}',WX98='{30}' WHERE WX82='{29}' AND idx='{26}'" , WX012 , WX013 , WX014 , WX015 , WX016 , WX017 , WX018 , WX019 , WX020 , WX021 , WX022 , WX023 , WX024 , WX025 , WX026 , WX027 , WX028 , WX029 , WX030 , WX031 , WX032 , WX077 , WX086 , WX83 , WX85 , WX087 , id , WX010 , WX011 , WX82 ,WX098 );
                 int count = SqlHelper.ExecuteNonQuery( strSql.ToString( ) );
                 if ( count < 1 )
                     MessageBox.Show( "数据编辑失败" );
@@ -2716,7 +2688,7 @@ namespace Mulaolao.Contract
                         MessageBox.Show( "物品名称不可为空" );
                     else
                     {
-                        if ( string.IsNullOrEmpty( comboBox10.Text ) )
+                        if ( string.IsNullOrEmpty( textBox37.Text ) )
                             MessageBox.Show( "类别不可以为空" );
                         else
                         {
@@ -2893,12 +2865,12 @@ namespace Mulaolao.Contract
         private void button14_Click ( object sender ,EventArgs e )
         {
             //,WX90
-            bj = SqlHelper.ExecuteDataTable( "SELECT idx,WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX21,WX22,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77,WX86,WX87,U3,U4,WX92,WX93,WX03 FROM R_PQT WHERE WX82=@WX82 ORDER BY idx DESC" ,new SqlParameter( "@WX82" ,WX82 ) );
+            bj = SqlHelper.ExecuteDataTable( "SELECT idx,WX10,WX11,WX12,WX13,WX14,WX15,WX16,WX17,WX18,WX19,WX20,WX21,WX22,WX23,WX24,WX25,WX26,WX27,WX28,WX29,WX30,WX31,WX32,WX77,WX86,WX87,U3,U4,WX92,WX93,WX03,WX98 FROM R_PQT WHERE WX82=@WX82 ORDER BY idx DESC" ,new SqlParameter( "@WX82" ,WX82 ) );
             gridControl1.DataSource = bj;
             //bandedGridView1 . BestFitColumns ( );
             assginContrac( );
 
-            //every ( );
+            every ( );
         }
         //实际收货日期
         yanpinSelect ys = new yanpinSelect( );

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.idx_thr = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GZ01 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,6 +59,7 @@
             this.EZ011 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.U1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button6 = new System.Windows.Forms.Button();
             this.lookUpEdit4 = new DevExpress.XtraEditors.LookUpEdit();
             this.label11 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -91,7 +92,6 @@
             this.tabPageOne = new System.Windows.Forms.TabPage();
             this.tabPageTwo = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -353,10 +353,10 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode2.LevelTemplate = this.gridView2;
-            gridLevelNode2.RelationName = "R_317";
+            gridLevelNode1.LevelTemplate = this.gridView2;
+            gridLevelNode1.RelationName = "R_317";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gridControl1.Location = new System.Drawing.Point(3, 3);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -390,6 +390,7 @@
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowHeight = 25;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            this.gridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView1_RowStyle);
             // 
             // idx
             // 
@@ -720,6 +721,17 @@
             this.splitContainer1.SplitterDistance = 110;
             this.splitContainer1.TabIndex = 4;
             // 
+            // button6
+            // 
+            this.button6.AutoSize = true;
+            this.button6.Location = new System.Drawing.Point(900, 74);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(86, 26);
+            this.button6.TabIndex = 91;
+            this.button6.Text = "生成本月";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // lookUpEdit4
             // 
             this.lookUpEdit4.Location = new System.Drawing.Point(718, 15);
@@ -1039,17 +1051,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1228, 316);
             this.textBox1.TabIndex = 0;
-            // 
-            // button6
-            // 
-            this.button6.AutoSize = true;
-            this.button6.Location = new System.Drawing.Point(900, 74);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 26);
-            this.button6.TabIndex = 91;
-            this.button6.Text = "生成本月";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FrmGongZiCe
             // 

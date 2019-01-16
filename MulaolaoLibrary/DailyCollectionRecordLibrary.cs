@@ -736,5 +736,23 @@ namespace MulaolaoLibrary
                 _ae42 = value;
             }
         }
+
+        private decimal _ae43;
+
+        /// <summary>
+        /// 美金结算差额
+        /// </summary>
+        public decimal AE43
+        {
+            get
+            {
+                return _ae43;
+            }
+            set
+            {
+                _ae43 = value;
+            }
+        }
+
     }
 }

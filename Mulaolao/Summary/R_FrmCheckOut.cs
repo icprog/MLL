@@ -174,7 +174,7 @@ namespace Mulaolao . Summary
             DataRow dr = this.gridView1.GetDataRow( num );
             if ( dr == null )
                 return;
-
+            
             if ( thereExist != null && thereExist.Rows.Count > 0 && thereExist.Select( "idx='" + dr["idx"].ToString( ) + "'" ).Length > 0 )
             {
                 //e.Appearance.ForeColor = Color.Red;// 改变行字体颜色

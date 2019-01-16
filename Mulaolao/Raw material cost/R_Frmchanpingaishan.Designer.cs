@@ -77,6 +77,7 @@
             this.GS20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GS70 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GS71 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS78 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label66 = new System.Windows.Forms.Label();
             this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.label65 = new System.Windows.Forms.Label();
@@ -123,6 +124,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.label82 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
@@ -533,7 +536,8 @@
             this.DGA011,
             this.GS20,
             this.GS70,
-            this.GS71});
+            this.GS71,
+            this.GS78});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -581,7 +585,7 @@
             this.GS0049.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS0049.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.GS0049.Visible = true;
-            this.GS0049.VisibleIndex = 11;
+            this.GS0049.VisibleIndex = 12;
             this.GS0049.Width = 79;
             // 
             // GS04
@@ -603,7 +607,7 @@
             this.GS04.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS04", "{0}")});
             this.GS04.Visible = true;
-            this.GS04.VisibleIndex = 9;
+            this.GS04.VisibleIndex = 10;
             this.GS04.Width = 102;
             // 
             // GS05
@@ -625,7 +629,7 @@
             this.GS05.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS05", "{0}")});
             this.GS05.Visible = true;
-            this.GS05.VisibleIndex = 18;
+            this.GS05.VisibleIndex = 19;
             this.GS05.Width = 109;
             // 
             // U0
@@ -650,7 +654,7 @@
             this.U0.UnboundExpression = "[GS04] - [U7]";
             this.U0.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U0.Visible = true;
-            this.U0.VisibleIndex = 19;
+            this.U0.VisibleIndex = 20;
             this.U0.Width = 116;
             // 
             // U7
@@ -672,7 +676,7 @@
             this.U7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GS06", "{0}")});
             this.U7.Visible = true;
-            this.U7.VisibleIndex = 20;
+            this.U7.VisibleIndex = 21;
             this.U7.Width = 119;
             // 
             // U1
@@ -697,7 +701,7 @@
             this.U1.UnboundExpression = "[GS04] - [GS05]";
             this.U1.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U1.Visible = true;
-            this.U1.VisibleIndex = 21;
+            this.U1.VisibleIndex = 22;
             this.U1.Width = 118;
             // 
             // U2
@@ -720,7 +724,7 @@
             this.U2.UnboundExpression = "[GS05] * [U4]";
             this.U2.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.U2.Visible = true;
-            this.U2.VisibleIndex = 22;
+            this.U2.VisibleIndex = 23;
             this.U2.Width = 109;
             // 
             // U3
@@ -741,7 +745,7 @@
             this.U3.UnboundExpression = "[GS49] * [U0]";
             this.U3.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U3.Visible = true;
-            this.U3.VisibleIndex = 23;
+            this.U3.VisibleIndex = 24;
             this.U3.Width = 127;
             // 
             // U4
@@ -762,7 +766,7 @@
             this.U4.UnboundExpression = "[GS49]* [GS10]";
             this.U4.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.U4.Visible = true;
-            this.U4.VisibleIndex = 12;
+            this.U4.VisibleIndex = 13;
             this.U4.Width = 95;
             // 
             // GS07
@@ -855,7 +859,7 @@
             this.GS11.Name = "GS11";
             this.GS11.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS11.Visible = true;
-            this.GS11.VisibleIndex = 10;
+            this.GS11.VisibleIndex = 11;
             this.GS11.Width = 113;
             // 
             // U5
@@ -879,7 +883,7 @@
             this.U5.UnboundExpression = "[GS10] * [GS11]";
             this.U5.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U5.Visible = true;
-            this.U5.VisibleIndex = 24;
+            this.U5.VisibleIndex = 25;
             this.U5.Width = 114;
             // 
             // GS51
@@ -897,7 +901,7 @@
             this.GS51.Name = "GS51";
             this.GS51.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS51.Visible = true;
-            this.GS51.VisibleIndex = 8;
+            this.GS51.VisibleIndex = 9;
             this.GS51.Width = 82;
             // 
             // U8
@@ -919,7 +923,7 @@
             this.U8.UnboundExpression = "[GS10] * [GS11]";
             this.U8.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U8.Visible = true;
-            this.U8.VisibleIndex = 7;
+            this.U8.VisibleIndex = 8;
             this.U8.Width = 72;
             // 
             // GS13
@@ -938,7 +942,7 @@
             this.GS13.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS13.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.GS13.Visible = true;
-            this.GS13.VisibleIndex = 25;
+            this.GS13.VisibleIndex = 26;
             this.GS13.Width = 77;
             // 
             // U6
@@ -963,7 +967,7 @@
             this.U6.UnboundExpression = "[U3] * [GS13]";
             this.U6.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U6.Visible = true;
-            this.U6.VisibleIndex = 26;
+            this.U6.VisibleIndex = 27;
             this.U6.Width = 80;
             // 
             // GS14
@@ -981,7 +985,7 @@
             this.GS14.Name = "GS14";
             this.GS14.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS14.Visible = true;
-            this.GS14.VisibleIndex = 27;
+            this.GS14.VisibleIndex = 28;
             this.GS14.Width = 91;
             // 
             // GS15
@@ -999,7 +1003,7 @@
             this.GS15.Name = "GS15";
             this.GS15.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS15.Visible = true;
-            this.GS15.VisibleIndex = 28;
+            this.GS15.VisibleIndex = 29;
             this.GS15.Width = 92;
             // 
             // GS16
@@ -1017,7 +1021,7 @@
             this.GS16.Name = "GS16";
             this.GS16.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS16.Visible = true;
-            this.GS16.VisibleIndex = 13;
+            this.GS16.VisibleIndex = 14;
             this.GS16.Width = 98;
             // 
             // GS17
@@ -1035,7 +1039,7 @@
             this.GS17.Name = "GS17";
             this.GS17.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS17.Visible = true;
-            this.GS17.VisibleIndex = 14;
+            this.GS17.VisibleIndex = 15;
             this.GS17.Width = 61;
             // 
             // GS18
@@ -1053,7 +1057,7 @@
             this.GS18.Name = "GS18";
             this.GS18.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS18.Visible = true;
-            this.GS18.VisibleIndex = 15;
+            this.GS18.VisibleIndex = 16;
             this.GS18.Width = 58;
             // 
             // GS19
@@ -1073,7 +1077,7 @@
             this.GS19.Name = "GS19";
             this.GS19.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.GS19.Visible = true;
-            this.GS19.VisibleIndex = 29;
+            this.GS19.VisibleIndex = 30;
             this.GS19.Width = 107;
             // 
             // DGA003
@@ -1090,7 +1094,7 @@
             this.DGA003.FieldName = "DGA003";
             this.DGA003.Name = "DGA003";
             this.DGA003.Visible = true;
-            this.DGA003.VisibleIndex = 16;
+            this.DGA003.VisibleIndex = 17;
             this.DGA003.Width = 93;
             // 
             // DGA011
@@ -1107,7 +1111,7 @@
             this.DGA011.FieldName = "DGA011";
             this.DGA011.Name = "DGA011";
             this.DGA011.Visible = true;
-            this.DGA011.VisibleIndex = 17;
+            this.DGA011.VisibleIndex = 18;
             this.DGA011.Width = 95;
             // 
             // GS20
@@ -1137,6 +1141,17 @@
             this.GS71.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.GS71.Visible = true;
             this.GS71.VisibleIndex = 1;
+            // 
+            // GS78
+            // 
+            this.GS78.Caption = "每套重量";
+            this.GS78.DisplayFormat.FormatString = "0.######";
+            this.GS78.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.GS78.FieldName = "GS78";
+            this.GS78.Name = "GS78";
+            this.GS78.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.GS78.Visible = true;
+            this.GS78.VisibleIndex = 7;
             // 
             // label66
             // 
@@ -1263,7 +1278,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Green;
-            this.button5.Location = new System.Drawing.Point(959, 91);
+            this.button5.Location = new System.Drawing.Point(848, 101);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(29, 26);
             this.button5.TabIndex = 81;
@@ -1272,24 +1287,24 @@
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(635, 94);
+            this.textBox15.Location = new System.Drawing.Point(545, 103);
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(129, 23);
+            this.textBox15.Size = new System.Drawing.Size(100, 23);
             this.textBox15.TabIndex = 80;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(858, 94);
+            this.textBox11.Location = new System.Drawing.Point(739, 103);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(95, 23);
+            this.textBox11.Size = new System.Drawing.Size(100, 23);
             this.textBox11.TabIndex = 79;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(562, 98);
+            this.label35.Location = new System.Drawing.Point(472, 107);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(67, 14);
             this.label35.TabIndex = 78;
@@ -1298,7 +1313,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(770, 97);
+            this.label34.Location = new System.Drawing.Point(651, 106);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(82, 14);
             this.label34.TabIndex = 76;
@@ -1307,7 +1322,7 @@
             // datatimepickeroverride6
             // 
             this.datatimepickeroverride6.Enabled = false;
-            this.datatimepickeroverride6.Location = new System.Drawing.Point(1067, 92);
+            this.datatimepickeroverride6.Location = new System.Drawing.Point(956, 102);
             this.datatimepickeroverride6.Name = "datatimepickeroverride6";
             this.datatimepickeroverride6.Size = new System.Drawing.Size(129, 23);
             this.datatimepickeroverride6.TabIndex = 75;
@@ -1315,7 +1330,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(994, 97);
+            this.label33.Location = new System.Drawing.Point(883, 107);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(67, 14);
             this.label33.TabIndex = 74;
@@ -1366,15 +1381,15 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(545, 67);
+            this.textBox13.Location = new System.Drawing.Point(739, 67);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(294, 23);
+            this.textBox13.Size = new System.Drawing.Size(100, 23);
             this.textBox13.TabIndex = 65;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(472, 70);
+            this.label28.Location = new System.Drawing.Point(666, 74);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(67, 14);
             this.label28.TabIndex = 64;
@@ -1590,6 +1605,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.textBox23);
+            this.splitContainer1.Panel1.Controls.Add(this.label82);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox3);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox7);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox6);
@@ -1644,6 +1661,22 @@
             this.splitContainer1.Size = new System.Drawing.Size(1226, 302);
             this.splitContainer1.SplitterDistance = 141;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(545, 70);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 23);
+            this.textBox23.TabIndex = 102;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(472, 74);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(67, 14);
+            this.label82.TabIndex = 101;
+            this.label82.Text = "每套重量";
             // 
             // comboBox3
             // 
@@ -4272,5 +4305,8 @@
         private System . Windows . Forms . Label label81;
         private System . Windows . Forms . ComboBox txtGS77;
         private DevExpress . XtraGrid . Columns . GridColumn GS77;
+        private System . Windows . Forms . Label label82;
+        private System . Windows . Forms . TextBox textBox23;
+        private DevExpress . XtraGrid . Columns . GridColumn GS78;
     }
 }

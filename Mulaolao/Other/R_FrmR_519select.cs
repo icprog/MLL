@@ -9,7 +9,7 @@ namespace Mulaolao . Other
 {
     public partial class R_FrmR_519select : Form
     {
-
+        
         public string zhi = "";
         //添加一个委托
         public delegate void PassDataBetweenFormHandler ( object sender ,PassDataWinFormEventArgs e );

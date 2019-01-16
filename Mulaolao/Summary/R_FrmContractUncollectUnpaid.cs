@@ -16,7 +16,7 @@ namespace Mulaolao.Summary
             MulaolaoBll . UserInfoMation . tableName = this . Name;
             
         }
-
+        
         MulaolaoBll.Bll.ContractUncollectUnpaidBll _bll = new MulaolaoBll.Bll.ContractUncollectUnpaidBll( );
         MulaolaoLibrary.ContractUncollectUnpaid _model = new MulaolaoLibrary.ContractUncollectUnpaid( );
         DataTable tableQuery;

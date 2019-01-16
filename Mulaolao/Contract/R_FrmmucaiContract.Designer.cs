@@ -366,8 +366,10 @@
             this.tabPageOne = new System.Windows.Forms.TabPage();
             this.tabPageTwo = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.partName = new System.Windows.Forms.TextBox();
             this.partInfo = new DevExpress.XtraEditors.GridLookUpEdit();
             this.ViewInfo = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PQV1001 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.label102 = new System.Windows.Forms.Label();
@@ -389,8 +391,6 @@
             this.textBox41 = new System.Windows.Forms.TextBox();
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.partName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
@@ -4454,6 +4454,15 @@
             this.splitContainer2.SplitterDistance = 259;
             this.splitContainer2.TabIndex = 0;
             // 
+            // partName
+            // 
+            this.partName.Location = new System.Drawing.Point(140, 32);
+            this.partName.Name = "partName";
+            this.partName.ReadOnly = true;
+            this.partName.Size = new System.Drawing.Size(176, 26);
+            this.partName.TabIndex = 150;
+            this.partName.TextChanged += new System.EventHandler(this.partName_TextChanged);
+            // 
             // partInfo
             // 
             this.partInfo.Location = new System.Drawing.Point(140, 6);
@@ -4482,6 +4491,18 @@
             this.ViewInfo.OptionsBehavior.Editable = false;
             this.ViewInfo.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.ViewInfo.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn1.AppearanceCell.Options.UseFont = true;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn1.Caption = "材料名称";
+            this.gridColumn1.FieldName = "PQV86";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
             // 
             // PQV1001
             // 
@@ -4735,27 +4756,6 @@
             this.radioButton16.TabIndex = 147;
             this.radioButton16.Text = "使用库存数量";
             this.radioButton16.UseVisualStyleBackColor = true;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
-            this.gridColumn1.AppearanceCell.Options.UseFont = true;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
-            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.Caption = "材料名称";
-            this.gridColumn1.FieldName = "PQV86";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            // 
-            // partName
-            // 
-            this.partName.Location = new System.Drawing.Point(140, 32);
-            this.partName.Name = "partName";
-            this.partName.ReadOnly = true;
-            this.partName.Size = new System.Drawing.Size(176, 26);
-            this.partName.TabIndex = 150;
-            this.partName.TextChanged += new System.EventHandler(this.partName_TextChanged);
             // 
             // R_FrmmucaiContract
             // 

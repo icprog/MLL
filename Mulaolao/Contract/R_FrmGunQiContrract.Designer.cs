@@ -97,6 +97,17 @@
             this.label91 = new System.Windows.Forms.Label();
             this.tabPageOne = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.txtPart = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.View1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.GS02 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS07 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS08 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GS78 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.textBox57 = new System.Windows.Forms.TextBox();
+            this.textBox56 = new System.Windows.Forms.TextBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.textBox55 = new System.Windows.Forms.TextBox();
+            this.label98 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label97 = new System.Windows.Forms.Label();
@@ -114,8 +125,6 @@
             this.label94 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label78 = new System.Windows.Forms.Label();
             this.textBox34 = new System.Windows.Forms.TextBox();
@@ -152,6 +161,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.MZ130 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.idx = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ016 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ017 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -172,13 +182,15 @@
             this.U13 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ025 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ027 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.MZ026 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U15 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U8 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ028 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U9 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.U11 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ122 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.U11 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.MZ026 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.U20 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.U21 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U14 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U16 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U17 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -186,6 +198,7 @@
             this.U18 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.U19 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ118 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.MZ126 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ119 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ120 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.MZ125 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -323,9 +336,8 @@
             this.checkBox36 = new System.Windows.Forms.CheckBox();
             this.tabPageTre = new System.Windows.Forms.TabPage();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.MZ126 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.U22 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand39 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand18 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand17 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -344,15 +356,19 @@
             this.gridBand8 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand29 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand7 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand30 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand22 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand30 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand31 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand24 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand23 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand25 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand13 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand40 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand43 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand41 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand42 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand32 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -377,7 +393,8 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPart.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.View1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
             this.tabPageFor.SuspendLayout();
@@ -1092,6 +1109,10 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.txtPart);
+            this.splitContainer2.Panel1.Controls.Add(this.textBox57);
+            this.splitContainer2.Panel1.Controls.Add(this.textBox56);
+            this.splitContainer2.Panel1.Controls.Add(this.label99);
             this.splitContainer2.Panel1.Controls.Add(this.textBox55);
             this.splitContainer2.Panel1.Controls.Add(this.label98);
             this.splitContainer2.Panel1.Controls.Add(this.textBox8);
@@ -1111,8 +1132,6 @@
             this.splitContainer2.Panel1.Controls.Add(this.label94);
             this.splitContainer2.Panel1.Controls.Add(this.button14);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox4);
-            this.splitContainer2.Panel1.Controls.Add(this.lookUpEdit1);
-            this.splitContainer2.Panel1.Controls.Add(this.comboBox3);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox2);
             this.splitContainer2.Panel1.Controls.Add(this.label78);
             this.splitContainer2.Panel1.Controls.Add(this.textBox34);
@@ -1152,8 +1171,130 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.gridControl1);
             this.splitContainer2.Size = new System.Drawing.Size(1294, 344);
-            this.splitContainer2.SplitterDistance = 134;
+            this.splitContainer2.SplitterDistance = 168;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // txtPart
+            // 
+            this.txtPart.EditValue = "";
+            this.txtPart.Location = new System.Drawing.Point(98, 7);
+            this.txtPart.Name = "txtPart";
+            this.txtPart.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPart.Properties.Appearance.Options.UseFont = true;
+            this.txtPart.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.txtPart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtPart.Properties.ImmediatePopup = true;
+            this.txtPart.Properties.NullText = "";
+            this.txtPart.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.txtPart.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.txtPart.Properties.View = this.View1;
+            this.txtPart.Size = new System.Drawing.Size(107, 22);
+            this.txtPart.TabIndex = 207;
+            this.txtPart.EditValueChanged += new System.EventHandler(this.txtPart_EditValueChanged);
+            // 
+            // View1
+            // 
+            this.View1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.GS02,
+            this.GS07,
+            this.GS08,
+            this.GS78});
+            this.View1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.View1.Name = "View1";
+            this.View1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.View1.OptionsView.ShowGroupPanel = false;
+            // 
+            // GS02
+            // 
+            this.GS02.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GS02.AppearanceCell.Options.UseFont = true;
+            this.GS02.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.GS02.AppearanceHeader.Options.UseFont = true;
+            this.GS02.Caption = "部件";
+            this.GS02.FieldName = "GS02";
+            this.GS02.Name = "GS02";
+            this.GS02.Visible = true;
+            this.GS02.VisibleIndex = 0;
+            // 
+            // GS07
+            // 
+            this.GS07.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
+            this.GS07.AppearanceCell.Options.UseFont = true;
+            this.GS07.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.GS07.AppearanceHeader.Options.UseFont = true;
+            this.GS07.Caption = "零件名称";
+            this.GS07.FieldName = "GS07";
+            this.GS07.Name = "GS07";
+            this.GS07.Visible = true;
+            this.GS07.VisibleIndex = 1;
+            // 
+            // GS08
+            // 
+            this.GS08.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
+            this.GS08.AppearanceCell.Options.UseFont = true;
+            this.GS08.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.GS08.AppearanceHeader.Options.UseFont = true;
+            this.GS08.Caption = "规格";
+            this.GS08.FieldName = "GS08";
+            this.GS08.Name = "GS08";
+            this.GS08.Visible = true;
+            this.GS08.VisibleIndex = 2;
+            // 
+            // GS78
+            // 
+            this.GS78.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F);
+            this.GS78.AppearanceCell.Options.UseFont = true;
+            this.GS78.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F);
+            this.GS78.AppearanceHeader.Options.UseFont = true;
+            this.GS78.Caption = "重量/套";
+            this.GS78.FieldName = "GS78";
+            this.GS78.Name = "GS78";
+            this.GS78.Visible = true;
+            this.GS78.VisibleIndex = 3;
+            // 
+            // textBox57
+            // 
+            this.textBox57.Location = new System.Drawing.Point(98, 67);
+            this.textBox57.Name = "textBox57";
+            this.textBox57.Size = new System.Drawing.Size(107, 26);
+            this.textBox57.TabIndex = 206;
+            // 
+            // textBox56
+            // 
+            this.textBox56.Location = new System.Drawing.Point(98, 35);
+            this.textBox56.Name = "textBox56";
+            this.textBox56.ReadOnly = true;
+            this.textBox56.Size = new System.Drawing.Size(107, 26);
+            this.textBox56.TabIndex = 205;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(50, 8);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(42, 16);
+            this.label99.TabIndex = 203;
+            this.label99.Text = "部件";
+            // 
+            // textBox55
+            // 
+            this.textBox55.Location = new System.Drawing.Point(1083, 36);
+            this.textBox55.Name = "textBox55";
+            this.textBox55.Size = new System.Drawing.Size(70, 26);
+            this.textBox55.TabIndex = 202;
+            this.textBox55.TextChanged += new System.EventHandler(this.textBox55_TextChanged);
+            this.textBox55.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox55_KeyPress);
+            this.textBox55.LostFocus += new System.EventHandler(this.textBox55_LostFocus);
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(992, 39);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(93, 16);
+            this.label98.TabIndex = 201;
+            this.label98.Text = "按桶用漆量";
             // 
             // textBox8
             // 
@@ -1309,29 +1450,6 @@
             this.comboBox4.Size = new System.Drawing.Size(107, 24);
             this.comboBox4.TabIndex = 183;
             // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(104, 6);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.NullText = "";
-            this.lookUpEdit1.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.lookUpEdit1.Properties.ShowHeader = false;
-            this.lookUpEdit1.Size = new System.Drawing.Size(107, 22);
-            this.lookUpEdit1.TabIndex = 182;
-            this.lookUpEdit1.EditValueChanged += new System.EventHandler(this.lookUpEdit1_EditValueChanged);
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(53, 33);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(107, 24);
-            this.comboBox3.TabIndex = 181;
-            // 
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1396,7 +1514,7 @@
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(87, 98);
+            this.textBox21.Location = new System.Drawing.Point(87, 129);
             this.textBox21.Name = "textBox21";
             this.textBox21.ReadOnly = true;
             this.textBox21.Size = new System.Drawing.Size(107, 26);
@@ -1406,7 +1524,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(5, 101);
+            this.label29.Location = new System.Drawing.Point(5, 132);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(76, 16);
             this.label29.TabIndex = 171;
@@ -1535,6 +1653,7 @@
             // 
             this.textBox18.Location = new System.Drawing.Point(486, 39);
             this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
             this.textBox18.Size = new System.Drawing.Size(70, 26);
             this.textBox18.TabIndex = 149;
             this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
@@ -1596,7 +1715,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(5, 36);
+            this.label18.Location = new System.Drawing.Point(50, 71);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 16);
             this.label18.TabIndex = 142;
@@ -1604,7 +1723,7 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(53, 64);
+            this.textBox13.Location = new System.Drawing.Point(53, 98);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(107, 26);
@@ -1613,7 +1732,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(5, 67);
+            this.label17.Location = new System.Drawing.Point(5, 101);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(42, 16);
             this.label17.TabIndex = 140;
@@ -1622,7 +1741,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Green;
-            this.button6.Location = new System.Drawing.Point(166, 66);
+            this.button6.Location = new System.Drawing.Point(166, 100);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(31, 26);
             this.button6.TabIndex = 138;
@@ -1632,7 +1751,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(5, 8);
+            this.label15.Location = new System.Drawing.Point(5, 39);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(93, 16);
             this.label15.TabIndex = 138;
@@ -1644,7 +1763,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.bandedGridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1294, 206);
+            this.gridControl1.Size = new System.Drawing.Size(1294, 172);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
@@ -1653,6 +1772,7 @@
             // 
             this.bandedGridView1.BandPanelRowHeight = 45;
             this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand39,
             this.gridBand1,
             this.gridBand18,
             this.gridBand17,
@@ -1671,13 +1791,13 @@
             this.gridBand8,
             this.gridBand29,
             this.gridBand7,
-            this.gridBand30,
             this.gridBand22,
+            this.gridBand30,
             this.gridBand31,
             this.gridBand6,
             this.gridBand25,
-            this.gridBand4,
             this.gridBand13,
+            this.gridBand40,
             this.gridBand3,
             this.gridBand10,
             this.gridBand33,
@@ -1722,7 +1842,11 @@
             this.MZ122,
             this.MZ124,
             this.MZ125,
-            this.MZ126});
+            this.MZ126,
+            this.MZ130,
+            this.U20,
+            this.U21,
+            this.U22});
             this.bandedGridView1.GridControl = this.gridControl1;
             this.bandedGridView1.Name = "bandedGridView1";
             this.bandedGridView1.OptionsBehavior.Editable = false;
@@ -1732,6 +1856,21 @@
             this.bandedGridView1.OptionsView.ShowGroupPanel = false;
             this.bandedGridView1.RowHeight = 20;
             this.bandedGridView1.Click += new System.EventHandler(this.bandedGridView1_Click);
+            // 
+            // MZ130
+            // 
+            this.MZ130.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.MZ130.AppearanceCell.Options.UseFont = true;
+            this.MZ130.AppearanceCell.Options.UseTextOptions = true;
+            this.MZ130.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MZ130.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.MZ130.AppearanceHeader.Options.UseFont = true;
+            this.MZ130.AppearanceHeader.Options.UseTextOptions = true;
+            this.MZ130.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MZ130.Caption = "部件";
+            this.MZ130.FieldName = "MZ130";
+            this.MZ130.Name = "MZ130";
+            this.MZ130.Visible = true;
             // 
             // idx
             // 
@@ -2080,25 +2219,6 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "MZ027", "{0:N1}")});
             this.MZ027.Visible = true;
             // 
-            // MZ026
-            // 
-            this.MZ026.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.MZ026.AppearanceCell.Options.UseFont = true;
-            this.MZ026.AppearanceCell.Options.UseTextOptions = true;
-            this.MZ026.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.MZ026.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.MZ026.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.MZ026.AppearanceHeader.Options.UseFont = true;
-            this.MZ026.AppearanceHeader.Options.UseTextOptions = true;
-            this.MZ026.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.MZ026.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.MZ026.Caption = "漆计划价/斤";
-            this.MZ026.FieldName = "MZ026";
-            this.MZ026.Name = "MZ026";
-            this.MZ026.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "MZ026", "{0:N2}")});
-            this.MZ026.Visible = true;
-            // 
             // U15
             // 
             this.U15.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
@@ -2187,6 +2307,17 @@
             this.U9.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.U9.Visible = true;
             // 
+            // MZ122
+            // 
+            this.MZ122.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.MZ122.AppearanceCell.Options.UseFont = true;
+            this.MZ122.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.MZ122.AppearanceHeader.Options.UseFont = true;
+            this.MZ122.Caption = "使用库存或外购";
+            this.MZ122.FieldName = "MZ122";
+            this.MZ122.Name = "MZ122";
+            this.MZ122.Visible = true;
+            // 
             // U11
             // 
             this.U11.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
@@ -2212,16 +2343,64 @@
             this.U11.Visible = true;
             this.U11.Width = 65;
             // 
-            // MZ122
+            // MZ026
             // 
-            this.MZ122.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.MZ122.AppearanceCell.Options.UseFont = true;
-            this.MZ122.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.MZ122.AppearanceHeader.Options.UseFont = true;
-            this.MZ122.Caption = "使用库存或外购";
-            this.MZ122.FieldName = "MZ122";
-            this.MZ122.Name = "MZ122";
-            this.MZ122.Visible = true;
+            this.MZ026.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.MZ026.AppearanceCell.Options.UseFont = true;
+            this.MZ026.AppearanceCell.Options.UseTextOptions = true;
+            this.MZ026.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MZ026.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.MZ026.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.MZ026.AppearanceHeader.Options.UseFont = true;
+            this.MZ026.AppearanceHeader.Options.UseTextOptions = true;
+            this.MZ026.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MZ026.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.MZ026.Caption = "漆计划价/斤";
+            this.MZ026.FieldName = "MZ026";
+            this.MZ026.Name = "MZ026";
+            this.MZ026.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "MZ026", "{0:N2}")});
+            this.MZ026.Visible = true;
+            // 
+            // U20
+            // 
+            this.U20.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.U20.AppearanceCell.Options.UseFont = true;
+            this.U20.AppearanceCell.Options.UseTextOptions = true;
+            this.U20.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.U20.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.U20.AppearanceHeader.Options.UseFont = true;
+            this.U20.Caption = "合厂内滚套";
+            this.U20.DisplayFormat.FormatString = "0.###";
+            this.U20.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.U20.FieldName = "U20";
+            this.U20.Name = "U20";
+            this.U20.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U20", "{0:0.##}")});
+            this.U20.ToolTip = "([内滚工资结款] + [内滚划价漆结算款])/[产品数量]";
+            this.U20.UnboundExpression = "([U14] + [U16]) / [MZ006]";
+            this.U20.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.U20.Visible = true;
+            // 
+            // U21
+            // 
+            this.U21.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.U21.AppearanceCell.Options.UseFont = true;
+            this.U21.AppearanceCell.Options.UseTextOptions = true;
+            this.U21.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.U21.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.U21.AppearanceHeader.Options.UseFont = true;
+            this.U21.Caption = "厂外滚套";
+            this.U21.DisplayFormat.FormatString = "0.###";
+            this.U21.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.U21.FieldName = "U21";
+            this.U21.Name = "U21";
+            this.U21.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U21", "{0:0.##}")});
+            this.U21.ToolTip = "[委外结算款] / [产品数量]";
+            this.U21.UnboundExpression = "[U12] / [MZ006]";
+            this.U21.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.U21.Visible = true;
             // 
             // U14
             // 
@@ -2387,6 +2566,28 @@
             this.MZ118.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MZ118", "{0:N0}")});
             this.MZ118.Visible = true;
+            // 
+            // MZ126
+            // 
+            this.MZ126.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.MZ126.AppearanceCell.Options.UseFont = true;
+            this.MZ126.AppearanceCell.Options.UseTextOptions = true;
+            this.MZ126.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MZ126.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.MZ126.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.MZ126.AppearanceHeader.Options.UseFont = true;
+            this.MZ126.AppearanceHeader.Options.UseTextOptions = true;
+            this.MZ126.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MZ126.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.MZ126.Caption = "按桶用漆量";
+            this.MZ126.DisplayFormat.FormatString = "N2";
+            this.MZ126.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.MZ126.FieldName = "MZ126";
+            this.MZ126.Name = "MZ126";
+            this.MZ126.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MZ126", "{0:N2}")});
+            this.MZ126.Visible = true;
+            this.MZ126.Width = 64;
             // 
             // MZ119
             // 
@@ -3788,46 +3989,30 @@
             this.textBox9.Size = new System.Drawing.Size(1300, 350);
             this.textBox9.TabIndex = 0;
             // 
-            // textBox55
+            // U22
             // 
-            this.textBox55.Location = new System.Drawing.Point(1083, 36);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(70, 26);
-            this.textBox55.TabIndex = 202;
-            this.textBox55.TextChanged += new System.EventHandler(this.textBox55_TextChanged);
-            this.textBox55.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox55_KeyPress);
-            this . textBox55 . LostFocus += new System . EventHandler ( this . textBox55_LostFocus );
+            this.U22.Caption = "厂内漆套";
+            this.U22.DisplayFormat.FormatString = "0.###";
+            this.U22.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.U22.FieldName = "U22";
+            this.U22.Name = "U22";
+            this.U22.ToolTip = "[内滚划价漆结算款]  / [产品数量]";
+            this.U22.UnboundExpression = "[U16] / [MZ006]";
+            this.U22.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.U22.Visible = true;
             // 
-            // label98
+            // gridBand39
             // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(992, 39);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(93, 16);
-            this.label98.TabIndex = 201;
-            this.label98.Text = "按桶用漆量";
-            // 
-            // MZ126
-            // 
-            this.MZ126.AppearanceCell.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.MZ126.AppearanceCell.Options.UseFont = true;
-            this.MZ126.AppearanceCell.Options.UseTextOptions = true;
-            this.MZ126.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.MZ126.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.MZ126.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.MZ126.AppearanceHeader.Options.UseFont = true;
-            this.MZ126.AppearanceHeader.Options.UseTextOptions = true;
-            this.MZ126.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.MZ126.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.MZ126.Caption = "按桶用漆量";
-            this.MZ126.DisplayFormat.FormatString = "N2";
-            this.MZ126.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.MZ126.FieldName = "MZ126";
-            this.MZ126.Name = "MZ126";
-            this.MZ126.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MZ126", "{0:N2}")});
-            this.MZ126.Visible = true;
-            this.MZ126.Width = 64;
+            this.gridBand39.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridBand39.AppearanceHeader.Options.UseFont = true;
+            this.gridBand39.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand39.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand39.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand39.Caption = "部件";
+            this.gridBand39.Columns.Add(this.MZ130);
+            this.gridBand39.Name = "gridBand39";
+            this.gridBand39.VisibleIndex = 0;
+            this.gridBand39.Width = 75;
             // 
             // gridBand1
             // 
@@ -3840,7 +4025,7 @@
             this.gridBand1.Columns.Add(this.idx);
             this.gridBand1.Columns.Add(this.MZ016);
             this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.VisibleIndex = 1;
             this.gridBand1.Width = 75;
             // 
             // gridBand18
@@ -3853,7 +4038,7 @@
             this.gridBand18.Caption = "基材";
             this.gridBand18.Columns.Add(this.MZ017);
             this.gridBand18.Name = "gridBand18";
-            this.gridBand18.VisibleIndex = 1;
+            this.gridBand18.VisibleIndex = 2;
             this.gridBand18.Width = 75;
             // 
             // gridBand17
@@ -3866,7 +4051,7 @@
             this.gridBand17.Caption = "规格";
             this.gridBand17.Columns.Add(this.MZ018);
             this.gridBand17.Name = "gridBand17";
-            this.gridBand17.VisibleIndex = 2;
+            this.gridBand17.VisibleIndex = 3;
             this.gridBand17.Width = 75;
             // 
             // gridBand15
@@ -3879,7 +4064,7 @@
             this.gridBand15.Caption = "零件体积/cm³";
             this.gridBand15.Columns.Add(this.MZ105);
             this.gridBand15.Name = "gridBand15";
-            this.gridBand15.VisibleIndex = 3;
+            this.gridBand15.VisibleIndex = 4;
             this.gridBand15.Width = 75;
             // 
             // gridBand16
@@ -3892,7 +4077,7 @@
             this.gridBand16.Caption = "519表零件体积cm³";
             this.gridBand16.Columns.Add(this.MZ106);
             this.gridBand16.Name = "gridBand16";
-            this.gridBand16.VisibleIndex = 4;
+            this.gridBand16.VisibleIndex = 5;
             this.gridBand16.Width = 92;
             // 
             // gridBand2
@@ -3905,7 +4090,7 @@
             this.gridBand2.Caption = "是厂滚或外滚";
             this.gridBand2.Columns.Add(this.MZ107);
             this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 5;
+            this.gridBand2.VisibleIndex = 6;
             this.gridBand2.Width = 68;
             // 
             // gridBand14
@@ -3918,7 +4103,7 @@
             this.gridBand14.Caption = "油漆品牌";
             this.gridBand14.Columns.Add(this.MZ032);
             this.gridBand14.Name = "gridBand14";
-            this.gridBand14.VisibleIndex = 6;
+            this.gridBand14.VisibleIndex = 7;
             this.gridBand14.Width = 75;
             // 
             // gridBand20
@@ -3931,7 +4116,7 @@
             this.gridBand20.Caption = "色名";
             this.gridBand20.Columns.Add(this.MZ023);
             this.gridBand20.Name = "gridBand20";
-            this.gridBand20.VisibleIndex = 7;
+            this.gridBand20.VisibleIndex = 8;
             this.gridBand20.Width = 75;
             // 
             // gridBand28
@@ -3944,7 +4129,7 @@
             this.gridBand28.Caption = "色号";
             this.gridBand28.Columns.Add(this.MZ019);
             this.gridBand28.Name = "gridBand28";
-            this.gridBand28.VisibleIndex = 8;
+            this.gridBand28.VisibleIndex = 9;
             this.gridBand28.Width = 75;
             // 
             // gridBand21
@@ -3957,7 +4142,7 @@
             this.gridBand21.Caption = "产品色号";
             this.gridBand21.Columns.Add(this.MZ124);
             this.gridBand21.Name = "gridBand21";
-            this.gridBand21.VisibleIndex = 9;
+            this.gridBand21.VisibleIndex = 10;
             this.gridBand21.Width = 75;
             // 
             // gridBand19
@@ -3970,7 +4155,7 @@
             this.gridBand19.Caption = "油漆利用率%";
             this.gridBand19.Columns.Add(this.MZ024);
             this.gridBand19.Name = "gridBand19";
-            this.gridBand19.VisibleIndex = 10;
+            this.gridBand19.VisibleIndex = 11;
             this.gridBand19.Width = 75;
             // 
             // gridBand12
@@ -3983,7 +4168,7 @@
             this.gridBand12.Caption = "产品数量";
             this.gridBand12.Columns.Add(this.MZ006);
             this.gridBand12.Name = "gridBand12";
-            this.gridBand12.VisibleIndex = 11;
+            this.gridBand12.VisibleIndex = 12;
             this.gridBand12.Width = 75;
             // 
             // ban
@@ -3996,7 +4181,7 @@
             this.ban.Caption = "粒/斤";
             this.ban.Columns.Add(this.MZ020);
             this.ban.Name = "ban";
-            this.ban.VisibleIndex = 12;
+            this.ban.VisibleIndex = 13;
             this.ban.Width = 75;
             // 
             // gridBand9
@@ -4009,7 +4194,7 @@
             this.gridBand9.Caption = "粒/套";
             this.gridBand9.Columns.Add(this.MZ021);
             this.gridBand9.Name = "gridBand9";
-            this.gridBand9.VisibleIndex = 13;
+            this.gridBand9.VisibleIndex = 14;
             this.gridBand9.Width = 75;
             // 
             // gridBand11
@@ -4022,7 +4207,7 @@
             this.gridBand11.Caption = "重量/套";
             this.gridBand11.Columns.Add(this.MZ022);
             this.gridBand11.Name = "gridBand11";
-            this.gridBand11.VisibleIndex = 14;
+            this.gridBand11.VisibleIndex = 15;
             this.gridBand11.Width = 75;
             // 
             // gridBand8
@@ -4036,7 +4221,7 @@
             this.gridBand8.Columns.Add(this.U0);
             this.gridBand8.Name = "gridBand8";
             this.gridBand8.ToolTip = "[重量/套] * [产品数量]";
-            this.gridBand8.VisibleIndex = 15;
+            this.gridBand8.VisibleIndex = 16;
             this.gridBand8.Width = 75;
             // 
             // gridBand29
@@ -4050,7 +4235,7 @@
             this.gridBand29.Columns.Add(this.U13);
             this.gridBand29.Name = "gridBand29";
             this.gridBand29.ToolTip = "[产品数量] * [粒/套]";
-            this.gridBand29.VisibleIndex = 16;
+            this.gridBand29.VisibleIndex = 17;
             this.gridBand29.Width = 75;
             // 
             // gridBand7
@@ -4063,8 +4248,21 @@
             this.gridBand7.Caption = "油漆单价/KG";
             this.gridBand7.Columns.Add(this.MZ025);
             this.gridBand7.Name = "gridBand7";
-            this.gridBand7.VisibleIndex = 17;
+            this.gridBand7.VisibleIndex = 18;
             this.gridBand7.Width = 75;
+            // 
+            // gridBand22
+            // 
+            this.gridBand22.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.gridBand22.AppearanceHeader.Options.UseFont = true;
+            this.gridBand22.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand22.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand22.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand22.Caption = "内滚漆价/斤";
+            this.gridBand22.Columns.Add(this.MZ026);
+            this.gridBand22.Name = "gridBand22";
+            this.gridBand22.VisibleIndex = 19;
+            this.gridBand22.Width = 75;
             // 
             // gridBand30
             // 
@@ -4076,21 +4274,8 @@
             this.gridBand30.Caption = "内滚工资价/斤";
             this.gridBand30.Columns.Add(this.MZ027);
             this.gridBand30.Name = "gridBand30";
-            this.gridBand30.VisibleIndex = 18;
+            this.gridBand30.VisibleIndex = 20;
             this.gridBand30.Width = 75;
-            // 
-            // gridBand22
-            // 
-            this.gridBand22.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.gridBand22.AppearanceHeader.Options.UseFont = true;
-            this.gridBand22.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand22.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand22.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridBand22.Caption = "漆计划价/斤";
-            this.gridBand22.Columns.Add(this.MZ026);
-            this.gridBand22.Name = "gridBand22";
-            this.gridBand22.VisibleIndex = 19;
-            this.gridBand22.Width = 75;
             // 
             // gridBand31
             // 
@@ -4103,7 +4288,7 @@
             this.gridBand31.Columns.Add(this.U15);
             this.gridBand31.Name = "gridBand31";
             this.gridBand31.ToolTip = "[内滚划价漆结算款] / [油漆单价/kg]";
-            this.gridBand31.VisibleIndex = 20;
+            this.gridBand31.VisibleIndex = 21;
             this.gridBand31.Width = 75;
             // 
             // gridBand6
@@ -4118,7 +4303,7 @@
             this.gridBand24,
             this.gridBand23});
             this.gridBand6.Name = "gridBand6";
-            this.gridBand6.VisibleIndex = 21;
+            this.gridBand6.VisibleIndex = 22;
             this.gridBand6.Width = 169;
             // 
             // gridBand24
@@ -4159,22 +4344,8 @@
             this.gridBand25.Columns.Add(this.U9);
             this.gridBand25.Name = "gridBand25";
             this.gridBand25.ToolTip = "[委外价/斤] - [内漆+工资实际价/斤]";
-            this.gridBand25.VisibleIndex = 22;
+            this.gridBand25.VisibleIndex = 23;
             this.gridBand25.Width = 75;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.gridBand4.AppearanceHeader.Options.UseFont = true;
-            this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand4.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridBand4.Caption = "工资实际价/套";
-            this.gridBand4.Columns.Add(this.U11);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.ToolTip = "[内滚工资结款] / [产品数量]";
-            this.gridBand4.VisibleIndex = 23;
-            this.gridBand4.Width = 65;
             // 
             // gridBand13
             // 
@@ -4189,6 +4360,79 @@
             this.gridBand13.VisibleIndex = 24;
             this.gridBand13.Width = 75;
             // 
+            // gridBand40
+            // 
+            this.gridBand40.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridBand40.AppearanceHeader.Options.UseFont = true;
+            this.gridBand40.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand40.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand40.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand40.Caption = "每套成本";
+            this.gridBand40.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand4,
+            this.gridBand43,
+            this.gridBand41,
+            this.gridBand42});
+            this.gridBand40.Name = "gridBand40";
+            this.gridBand40.VisibleIndex = 25;
+            this.gridBand40.Width = 290;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.gridBand4.AppearanceHeader.Options.UseFont = true;
+            this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand4.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand4.Caption = "厂内工资套";
+            this.gridBand4.Columns.Add(this.U11);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.ToolTip = "[内滚工资结款] / [产品数量]";
+            this.gridBand4.VisibleIndex = 0;
+            this.gridBand4.Width = 65;
+            // 
+            // gridBand43
+            // 
+            this.gridBand43.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.gridBand43.AppearanceHeader.Options.UseFont = true;
+            this.gridBand43.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand43.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand43.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand43.Caption = "厂内漆套";
+            this.gridBand43.Columns.Add(this.U22);
+            this.gridBand43.Name = "gridBand43";
+            this.gridBand43.ToolTip = "[内滚划价漆结算款]  / [产品数量]";
+            this.gridBand43.VisibleIndex = 1;
+            this.gridBand43.Width = 75;
+            // 
+            // gridBand41
+            // 
+            this.gridBand41.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridBand41.AppearanceHeader.Options.UseFont = true;
+            this.gridBand41.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand41.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand41.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand41.Caption = "合厂内滚套";
+            this.gridBand41.Columns.Add(this.U20);
+            this.gridBand41.Name = "gridBand41";
+            this.gridBand41.ToolTip = "([内滚工资结款] + [内滚划价漆结算款])/[产品数量]";
+            this.gridBand41.VisibleIndex = 2;
+            this.gridBand41.Width = 75;
+            // 
+            // gridBand42
+            // 
+            this.gridBand42.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.gridBand42.AppearanceHeader.Options.UseFont = true;
+            this.gridBand42.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand42.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand42.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gridBand42.Caption = "厂外滚套";
+            this.gridBand42.Columns.Add(this.U21);
+            this.gridBand42.Name = "gridBand42";
+            this.gridBand42.ToolTip = "[委外结算款] / [产品数量]";
+            this.gridBand42.VisibleIndex = 3;
+            this.gridBand42.Width = 75;
+            // 
             // gridBand3
             // 
             this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
@@ -4202,7 +4446,7 @@
             this.gridBand32});
             this.gridBand3.Name = "gridBand3";
             this.gridBand3.ToolTip = "[厂滚漆计划结算额] / [油漆单价/kg]";
-            this.gridBand3.VisibleIndex = 25;
+            this.gridBand3.VisibleIndex = 26;
             this.gridBand3.Width = 153;
             // 
             // gridBand5
@@ -4226,7 +4470,7 @@
             this.gridBand32.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand32.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridBand32.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridBand32.Caption = "内滚划价漆结算款";
+            this.gridBand32.Caption = "内滚漆结算款";
             this.gridBand32.Columns.Add(this.U16);
             this.gridBand32.Name = "gridBand32";
             this.gridBand32.ToolTip = "[零件总重量] * [漆计划价/斤]";
@@ -4245,7 +4489,7 @@
             this.gridBand26,
             this.gridBand27});
             this.gridBand10.Name = "gridBand10";
-            this.gridBand10.VisibleIndex = 26;
+            this.gridBand10.VisibleIndex = 27;
             this.gridBand10.Width = 154;
             // 
             // gridBand26
@@ -4287,7 +4531,7 @@
             this.gridBand33.Columns.Add(this.U18);
             this.gridBand33.Name = "gridBand33";
             this.gridBand33.ToolTip = "[委外结算款] - [工资+划价漆结款]";
-            this.gridBand33.VisibleIndex = 27;
+            this.gridBand33.VisibleIndex = 28;
             this.gridBand33.Width = 75;
             // 
             // gridBand38
@@ -4300,7 +4544,7 @@
             this.gridBand38.Caption = "内.外结差额%";
             this.gridBand38.Columns.Add(this.U19);
             this.gridBand38.Name = "gridBand38";
-            this.gridBand38.VisibleIndex = 28;
+            this.gridBand38.VisibleIndex = 29;
             this.gridBand38.Width = 75;
             // 
             // gridBand37
@@ -4316,7 +4560,7 @@
             this.gridBand35,
             this.gridBand36});
             this.gridBand37.Name = "gridBand37";
-            this.gridBand37.VisibleIndex = 29;
+            this.gridBand37.VisibleIndex = 30;
             this.gridBand37.Width = 289;
             // 
             // gridBand34
@@ -4386,7 +4630,8 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPart.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.View1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
             this.tabPageFor.ResumeLayout(false);
@@ -4659,8 +4904,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn U16;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn U17;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn U18;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
         private System.Windows.Forms.ComboBox comboBox4;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
         private System.Windows.Forms.TextBox textBox11;
@@ -4714,6 +4957,20 @@
         private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn U19;
         private System . Windows . Forms . TextBox textBox55;
         private System . Windows . Forms . Label label98;
+        private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn MZ126;
+        private System . Windows . Forms . Label label99;
+        private System . Windows . Forms . TextBox textBox56;
+        private System . Windows . Forms . TextBox textBox57;
+        private DevExpress . XtraEditors . GridLookUpEdit txtPart;
+        private DevExpress . XtraGrid . Views . Grid . GridView View1;
+        private DevExpress . XtraGrid . Columns . GridColumn GS02;
+        private DevExpress . XtraGrid . Columns . GridColumn GS07;
+        private DevExpress . XtraGrid . Columns . GridColumn GS08;
+        private DevExpress . XtraGrid . Columns . GridColumn GS78;
+        private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn MZ130;
+        private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn U20;
+        private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn U21;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand39;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand1;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand18;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand17;
@@ -4732,15 +4989,20 @@
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand8;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand29;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand7;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand30;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand22;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand30;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand31;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand6;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand24;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand23;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand25;
-        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand13;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand40;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand4;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand43;
+        private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn U22;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand41;
+        private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand42;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand3;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand5;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand32;
@@ -4752,7 +5014,6 @@
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand37;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand34;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand35;
-        private DevExpress . XtraGrid . Views . BandedGrid . BandedGridColumn MZ126;
         private DevExpress . XtraGrid . Views . BandedGrid . GridBand gridBand36;
     }
 }

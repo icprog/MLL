@@ -372,5 +372,37 @@ namespace MulaolaoLibrary
             }
         }
 
+        private int _rz023;
+        /// <summary>
+        /// 合同美金
+        /// </summary>
+        public int RZ023
+        {
+            get
+            {
+                return _rz023;
+            }
+            set
+            {
+                _rz023 = value;
+            }
+        }
+
+        private int _rz024;
+        /// <summary>
+        /// 合同美金未收款
+        /// </summary>
+        public int RZ024
+        {
+            get
+            {
+                return _rz024;
+            }
+            set
+            {
+                _rz024 = value;
+            }
+        }
+
     }
 }

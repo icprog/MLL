@@ -19,7 +19,7 @@ namespace MulaolaoBll.Dao
         public DataTable GetDataTableQuery ( string strWhere )
         {
             StringBuilder strSql = new StringBuilder( );
-            strSql . Append ( "SELECT idx,MZ006,MZ016,MZ017,MZ018,MZ019,MZ020,MZ021,MZ022,MZ023,MZ024,MZ025,MZ026,MZ027,MZ028,MZ032,MZ105,MZ106,MZ107,MZ118,MZ119,MZ120,MZ122,MZ124,MZ125,ISNULL(MZ126,0) MZ126 FROM R_PQMZ" );
+            strSql . Append ( "SELECT idx,MZ006,MZ016,MZ017,MZ018,MZ019,MZ020,MZ021,MZ022,MZ023,MZ024,MZ025,MZ026,MZ027,MZ028,MZ032,MZ105,MZ106,MZ107,MZ118,MZ119,MZ120,MZ122,MZ124,MZ125,ISNULL(MZ126,0) MZ126,MZ130 FROM R_PQMZ" );
             strSql . Append ( " WHERE " + strWhere );
 
             return SqlHelper.ExecuteDataTable( strSql.ToString( ) );
@@ -80,9 +80,9 @@ namespace MulaolaoBll.Dao
             ArrayList SQLString = new ArrayList( );
             StringBuilder strSql = new StringBuilder( );
             strSql.Append( "INSERT INTO R_PQMZ (" );
-            strSql.Append( "MZ001,MZ002,MZ006,MZ016,MZ017,MZ018,MZ019,MZ020,MZ021,MZ022,MZ023,MZ024,MZ025,MZ026,MZ027,MZ028,MZ031,MZ032,MZ105,MZ106,MZ107,MZ108,MZ118,MZ119,MZ120,MZ122,MZ124,MZ125,MZ126)" );
+            strSql.Append( "MZ001,MZ002,MZ006,MZ016,MZ017,MZ018,MZ019,MZ020,MZ021,MZ022,MZ023,MZ024,MZ025,MZ026,MZ027,MZ028,MZ031,MZ032,MZ105,MZ106,MZ107,MZ108,MZ118,MZ119,MZ120,MZ122,MZ124,MZ125,MZ126,MZ130)" );
             strSql.Append( " VALUES (" );
-            strSql . AppendFormat ( "'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}')" ,model . MZ001 ,model . MZ002 ,model . MZ006 ,model . MZ016 ,model . MZ017 ,model . MZ018 ,model . MZ019 ,model . MZ020 ,model . MZ021 ,model . MZ022 ,model . MZ023 ,model . MZ024 ,model . MZ025 ,model . MZ026 ,model . MZ027 ,model . MZ028 ,model . MZ031 ,model . MZ032 ,model . MZ105 ,model . MZ106 ,model . MZ107 ,model . MZ108 ,model . MZ118 ,model . MZ119 ,model . MZ120 ,model . MZ122 ,model . MZ124 ,model . MZ125 ,model . MZ126 );
+            strSql . AppendFormat ( "'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','{28}','{29}')" ,model . MZ001 ,model . MZ002 ,model . MZ006 ,model . MZ016 ,model . MZ017 ,model . MZ018 ,model . MZ019 ,model . MZ020 ,model . MZ021 ,model . MZ022 ,model . MZ023 ,model . MZ024 ,model . MZ025 ,model . MZ026 ,model . MZ027 ,model . MZ028 ,model . MZ031 ,model . MZ032 ,model . MZ105 ,model . MZ106 ,model . MZ107 ,model . MZ108 ,model . MZ118 ,model . MZ119 ,model . MZ120 ,model . MZ122 ,model . MZ124 ,model . MZ125 ,model . MZ126 ,model . MZ130 );
             SQLString.Add( strSql.ToString( ) );
             SQLString.Add( Drity.DrityOfComparation( tableNum ,tableName ,logins ,dtOne ,model.MZ001 ,strSql.ToString( ).Replace( "'" ,"''" ) ,stateOf ,stateOfOdd ) );
 
@@ -123,7 +123,8 @@ namespace MulaolaoBll.Dao
             strSql . AppendFormat ( "MZ120='{0}'," ,model . MZ120 );
             strSql . AppendFormat ( "MZ122='{0}'," ,model . MZ122 );
             strSql . AppendFormat ( "MZ124='{0}'," ,model . MZ124 );
-            strSql . AppendFormat ( "MZ126='{0}' " ,model . MZ126 );
+            strSql . AppendFormat ( "MZ126='{0}'," ,model . MZ126 );
+            strSql . AppendFormat ( "MZ130='{0}' " ,model . MZ130 );
             strSql . AppendFormat ( " WHERE MZ001='{0}' AND MZ125='{1}'" ,model . MZ001 ,model . MZ125 );
             SQLString . Add ( strSql . ToString ( ) );
             SQLString . Add ( Drity . DrityOfComparation ( tableNum ,tableName ,logins ,dtOne ,model . MZ001 ,strSql . ToString ( ) . Replace ( "'" ,"''" ) ,stateOf ,stateOfOdd ) );
@@ -449,6 +450,8 @@ namespace MulaolaoBll.Dao
                     model.MZ125 = row["MZ125"].ToString( );
                 if ( row [ "MZ126" ] != null && row [ "MZ126" ] . ToString ( ) != "" )
                     model . MZ126 = decimal . Parse ( row [ "MZ126" ] . ToString ( ) );
+                if ( row [ "MZ130" ] != null && row [ "MZ130" ] . ToString ( ) != "" )
+                    model . MZ130 = row [ "MZ130" ] . ToString ( );
             }
             return model;
         }
@@ -1183,13 +1186,13 @@ namespace MulaolaoBll.Dao
         public DataTable GetDataTableOfPart ( string num )
         {
             StringBuilder strSql = new StringBuilder( );
-            strSql.Append( "SELECT DISTINCT GS07 LZ015,GS08 LZ017 FROM R_PQP WHERE GS01=@GS01 AND GS07!=''" );
-            SqlParameter[] parameter = {
-                new SqlParameter("@GS01",SqlDbType.NVarChar,20)
-            };
-            parameter[0].Value = num;
-
-            return SqlHelper.ExecuteDataTable( strSql.ToString( ) ,parameter );
+            //strSql.Append( "SELECT DISTINCT GS07 LZ015,GS08 LZ017 FROM R_PQP WHERE GS01=@GS01 AND GS07!=''" );
+            //SqlParameter[] parameter = {
+            //    new SqlParameter("@GS01",SqlDbType.NVarChar,20)
+            //};
+            //parameter[0].Value = num;
+            strSql . AppendFormat ( "SELECT GS02,GS07,GS08,CONVERT(FLOAT,GS78) GS78 FROM R_PQP WHERE GS78>0 AND GS01='{0}'" ,num );
+            return SqlHelper.ExecuteDataTable( strSql.ToString( ) );
         }
 
         /// <summary>
@@ -1572,10 +1575,17 @@ namespace MulaolaoBll.Dao
         public bool DeleteLibrary ( string ad17 )
         {
             StringBuilder strSql = new StringBuilder ( );
-            strSql . AppendFormat ( "DELETE FROM R_PQAD WHERE AD17='{0}'" ,ad17 );
+            strSql . AppendFormat ( "select count(1) from R_PQAD where AD17='{0}'" ,ad17 );
+            if ( SqlHelper . Exists ( strSql . ToString ( ) ) )
+            {
+                strSql = new StringBuilder ( );
+                strSql . AppendFormat ( "DELETE FROM R_PQAD WHERE AD17='{0}'" ,ad17 );
 
-            int rows = SqlHelper . ExecuteNonQuery ( strSql . ToString ( ) );
-            return rows >= 0 ? true : false;
+                int rows = SqlHelper . ExecuteNonQuery ( strSql . ToString ( ) );
+                return rows >= 0 ? true : false;
+            }
+            else
+                return true;
         }
 
     }

@@ -10,7 +10,7 @@ namespace Mulaolao . QuoForms
         MulaolaoBll.Bll.QuoBll _bll=null;
         MulaolaoLibrary.ChanPinZhiBiaoLibrary model=null;
 
-        public r195 ( MulaolaoLibrary . ChanPinZhiBiaoLibrary model )
+        public r195 ( MulaolaoLibrary . ChanPinZhiBiaoLibrary model  )
         {
             InitializeComponent ( );
 
@@ -18,14 +18,16 @@ namespace Mulaolao . QuoForms
 
             GridViewMoHuSelect . SetFilter ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { view ,View1 } );
             GrivColumnStyle . setColumnStyle ( new DevExpress . XtraGrid . Views . Grid . GridView [ ] { view ,View1 } );
-            getInfo ( );
             this . model = model;
+
+            getInfo ( );
+        
             setValue ( );
         }
 
         void getInfo ( )
         {
-            DataTable tableOne = _bll . getTableFor195Info ( );
+            DataTable tableOne = _bll . getTableFor195Info ( model . CP14 );
             txtCP06 . Properties . DataSource = tableOne;
             txtCP06 . Properties . DisplayMember = "CP06";
             txtCP06 . Properties . ValueMember = "CP06";
@@ -43,7 +45,7 @@ namespace Mulaolao . QuoForms
             txtCP06 . Text = model . CP06;
             txtCP07 . Text = model . CP07;
             txtCP09 . Text = model . CP09;
-            txtCP11 . Text = model . CP11 . ToString ( );
+            txtCP11 . Text = model . CP10 . ToString ( );
             txtCP13 . Text = model . CP13 . ToString ( );
         }
 
@@ -65,7 +67,7 @@ namespace Mulaolao . QuoForms
                 MessageBox . Show ( "单价应为数字" );
                 return;
             }
-            model . CP11 = outResult;
+            model . CP10 = outResult;
             if ( string . IsNullOrEmpty ( txtCP13 . Text ) )
             {
                 MessageBox . Show ( "每套数量不可为空" );
@@ -111,7 +113,7 @@ namespace Mulaolao . QuoForms
             txtCP07 . Text = row [ "CP07" ] . ToString ( );
             txtCP09 . Text = row [ "CP09" ] . ToString ( );
             txtCP13 . Text = row [ "CP13" ] . ToString ( );
-            txtCP11 . Text = row [ "CP11" ] . ToString ( );
+            txtCP11 . Text = row [ "CP10" ] . ToString ( );
         }
 
     }

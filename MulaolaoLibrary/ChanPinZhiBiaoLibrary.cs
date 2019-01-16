@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MulaolaoLibrary
 {
-    public class ChanPinZhiBiaoLibrary
+    public class ChanPinZhiBiaoLibrary:BaseEntity
     {
         private int _idx;
         public int IDX

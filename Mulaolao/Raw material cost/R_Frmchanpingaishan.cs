@@ -285,7 +285,7 @@ namespace Mulaolao.Raw_material_cost
                 comboBox16.Text = das.Rows[0]["GS31"].ToString( );
                 textBox16.Text = das.Rows[0]["GS32"].ToString( );
 
-                ddl = SqlHelper.ExecuteDataTable( "SELECT idx,GS02,GS49,GS51,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02 ) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS70,GS71,GS02,GS07 " ,new SqlParameter( "@GS34" ,_model . GS34 ) );//ASC,REVERSE(GS07) ASC
+                ddl = SqlHelper.ExecuteDataTable( "SELECT idx,GS02,GS49,GS51,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71,GS78 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02 ) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS70,GS71,GS02,GS07 " ,new SqlParameter( "@GS34" ,_model . GS34 ) );//ASC,REVERSE(GS07) ASC
                 gridControl1 .DataSource = ddl;
 
                 ddk = SqlHelper.ExecuteDataTable( "SELECT idx,GS35,GS36,GS37,GS38,GS39,GS40,GS41,GS42,GS43,GS44,GS45,GS72,GS74,GS75,GS76 FROM R_PQP WHERE GS35 IS NOT NULL AND GS35!='' AND GS34=@GS34 ORDER BY REVERSE(GS35) ASC" ,new SqlParameter( "@GS34" ,_model . GS34 ) );
@@ -661,7 +661,7 @@ namespace Mulaolao.Raw_material_cost
             }
         }
         //获取获得焦点的行的值
-        string DGA03 = "", DGA01 = "", GS002 = "", GS007 = "", GS200 = "",GS008="";
+        string DGA03 = "", DGA01 = "", GS002 = "", GS007 = "", GS200 = "",GS008="",GS071="";
         private void gridView1_RowClick ( object sender ,DevExpress . XtraGrid . Views . Grid . RowClickEventArgs e )
         {
             DataRow row = gridView1 . GetFocusedDataRow ( );
@@ -684,6 +684,7 @@ namespace Mulaolao.Raw_material_cost
                 comboBox18 . Text = row [ "GS51" ] . ToString ( );
                 textBox11 . Text = row [ "DGA003" ] . ToString ( );
                 textBox15 . Text = row [ "DGA011" ] . ToString ( );
+                textBox23 . Text = row [ "GS78" ] . ToString ( );
                 comboBox5 . Text = row [ "GS70" ] . ToString ( );
                 comboBox11 . Text = row [ "GS71" ] . ToString ( );
                 if ( row [ "GS19" ] . ToString ( ) != "" )
@@ -697,6 +698,7 @@ namespace Mulaolao.Raw_material_cost
                 GS007 = comboBox6 . Text;
                 GS200 = _model . GS20;
                 GS008 = comboBox7 . Text;
+                GS071 = comboBox11 . Text;
                 _model .idx = string . IsNullOrEmpty ( row [ "idx" ] . ToString ( ) ) == true ? 0 : Convert . ToInt32 ( row [ "idx" ] . ToString ( ) );
             }
         }
@@ -986,29 +988,30 @@ namespace Mulaolao.Raw_material_cost
             switch ( comboBox11 . Text )
             {
                 case "胶合板":
-                comboBox5 . Items . Add ( DicStr . r338 );
-                comboBox5 . Text = DicStr . r338;
                 comboBox3 . Items . Add ( DicStr . dmb );
                 comboBox3 . Items . Add ( DicStr . ymb );
                 comboBox3 . Items . Add ( DicStr . hmb );
                 comboBox3 . Items . Add ( DicStr . zmb );
                 comboBox3 . Text = DicStr . dmb;
-                break;
-                case "密度板":
                 comboBox5 . Items . Add ( DicStr . r338 );
                 comboBox5 . Text = DicStr . r338;
+                break;
+                case "密度板":
+            
                 comboBox3 . Items . Add ( DicStr . densityBoard );
                 comboBox3 . Text = DicStr . densityBoard;
+                comboBox5 . Items . Add ( DicStr . r338 );
+                comboBox5 . Text = DicStr . r338;
                 break;
                 case "成品委外":
-                comboBox5 . Items . Add ( DicStr . r199 );
-                comboBox5 . Text = DicStr . r199;
+           
                 comboBox3 . Items . Add ( DicStr . endProductOut );
                 comboBox3 . Text = DicStr . endProductOut;
+                comboBox5 . Items . Add ( DicStr . r199 );
+                comboBox5 . Text = DicStr . r199;
                 break;
                 case "木材":
-                comboBox5 . Items . Add ( DicStr . r341 );
-                comboBox5 . Text = DicStr . r341;
+       
                 comboBox3 . Items . Add ( DicStr . jm );
                 comboBox3 . Items . Add ( DicStr . hm );
                 comboBox3 . Items . Add ( DicStr . ym );
@@ -1020,10 +1023,11 @@ namespace Mulaolao.Raw_material_cost
                 comboBox3 . Items . Add ( DicStr . zam );
                 comboBox3 . Items . Add ( DicStr . pjb );
                 comboBox3 . Text = DicStr . jm;
+                comboBox5 . Items . Add ( DicStr . r341 );
+                comboBox5 . Text = DicStr . r341;
                 break;
                 case "车木件":
-                comboBox5 . Items . Add ( DicStr . r342 );
-                comboBox5 . Text = DicStr . r342;
+    
                 comboBox3 . Items . Add ( DicStr . zq );
                 comboBox3 . Items . Add ( DicStr . jm );
                 comboBox3 . Items . Add ( DicStr . hm );
@@ -1032,35 +1036,38 @@ namespace Mulaolao.Raw_material_cost
                 comboBox3 . Items . Add ( DicStr . sm );
                 comboBox3 . Items . Add ( DicStr . zam );
                 comboBox3 . Text = DicStr . zq;
+                comboBox5 . Items . Add ( DicStr . r342 );
+                comboBox5 . Text = DicStr . r342;
                 break;
                 case "铁件":
-                comboBox5 . Items . Add ( DicStr . r343 );
-                comboBox5 . Text = DicStr . r343;
+       
                 comboBox3 . Items . Add ( DicStr . lronParts );
                 comboBox3 . Text = DicStr . lronParts;
+                comboBox5 . Items . Add ( DicStr . r343 );
+                comboBox5 . Text = DicStr . r343;
                 break;
                 case "塑料件":
-                comboBox5 . Items . Add ( DicStr . r347 );
-                comboBox5 . Text = DicStr . r347;
+             
                 comboBox3 . Items . Add ( DicStr . plasticParts );
                 comboBox3 . Text = DicStr . plasticParts;
+                comboBox5 . Items . Add ( DicStr . r347 );
+                comboBox5 . Text = DicStr . r347;
                 break;
                 case "其它材料":
-                comboBox5 . Items . Add ( DicStr . r347 );
-                comboBox5 . Text = DicStr . r347;
+          
                 comboBox3 . Items . Add ( DicStr . otherMaterials );
                 comboBox3 . Text = DicStr . otherMaterials;
+                comboBox5 . Items . Add ( DicStr . r347 );
+                comboBox5 . Text = DicStr . r347;
                 break;
                 case "包装辅料":
-                comboBox5 . Items . Add ( DicStr . r347 );
-                comboBox5 . Items . Add ( DicStr . r349 );
-                comboBox5 . Text = DicStr . r347;
+            
                 comboBox3 . Items . Add ( DicStr . packAccess );
                 comboBox3 . Text = DicStr . packAccess;
+                comboBox5 . Items . Add ( DicStr . r347 );
+                comboBox5 . Text = DicStr . r347;
                 break;
                 case "外箱":
-                comboBox5 . Items . Add ( DicStr . r349 );
-                comboBox5 . Text = DicStr . r349;
                 comboBox3 . Items . Add ( DicStr . swwx );
                 comboBox3 . Items . Add ( DicStr . xxs );
                 comboBox3 . Items . Add ( DicStr . ygs );
@@ -1072,10 +1079,10 @@ namespace Mulaolao.Raw_material_cost
                 comboBox3 . Items . Add ( DicStr . dwlzk );
                 comboBox3 . Items . Add ( DicStr . swlzk );
                 comboBox3 . Text = DicStr . swwx;
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r349;
                 break;
                 case "中包":
-                comboBox5 . Items . Add ( DicStr . r349 );
-                comboBox5 . Text = DicStr . r349;
                 comboBox3 . Items . Add ( DicStr . swwx );
                 comboBox3 . Items . Add ( DicStr . xxs );
                 comboBox3 . Items . Add ( DicStr . ygs );
@@ -1087,10 +1094,10 @@ namespace Mulaolao.Raw_material_cost
                 comboBox3 . Items . Add ( DicStr . dwlzk );
                 comboBox3 . Items . Add ( DicStr . swlzk );
                 comboBox3 . Text = DicStr . swwx;
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r349;
                 break;
                 case "内盒":
-                comboBox5 . Items . Add ( DicStr . r349 );
-                comboBox5 . Text = DicStr . r349;
                 comboBox3 . Items . Add ( DicStr . swwx );
                 comboBox3 . Items . Add ( DicStr . xxs );
                 comboBox3 . Items . Add ( DicStr . ygs );
@@ -1102,10 +1109,10 @@ namespace Mulaolao.Raw_material_cost
                 comboBox3 . Items . Add ( DicStr . dwlzk );
                 comboBox3 . Items . Add ( DicStr . swlzk );
                 comboBox3 . Text = DicStr . swwx;
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r349;
                 break;
                 case "彩盒":
-                comboBox5 . Items . Add ( DicStr . r349 );
-                comboBox5 . Text = DicStr . r349;
                 comboBox3 . Items . Add ( DicStr . swwx );
                 comboBox3 . Items . Add ( DicStr . xxs );
                 comboBox3 . Items . Add ( DicStr . ygs );
@@ -1117,32 +1124,38 @@ namespace Mulaolao.Raw_material_cost
                 comboBox3 . Items . Add ( DicStr . dwlzk );
                 comboBox3 . Items . Add ( DicStr . swlzk );
                 comboBox3 . Text = DicStr . swwx;
+                comboBox5 . Items . Add ( DicStr . r349 );
+                comboBox5 . Text = DicStr . r349;
                 break;
                 case "喷油漆":
-                comboBox5 . Items . Add ( DicStr . r339 );
-                comboBox5 . Text = DicStr . r339;
+
                 comboBox3 . Items . Add ( DicStr . sxq );
                 comboBox3 . Items . Add ( DicStr . xjq );
                 comboBox3 . Text = DicStr . sxq;
+                comboBox5 . Items . Add ( DicStr . r339 );
+                comboBox5 . Text = DicStr . r339;
                 break;
                 case "滚油漆":
-                comboBox5 . Items . Add ( DicStr . r339 );
-                comboBox5 . Text = DicStr . r339;
+    
                 comboBox3 . Items . Add ( DicStr . sxq );
                 comboBox3 . Items . Add ( DicStr . xjq );
                 comboBox3 . Text = DicStr . sxq;
+                comboBox5 . Items . Add ( DicStr . r339 );
+                comboBox5 . Text = DicStr . r339;
                 break;
                 case "生产":
-                comboBox5 . Items . Add ( DicStr . production );
-                comboBox5 . Text = DicStr . production;
+           
                 comboBox3 . Items . Add ( DicStr . production );
                 comboBox3 . Text = DicStr . production;
+                comboBox5 . Items . Add ( DicStr . production );
+                comboBox5 . Text = DicStr . production;
                 break;
                 case "/":
-                comboBox5 . Items . Add ( DicStr . other );
-                comboBox5 . Text = DicStr . other;
+   
                 comboBox3 . Items . Add ( DicStr . other );
                 comboBox3 . Text = DicStr . other;
+                comboBox5 . Items . Add ( DicStr . other );
+                comboBox5 . Text = DicStr . other;
                 break;
             }
         }
@@ -1165,9 +1178,24 @@ namespace Mulaolao.Raw_material_cost
             }
             if ( comboBox5 . Text . Equals ( DicStr . r347 ) )
             {
-                comboBox3 . Items . Clear ( );
-                comboBox3 . Items . Add ( DicStr . packAccess );
-                comboBox3 . Text = DicStr . packAccess;
+                if ( comboBox11 . Text . Equals ( DicStr . plasticParts ) )
+                {
+                    comboBox3 . Items . Clear ( );
+                    comboBox3 . Items . Add ( DicStr . plasticParts );
+                    comboBox3 . Text = DicStr . plasticParts;
+                }
+                else if ( comboBox11 . Text . Equals ( DicStr . otherMaterials ) )
+                {
+                    comboBox3 . Items . Clear ( );
+                    comboBox3 . Items . Add ( DicStr . otherMaterials );
+                    comboBox3 . Text = DicStr . otherMaterials;
+                }
+                else
+                {
+                    comboBox3 . Items . Clear ( );
+                    comboBox3 . Items . Add ( DicStr . packAccess );
+                    comboBox3 . Text = DicStr . packAccess;
+                }
             }
         }
         private void comboBox13_SelectedValueChanged ( object sender ,EventArgs e )
@@ -1689,10 +1717,17 @@ namespace Mulaolao.Raw_material_cost
                 MessageBox . Show ( "请填写零件名称" );
                 return;
             }
+            decimal outResult = 0M;
+            if ( !string . IsNullOrEmpty ( textBox23 . Text ) && decimal . TryParse ( textBox23 . Text ,out outResult ) == false )
+            {
+                MessageBox . Show ( "每套重量为数字" );
+                return;
+            }
+            _model . GS78 = outResult;
             build ( );
 
             result = bll . Exists ( _model );
-            if ( result==false )
+            if ( result == false )
             {
                 if ( bll . ExistsNum ( _model ) )
                 {
@@ -1700,7 +1735,7 @@ namespace Mulaolao.Raw_material_cost
                     return;
                 }
                 result = bll . BuildOne ( _model );
-                if ( result==false )
+                if ( result == false )
                     MessageBox . Show ( "录入数据失败" );
                 else
                 {
@@ -1708,7 +1743,7 @@ namespace Mulaolao.Raw_material_cost
                     DataRow row;
                     if ( sads == "1" )
                     {
-                        ddl = SqlHelper . ExecuteDataTable ( "SELECT idx,GS02,GS49,GS51,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02 ) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS02,GS71,GS70,GS07" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
+                        ddl = SqlHelper . ExecuteDataTable ( "SELECT idx,GS02,GS49,GS51,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71,GS78 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02 ) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS02,GS71,GS70,GS07" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
                         gridControl1 . DataSource = ddl;
                     }
                     else if ( sads == "2" )
@@ -1733,6 +1768,7 @@ namespace Mulaolao.Raw_material_cost
                         row [ "GS51" ] = _model . GS51;
                         row [ "GS70" ] = _model . GS70;
                         row [ "GS71" ] = _model . GS71;
+                        row [ "GS78" ] = _model . GS78;
                         row [ "DGA003" ] = DGA3;
                         row [ "DGA011" ] = DGA11;
                         ddl . Rows . Add ( row );
@@ -1742,7 +1778,7 @@ namespace Mulaolao.Raw_material_cost
                 }
             }
             else
-                MessageBox . Show ( "单号：" + _model . GS34 + "\n\r材料：" + _model . GS02 + "\n\r零件名称：" + _model . GS07 + "\n\r供应商：" + DGA3 + "\n\r的数据已经存在,请核实后再录入" );
+                MessageBox . Show ( "单号：" + _model . GS34 + "\n\r类别:" + _model . GS71 + "\n\r部件：" + _model . GS02 + "\n\r零件名称：" + _model . GS07 + "\n\r供应商：" + DGA3 + "\n\r的数据已经存在,请核实后再录入" );
         }
         //编辑
         private void up ( )
@@ -1771,6 +1807,7 @@ namespace Mulaolao.Raw_material_cost
             row [ "GS51" ] = _model . GS51;
             row [ "GS70" ] = _model . GS70;
             row [ "GS71" ] = _model . GS71;
+            row [ "GS78" ] = _model . GS78;
             row [ "DGA003" ] = DGA3;
             row [ "DGA011" ] = DGA11;
             row . EndEdit ( );
@@ -1799,12 +1836,19 @@ namespace Mulaolao.Raw_material_cost
                 MessageBox . Show ( "请填写零件名称" );
                 return;
             }
+            decimal outResult = 0M;
+            if ( !string . IsNullOrEmpty ( textBox23 . Text ) && decimal . TryParse ( textBox23 . Text ,out outResult ) == false )
+            {
+                MessageBox . Show ( "每套重量为数字" );
+                return;
+            }
+            _model . GS78 = outResult;
             build ( );
 
-            if ( _model . GS02 == GS002 && _model . GS07 == GS007 && _model . GS20 == GS200  && _model.GS08==GS008)
+            if ( _model . GS02 == GS002 && _model . GS07 == GS007 && _model . GS20 == GS200 && _model . GS08 == GS008 && _model . GS71 == GS071 )
             {
                 result = bll . EditOne ( _model );
-                if ( result==false )
+                if ( result == false )
                     MessageBox . Show ( "编辑数据失败" );
                 else
                 {
@@ -1816,7 +1860,7 @@ namespace Mulaolao.Raw_material_cost
             {
                 result = bll . Exists ( _model );
                 if ( result )
-                    MessageBox . Show ( "单号：" + _model . GS34 + "\n\r材料：" + _model . GS02 + "\n\r零件名称：" + _model . GS07 + "\n\r规格:" + _model . GS08 + "\n\r供应商：" + DGA3 + "\n\r的数据已经存在,请核实后再录入" );
+                    MessageBox . Show ( "单号：" + _model . GS34 + "\n\r类别:" + _model . GS71 + "\n\r部件：" + _model . GS02 + "\n\r零件名称：" + _model . GS07 + "\n\r规格:" + _model . GS08 + "\n\r供应商：" + DGA3 + "\n\r的数据已经存在,请核实后再录入" );
                 else
                 {
                     result = bll . EditOne ( _model );
@@ -1867,7 +1911,7 @@ namespace Mulaolao.Raw_material_cost
         //刷新
         private void button11_Click ( object sender ,EventArgs e )
         {
-            ddl = SqlHelper . ExecuteDataTable ( "SELECT idx,GS02,GS51,GS49,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS70,GS71,GS02,GS07" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
+            ddl = SqlHelper . ExecuteDataTable ( "SELECT idx,GS02,GS51,GS49,GS04,GS05,GS07,GS08,GS09,GS10,GS11,GS13,GS14,GS15,GS16,GS17,GS18,GS19,GS20,(SELECT DGA003 FROM TPADGA WHERE GS20 = DGA001 ) DGA003 ,(SELECT DGA011 FROM TPADGA WHERE GS20 = DGA001 ) DGA011,D.U7,GS70,GS71,GS78 FROM R_PQP A, (SELECT GS02 U0 ,SUM( GS10 * GS11 ) U7 FROM R_PQP GROUP BY GS02) D WHERE A.GS02 = D.U0 AND GS34 = @GS34 AND GS02!='' AND GS02 IS NOT NULL ORDER BY GS70,GS71,GS02,GS07" ,new SqlParameter ( "@GS34" ,_model . GS34 ) );
             gridControl1 . DataSource = ddl;
         }
         #endregion

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="01/13/2016 09:33:59" ReportInfo.Modified="01/25/2018 13:32:46" ReportInfo.CreatorVersion="2013.2.5.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/13/2016 09:33:59" ReportInfo.Modified="12/27/2018 10:37:01" ReportInfo.CreatorVersion="2013.2.5.0">
   <ScriptText>using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -34,8 +34,8 @@ namespace FastReport
 }
 </ScriptText>
   <Dictionary>
-    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGlrJ0V2eD49/23aASHu9CzkLXmK1vG22g18L7rYYWBO+4SBv7MsTeEOHQWXAF5hzGJQ06EX3i2VRb+WzKNuPUGwYNEOgEqnC6ZWWu/r59CeMUL2XIBApfh4iG0GCwJqumw==">
-      <TableDataSource Name="Table2" Alias="R_PQT" DataType="System.Int32" Enabled="true" SelectCommand="SELECT WX10,WX20,WX77,WX86,WX14,WX18,WX19,WX12,WX13,CASE WHEN WX86 = 0 THEN 0 WHEN WX86 != 0 THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 ) END U0,CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 ) U1,WX15,CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 ) U2,WX17,CONVERT( VARCHAR( 20 ), WX21, 102 ) WX21,CONVERT( VARCHAR( 20 ), WX22, 102 ) WX22,WX11, WX27, WX28, WX29,CONVERT( DECIMAL( 11, 1 ), WX27 + WX28 + WX29 ) U3,WX30, WX31, WX32,CONVERT( DECIMAL( 11, 1 ), WX30 + WX31 + WX32 ) U4,CONVERT( DECIMAL( 11, 4 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32)) * 0.0001 ) U5,WX23, WX24, WX25, WX26,CONVERT( DECIMAL( 11, 4 ), ((WX23 + WX24) * (WX25 + WX26)) * 0.0001 ) U6 FROM R_PQT">
+    <OleDbDataConnection Name="Connection" ConnectionString="rijcmlqVzFGsc+BVENiWJhr/EarGlrJ0V2eD49/23aASHu9CzkLXmK1vG22g18L7rYYWBO+4SBv7MsTeEOHQWXAF5hzGJQ06EX3i2VRb+WzKNuPUGwYNEOgEqnC6ZWWu/r59CeMAwIFZ7r+Cn2zNxOsCP7dsQ==">
+      <TableDataSource Name="Table2" Alias="R_PQT" DataType="System.Int32" Enabled="true" SelectCommand="SELECT WX10,WX20,WX98,WX77,WX86,WX14,WX18,WX19,WX12,WX13,CASE WHEN WX86 = 0 THEN 0 WHEN WX86 != 0 THEN CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 / WX86 ) END U0,CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 ) U1,WX15,CONVERT( DECIMAL( 11, 2 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32) + (WX23 + WX24) * (WX25 + WX26)) * 0.0001 * WX13 * WX15 ) U2,WX17,CONVERT( VARCHAR( 20 ), WX21, 102 ) WX21,CONVERT( VARCHAR( 20 ), WX22, 102 ) WX22,WX11, WX27, WX28, WX29,CONVERT( DECIMAL( 11, 1 ), WX27 + WX28 + WX29 ) U3,WX30, WX31, WX32,CONVERT( DECIMAL( 11, 1 ), WX30 + WX31 + WX32 ) U4,CONVERT( DECIMAL( 11, 4 ), ((WX27 + WX28 + WX29) * (WX30 + WX31 + WX32)) * 0.0001 ) U5,WX23, WX24, WX25, WX26,CONVERT( DECIMAL( 11, 4 ), ((WX23 + WX24) * (WX25 + WX26)) * 0.0001 ) U6 FROM R_PQT">
         <Column Name="WX10" DataType="System.String"/>
         <Column Name="WX20" DataType="System.String"/>
         <Column Name="WX77" DataType="System.String"/>
@@ -67,6 +67,7 @@ namespace FastReport
         <Column Name="U6" DataType="System.Decimal"/>
         <Column Name="WX86" DataType="System.Int64"/>
         <Column Name="WX17" DataType="System.String"/>
+        <Column Name="WX98" DataType="System.String"/>
       </TableDataSource>
       <TableDataSource Name="Table" Alias="R_PQTS" DataType="System.Int32" Enabled="true" SelectCommand="SELECT DBA002,DBA028,DGA003,DGA017,DGA008,DGA009,DGA011,WX05,CONVERT(VARCHAR(20),WX06,102) WX06,WX07,CONVERT(VARCHAR(20),WX08,102) WX08,WX09, WX83, WX84, WX85, WX01, WX78, WX79, WX33, CONVERT( VARCHAR( 20 ), WX34, 102 ) WX34, WX35, WX36, WX37, WX38, WX41, WX39, WX40, WX51, WX42, WX43, WX44, WX45, WX46, WX47, WX48,WX49, WX50, WX52, WX53, WX54, CONVERT( VARCHAR( 20 ), WX55, 102 ) WX55, WX68, WX69, WX70, CONVERT( VARCHAR( 20 ), WX71, 102 ) WX71, WX72, CONVERT( VARCHAR( 20 ), WX73, 102 ) WX73,WX74, WX75, CONVERT( VARCHAR( 20 ), WX76, 102 ) WX76,WX91,WX82,ISNULL(WX90,0) WX90 FROM R_PQT A, TPADBA B, TPADGA C WHERE A.WX02 = B.DBA001 AND A.WX03 = C.DGA001">
         <Column Name="DBA002" DataType="System.String"/>
@@ -159,7 +160,7 @@ namespace FastReport
       <TextObject Name="Text32" Left="945" Top="75.6" Width="75.6" Height="18.9" Border.Lines="All" Text="合同批次号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text33" Left="1020.6" Top="75.6" Width="85.05" Height="18.9" Border.Lines="All" Text="[R_PQTS.WX09]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text42" Top="113.4" Width="75.6" Height="47.25" Border.Lines="All" Text="物品名称式样形状流水号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-      <TextObject Name="Text45" Left="113.4" Top="113.4" Width="132.3" Height="47.25" Border.Lines="All" Text="材料要求" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text45" Left="141.75" Top="113.4" Width="103.95" Height="47.25" Border.Lines="All" Text="材料要求" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text46" Left="245.7" Top="113.4" Width="66.15" Height="47.25" Border.Lines="All" Text="产品数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text51" Left="311.85" Top="113.4" Width="66.15" Height="47.25" Border.Lines="All" Text="每套物品数量" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text52" Left="378" Top="113.4" Width="56.7" Height="47.25" Border.Lines="All" Text="装箱率" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
@@ -186,14 +187,14 @@ namespace FastReport
       <TextObject Name="Text140" Left="538.65" Top="94.5" Width="132.3" Height="18.9" Border.Lines="All" Text="[R_PQTS.WX85]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text143" Left="670.95" Top="94.5" Width="56.7" Height="18.9" Border.Lines="All" Text="流水号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text144" Left="727.65" Top="94.5" Width="378" Height="18.9" Border.Lines="All" Text="[R_PQTS.WX01]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-      <TextObject Name="Text44" Left="75.6" Top="113.4" Width="37.8" Height="47.25" Border.Lines="All" Text="类别" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text44" Left="75.6" Top="113.4" Width="66.15" Height="47.25" Border.Lines="All" Text="零件" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text50" Left="878.85" Top="113.4" Width="56.7" Height="47.25" Border.Lines="All" Text="库存或采购" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text864" Left="926.1" Top="18.9" Width="170.1" Height="66.15" Text="超补" HorzAlign="Center" Font="宋体, 48pt, style=Bold, Italic, Underline" TextFill.Color="Red"/>
     </PageHeaderBand>
     <DataBand Name="Data1" Top="215.9" Width="1107.54" Height="18.9" CanBreak="true" DataSource="Table2" MaxRows="5">
       <TextObject Name="Text70" Width="75.6" Height="18.9" Border.Lines="All" Text="[R_PQT.WX10]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-      <TextObject Name="Text72" Left="75.6" Width="37.8" Height="18.9" Border.Lines="All" Text="[R_PQT.WX20]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-      <TextObject Name="Text73" Left="113.4" Width="132.3" Height="18.9" Border.Lines="All" Text="[R_PQT.WX77]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text72" Left="75.6" Width="66.15" Height="18.9" Border.Lines="All" Text="[R_PQT.WX98]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text73" Left="141.75" Width="103.95" Height="18.9" Border.Lines="All" Text="[R_PQT.WX77]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text77" Left="245.7" Width="66.15" Height="18.9" Border.Lines="All" Text="[R_PQT.WX86]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text78" Left="311.85" Width="66.15" Height="18.9" Border.Lines="All" Text="[R_PQT.WX14]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text80" Left="378" Width="56.7" Height="18.9" Border.Lines="All" Text="[R_PQT.WX18]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
@@ -209,8 +210,8 @@ namespace FastReport
       <TextObject Name="Text317" Left="1020.6" Width="85.05" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <ChildBand Name="Child1" Top="238.8" Width="1107.54" Height="18.9" CanBreak="true" CompleteToNRows="5">
         <TextObject Name="Text387" Width="75.6" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-        <TextObject Name="Text388" Left="75.6" Width="37.8" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-        <TextObject Name="Text389" Left="113.4" Width="132.3" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text388" Left="75.6" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text389" Left="141.75" Width="103.95" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text390" Left="245.7" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text391" Left="311.85" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text392" Left="378" Width="56.7" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
@@ -228,8 +229,8 @@ namespace FastReport
     </DataBand>
     <DataBand Name="Data2" Top="331.85" Width="1107.54" Height="18.9" CanBreak="true" DataSource="Table2" MaxRows="5">
       <TextObject Name="Text75" Width="75.6" Height="18.9" Border.Lines="All" Text="[R_PQT.WX10]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-      <TextObject Name="Text419" Left="75.6" Width="37.8" Height="18.9" Border.Lines="All" Text="[R_PQT.WX20]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-      <TextObject Name="Text420" Left="113.4" Width="132.3" Height="18.9" Border.Lines="All" Text="[R_PQT.WX11]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text419" Left="75.6" Width="66.15" Height="18.9" Border.Lines="All" Text="[R_PQT.WX98]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text420" Left="141.75" Width="103.95" Height="18.9" Border.Lines="All" Text="[R_PQT.WX11]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text421" Left="245.7" Width="66.15" Height="18.9" Border.Lines="All" Text="[R_PQT.WX27]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text422" Left="311.85" Width="66.15" Height="18.9" Border.Lines="All" Text="[R_PQT.WX28]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <TextObject Name="Text423" Left="378" Width="85.05" Height="18.9" Border.Lines="All" Text="[R_PQT.WX29]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
@@ -246,8 +247,8 @@ namespace FastReport
       <TextObject Name="Text434" Left="1030.05" Width="75.6" Height="18.9" Border.Lines="All" Text="[R_PQT.U6]" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
       <ChildBand Name="Child2" Top="354.75" Width="1107.54" Height="18.9" CanBreak="true" Guides="0" CompleteToNRows="5">
         <TextObject Name="Text435" Width="75.6" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-        <TextObject Name="Text436" Left="75.6" Width="37.8" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-        <TextObject Name="Text437" Left="113.4" Width="132.3" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text436" Left="75.6" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text437" Left="141.75" Width="103.95" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text438" Left="245.7" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text439" Left="311.85" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text440" Left="378" Width="85.05" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
@@ -265,8 +266,8 @@ namespace FastReport
       </ChildBand>
       <DataHeaderBand Name="DataHeader1" Top="261.7" Width="1107.54" Height="66.15" CanBreak="true" FirstRowStartsNewPage="true">
         <TextObject Name="Text403" Top="18.9" Width="75.6" Height="47.25" Border.Lines="All" Text="物品名称式样形状流水号" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-        <TextObject Name="Text404" Left="75.6" Top="18.9" Width="37.8" Height="47.25" Border.Lines="All" Text="类别" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-        <TextObject Name="Text405" Left="113.4" Top="18.9" Width="132.3" Height="47.25" Border.Lines="All" Text="规格" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text404" Left="75.6" Top="18.9" Width="66.15" Height="47.25" Border.Lines="All" Text="零件" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text405" Left="141.75" Top="18.9" Width="103.95" Height="47.25" Border.Lines="All" Text="规格" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text59" Left="245.7" Top="18.9" Width="623.7" Height="18.9" Border.Lines="All" Text="纸箱盒" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text61" Left="245.7" Top="37.8" Width="66.15" Height="28.35" Border.Lines="All" Text="长" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text406" Left="311.85" Top="37.8" Width="66.15" Height="28.35" Border.Lines="All" Text="宽.高" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
@@ -284,8 +285,8 @@ namespace FastReport
         <TextObject Name="Text417" Left="982.8" Top="37.8" Width="47.25" Height="28.35" Border.Lines="All" Text="边" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text418" Left="1030.05" Top="37.8" Width="75.6" Height="28.35" Border.Lines="All" Text="片面积米" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text464" Width="75.6" Height="18.9" Border.Lines="All" Text="合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-        <TextObject Name="Text465" Left="75.6" Width="37.8" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
-        <TextObject Name="Text466" Left="113.4" Width="132.3" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text465" Left="75.6" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+        <TextObject Name="Text466" Left="141.75" Width="103.95" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text467" Left="245.7" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text468" Left="311.85" Width="66.15" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
         <TextObject Name="Text469" Left="378" Width="56.7" Height="18.9" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>

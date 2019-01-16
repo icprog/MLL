@@ -24,7 +24,7 @@ namespace MulaolaoLibrary
         private decimal? _qur013;
         private decimal? _qur014;
         private string _qur015;
-        private string _qur016;
+        private decimal? _qur016;
 
         /// <summary>
         /// 
@@ -55,7 +55,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 材料工资种类
+        /// 材种
         /// </summary>
         public string QUR002
         {
@@ -69,7 +69,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 材种
+        /// 合同代号
         /// </summary>
         public string QUR003
         {
@@ -237,7 +237,7 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 规格
         /// </summary>
         public string QUR015
         {
@@ -251,9 +251,9 @@ namespace MulaolaoLibrary
             }
         }
         /// <summary>
-        /// 
+        /// 立方cm³
         /// </summary>
-        public string QUR016
+        public decimal? QUR016
         {
             set
             {
@@ -264,6 +264,23 @@ namespace MulaolaoLibrary
                 return _qur016;
             }
         }
+
+        private decimal? _u0;
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal? U0
+        {
+            set
+            {
+                _u0 = value;
+            }
+            get
+            {
+                return _u0;
+            }
+        }
+
         #endregion Model
     }
 }

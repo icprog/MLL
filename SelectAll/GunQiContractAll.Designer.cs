@@ -55,6 +55,8 @@
             this.MZ026 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MZ028 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MZ129 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.U0 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.U1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lookUpEdit5 = new DevExpress.XtraEditors.LookUpEdit();
@@ -122,11 +124,11 @@
             // 
             this.splitContainer2.Panel1.Controls.Add(this.gridControl1);
             this.splitContainer2.Size = new System.Drawing.Size(1250, 401);
-            this.splitContainer2.SplitterDistance = 352;
+            this.splitContainer2.SplitterDistance = 346;
             // 
             // userControl11
             // 
-            this.userControl11.Size = new System.Drawing.Size(831, 45);
+            this.userControl11.Size = new System.Drawing.Size(831, 51);
             // 
             // gridControl1
             // 
@@ -136,7 +138,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1250, 352);
+            this.gridControl1.Size = new System.Drawing.Size(1250, 346);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -168,7 +170,9 @@
             this.MZ027,
             this.MZ026,
             this.MZ028,
-            this.MZ129});
+            this.MZ129,
+            this.U0,
+            this.U1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -404,7 +408,7 @@
             this.MZ4.UnboundExpression = "[MZ0] - [MZ1] - [MZ2]";
             this.MZ4.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.MZ4.Visible = true;
-            this.MZ4.VisibleIndex = 12;
+            this.MZ4.VisibleIndex = 14;
             // 
             // MZ3
             // 
@@ -429,7 +433,7 @@
             this.MZ3.UnboundExpression = "([MZ0] - [MZ1] - [MZ2]) / [MZ0]";
             this.MZ3.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.MZ3.Visible = true;
-            this.MZ3.VisibleIndex = 13;
+            this.MZ3.VisibleIndex = 15;
             this.MZ3.Width = 115;
             // 
             // RES05
@@ -448,7 +452,7 @@
             this.RES05.FieldName = "RES05";
             this.RES05.Name = "RES05";
             this.RES05.Visible = true;
-            this.RES05.VisibleIndex = 19;
+            this.RES05.VisibleIndex = 21;
             this.RES05.Width = 83;
             // 
             // MZ031
@@ -492,7 +496,7 @@
             this.MZ121.FieldName = "MZ121";
             this.MZ121.Name = "MZ121";
             this.MZ121.Visible = true;
-            this.MZ121.VisibleIndex = 20;
+            this.MZ121.VisibleIndex = 22;
             this.MZ121.Width = 78;
             // 
             // MZ107
@@ -511,7 +515,7 @@
             this.MZ107.FieldName = "MZ107";
             this.MZ107.Name = "MZ107";
             this.MZ107.Visible = true;
-            this.MZ107.VisibleIndex = 14;
+            this.MZ107.VisibleIndex = 16;
             this.MZ107.Width = 69;
             // 
             // MZ014
@@ -526,7 +530,7 @@
             this.MZ014.FieldName = "MZ014";
             this.MZ014.Name = "MZ014";
             this.MZ014.Visible = true;
-            this.MZ014.VisibleIndex = 15;
+            this.MZ014.VisibleIndex = 17;
             // 
             // MZ019
             // 
@@ -562,7 +566,7 @@
             this.AD08.FieldName = "AD08";
             this.AD08.Name = "AD08";
             this.AD08.Visible = true;
-            this.AD08.VisibleIndex = 21;
+            this.AD08.VisibleIndex = 23;
             // 
             // MZ027
             // 
@@ -574,7 +578,7 @@
             this.MZ027.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MZ027", "{0:N1}")});
             this.MZ027.Visible = true;
-            this.MZ027.VisibleIndex = 16;
+            this.MZ027.VisibleIndex = 18;
             // 
             // MZ026
             // 
@@ -586,7 +590,7 @@
             this.MZ026.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MZ026", "{0:N2}")});
             this.MZ026.Visible = true;
-            this.MZ026.VisibleIndex = 17;
+            this.MZ026.VisibleIndex = 19;
             // 
             // MZ028
             // 
@@ -598,7 +602,7 @@
             this.MZ028.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MZ028", "{0:N3}")});
             this.MZ028.Visible = true;
-            this.MZ028.VisibleIndex = 18;
+            this.MZ028.VisibleIndex = 20;
             // 
             // MZ129
             // 
@@ -606,7 +610,37 @@
             this.MZ129.FieldName = "MZ129";
             this.MZ129.Name = "MZ129";
             this.MZ129.Visible = true;
-            this.MZ129.VisibleIndex = 22;
+            this.MZ129.VisibleIndex = 24;
+            // 
+            // U0
+            // 
+            this.U0.Caption = "合厂内滚套";
+            this.U0.DisplayFormat.FormatString = "0.###";
+            this.U0.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.U0.FieldName = "U0";
+            this.U0.Name = "U0";
+            this.U0.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U0", "{0:0.##}")});
+            this.U0.ToolTip = "([内漆漆结款] + [内滚工资])/[产品数量]";
+            this.U0.UnboundExpression = "([MZ1] + [MZ2]) / [MZ006]";
+            this.U0.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.U0.Visible = true;
+            this.U0.VisibleIndex = 12;
+            // 
+            // U1
+            // 
+            this.U1.Caption = "厂外滚套";
+            this.U1.DisplayFormat.FormatString = "0.###";
+            this.U1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.U1.FieldName = "U1";
+            this.U1.Name = "U1";
+            this.U1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "U1", "{0:0.##}")});
+            this.U1.ToolTip = "[委外结算款]/[产品数量]";
+            this.U1.UnboundExpression = "[MZ0] / [MZ006]";
+            this.U1.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.U1.Visible = true;
+            this.U1.VisibleIndex = 13;
             // 
             // button2
             // 
@@ -870,5 +904,7 @@
         private DevExpress . XtraGrid . Columns . GridColumn MZ028;
         private DevExpress . XtraGrid . Columns . GridColumn MZ129;
         private DevExpress . XtraGrid . Columns . GridColumn MZ4;
+        private DevExpress . XtraGrid . Columns . GridColumn U0;
+        private DevExpress . XtraGrid . Columns . GridColumn U1;
     }
 }
